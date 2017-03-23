@@ -1,0 +1,3 @@
+Alternative.Hypothesis	p.value	effect.size.t	p.value.corr
+Expanded families' non-orthologs have higher mean diversity than positively selected families	1.66853555590664e-35	-12.8200568619928	5.00560666771991e-35
+Positively selected families' non-orthologs have higher mean diversity than tandem clusters	0.0201896303040664	-2.05033181096037	0.0302844454560996

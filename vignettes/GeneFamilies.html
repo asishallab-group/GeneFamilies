@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="Dr. Asis Hallab" />
+
+<meta name="date" content="2017-02-18" />
+
+<title>README of package GeneFamilies</title>
+
+
+
+
+
+
+<link href="data:text/css;charset=utf-8,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20700px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%201%2E35%3B%0A%7D%0A%23header%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%2010px%3B%0Apadding%3A%204px%3B%0Awidth%3A%20400px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%20%7B%0Amargin%3A%201em%20auto%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%200%2E25em%200%2E75em%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0A%7D%0Apre%20%7B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200px%2010px%200px%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0Afont%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%200px%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%3A%201px%20solid%20%23DDDDDD%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%20code%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">README of package GeneFamilies</h1>
+<h4 class="author"><em>Dr. Asis Hallab</em></h4>
+<h4 class="date"><em>2017-02-18</em></h4>
+
+
+
+<p>The R package GeneFamilies includes all the code, data, and executables used to analyse the gene families generated from 8 Brassicaceaen genomes.</p>
+<div id="general-information-requirements" class="section level2">
+<h2>General Information / Requirements</h2>
+<p>This R package relys on results provided by external Bioinformatics tools. Among these sequence similarity search tools, like Blast and Blat, gene family clustering results, obtained by Markov Clustering with mcl, a species tree generated with fasttree from concatonated alignments of orthologous genes generated with mafft, etc.</p>
+<p>In general all executables in the packages’ exec directory are meant to carry out setup functions or analyses specific to the data of the 8 Brassicaceaen genomes. In most cases, the package has to be re-installed after executing a R-Script in the exec directory, because new data wil be added to the package. However, the functions of the package are of general nature and serve to carry out the analyses with any custom data.</p>
+</div>
+<div id="gene-family-analyses" class="section level2">
+<h2>Gene Family Analyses</h2>
+<p>In this section the gene family analyses for the 8 Brassicaceaen genomes is explained. Each step is reproducable and it is documented, how from initial setup the final results were obtained.</p>
+<div id="load-coding-sequences-of-species" class="section level3">
+<h3>Load coding sequences of species</h3>
+<p>Use R-script <code>exec/loadCodingSequences.R</code> and re-install package after execution to load the coding sequences of the 8 Brassicaceaen genomes.</p>
+</div>
+<div id="load-gene-families" class="section level3">
+<h3>Load Gene Families</h3>
+<p>On all coding sequences available for the eight genomes ran an all-vs-all BLAT. Using this the results were fed into Markov Clustering based on Pairwise Sequence Similarities in percent. The MCL algorithm is implemented in the popular <code>mcl</code> program (<code>mcl 14-137, van Dongen</code>). It’s output has been read in by the following script. Furthermore, the results were parsed and provided as a table in which each family was assigned a name (e.g. ‘cluster_1’) and for each of the eight species the number of gene members is provided. The Perl-Script <code>mcl2orthoformat.pl</code> can be used to convert the MCL output into the table.</p>
+<p>Use R-script <code>exec/loadGeneFamilies.R</code> and re-install package after execution.</p>
+</div>
+<div id="reconstruct-gene-families-phylogenies" class="section level3">
+<h3>Reconstruct Gene Families’ Phylogenies</h3>
+<p>Use Maximum Likelihood Phylogenetic Algorithm (fasttree2) on each non-singleton family to reconstruct the family-trees. Required external software is macse, mafft, and fasttree2. For details see the functions in file phylogenies.R.</p>
+<p>Use R-script <code>exec/reconstructFamilyPhylogenies.R working_directory n_cores_to_use [batch-start batch-stop]</code></p>
+</div>
+<div id="load-interproscan-results-for-the-eight-brassicaceaen-genomes" class="section level3">
+<h3>Load InterProScan results for the eight Brassicaceaen genomes</h3>
+<p>Obtain the latest InterPro XML database from <a href="https://www.ebi.ac.uk/interpro/download.html">here</a> (last visited October 19, 2016).</p>
+<p>You need the InterProScan result files in TAB separated output-format for all of the eight Brassicaceaen genomes.</p>
+<p>Run R-script <code>exec/loadInterProData.R path/2/GeneFamilies/data aet_iprscan_out.tsv aly_iprscan_out.tsv ath_iprscan_out.tsv bra_iprscan_out.tsv chi_iprscan_out.tsv cru_iprscan_out.tsv esa_iprscan_out.tsv tpa_iprscan_out.tsv interpro.xml</code></p>
+<p>Re-install package afterwards.</p>
+</div>
+<div id="assign-the-gene-families-human-readable-descriptions-using-r-package-ahrd.on.gene.clusters" class="section level3">
+<h3>Assign the Gene-Families Human Readable Descriptions using R-package ‘AHRD.on.gene.clusters’</h3>
+<p>Run R-Script <code>exec/annotateFamilies.R path2/GeneFamilies/data</code></p>
+<p>Re-install package afterwards.</p>
+</div>
+<div id="load-information-about-pairwise-sequence-similarities-orthologs-and-tandems-identified-within-the-eight-brassicaceaen-genomes" class="section level3">
+<h3>Load information about Pairwise Sequence Similarities, Orthologs, and Tandems identified within the eight Brassicaceaen Genomes</h3>
+<p>Use R-script <code>exec/loadOrthologsAndTandems.R path/2/GeneFamilies/data all_vs_all_tabular_blast_out.txt eight_brassicaceae_orthologs.txt eight_brassicaceae_tandems.txt</code></p>
+<p>Re-install package after execution to load the Pairwise Sequence Similarities, Ortholog, and Tandem information into the installed package.</p>
+<p>Cluster of Orthologs were inferred using reciprocal best hits in an all-vs-all Sequence-Similarity-Search with validation of 1 gene per other species matching to the TAIR10 (A. thaliana) reference.</p>
+<p>Tandems were inferred in a similar manner, where the sequence similarity searches were carried out within each species’ genome separately, and the validation was a maximum neighborhood of 9 genes in the genome.</p>
+</div>
+<div id="prepare-detection-of-natural-selection-acting-on-conserved-homologous-codons-sites-using-fubar" class="section level3">
+<h3>Prepare Detection of natural Selection acting on conserved homologous codons (sites) using FUBAR</h3>
+<p>To generate the FUBAR input batch files use the</p>
+<p>R-script <code>exec/generateFubarBatchFiles.R working-directory</code> Note, that the working directory is the one used in task “Reconstruct Gene Families’ Phylogenies”.</p>
+</div>
+<div id="detect-sites-subject-to-positive-selection-using-fubar-hyphy" class="section level3">
+<h3>Detect sites subject to positive selection using FUBAR (HYPHY)</h3>
+<p>HYPHY Fubar batch files were generated within section ‘Prepare Detection …’. Submit them in parallel to a compute cluster, each with HYPHYMP cpu=<code>nCPUs</code> fubarBatchFileInput.bf</p>
+</div>
+<div id="load-fubar-results" class="section level3">
+<h3>Load FUBAR Results</h3>
+<p>Once the FUBAR analyses have been executed. Use the following methodology to load the FUBAR results into this R package:</p>
+<p><code>Rscript ./exec/loadFubarResults.R path/2/families/working-directory path/2/this_package</code></p>
+<p>First argument points to the directory in which to find the FUBAR result tables recursively, the second argument points to the source directory of this package, required to install the resulting RData files.</p>
+<p>After executing the script the package has to be re-installed in order to make the new RData available.</p>
+</div>
+<div id="detect-pairwise-kaks-ratios-within-closest-homologs" class="section level3">
+<h3>Detect pairwise Ka/Ks ratios within closest homologs</h3>
+<p>Identification of closest homologs is done using the all-vs-all sequence similarity search results. Here, best hits are used aas the closest homolog, excluding self-matches. The coding sequences of the two respective homologs are aligned guided by the alignment of their respective amino-acid sequences. Based on this alignment the program <code>codeml</code> is used to compute pairwise Ka, Ks, and omega (‘w’) values.</p>
+<p>The R-script <code>exec/computePairwiseKaKsRatios.R pairwise_ka_ks_table.tsv batch-start batch-stop</code> is used to submit the jobs in parallel. Once all jobs have successfully terminated the resulting tables are to be concatonated and stored as <code>pairwiseKaKs.RData</code> in this package’s data directory.</p>
+<p>After all parallel computations have terminated concatonated their output tables into a single table and load it into R. Then save it in this R-package as data. Finally re-install the package.</p>
+<p>Concatonate the tables with the following Shell-Script:</p>
+<p><code>head -1 ../GeneFamilies_WorkingDir/KaKs_Batch_1.tsv &gt; ./inst/pairwiseKaKs.tsv cat ../GeneFamilies_WorkingDir/KaKs_Batch_*.tsv | sed -e '/^gene.a/d' &gt;&gt; ./inst/pairwiseKaKs.tsv</code></p>
+<p>Use the following R-Code:</p>
+<p><code>pairwise.Ka.Ks &lt;- read.table( &quot;./inst/pairwiseKaKs.tsv&quot;, sep=&quot;\t&quot;, header=TRUE, comment.char='', quote='', na.strings='NA', colClasses=c( rep('character',2),rep('numeric',3)), stringsAsFactors=FALSE) save( pairwise.Ka.Ks, file=&quot;./data/pairwiseKaKs.RData&quot; )</code></p>
+</div>
+<div id="compute-kaks-ratios-for-closest-orthologs-that-have-not-yet-been-considered-by-the-above-closest-homolog-approach" class="section level3">
+<h3>Compute Ka/Ks ratios for closest Orthologs that have not yet been considered by the above closest Homolog approach</h3>
+<p>Some genes may e.g. include premature stop codons and thus we can not obtain relyable Ka/Ks values from gene pairs including them. Hence for the subset of genes that still have no Ka/Ks value assigned but have an orthologous partner, we compute their Ka/Ks values using the closest ortholog.</p>
+<p>Use R-Script <code>exec/computeOrthologsKaKsRatios.R path/2/GeneFamilies</code> and re-install package after successful termination of the script.</p>
+</div>
+<div id="verify-positive-selection-phylogenetically-for-genes-positively-selected-according-to-pairwise-comparison-of-homologs" class="section level3">
+<h3>Verify positive selection phylogenetically for genes positively selected according to pairwise comparison of homologs</h3>
+<p>Use HyPhy’s BUSTED to perform a phylogenetically informed test for branch specific positive selection. The tested ‘foreground’ genes are those identified as positively selected according to pairwise comparison of closest homologs (see above).</p>
+<p>Use <code>Rscript exec/generateBustedBatchFiles.R path/2/families_dir</code></p>
+<p>The only argument provided is the working directory in which each family’s phylogeny is stored (see above).</p>
+<div id="start-the-busted-analyses-using-a-job-queue" class="section level4">
+<h4>Start the BUSTED analyses using a job queue</h4>
+<p>Find all BUSTED Batch Files and submit them to your cluster. E.g. as follows:</p>
+<p><code>find . -name 'cluster_*_hyphy_busted_input.bf' -type f &gt; ./submit_busted_jobs.sh</code></p>
+<p>Edit the above file according to the needs of your Job-Queue-System and submit the Jobs afterwards.</p>
+</div>
+<div id="load-busted-results" class="section level4">
+<h4>Load BUSTED results</h4>
+<p>Find all BUSTED JSON output files and parse their last line for the P-Value. Based on this infer which foreground genes have received a significant BUSTED-P-Value.</p>
+<p><code>Rscript exec/loadBustedResults.R path/2/Families/Working-Dir path/2/GeneFamilies</code></p>
+<p>First argument points to the working directory in which all family phylogenies and selection analyses are stored. The second argument points to this R-package itself. Remember to re-install the package after the script has successfully terminated. Otherwise the generated RData file will not be available.</p>
+</div>
+</div>
+<div id="identify-significantly-expanded-or-contracted-families" class="section level3">
+<h3>Identify significantly expanded or contracted families</h3>
+<p>Use the CAFE algorithm together with a ultrametric species tree to identify Gene Families significantly expanded / contracted during the evolution of any of the included species.</p>
+<p>The R-Script <code>exec/parseCafeResult.R path/2/cafe_result.txt.cafe path/2/GeneFamilies/data</code> parses the CAFE results and adjust the provided P-Values to multiple hypotheses testing (<code>method=&quot;BY&quot;</code>). Data is stored in the package. Re-install this package after this script has been executed.</p>
+</div>
+<div id="load-tissue-specific-expression-data" class="section level3">
+<h3>Load tissue specific expression data</h3>
+<p>Use expresion data to generate expression profiles for different sets of genes and enable comparison of them, also on the level of the tissue.</p>
+<p>The R-Script <code>exec/loadRpkmRnaSeqCounts.R RPKM_counts_table.tsv path/2/GeneFamilies</code> in order to load the data into this R-package. <em>Note</em>, that the TAB delimited table is expected to have the following header: <code>id tissue rank expression variance</code></p>
+<p>Re-install the package after having executed this R-script.</p>
+</div>
+<div id="compute-interpro-annotations-based-function-diversity-for-gene-groups" class="section level3">
+<h3>Compute InterPro Annotations based function diversity for gene groups</h3>
+<p>In order to infer function diversity within gene groups like families, tandem or ortholog clusters, we measure the diversity of domain architecture in terms of Shannon Entropy. This is done for each gene group separately as well as within each group for orthologous versus non orthologous genes. In this, orthologs are used as background to enable testing the hypothesis wether function diversification took place after paralogous gene duplication.</p>
+<p>The following R-Script generates the data-set <code>IprBasedEntropies.RData</code>:</p>
+<p><code>Rscript ./exec/computeAnnotationBasedShannonEntropies.R path/2/GeneFamilies</code></p>
+<p>The single argument <em>must</em> point to this R-package’s local source directory. It will generate the above data file and thus it is required that you re-install the package after successfull completion of the script.</p>
+</div>
+<div id="compute-pairwise-gene-expression-profile-distances-within-gene-groups" class="section level3">
+<h3>Compute pairwise gene expression profile distances within gene groups</h3>
+<p>Differences in expression are correlated with function diversification. In order to detect such diversification of function we measure euclidean distances between expression profiles of genes within gene groups. Distances are computed between whole expression profiles as well as on each euclidean dimension (tissue).</p>
+<p>The following R-script generates the data-set <code>ExpressionProfileDistances.RData</code>:</p>
+<p><code>Rscript ./exec/computeExpressionProfileDistances.R path/2/GeneFamilies</code></p>
+<p>The single argument <em>must</em> point to this R-package’s local source directory. It will generate the above data file and thus it is required that you re-install the package after successfull completion of the script.</p>
+</div>
+<div id="investigate-function-diversities-using-expression-data-and-domain-architecture" class="section level3">
+<h3>Investigate function diversities using expression data and domain architecture</h3>
+<p>Per gene group function diversity is assessed in two ways. For all eight Brassicaceaen proteomes using domain architecture diversity within given gene groups, and as median distance between expression profiles of the proteomes of <em>A. thaliana</em> and <em>C. hirsuta</em>. Mainly four classes of gene groups are investigated: * Orthologs (Orth) * Tandem Duplicates (Tand) * Expanded Gene Families (Exp) * Gene Families showing signs of positive selection (PSel)</p>
+<p>Define the above gene-sets with the following R-script:</p>
+<p><code>Rscript ./exec/defineGeneSets.R path/2/GeneFamilies-source-package</code></p>
+<p>The single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.</p>
+<p>The distributions of the two function diversity measures are plotted for each class of gene group. Furthermore within each class the function diversity distributions are compared between Orthologs and Non-Orthologs. Finally t-tests are carried out to detect significant differences between these distributions.</p>
+<div id="domain-architecture-diversity-shannon-entropy" class="section level4">
+<h4>Domain Architecture Diversity (Shannon Entropy)</h4>
+<p>In order to compute the Shannon Entropies of domain architecture within the different groups of genes use the following R-script:</p>
+<p><code>Rscript ./exec/computeAnnotationBasedShannonEntropies.R path/2/GeneFamilies-source-package</code></p>
+<p>The single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.</p>
+<p>In order to carry out the above explained t-tests and generate the boxplots of the domain architecture diversities use the following R-script:</p>
+<p><code>Rscript ./exec/investigateDistributionsOfAnnotationBasedShannonEntropies.R path/2/GeneFamilies-source-package</code></p>
+<p>Again, the single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.</p>
+</div>
+<div id="expression-profile-based-function-diversity" class="section level4">
+<h4>Expression Profile based Function Diversity</h4>
+<p>In order to compute the distances between the expression profiles for <em>C. hirsuta</em> and <em>A. thaliana</em> genes use the following R-script:</p>
+<p><code>Rscript ./exec/computeExpressionProfileDistances.R path/2/GeneFamilies-source-package</code></p>
+<p>The single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.</p>
+<p>The following R-script summarizes the different distances per gene group using various statistics, like <code>mean</code>, <code>median</code>, <code>max</code>, and <code>maxMinusMin</code>:</p>
+<p><code>Rscript ./exec/investigateDistributionsOfExpressionProfileDistances.R path/2/GeneFamilies-source-package</code></p>
+<p>Again, the single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.</p>
+<p>Finally carry out the mentioned t-tests and generate the corresponding plots with:</p>
+<p><code>Rscript ./exec/plotDistributionsOfExpressionProfileDistances.R path/2/GeneFamilies-source-package</code></p>
+<p>Again, the single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.</p>
+<div id="developmental-hourglass-or-expression-diversity-per-tissue" class="section level5">
+<h5>Developmental hourglass or expression diversity per tissue</h5>
+<p>In order to investigate which classes of gene groups mostly contribute to developmental diversity, measure and subsequently compare the distributions of expression profile distances within the different tissues. In this also compare Non-Orthologs with Orthologs.</p>
+<p>The following script computes the tissue specific distances between expression profiles:</p>
+<p><code>Rscript ./exec/investigateDistributionsOfExpressionProfileDistancesPerTissue.R path/2/GeneFamilies-source-package</code></p>
+<p>The single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.</p>
+<p>Carry out the above explained t-tests and generate the hourglass plots with:</p>
+<p><code>Rscript ./exec/plotDistributionsOfExpressionProfileDistancesPerTissue.R path/2/GeneFamilies-source-package</code></p>
+<p>Again, the single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

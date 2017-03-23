@@ -1,0 +1,246 @@
+---
+title: "README of package GeneFamilies"
+author: "Dr. Asis Hallab"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The R package GeneFamilies includes all the code, data, and executables used to analyse the gene families generated from 8 Brassicaceaen genomes.
+
+## General Information / Requirements 
+
+This R package relys on results provided by external Bioinformatics tools. Among these sequence similarity search tools, like Blast and Blat, gene family clustering results, obtained by Markov Clustering with mcl, a species tree generated with fasttree from concatonated alignments of orthologous genes generated with mafft, etc.
+
+In general all executables in the packages' exec directory are meant to carry out setup functions or analyses specific to the data of the 8 Brassicaceaen genomes. In most cases, the package has to be re-installed after executing a R-Script in the exec directory, because new data wil be added to the package. However, the functions of the package are of general nature and serve to carry out the analyses with any custom data.
+
+## Gene Family Analyses
+
+In this section the gene family analyses for the 8 Brassicaceaen genomes is explained. Each step is reproducable and it is documented, how from initial setup the final results were obtained.
+
+### Load coding sequences of species
+
+Use R-script `exec/loadCodingSequences.R` and re-install package after execution to load the coding sequences of the 8 Brassicaceaen genomes.
+
+### Load Gene Families
+
+On all coding sequences available for the eight genomes ran an all-vs-all BLAT. Using this the results were fed into Markov Clustering based on Pairwise Sequence Similarities in percent. The MCL algorithm is implemented in the popular `mcl` program (`mcl 14-137, van Dongen`). It's output has been read in by the following script. Furthermore, the results were parsed and provided as a table in which each family was assigned a name (e.g. 'cluster\_1') and for each of the eight species the number of gene members is provided. The Perl-Script `mcl2orthoformat.pl` can be used to convert the MCL output into the table.
+
+Use R-script `exec/loadGeneFamilies.R` and re-install package after execution.o
+
+_Note_: Using these Shell commandos will enable to reduce the all-vs-all tabular separated Blast output table. Filtering will retain non self-matches, and per gene pair only the highest scoring local alignment, and will be sorted by sequence similarity, and if this is identical by alignment score:
+
+`sort -k1,1 -k2,2 -k3,3nr -k12,12nr ~all_vs_all_blast_out_tabular.tsv~ | awk -F "\t" 'BEGIN{x=""; y=""}{if($1 != $2 && (x != $1 || y != $2)){ x=$1; y=$2; print $0}}' > filtered_all_vs_all_blast_out_tabular.tsv`
+
+### Identification of Orthologs and Tandems
+
+Many different methods exist to identify both orthologous genes and tandem duplicated genes. We will use the widely spread reciprocal best Blast Hit method to identify Orhtologs, and subsequently identify Tandem Duplicates as genes belonging to the same family _and_ species _and_ being located on the same chromosome (scaffold) within a maximum distance of nine genes.
+
+First we need information about pairwise sequence similarity. For that we use the "all-vs-all" Blast result used to generate Gene-Families above.
+
+Filter the all-vs-all-Blast-table in order to retain only the best non-self-match per gene using the following Shell commandos:
+
+``
+
+### Reconstruct Gene Families' Phylogenies
+
+Use Maximum Likelihood Phylogenetic Algorithm (fasttree2) on each non-singleton family to reconstruct the family-trees. Required external software is macse, mafft, and fasttree2. For details see the functions in file phylogenies.R.
+
+Use R-script `exec/reconstructFamilyPhylogenies.R working_directory n_cores_to_use [batch-start batch-stop]`
+
+### Load InterProScan results for the eight Brassicaceaen genomes
+
+Obtain the latest InterPro XML database from [here](https://www.ebi.ac.uk/interpro/download.html) (last visited October 19, 2016).
+
+You need the InterProScan result files in TAB separated output-format for all of the eight Brassicaceaen genomes.
+
+Run R-script `exec/loadInterProData.R path/2/GeneFamilies/data aet_iprscan_out.tsv aly_iprscan_out.tsv ath_iprscan_out.tsv bra_iprscan_out.tsv chi_iprscan_out.tsv cru_iprscan_out.tsv esa_iprscan_out.tsv tpa_iprscan_out.tsv interpro.xml`
+
+Re-install package afterwards.
+
+### Assign the Gene-Families Human Readable Descriptions using R-package 'AHRD.on.gene.clusters'
+
+Run R-Script `exec/annotateFamilies.R path2/GeneFamilies/data`
+
+Re-install package afterwards.
+
+### Load information about Pairwise Sequence Similarities, Orthologs, and Tandems identified within the eight Brassicaceaen Genomes
+
+Use R-script `exec/loadOrthologsAndTandems.R path/2/GeneFamilies/data all_vs_all_tabular_blast_out.txt eight_brassicaceae_orthologs.txt eight_brassicaceae_tandems.txt` 
+
+Re-install package after execution to load the Pairwise Sequence Similarities, Ortholog, and Tandem information into the installed package.
+
+Cluster of Orthologs were inferred using reciprocal best hits in an all-vs-all Sequence-Similarity-Search with validation of 1 gene per other species matching to the TAIR10 (A. thaliana) reference. 
+
+Tandems were inferred in a similar manner, where the sequence similarity searches were carried out within each species' genome separately, and the validation was a maximum neighborhood of 9 genes in the genome.
+
+### Prepare Detection of natural Selection acting on conserved homologous codons (sites) using FUBAR
+
+To generate the FUBAR input batch files use the 
+
+R-script `exec/generateFubarBatchFiles.R working-directory` Note, that the working directory is the one used in task "Reconstruct Gene Families' Phylogenies".
+
+### Detect sites subject to positive selection using FUBAR (HYPHY)
+
+HYPHY Fubar batch files were generated within section 'Prepare Detection ...'. Submit them in parallel to a compute cluster, each with HYPHYMP cpu=`nCPUs` fubarBatchFileInput.bf
+
+### Load FUBAR Results
+
+Once the FUBAR analyses have been executed. Use the following methodology to load the FUBAR results into this R package:
+
+`Rscript ./exec/loadFubarResults.R path/2/families/working-directory path/2/this_package`
+
+First argument points to the directory in which to find the FUBAR result tables recursively, the second argument points to the source directory of this package, required to install the resulting RData files.
+
+After executing the script the package has to be re-installed in order to make the new RData available.
+
+### Detect pairwise Ka/Ks ratios within closest homologs
+
+Identification of closest homologs is done using the all-vs-all sequence similarity search results. Here, best hits are used aas the closest homolog, excluding self-matches. The coding sequences of the two respective homologs are aligned guided by the alignment of their respective amino-acid sequences. Based on this alignment the program `codeml` is used to compute pairwise Ka, Ks, and omega ('w') values. 
+
+The R-script `exec/computePairwiseKaKsRatios.R pairwise_ka_ks_table.tsv batch-start batch-stop` is used to submit the jobs in parallel. Once all jobs have successfully terminated the resulting tables are to be concatonated and stored as `pairwiseKaKs.RData` in this package's data directory.
+
+After all parallel computations have terminated concatonated their output tables into a single table and load it into R. Then save it in this R-package as data. Finally re-install the package.
+
+Concatonate the tables with the following Shell-Script:
+
+`head -1 ../GeneFamilies_WorkingDir/KaKs_Batch_1.tsv > ./inst/pairwiseKaKs.tsv
+cat ../GeneFamilies_WorkingDir/KaKs_Batch_*.tsv | sed -e '/^gene.a/d' >> ./inst/pairwiseKaKs.tsv`
+
+Use the following R-Code:
+
+`pairwise.Ka.Ks <- read.table( "./inst/pairwiseKaKs.tsv", sep="\t", header=TRUE, comment.char='', quote='', na.strings='NA', colClasses=c( rep('character',2),rep('numeric',3)), stringsAsFactors=FALSE)
+save( pairwise.Ka.Ks, file="./data/pairwiseKaKs.RData" )`
+
+### Compute Ka/Ks ratios for closest Orthologs that have not yet been considered by the above closest Homolog approach
+
+Some genes may e.g. include premature stop codons and thus we can not obtain relyable Ka/Ks values from gene pairs including them. Hence for the subset of genes that still have no Ka/Ks value assigned but have an orthologous partner, we compute their Ka/Ks values using the closest ortholog.
+
+Use R-Script `exec/computeOrthologsKaKsRatios.R path/2/GeneFamilies` and re-install package after successful termination of the script.
+
+### Verify positive selection phylogenetically for genes positively selected according to pairwise comparison of homologs
+
+Use HyPhy's BUSTED to perform a phylogenetically informed test for branch specific positive selection. The tested 'foreground' genes are those identified as positively selected according to pairwise comparison of closest homologs (see above).
+
+Use `Rscript exec/generateBustedBatchFiles.R path/2/families_dir`
+
+The only argument provided is the working directory in which each family's phylogeny is stored (see above).
+
+#### Start the BUSTED analyses using a job queue
+
+Find all BUSTED Batch Files and submit them to your cluster. E.g. as follows:
+
+`find . -name 'cluster_*_hyphy_busted_input.bf' -type f > ./submit_busted_jobs.sh`
+
+Edit the above file according to the needs of your Job-Queue-System and submit the Jobs afterwards.
+
+#### Load BUSTED results 
+
+Find all BUSTED JSON output files and parse their last line for the P-Value. Based on this infer which foreground genes have received a significant BUSTED-P-Value.
+
+`Rscript exec/loadBustedResults.R path/2/Families/Working-Dir path/2/GeneFamilies`
+
+First argument points to the working directory in which all family phylogenies and selection analyses are stored. The second argument points to this R-package itself. Remember to re-install the package after the script has successfully terminated. Otherwise the generated RData file will not be available.
+
+### Identify significantly expanded or contracted families
+
+Use the CAFE algorithm together with a ultrametric species tree to identify Gene Families significantly expanded / contracted during the evolution of any of the included species. 
+
+The R-Script `exec/parseCafeResult.R path/2/cafe_result.txt.cafe path/2/GeneFamilies/data` parses the CAFE results and adjust the provided P-Values to multiple hypotheses testing (`method="BY"`). Data is stored in the package. Re-install this package after this script has been executed.
+
+### Load tissue specific expression data
+
+Use expresion data to generate expression profiles for different sets of genes and enable comparison of them, also on the level of the tissue.
+
+The R-Script `exec/loadRpkmRnaSeqCounts.R RPKM_counts_table.tsv path/2/GeneFamilies` in order to load the data into this R-package. _Note_, that the TAB delimited table is expected to have the following header: `id tissue rank expression variance`
+
+Re-install the package after having executed this R-script. 
+
+### Compute InterPro Annotations based function diversity for gene groups
+
+In order to infer function diversity within gene groups like families, tandem or ortholog clusters, we measure the diversity of domain architecture in terms of Shannon Entropy. This is done for each gene group separately as well as within each group for orthologous versus non orthologous genes. In this, orthologs are used as background to enable testing the hypothesis wether function diversification took place after paralogous gene duplication.
+
+The following R-Script generates the data-set `IprBasedEntropies.RData`:
+
+`Rscript ./exec/computeAnnotationBasedShannonEntropies.R path/2/GeneFamilies`
+
+The single argument _must_ point to this R-package's local source directory. It will generate the above data file and thus it is required that you re-install the package after successfull completion of the script.
+
+### Compute pairwise gene expression profile distances within gene groups
+
+Differences in expression are correlated with function diversification. In order to detect such diversification of function we measure euclidean distances between expression profiles of genes within gene groups. Distances are computed between whole expression profiles as well as on each euclidean dimension (tissue).
+
+The following R-script generates the data-set `ExpressionProfileDistances.RData`:
+
+`Rscript ./exec/computeExpressionProfileDistances.R path/2/GeneFamilies`
+
+The single argument _must_ point to this R-package's local source directory. It will generate the above data file and thus it is required that you re-install the package after successfull completion of the script.
+
+### Investigate function diversities using expression data and domain architecture
+
+Per gene group function diversity is assessed in two ways. For all eight Brassicaceaen proteomes using domain architecture diversity within given gene groups, and as median distance between expression profiles of the proteomes of _A. thaliana_ and _C. hirsuta_. Mainly four classes of gene groups are investigated: 
+* Orthologs (Orth)
+* Tandem Duplicates (Tand)
+* Expanded Gene Families (Exp)
+* Gene Families showing signs of positive selection (PSel)
+
+Define the above gene-sets with the following R-script:
+
+`Rscript ./exec/defineGeneSets.R path/2/GeneFamilies-source-package`
+
+The single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.
+
+The distributions of the two function diversity measures are plotted for each class of gene group. Furthermore within each class the function diversity distributions are compared between Orthologs and Non-Orthologs. Finally t-tests are carried out to detect significant differences between these distributions.
+
+#### Domain Architecture Diversity (Shannon Entropy)
+
+In order to compute the Shannon Entropies of domain architecture within the different groups of genes use the following R-script:
+
+`Rscript ./exec/computeAnnotationBasedShannonEntropies.R path/2/GeneFamilies-source-package`
+
+The single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.
+
+In order to carry out the above explained t-tests and generate the boxplots of the domain architecture diversities use the following R-script:
+
+`Rscript ./exec/investigateDistributionsOfAnnotationBasedShannonEntropies.R path/2/GeneFamilies-source-package`
+
+Again, the single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.
+
+#### Expression Profile based Function Diversity
+
+In order to compute the distances between the expression profiles for _C. hirsuta_ and _A. thaliana_ genes use the following R-script:
+
+`Rscript ./exec/computeExpressionProfileDistances.R path/2/GeneFamilies-source-package`
+
+The single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.
+
+The following R-script summarizes the different distances per gene group using various statistics, like `mean`, `median`, `max`, and `maxMinusMin`:
+
+`Rscript ./exec/investigateDistributionsOfExpressionProfileDistances.R path/2/GeneFamilies-source-package`
+
+Again, the single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.
+
+Finally carry out the mentioned t-tests and generate the corresponding plots with:
+
+`Rscript ./exec/plotDistributionsOfExpressionProfileDistances.R path/2/GeneFamilies-source-package`
+
+Again, the single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.
+
+##### Developmental hourglass or expression diversity per tissue
+
+In order to investigate which classes of gene groups mostly contribute to developmental diversity, measure and subsequently compare the distributions of expression profile distances within the different tissues. In this also compare Non-Orthologs with Orthologs.
+
+The following script computes the tissue specific distances between expression profiles:
+
+`Rscript ./exec/investigateDistributionsOfExpressionProfileDistancesPerTissue.R path/2/GeneFamilies-source-package`
+
+The single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.
+
+Carry out the above explained t-tests and generate the hourglass plots with:
+
+`Rscript ./exec/plotDistributionsOfExpressionProfileDistancesPerTissue.R path/2/GeneFamilies-source-package`
+
+Again, the single argument needs to point to the local source package directory. After the script has generated the required RData-sets, the package needs to be re-installed.

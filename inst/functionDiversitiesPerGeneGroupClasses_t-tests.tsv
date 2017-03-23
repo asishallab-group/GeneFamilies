@@ -1,0 +1,4 @@
+Group.Class	Alternative.Hypothesis	p.value	effect.size.t	p.value.corr
+Tand	orthologs have lower mean diversity than non-orthologs	1.37840230172523e-05	-4.20340098539183	3.79060632974439e-05
+Exp	orthologs have lower mean diversity than non-orthologs	5.57011612455241e-29	-11.4624048018898	3.06356386850382e-28
+PSel	orthologs have lower mean diversity than non-orthologs	0.000361452947937163	-3.3834457523377	0.000662663737884798

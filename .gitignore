@@ -1,0 +1,5 @@
+inst/doc
+.Rapp.history
+VennDiagram*.log
+.nfs*
+data
