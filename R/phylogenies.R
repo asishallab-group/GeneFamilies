@@ -257,8 +257,11 @@ formatNodeLabels <- function(nd.lb) {
 #'
 #' @return A named list. Names are the argument tips and values the node label
 #' of the root node of the sub-tree.
-#' @export
-#' @import phangorn ape
+#' Not supported by defaut. At '@' signs before the following export and import
+#' and run roxygen2::roxygenize('GeneFamilies_directory'), reinstall this
+#' package.
+#' export
+#' import phangorn ape
 subTrees <- function(tree, nds = unique(tree$edge[, 1])) {
     lst <- list()
     lapply(nds, function(x) {

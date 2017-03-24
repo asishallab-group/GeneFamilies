@@ -15,6 +15,11 @@ subTrees(tree, nds = unique(tree$edge[, 1]))
 \value{
 A named list. Names are the argument tips and values the node label
 of the root node of the sub-tree.
+Not supported by defaut. At '@' signs before the following export and import
+and run roxygen2::roxygenize('GeneFamilies_directory'), reinstall this
+package.
+export
+import phangorn ape
 }
 \description{
 Identifies a list of sub-trees in argument tree initiating from the the
