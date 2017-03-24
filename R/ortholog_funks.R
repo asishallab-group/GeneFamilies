@@ -170,20 +170,52 @@ matchingSpliceVariant <- function(gene.ids, genes = as.character(unlist(spec.gen
     gene.ids
 }
 
+#' Extracts clusters of highly conserved orthologous genes from pairwise
+#' reciprocal best hits obtained from sequence similarity searches. The
+#' searches are explained in detail in this package's Vignette
+#' \code{GeneFamilies}, section \code{Ortholog Identification}. Only ortholog
+#' clusters that have the exact same size as the numer of investigated species
+#' are returned.
+#'
+#' @param pair.best.hits.tbl An instance of \code{base::data.frame} holding the
+#' final result of the concatonated filtered pairwise sequence similarity
+#' searches. See Vignette \code{GeneFamilies} for details on how to generate
+#' this input table.
+#' @param spec.gene.ids.arg An instance of \code{base::list} with names being
+#' the investigated species and values all protein accessions belonging to the
+#' respective species. Default is \code{spec.gene.ids} (see file \code{zzz.R}
+#' for more details).
+#' @param anchor.gene.col The column-name or column-index of
+#' \code{pair.best.hits.tbl} in which to find the anchor genes, i.e. those
+#' genes of the species all pairwise sequence similarity searches were
+#' conducted with. Default is \code{1}.
+#' @param candidate.gene.col The column-name or column-index of
+#' \code{pair.best.hits.tbl} in which to find the candidate genes, that were
+#' the best hits in the pairwise sequence similarity searches. Default is
+#' \code{2}.
+#'
+#' @return An instance of \code{base::data.frame} with one ortholog cluster per
+#' row and one column for each of the investigated species. An additional
+#' column holds the ortholog cluster name, composed as
+#' \code{'ortholog_cluster_<number>'}.
+#' @export
 orthologsFromPairwiseReciprocalBestHits <- function(pair.best.hits.tbl, spec.gene.ids.arg = spec.gene.ids, 
     anchor.gene.col = 1, candidate.gene.col = 2) {
     anchor.genes <- unique(pair.best.hits.tbl[, anchor.gene.col])
-    orths.lst <- lapply(anchor.genes, function(x) {
+    orths.df <- as.data.frame(matrix(vector(), ncol = length(spec.gene.ids), nrow = 0, 
+        dimnames = list(c(), sort(names(spec.gene.ids)))), stringsAsFactors = FALSE)
+    for (x in anchor.genes) {
         orth.cands <- pair.best.hits.tbl[which(pair.best.hits.tbl[, anchor.gene.col] == 
             x), candidate.gene.col]
-        if (length(orth.cands) == length(spec.genes) - 1) {
+        if (length(orth.cands) == length(spec.gene.ids.arg) - 1) {
             orth.genes <- c(orth.cands, x)
-            setNames(orth.genes, unlist(lapply(orth.genes, function(y) speciesForGeneId(y, 
-                spec.gene.ids.arg))))
-        } else NULL
-    })
-    orths.lst <- orths.lst[which(!is.null(orths.lst))]
-    orths.df <- Reduce(rbind, orths.lst, stringsAsFactors = FALSE)
-    orths.df$Cluster <- paste("ortholog_cluster_", 1:nrow(orths.df), sep = "")
-    list(orthologs.list = orths.lst, orthologs.data.frame = orths.df)
+            orth.genes.named <- setNames(orth.genes, unlist(lapply(orth.genes, 
+                function(y) speciesForGeneId(y, spec.gene.ids.arg))))
+            o.df.row <- nrow(orths.df) + 1
+            orths.df[o.df.row, ] <- orth.genes.named[sort(names(spec.gene.ids))]
+        }
+    }
+    o.cl.names <- paste("ortholog_cluster_", 1:nrow(orths.df), sep = "")
+    orths.df$Cluster <- o.cl.names
+    orths.df[, c("Cluster", sort(names(spec.gene.ids)))]
 }
