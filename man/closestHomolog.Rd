@@ -41,4 +41,3 @@ Uses pairwise sequence similarity search results in order to identify which
 gene is the closest homolog of the argument \code{gene.id}. Self-Matches are
 excluded and as measure of sequence similarity the Bit-Score is used.
 }
-

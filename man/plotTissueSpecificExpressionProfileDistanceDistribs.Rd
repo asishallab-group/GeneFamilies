@@ -37,4 +37,3 @@ distances. Draws a line from each upper Whisker to the next in order to
 highlight the hourglass shape. Tissues must be given in the order according
 to a plant's life.
 }
-

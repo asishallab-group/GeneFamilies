@@ -16,9 +16,13 @@ procGOHyperGResult(ghgr, pvalue.cutoff = 0.01)
 A data.frame with three columns: 1. 'GO.term', 2. 'p.value', and 3.
         'GO.category' - or NULL if no significantly enriched GO terms were
         found.
+Not supported by defaut. At '@' signs before the following export and import
+and run roxygen2::roxygenize('GeneFamilies_directory'), reinstall this
+package.
+export
+import GO.db
 }
 \description{
 Converts an instance of GOHyperGResult into a table containing only the
 significantly enriched Gene Ontology terms.
 }
-

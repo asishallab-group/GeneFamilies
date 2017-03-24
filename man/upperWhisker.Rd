@@ -17,4 +17,3 @@ A single number
 Identifies the value that corresponds to the upper whisker end in an
 boxplot. \code{NA} are ignored
 }
-

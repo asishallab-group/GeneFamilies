@@ -33,4 +33,3 @@ A character vector of matching InterPro domains.
 Looks up the conserved protein domains (InterPro) that have been annotated
 to gene and overlap with amino acid position 'aa.pos'.
 }
-

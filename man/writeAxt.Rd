@@ -20,4 +20,3 @@ the result of calling readLines
 Writes pairwise aligned sequences to a file of AXT format for Ka/Ks
 calculation.
 }
-

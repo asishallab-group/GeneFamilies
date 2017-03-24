@@ -54,4 +54,3 @@ tissues.
 Computes the distance (\code{base::dist}) between the expression profiles of
 the genes in argument \code{gene.accessions}.
 }
-

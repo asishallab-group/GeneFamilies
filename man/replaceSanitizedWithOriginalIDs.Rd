@@ -28,4 +28,3 @@ replaced with their originals.
 Replaces sanitized protein identifiers in XStringSet 'xstring.set' with the
 original ones held in 'name.maps' table.
 }
-

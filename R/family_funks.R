@@ -77,34 +77,6 @@ parseCafeBranchSpecificPValues <- function(cafe.br.spec.pvals, spec.pos) {
     })
 }
 
-#' Alternative method to detect expanded or compressed families comparing one
-#' species with the background of the others. P-Values are obtained from an
-#' outlier chisquare test; see package outliers::chisq.out.test(...) for
-#' details.
-#'
-#' @param x named integer vector representing the gene family to test. x holds
-#' the number of gene members per species. 
-#' @param test.species a string being used ase a name in argument 'x'
-#' indicating which species is the alternative hypothesis of expansion (or
-#' contraction) based upon
-#' @param background.species a character vector holding the names of the
-#' species the background distribution of numbers of the species specific
-#' family members is based upon.
-#' @param expansion.test boolean indicating whether to test for expansion
-#' (default TRUE) or compression (set to FALSE).
-#'
-#' @return numeric p-value obtained from outliers::chisq.out.test(x) or NA, if
-#' expansion-test does not indicate a candidate outlier.
-#' @import outliers
-#' @export
-familyExpanded <- function(x, test.species = "chi", background.species = setdiff(names(x), 
-    test.species), expansion.test = max) {
-    if (expansion.test && x[test.species] > max(x[background.species]) || !expansion.test && 
-        x[test.species] < min(x[background.species])) {
-        chisq.out.test(x)$p.value
-    } else NA
-}
-
 #' Given a character vector regular expressions are applied to extract
 #' substrings of the type 'fam1234'.
 #'

@@ -26,4 +26,3 @@ A String representing the aligned codon sequence
 Uses an amino acid multiple sequence alignment to guide the alignment of
 codon sequence 'cds'.
 }
-

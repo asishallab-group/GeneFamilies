@@ -25,4 +25,3 @@ An instance of base::data.frame
 Uses function 'readInterProScanResultTable(path.2.iprscan.res)' and retains
 only two columns: 1. Gene Identifier, and 2. InterPro Identifier.
 }
-

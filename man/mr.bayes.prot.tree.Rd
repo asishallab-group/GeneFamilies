@@ -12,4 +12,3 @@ mr.bayes.prot.tree
 Brew template to generate a protein group's Mr Bayes input file
 }
 \keyword{datasets}
-

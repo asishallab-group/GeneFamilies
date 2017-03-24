@@ -41,4 +41,3 @@ or underrepresentation of 'anno' in the case 'anno.tbl' when compared with
 the whole universe 'universe.tbl'. Please note, that 'anno.tbl' is expected
 to be a true subset of 'universe.tbl.'
 }
-

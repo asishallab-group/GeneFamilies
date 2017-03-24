@@ -37,9 +37,13 @@ details.}
 }
 \value{
 A named list with enriched GO terms in the argument GO categories.
+Not supported by defaut. At '@' signs before the following export and import
+and run roxygen2::roxygenize('GeneFamilies_directory'), reinstall this
+package.
+export
+import GOstats GSEABase
 }
 \description{
 Computes a Gene Ontology (GO) enrichment test using the functions from #'
 package GOstats and GSEABase.
 }
-

@@ -14,4 +14,3 @@ Brew template to generate an Mr Bayes input file for a multiple alignment of
 Coding Sequences (CDS MSA).
 }
 \keyword{datasets}
-

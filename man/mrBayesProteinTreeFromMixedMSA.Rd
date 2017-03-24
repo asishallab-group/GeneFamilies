@@ -29,4 +29,3 @@ Generates a valid input file for Mr Bayes, which will generate a Bayesian
 phylogeny from a multiple amino acid sequence alignment AND an alignment of
 additional e.g. morphological data.
 }
-

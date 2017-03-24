@@ -29,4 +29,3 @@ to 'sel.aa'.
 Selects the aligned amino acid subsequence around the given coordinate
 including radius up- and downstream AAs.
 }
-

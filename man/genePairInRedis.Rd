@@ -19,4 +19,3 @@ accessions 'A_B' appear in the Redis store.
 Checks wether in the current Redis server there is an entry for gene pair
 'gene.pair'
 }
-

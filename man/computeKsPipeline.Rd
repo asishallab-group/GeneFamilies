@@ -43,4 +43,3 @@ This function will only work on *nix Operating Systems with 'codeml' and
 \references{
 Yang, Z. and Nielsen, R. (2000) Mol. Biol. Evol., 17, 32-43.
 }
-

@@ -28,4 +28,3 @@ Adds a column to 'enrichment.tbl' holding human readable descriptions for
 the annotations found o be enriched. This function has been written
 primarily for use with InterPro annotations.
 }
-

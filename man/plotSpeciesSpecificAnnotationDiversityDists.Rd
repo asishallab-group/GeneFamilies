@@ -36,4 +36,3 @@ TRUE if and only if the plot can be generated successfully
 Boxplots the distributions of species specific annotation (function)
 diversity, measured for each single gene group found in 'entropy.df'.
 }
-

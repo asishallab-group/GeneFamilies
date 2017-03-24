@@ -25,4 +25,3 @@ Translates the FUBAR reported expected absolute NUMBER of false positives
 into a relative false positive rate for each family within which positively
 selected codons have been identified.
 }
-

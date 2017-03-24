@@ -58,4 +58,3 @@ validation is done for the other rows and columns. Error-Codes are:
 the size of the mathematical set of all elements contained in both rows and
 columns (row.1, row.2, col.1, col.2).
 }
-

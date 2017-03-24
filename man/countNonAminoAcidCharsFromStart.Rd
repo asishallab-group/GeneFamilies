@@ -21,4 +21,3 @@ of the argument 'aa.seq'.
 \description{
 Args:
 }
-

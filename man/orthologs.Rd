@@ -26,4 +26,3 @@ too. This should ease lookup.
 Identifies orthologous gene pairs as genes being significantly similar in
 sequence and belonging to different species.
 }
-

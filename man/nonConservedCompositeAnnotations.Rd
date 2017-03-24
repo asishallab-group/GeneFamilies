@@ -33,4 +33,3 @@ frequent ones found for the argument genes and based upon argument gene
 (function) annotations. For more details about composite annotations see
 function 'compositeAnnotations(...)'
 }
-

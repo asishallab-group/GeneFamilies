@@ -20,4 +20,3 @@ is replaced with two columns 'gene.1' and 'gene.2'.
 Extracts the gene pairs' identifiers from the 'Sequence' column of
 'hom.kaks.tbl' and replaces this column with the parse result.
 }
-

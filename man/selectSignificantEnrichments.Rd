@@ -19,4 +19,3 @@ A subset of 'enrichment.tbl' holding only the significant results.
 Filters 'enrichment.tbl' for those annotations that have a significant
 adjusted p.value.
 }
-

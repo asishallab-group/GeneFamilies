@@ -16,4 +16,3 @@ codon.
 \description{
 Validates an AAString
 }
-

@@ -31,4 +31,3 @@ Selects those results obtained from calling \code{enrichedAnnotations} that
 are significant and adds informative information to the annotations
 extracted from the \code{anno.db}.
 }
-

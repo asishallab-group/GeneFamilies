@@ -49,4 +49,3 @@ orthologs between two species can be extracted, even though the BLAT output
 file contains similarity pairs from more than two species. Note that
 orthology is inferred based on reciprocal best search results.
 }
-

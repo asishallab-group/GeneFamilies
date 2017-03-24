@@ -20,4 +20,3 @@ of the root node of the sub-tree.
 Identifies a list of sub-trees in argument tree initiating from the the
 argument nodes and maps those sub-trees on their contained tips.
 }
-

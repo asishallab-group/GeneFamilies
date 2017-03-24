@@ -17,4 +17,3 @@ The modified 'gene.ids' without the trailing splice variant IDs.
 Removes trailing splice variant identifier from gene IDs; e.g. CARHR213450.1
 -> CARHR213450
 }
-

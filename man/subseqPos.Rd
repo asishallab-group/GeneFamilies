@@ -19,4 +19,3 @@ An integer vector with matching start positions.
 Infers the amino acid position(s) at which the argument 'aa.subseq' starts
 in the full 'aa.full' amino acid sequence.
 }
-

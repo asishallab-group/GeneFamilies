@@ -26,4 +26,3 @@ Assuming 'gene.ids' holds gene identifiers that lack splice variant suffixes
 like '.1' but refer to genes contained in this packages coding sequences
 (data) this function aims to identify the matching splice variants.
 }
-

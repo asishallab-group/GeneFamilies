@@ -24,4 +24,3 @@ Bayesian tree for}
 Generates a valid input file for Mr Bayes, which will generate a Bayesian
 phylogeny from a multiple amino acid sequence alignment.
 }
-

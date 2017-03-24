@@ -35,4 +35,3 @@ obtained from an multiple sequence alignment. This is done by iterativly
 increasing a amino acid substring, without gap characters, and finding its
 position on the original unaligned amino acid sequence.
 }
-

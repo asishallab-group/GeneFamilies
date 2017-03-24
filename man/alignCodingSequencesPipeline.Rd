@@ -40,4 +40,3 @@ then validates them for premature stop codons, subsequently generates a
 multiple sequence alignment (MSA) of amino acid (AA) sequences, then uses
 this AA MSA as guide and aligns the coding sequences in the final step.
 }
-

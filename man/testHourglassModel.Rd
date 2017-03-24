@@ -51,4 +51,3 @@ class early and late developmental tissues with intermediate samples. This
 should show wether early and late stages are more diverse than intermediate
 ones, and thus give the hourglass shape.
 }
-

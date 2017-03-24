@@ -205,8 +205,11 @@ cbindAnnotationDescription <- function(enrichment.tbl, annotation.db = ipr.db, a
 #'        details.
 #'
 #' @return A named list with enriched GO terms in the argument GO categories.
-#' @export
-#' @import GOstats GSEABase
+#' Not supported by defaut. At '@' signs before the following export and import
+#' and run roxygen2::roxygenize('GeneFamilies_directory'), reinstall this
+#' package.
+#' export
+#' import GOstats GSEABase
 goEnrichTest <- function(gsc, gene.ids, univ.gene.ids, ontologies = c("BP", "CC", 
     "MF"), pvalue.cutoff = 0.01, cond = FALSE, test.dir = "over", p.adjust.method = "fdr") {
     setNames(mclapply(ontologies, function(go.ont) {
@@ -233,8 +236,11 @@ goEnrichTest <- function(gsc, gene.ids, univ.gene.ids, ontologies = c("BP", "CC"
 #' @return A data.frame with three columns: 1. 'GO.term', 2. 'p.value', and 3.
 #'         'GO.category' - or NULL if no significantly enriched GO terms were
 #'         found.
-#' @export
-#' @import GO.db
+#' Not supported by defaut. At '@' signs before the following export and import
+#' and run roxygen2::roxygenize('GeneFamilies_directory'), reinstall this
+#' package.
+#' export
+#' import GO.db
 procGOHyperGResult <- function(ghgr, pvalue.cutoff = 0.01) {
     go.ont <- strsplit(ghgr@testName, " ")[[2]]
     x.pv <- pvalues(ghgr)

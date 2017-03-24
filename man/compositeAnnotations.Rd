@@ -32,4 +32,3 @@ Generates a list of composite Annotations found for the argument genes based
 on the argument gene (function) annotation data.frame. Composite annotations
 are sorted alphabetically and then concatonated with ',' as separator.
 }
-

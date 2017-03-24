@@ -35,4 +35,3 @@ A data.frame with two columns: 1. Annotation and 2. Annotation.Name
 Infer enriched annotations specific to the argument type of gene-groups, add
 human readable information to it and return it as a data.frame.
 }
-

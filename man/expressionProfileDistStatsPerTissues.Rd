@@ -34,4 +34,3 @@ inferred for each group of tissue specific distances as found in argument
 \description{
 Extract different \code{stats} per tissue specific expression profile distances.
 }
-

@@ -37,4 +37,3 @@ sorted and concatonated in order to treat them as single composite
 annotations. This means, that e.g if all genes have the same three
 annotations the resulting entropy will be 0.
 }
-

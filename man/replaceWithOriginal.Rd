@@ -23,4 +23,3 @@ order of their matching sanitized ones as they appear in the argument
 Returns the matching original names for the sanitized ones held in argument
 'san.names'.
 }
-

@@ -24,4 +24,3 @@ Uses 'gene.1' as the first member of the orthologous gene pair and extracts
 the gene identifier of the pairs second member from the 'Sequence' column of
 'orth.kaks.tbl' and replaces this column with the result.
 }
-

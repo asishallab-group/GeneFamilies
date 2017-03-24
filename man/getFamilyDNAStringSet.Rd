@@ -24,4 +24,3 @@ Extracts the coding sequences of the gene members of the argument family
 from this package's database 'all.cds'. Warns, if not all members are found
 in the database.
 }
-
