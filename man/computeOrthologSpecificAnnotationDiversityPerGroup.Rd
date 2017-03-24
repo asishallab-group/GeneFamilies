@@ -8,18 +8,19 @@ affiliation the distinction here is wether genes are Orthologs or
 Non-Orthologs.}
 \usage{
 computeOrthologSpecificAnnotationDiversityPerGroup(gene.groups.df,
-  orthologs = orthologs.genes, group.col = "Family", gene.col = "Gene")
+  orthologs = orthologs.genes, group.col.arg = "Family",
+  gene.col = "Gene")
 }
 \arguments{
 \item{gene.groups.df}{An instance of base::data.frame with at least two
 columns. One must hold the gene group identifiers and the other the gene
 identifiers (accessions) belonging to the respective group.}
 
-\item{group.col}{The column name of 'gene.groups.df' in which to find the
-gene group identifiers. Default is 'Family'.}
-
 \item{gene.col}{The column name of 'gene.groups.df' in which to find the
 gene identifiers (accessions). Default is 'Gene'.}
+
+\item{group.col}{The column name of 'gene.groups.df' in which to find the
+gene group identifiers. Default is 'Family'.}
 }
 \value{
 An instance of base::data.frame with several columns. The first

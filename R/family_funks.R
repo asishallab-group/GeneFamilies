@@ -133,9 +133,9 @@ compositeAnnotations <- function(gene.accs, gene.annos = all.ipr, gene.col = 1, 
 #' architectures and their frequencies
 annotationBasedShannonEntropy <- function(gene.accs, gene.annos = all.ipr, gene.col = 1, 
     anno.col = 2) {
-    gene.annos.freqs <- table(compositeAnnotations(gene.accs, gene.annos, gene.col, 
+    gene.annos.freqs.res <- table(compositeAnnotations(gene.accs, gene.annos, gene.col, 
         anno.col))
-    list(gene.annos.freqs = gene.annos.freqs, entropy = entropy(gene.annos.freqs))
+    list(gene.annos.freqs = gene.annos.freqs.res, entropy = entropy(gene.annos.freqs.res))
 }
 
 #' Computes for each gene group in \code{groups.ids} the annotation based
@@ -200,14 +200,14 @@ geneGroupsAnnotationBasedShannonEntropy <- function(groups.ids, groups.2.genes.l
 #' respective gene group.
 computeSpeciesSpecificAnnotationDiversityPerGroup <- function(groups.df, group.col = "Tandem.Cluster", 
     species.col = "Species", gene.col = "Gene", group.ids = unique(groups.df[, group.col]), 
-    species = unique(groups.df[, species.col]), gene.annos = all.ipr, annos.gene.col = 1, 
+    species = unique(groups.df[, species.col]), gene.annos.arg = all.ipr, annos.gene.col = 1, 
     annos.anno.col = 2) {
     res.df <- as.data.frame(do.call("rbind", mclapply(group.ids, function(x) {
         clstr <- groups.df[which(groups.df[, group.col] == x), ]
         clstr.spec.entrp <- lapply(species, function(y) {
             if (y %in% clstr[, species.col]) {
                 annotationBasedShannonEntropy(clstr[which(clstr[, species.col] == 
-                  y), gene.col], gene.annos = gene.annos, gene.col = annos.gene.col, 
+                  y), gene.col], gene.annos = gene.annos.arg, gene.col = annos.gene.col, 
                   anno.col = annos.anno.col)$entropy
             } else NA
         })
@@ -241,11 +241,11 @@ computeSpeciesSpecificAnnotationDiversityPerGroup <- function(groups.df, group.c
 #' gene groups; NA values where no genes of that species were found to be
 #' members of the respective gene group.
 computeOrthologSpecificAnnotationDiversityPerGroup <- function(gene.groups.df, orthologs = orthologs.genes, 
-    group.col = "Family", gene.col = "Gene") {
+    group.col.arg = "Family", gene.col = "Gene") {
     gene.groups.extended.df <- gene.groups.df
     gene.groups.extended.df$Species <- as.character(unlist(mclapply(gene.groups.extended.df[, 
         gene.col], function(x) if (x %in% orthologs) "Orthologs" else "Non-Orthologs")))
-    computeSpeciesSpecificAnnotationDiversityPerGroup(gene.groups.extended.df, group.col = group.col, 
+    computeSpeciesSpecificAnnotationDiversityPerGroup(gene.groups.extended.df, group.col = group.col.arg, 
         gene.col = gene.col)
 }
 

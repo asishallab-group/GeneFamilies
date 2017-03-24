@@ -9,7 +9,7 @@ separate for each species. Note it is highly recommended to set
 computeSpeciesSpecificAnnotationDiversityPerGroup(groups.df,
   group.col = "Tandem.Cluster", species.col = "Species",
   gene.col = "Gene", group.ids = unique(groups.df[, group.col]),
-  species = unique(groups.df[, species.col]), gene.annos = all.ipr,
+  species = unique(groups.df[, species.col]), gene.annos.arg = all.ipr,
   annos.gene.col = 1, annos.anno.col = 2)
 }
 \arguments{
@@ -35,15 +35,15 @@ groups found in 'groups.df'.}
 'species.col'. Species not present in this argument will not be considered.
 Default is all distinct species names found in 'groups.df'.}
 
-\item{gene.annos}{The data.frame holding the annotations for the genes in
-'gene.accs'. Default is all available InterPro annotations expected to be
-found in 'all.ipr'}
-
 \item{annos.gene.col}{the column of 'gene.annos' in which to lookup the gene
 identifiers or gene accessions. Default is 1}
 
 \item{annos.anno.col}{the column of 'gene.annos' in which to lookup the
 function annotation for the genes in 'gene.accs'. Default is 2}
+
+\item{gene.annos}{The data.frame holding the annotations for the genes in
+'gene.accs'. Default is all available InterPro annotations expected to be
+found in 'all.ipr'}
 }
 \value{
 An instance of base::data.frame with several columns. The first

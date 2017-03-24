@@ -6,13 +6,13 @@
 the gene identifier of the pairs second member from the 'Sequence' column of
 'orth.kaks.tbl' and replaces this column with the result.}
 \usage{
-addGeneIdsCols2OrthologsKaKsTable(orth.kaks.tbl, gene.1)
+addGeneIdsCols2OrthologsKaKsTable(orth.kaks.tbl, gene.1.arg)
 }
 \arguments{
 \item{orth.kaks.tbl}{the result of calling 'readKaKsCalculatorOutput(...)'
 on the result file of KaKs_Calculator used on conserved orthologs.}
 
-\item{gene.1}{the identifier of the anchoring gene used within the currently
+\item{gene.1.arg}{the identifier of the anchoring gene used within the currently
 processed group of conserved orthologs.}
 }
 \value{

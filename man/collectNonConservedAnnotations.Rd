@@ -8,7 +8,7 @@ Non conservation is inferred by
 \code{nonConservedCompositeAnnotations(...)}.}
 \usage{
 collectNonConservedAnnotations(genes.df, group.col = "Tandem.Cluster",
-  group.ids = unique(genes.df[, group.col]), gene.annos = all.ipr,
+  group.ids = unique(genes.df[, group.col]), gene.annos.arg = all.ipr,
   annos.gene.col = 1, annos.anno.col = 2)
 }
 \arguments{
@@ -23,15 +23,15 @@ gene-group-identifiers. Default is \code{'Tandem.Cluster'}.}
 non conserved composite annotations. Default is \code{unique(genes.df[,
 group.col])}.}
 
-\item{gene.annos}{The data.frame holding the annotations for the genes in
-'gene.accs'. Default is all available InterPro annotations expected to be
-found in 'all.ipr'}
-
 \item{annos.gene.col}{The column of \code{gene.annos} in which to lookup the gene
 identifiers or gene accessions. Default is 1}
 
 \item{species}{The species for which to identify non conserved composite
 annotations. Default is \code{unique(genes.df$Species)}.}
+
+\item{gene.annos}{The data.frame holding the annotations for the genes in
+'gene.accs'. Default is all available InterPro annotations expected to be
+found in 'all.ipr'}
 
 \item{anno.col}{the column of \code{gene.annos} in which to lookup the function
 annotation for the genes in 'gene.accs'. Default is 2}

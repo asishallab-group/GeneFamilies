@@ -428,12 +428,12 @@ testNonConservedAnnotations <- function() {
 #' Species, 3.  genes, and 4. the non conserved annotations (now
 #' non-composite!).
 collectNonConservedAnnotations <- function(genes.df, group.col = "Tandem.Cluster", 
-    group.ids = unique(genes.df[, group.col]), gene.annos = all.ipr, annos.gene.col = 1, 
+    group.ids = unique(genes.df[, group.col]), gene.annos.arg = all.ipr, annos.gene.col = 1, 
     annos.anno.col = 2) {
     do.call("rbind", mclapply(group.ids, function(x) {
         clstr <- genes.df[which(genes.df[, group.col] == x), ]
         gene.accs <- clstr$Gene
-        z <- nonConservedAnnotations(gene.accs, gene.annos = gene.annos, gene.col = annos.gene.col, 
+        z <- nonConservedAnnotations(gene.accs, gene.annos = gene.annos.arg, gene.col = annos.gene.col, 
             anno.col = annos.anno.col)
         if (!is.null(z) && !is.na(z) && nrow(z) > 0) {
             z$Gene.Group <- x

@@ -27,8 +27,8 @@ homologs <- function(seq.sim.tbl) {
 #' @return TRUE if and only if the test succeeded.
 #' @export
 testHomologs <- function() {
-    df <- data.frame(V1 = c(1, 1, 1:5), V2 = c(1, 4, 4, 3, 2, 1, 8), V11 = c(0, 0, 
-        1, rep(0, 4)), stringsAsFactors = FALSE)
+    df <- data.frame(V1 = c(1, 1, 1:5), V2 = c(1, 4, 4, 3, 2, 1, 8), V11 = c(0, 
+        0, 1, rep(0, 4)), stringsAsFactors = FALSE)
     expected.res <- data.frame(V1 = 4:1, V2 = 1:4, V11 = rep(0, 2), stringsAsFactors = FALSE)
     res <- homologs(df)
     # Ignore increased row-names in 'identical' comparison:
@@ -85,19 +85,20 @@ orthologs <- function(homologs.tbl, gene.regex.1, gene.regex.2) {
 #' orthologous gene pairs. Note, that for reasons of easing lookup inverse
 #' pairs are also contained.
 #' @export
-orthologsFromBLATpslTable <- function(blat.df, query.col = 10, target.col = 14, matching.bases.col = 1, 
-    qSize.col = 11, tSize.col = 15, spec.regexs = c("CAHR\\d+(\\.\\d)?", "AT[0-9MC]G\\d+(\\.\\d)?")) {
+orthologsFromBLATpslTable <- function(blat.df, query.col = 10, target.col = 14, 
+    matching.bases.col = 1, qSize.col = 11, tSize.col = 15, spec.regexs = c("CAHR\\d+(\\.\\d)?", 
+        "AT[0-9MC]G\\d+(\\.\\d)?")) {
     # Retain only those gene pairs, where each gene matches one of the species'
     # regular expressions:
     b.df <- blat.df[which((grepl(spec.regexs[[1]], blat.df[, query.col], perl = TRUE) | 
         grepl(spec.regexs[[1]], blat.df[, target.col], perl = TRUE)) & (grepl(spec.regexs[[2]], 
-        blat.df[, query.col], perl = TRUE) | grepl(spec.regexs[[2]], blat.df[, target.col], 
-        perl = TRUE))), ]
+        blat.df[, query.col], perl = TRUE) | grepl(spec.regexs[[2]], blat.df[, 
+        target.col], perl = TRUE))), ]
     b.df <- b.df[which((b.df[, matching.bases.col] >= ((b.df[, qSize.col] + b.df[, 
         tSize.col])/4))), c(query.col, target.col, matching.bases.col)]
     colnames(b.df) <- paste("V", 1:ncol(b.df), sep = "")
-    # Identify homologous candidates and retain orthologs as reciprocal best hits of
-    # genes belonging to different species:
+    # Identify homologous candidates and retain orthologs as reciprocal best hits
+    # of genes belonging to different species:
     orthologs(homologs(b.df), spec.regexs[[1]], spec.regexs[[2]])
 }
 
@@ -110,8 +111,8 @@ orthologsFromBLATpslTable <- function(blat.df, query.col = 10, target.col = 14, 
 #' @export
 readBlatPSLoutput <- function(blat.psl.path) {
     read.table(blat.psl.path, sep = "\t", skip = 5, stringsAsFactors = FALSE, colClasses = c(rep("numeric", 
-        8), rep("character", 2), rep("numeric", 3), "character", rep("numeric", 4), 
-        rep("character", 3)), comment.char = "", quote = "", na.strings = "")
+        8), rep("character", 2), rep("numeric", 3), "character", rep("numeric", 
+        4), rep("character", 3)), comment.char = "", quote = "", na.strings = "")
 }
 
 #' Identifies those pairs of orthologous genes where one member appears in all
@@ -167,4 +168,22 @@ matchingSpliceVariant <- function(gene.ids, genes = as.character(unlist(spec.gen
         } else genes[[y]]
     })))
     gene.ids
-} 
+}
+
+orthologsFromPairwiseReciprocalBestHits <- function(pair.best.hits.tbl, spec.gene.ids.arg = spec.gene.ids, 
+    anchor.gene.col = 1, candidate.gene.col = 2) {
+    anchor.genes <- unique(pair.best.hits.tbl[, anchor.gene.col])
+    orths.lst <- lapply(anchor.genes, function(x) {
+        orth.cands <- pair.best.hits.tbl[which(pair.best.hits.tbl[, anchor.gene.col] == 
+            x), candidate.gene.col]
+        if (length(orth.cands) == length(spec.genes) - 1) {
+            orth.genes <- c(orth.cands, x)
+            setNames(orth.genes, unlist(lapply(orth.genes, function(y) speciesForGeneId(y, 
+                spec.gene.ids.arg))))
+        } else NULL
+    })
+    orths.lst <- orths.lst[which(!is.null(orths.lst))]
+    orths.df <- Reduce(rbind, orths.lst, stringsAsFactors = FALSE)
+    orths.df$Cluster <- paste("ortholog_cluster_", 1:nrow(orths.df), sep = "")
+    list(orthologs.list = orths.lst, orthologs.data.frame = orths.df)
+}

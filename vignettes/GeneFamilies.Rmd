@@ -39,11 +39,32 @@ _Note_: Using these Shell commandos will enable to reduce the all-vs-all tabular
 
 Many different methods exist to identify both orthologous genes and tandem duplicated genes. We will use the widely spread reciprocal best Blast Hit method to identify Orhtologs, and subsequently identify Tandem Duplicates as genes belonging to the same family _and_ species _and_ being located on the same chromosome (scaffold) within a maximum distance of nine genes.
 
-First we need information about pairwise sequence similarity. For that we use the "all-vs-all" Blast result used to generate Gene-Families above.
+#### Ortholog identification
 
-Filter the all-vs-all-Blast-table in order to retain only the best non-self-match per gene using the following Shell commandos:
+Decide on which genome to anchor or reference the reciprocal Best Blast Hits. Then run pairwise sequence similarity searches, each in both directions, as in the following example. Here, we use Arabidopsis as anchor genome:
 
-``
+For comparing Arabidopsis and _C. hirsuta_:
+
+`blat chi.cds.fa ath.cds.fa -out=blast8 ath_vs_chi_blat_out.tsv`
+`blat ath.cds.fa chi.cds.fa -out=blast8 chi_vs_ath_blat_out.tsv`
+
+Now collect each best non-self match for each single Arabidopsis gene:
+
+`cat chi_vs_ath_blat_out.tsv | sort -k1,1 -k3,3nr -k12,12nr | awk -F "\t" 'BEGIN{x=""}{if(x != $1){x=$1; print $2 "\t" $1}}' | sort -u > chi_vs_ath_blat_out_only_best_non_selves.tsv`
+
+`cat ath_vs_chi_blat_out.tsv | sort -k1,1 -k3,3nr -k12,12nr | awk -F "\t" 'BEGIN{x=""}{if(x != $1){x=$1; print $1 "\t" $2}}' | sort -u > ath_vs_chi_blat_out_only_best_non_selves.tsv`
+
+Note, the _reversed_ order in the `awk` `print` statements.
+
+Now, select the lines (gene-pairs) that both files have in common:
+
+`comm -1 -2 ath_vs_chi_blat_out_only_best_non_selves.tsv chi_vs_ath_blat_out_only_best_non_selves.tsv > ath_chi_orthologs.tsv`
+
+Do the above for _all_ other pairs _with_ Arabidopsis (anchor genome).
+
+Finally concatonate all the above `ath_*_orthologs.tsv` files into a single one, sorted by the first column and use this package's R script to load the orthologs and do the final processing step.
+
+`cat ath_*_orthologs.tsv | sort -k1,1 > spe8_orthologs.tsv`
 
 ### Reconstruct Gene Families' Phylogenies
 

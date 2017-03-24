@@ -188,14 +188,14 @@ addGeneIdsCols2HomologsKaKsTable <- function(hom.kaks.tbl) {
 #'
 #' @param orth.kaks.tbl the result of calling 'readKaKsCalculatorOutput(...)'
 #' on the result file of KaKs_Calculator used on conserved orthologs.
-#' @param gene.1 the identifier of the anchoring gene used within the currently
+#' @param gene.1.arg the identifier of the anchoring gene used within the currently
 #' processed group of conserved orthologs.
 #'
 #' @return A modified version of 'orth.kaks.tbl' in which the column 'Sequence'
 #' is replaced with two columns 'gene.1' and 'gene.2'.
 #' @export
-addGeneIdsCols2OrthologsKaKsTable <- function(orth.kaks.tbl, gene.1) {
-    x <- data.frame(gene.1 = gene.1, gene.2 = orth.kaks.tbl$Sequence, stringsAsFactors = FALSE)
+addGeneIdsCols2OrthologsKaKsTable <- function(orth.kaks.tbl, gene.1.arg) {
+    x <- data.frame(gene.1 = gene.1.arg, gene.2 = orth.kaks.tbl$Sequence, stringsAsFactors = FALSE)
     cbind(x, orth.kaks.tbl[, 2:3], stringsAsFactors = FALSE)
 }
 
