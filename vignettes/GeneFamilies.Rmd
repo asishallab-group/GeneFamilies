@@ -66,6 +66,21 @@ Finally concatonate all the above `ath_*_orthologs.tsv` files into a single one,
 
 `cat ath_*_orthologs.tsv | sort -k1,1 > spe8_orthologs.tsv`
 
+#### Identification of Tandem Duplicated Genes
+
+We identify tandem duplicated genes ("Tandems") as genes belonging to the same species, being located on the same chromosome within a a maximum distance of _nine_ genes, and having significant sequence similarity to each other. For reasons of convenience the last information is obtained as genes belonging to the same gene family.
+
+Many methods exist to infer gene neighborhood based on GFF3 files. However, experience showed that often the files do not stick fully to the required format, especiallyreliable extraction of gene identifier can be problematic. Hence, we use a somewhat crude method relying on GNU shell commands.
+
+We need the GFF3 files for each investigated species. They need to be sorted by _chromosome_ or _scaffold_ and the gene position. Lastly the gene identifiers need to be extracted. Depending on the provided GFF3 file, you will need to adapt the following example commando:
+
+`awk -F "\t" '/^[^#]/{if($3 =="gene"){gsub(/(^ID=)|(;Name=.*$)/,"",$9); print $1 "\t" $4 "\t" $9}}' Brapa_gene_v1.5.gff | sort -k1,1 -k2,2n | awk -F
+"\t" '{print $1 "\t" $3}' > bra_gene_neighborhood.tsv`
+
+or in the case of _A. lyrata_ the gene IDs need a different regular expression:
+
+`awk -F "\t" '/^[^#]/{if($3 =="gene"){gsub(/(^ID=)|(\.v1;Name=.*$)/,"",$9); print $1 "\t" $4 "\t" $9}}' Alyrata_107_v1.0.gene.gff3 | sort -k1,1 -k2,2n | awk -F "\t" '{print $1 "\t" $3}' > aly_gene_neighborhood.tsv`
+
 ### Reconstruct Gene Families' Phylogenies
 
 Use Maximum Likelihood Phylogenetic Algorithm (fasttree2) on each non-singleton family to reconstruct the family-trees. Required external software is macse, mafft, and fasttree2. For details see the functions in file phylogenies.R.

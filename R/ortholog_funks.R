@@ -219,3 +219,111 @@ orthologsFromPairwiseReciprocalBestHits <- function(pair.best.hits.tbl, spec.gen
     orths.df$Cluster <- o.cl.names
     orths.df[, c("Cluster", sort(names(spec.gene.ids)))]
 }
+
+#' Informs whether two genes are located on the same chromosome and are within
+#' a maximum distance. Distance is measured NOT in nucleotides, but in number
+#' of separating genes.
+#'
+#' @param gene.a The gene identifier for the first gene in question
+#' @param gene.b The gene identifier for the second gene in question
+#' @param neighborhood.tbl an instance of \code{base::data.frame} with at least
+#' two columns. One holding the gene identifiers, and the other the chromosome
+#' name. This table MUST be sorted by chromose and gene position, i.e. genes
+#' separated by three rows and being located on the same chromosome are
+#' expected to be separated by three genes on the respective chromosome.
+#' @param gene.col Column name or number of \code{neighborhood.tbl} indicating
+#' where to find the gene identifier. Default is
+#' \code{getOption('GeneFamilies.neighborhood.gene.col', 2)}.
+#' @param chromosome.col Column name or number of \code{neighborhood.tbl}
+#' indicating where to find the chromosome names. Default is
+#' \code{getOption('GeneFamilies.neighborhood.chromosome.col', 1)}.
+#' @param max.dist An integer defining the maximum number of genes allowed to
+#' separate two genes to be still considered 'neighbors'. Default is
+#' \code{getOption('GeneFamilies.neighborhood.max.dist', 9)}
+#'
+#' @return A boolean or NA, if the two genes are not found in
+#' \code{neighborhood.tbl}.
+#' @export
+areNeighbors <- function(gene.a, gene.b, neighborhood.tbl, gene.col = getOption("GeneFamilies.neighborhood.gene.col", 
+    2), chromosome.col = getOption("GeneFamilies.neighborhood.chromosome.col", 
+    1), max.dist = getOption("GeneFamilies.neighborhood.max.dist", 9)) {
+    genes <- c(gene.a, gene.b)
+    i <- sort(which(neighborhood.tbl[, gene.col] %in% genes))
+    if (length(i) != 2) {
+        warning("GeneFamilies::areNeighbors - Not all supplied argument genes are in argument 'neighborhood.tbl'")
+        return(NA)
+    }
+    n.chr <- unique(neighborhood.tbl[i, chromosome.col])
+    if (length(n.chr) == 1) {
+        sum(i) - i[1] <= max.dist
+    } else FALSE
+}
+
+#' Identifies tandem duplicated genes within a gene family. Conditions are that
+#' the tandems belonging to the same species are within a gene neighborhod of
+#' (default) nine genes on the same chromosome. See
+#' \code{GeneFamilies::areNeighbors} for more details.
+#' _Note_ that this approach does NOT exclude orthologous genes. If you want to
+#' distinguish those do a subsequent \code{setdiff} with the result of this
+#' function.
+#'
+#' @param gene.family A character vector holding the gene identifiers of the
+#' genes comprising a single gene family.
+#' @param spec.neighborhoods A list with names representing the species and
+#' values being the tables indicating gene neighborhood. See the Vignette
+#' \code{GeneFamilies} on how to generate these neighborhood-tables. Also see
+#' function \code{GeneFamilies::areNeighbors} for more details on these tables'
+#' format.
+#' @param spec.gene.ids.arg An instance of \code{base::list} with names being
+#' the investigated species and values all protein accessions belonging to the
+#' respective species. Default is \code{spec.gene.ids} (see file \code{zzz.R}
+#' for more details).
+#'
+#' @return A character vector holding all Tandem Duplicated Genes found within
+#' the argument gene family.
+#' @export
+tandemsFromFamiliesAndNeighborhood <- function(gene.family, spec.neighborhoods, 
+    spec.gene.ids.arg = spec.gene.ids) {
+    if (length(gene.family) >= 2) {
+        genes.df <- data.frame(gene = gene.family, species = unlist(lapply(gene.family, 
+            speciesForGeneId, spec.gene.ids.arg)), stringsAsFactors = FALSE)
+        tands <- c()
+        for (spec in names(spec.gene.ids.arg)) {
+            spec.genes <- genes.df[which(genes.df$species == spec), "gene"]
+            if (length(spec.genes) > 1) {
+                all.pairs <- combn(spec.genes, 2)
+                spec.genes.neighbrs <- c()
+                for (i in 1:ncol(all.pairs)) {
+                  x <- all.pairs[, i]
+                  if (areNeighbors(x[1], x[2], spec.neighborhoods[[spec]])) {
+                    spec.genes.neighbrs <- union(spec.genes.neighbrs, x)
+                  }
+                }
+                if (length(spec.genes.neighbrs) > 0) 
+                  tands <- union(tands, spec.genes.neighbrs)
+            }
+        }
+        return(tands)
+    } else c()
+}
+
+#' Function testing \code{GeneFamilies::tandemsFromFamiliesAndNeighborhood}.
+#'
+#' @param \code{NULL}
+#'
+#' @return TRUE if and only if all tests pass
+#' @export
+testTandemsFromFamiliesAndNeighborhood <- function() {
+    spec.nghbr.tbl <- list(ath = data.frame(V1 = c(rep("chr1", 3), rep("chr2", 
+        3)), V2 = LETTERS[1:6], stringsAsFactors = FALSE), chi = data.frame(V1 = paste("chr", 
+        c(1:3, 3), sep = ""), V2 = letters[1:4], stringsAsFactors = FALSE))
+    gene.fam <- c(LETTERS[1:6], letters[1:4])
+    s.g.i <- list(ath = LETTERS[1:6], chi = letters[1:4])
+    t.1 <- identical(c(LETTERS[1:6], letters[3:4]), tandemsFromFamiliesAndNeighborhood(gene.fam, 
+        spec.nghbr.tbl, s.g.i))
+    options(GeneFamilies.neighborhood.max.dist = 0)
+    t.2 <- identical(NULL, tandemsFromFamiliesAndNeighborhood(gene.fam, spec.nghbr.tbl, 
+        s.g.i))
+    options(GeneFamilies.neighborhood.max.dist = NULL)
+    all(c(t.1, t.2))
+}
