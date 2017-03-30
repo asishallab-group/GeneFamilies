@@ -1,6 +1,7 @@
 .onLoad <- function(libname = find.package("GeneFamilies"), pkgname = "GeneFamilies") {
     data("codingSequences", package = "GeneFamilies")
     data("families", package = "GeneFamilies")
+    data("orthologs", package = "GeneFamilies")
     # After loading the species' CDS define this constant:
     if (exists("ath.cds") && exists("cla.cds") && exists("cme.cds") && exists("csa.cds") && 
         exists("fve.cds")) {
