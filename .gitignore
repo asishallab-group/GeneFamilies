@@ -4,3 +4,6 @@ VennDiagram*.log
 .nfs*
 data
 inst/spe8_orthologs.tsv
+inst/interpro.xml
+.RData
+.Rhistory
