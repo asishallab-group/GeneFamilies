@@ -1,19 +1,6 @@
 .onLoad <- function(libname = find.package("GeneFamilies"), pkgname = "GeneFamilies") {
     data("codingSequences", package = "GeneFamilies")
     data("families", package = "GeneFamilies")
-    data("interPro", package = "GeneFamilies")
-    data("orthologsTandems", package = "GeneFamilies")
-    data("cafe_result", package = "GeneFamilies")
-    data("RNA_Seq_RPKM_and_profiles", package = "GeneFamilies")
-    data("pairwiseKaKs", package = "GeneFamilies")
-    # data('orthologsKaKs', package = 'GeneFamilies')
-    data("fubar_results", package = "GeneFamilies")
-    data("BUSTED_Results", package = "GeneFamilies")
-    data("GeneGroups", package = "GeneFamilies")
-    data("IprBasedEntropies", package = "GeneFamilies")
-    data("ExpressionProfileDistances", package = "GeneFamilies")
-    data("ExpressionProfileDistanceDistributions", package = "GeneFamilies")
-    data("ExpressionProfileDistancesPerTissueDistributions", package = "GeneFamilies")
     # After loading the species' CDS define this constant:
     if (exists("ath.cds") && exists("cla.cds") && exists("cme.cds") && exists("csa.cds") && 
         exists("fve.cds")) {
