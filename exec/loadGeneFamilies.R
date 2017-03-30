@@ -9,14 +9,15 @@ input.args <- commandArgs(trailingOnly = TRUE)
 
 families.genes.df <- readMclOutput(input.args[[2]])
 families.lst <- mclDataFrameAsList(families.genes.df)
-families.df <- Reduce( rbind, lapply( unique(families.genes.df$Family), function(fam.name) {
-                                       fam.genes <- families.genes.df[ which( families.genes.df$Family == fam.name ), "Gene" ]
-} )
-
-families.df <- read.table(input.args[[3]], sep = "\t", header = TRUE, stringsAsFactors = FALSE, 
-    comment.char = "", quote = "", na.strings = "", colClasses = c("character", rep("numeric", 
-        8)))
-families.df$size <- apply(families.df[, 2:9], 1, sum)
+family.nms <- names(families.lst)
+families.df <- Reduce(rbind, mclapply(family.nms, function(fam.nm) {
+    fam.genes <- families.lst[[fam.nm]]
+    fam.specs <- setNames(lapply(fam.genes, speciesForGeneId), fam.genes)
+    data.frame(id = fam.nm, ath = length(which(fam.specs == "ath")), cla = length(which(fam.specs == 
+        "cla")), cme = length(which(fam.specs == "cme")), csa = length(which(fam.specs == 
+        "csa")), fve = length(which(fam.specs == "fve")), size = length(fam.genes), 
+        stringsAsFactors = FALSE)
+}))
 
 #' Save parsed data:
 save(families.genes.df, families.lst, families.df, file = file.path(input.args[[1]], 
