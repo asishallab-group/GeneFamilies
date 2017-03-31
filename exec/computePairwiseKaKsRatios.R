@@ -1,5 +1,4 @@
 require(GeneFamilies)
-data("pairwiseSequenceSimilarities", package = "GeneFamilies")
 
 message("USAGE: Rscript path/2/GeneFamilies/exec/computePairwiseKaKsRatios.R output_table.tsv [start-index stop-index]")
 
