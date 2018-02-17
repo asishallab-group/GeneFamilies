@@ -1,0 +1,174 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+.onLoad	./R/zzz.R	/^.onLoad <- function(libname = find.package("GeneFamilies"), pkgname = "GeneFamilies") {$/;"	r
+A	./data/pairwiseSequenceSimilarities.RData	/^A<-Îc4¾ž%Ñû½Œt/;"	r
+O	./data/interPro.RData	/^O<-0ðÃ†ÿÆ&{¹¢mˆ<˜I!“Øqþ0ˆÒ·‹”ÿã¯Í¾;il7CúÅmzrØØl®êºŸeü½<3¤¯\/ß\/Ÿ3§™ R›G¿¼ck«89OòXé‘¹ãØ	úMj‘’:"î8¹‹Ûƒœ n˜ˆ¬lâòàúË¥ç”åþìõ™&&³C7™•‘T+„Ü§¹@å‡“è¹ù/;"	r
+addGeneIdsCols2HomologsKaKsTable	./R/selection_funks.R	/^addGeneIdsCols2HomologsKaKsTable <- function(hom.kaks.tbl) {$/;"	r
+addGeneIdsCols2OrthologsKaKsTable	./R/selection_funks.R	/^addGeneIdsCols2OrthologsKaKsTable <- function(orth.kaks.tbl, gene.1) {$/;"	r
+aet.cds	./exec/loadCodingSequences.R	/^aet.cds <- loadDnaFasta(input.args[[2]])$/;"	r
+aet.ipr	./exec/loadInterProData.R	/^aet.ipr <- readMinimumInterProScanResultTable(input.args[[2]])$/;"	r
+alignAAStringSet	./R/phylogenies.R	/^alignAAStringSet <- function(path.2.aa.seqs, path.2.aa.msa, mafft.call = getOption("mafft.call", $/;"	r
+alignCDSSetWithAlignedAAsAsGuide	./R/phylogenies.R	/^alignCDSSetWithAlignedAAsAsGuide <- function(unaligned.cds.set, aligned.aa.set) {$/;"	r
+alignCDSWithAlignedAASeq	./R/phylogenies.R	/^alignCDSWithAlignedAASeq <- function(cds, aligned.aa.seq, aa.gap = "-", codon.gap = "---") {$/;"	r
+alignCodingSequencesPipeline	./R/phylogenies.R	/^alignCodingSequencesPipeline <- function(cds, work.dir, gene.group.name) {$/;"	r
+all.cds	./exec/loadCodingSequences.R	/^all.cds <- Reduce(append, list(aet.cds, aly.cds, ath.cds, bra.cds, chi.cds, cru.cds, $/;"	r
+all.ipr	./exec/loadInterProData.R	/^all.ipr <- unique(Reduce(rbind, list(aet.ipr, aly.ipr, ath.ipr, bra.ipr, chi.ipr, $/;"	r
+all.vs.all.sim	./exec/loadOrthologsAndTandems.R	/^all.vs.all.sim <- fread(input.args[[2]], data.table = FALSE, header = FALSE, stringsAsFactors = FALSE, $/;"	r
+aly.cds	./exec/loadCodingSequences.R	/^aly.cds <- loadDnaFasta(input.args[[3]])$/;"	r
+aly.ipr	./exec/loadInterProData.R	/^aly.ipr <- readMinimumInterProScanResultTable(input.args[[3]])$/;"	r
+annotationBasedShannonEntropy	./R/family_funks.R	/^annotationBasedShannonEntropy <- function(gene.accs, gene.annos = all.ipr, gene.col = 1, $/;"	r
+annotationMatrix	./R/enrichment_funks.R	/^annotationMatrix <- function(anno, anno.tbl, universe.tbl, anno.tbl.anno.col = 1, $/;"	r
+appendToTestedHypotheses	./R/enrichment_funks.R	/^appendToTestedHypotheses <- function(df, hypo, p.val) {$/;"	r
+ath.cds	./exec/loadCodingSequences.R	/^ath.cds <- loadDnaFasta(input.args[[4]])$/;"	r
+ath.ipr	./exec/loadInterProData.R	/^ath.ipr <- readMinimumInterProScanResultTable(input.args[[4]])$/;"	r
+axt	./R/selection_funks.R	/^axt <- function(cds.msa, anchor.gene) {$/;"	r
+bra.cds	./exec/loadCodingSequences.R	/^bra.cds <- loadDnaFasta(input.args[[5]])$/;"	r
+bra.ipr	./exec/loadInterProData.R	/^bra.ipr <- readMinimumInterProScanResultTable(input.args[[5]])$/;"	r
+buildPhylogeneticTree	./R/phylogenies.R	/^buildPhylogeneticTree <- function(path.2.cds.msa, path.2.ml.tree, fast.tree.call = getOption("fast.tree.call", $/;"	r
+cafe.result.df	./exec/parseCafeResult.R	/^cafe.result.df <- do.call("rbind", mclapply(cf.tbl$Viterbi.P.values, function(x) {$/;"	r
+cbindAnnotationDescription	./R/enrichment_funks.R	/^cbindAnnotationDescription <- function(enrichment.tbl, annotation.db = ipr.db, ano.desc.field = "NAME") {$/;"	r
+cf.tbl	./exec/parseCafeResult.R	/^cf.tbl <- read.table(input.args[[1]], stringsAsFactors = FALSE, skip = 9, header = TRUE)$/;"	r
+chi.cds	./exec/loadCodingSequences.R	/^chi.cds <- loadDnaFasta(input.args[[6]])$/;"	r
+chi.ipr	./exec/loadInterProData.R	/^chi.ipr <- readMinimumInterProScanResultTable(input.args[[6]])$/;"	r
+closestHomolog	./R/family_funks.R	/^closestHomolog <- function(gene.id, seq.sim.tbl = if (exists("all.vs.all.sim")) all.vs.all.sim, $/;"	r
+codeml.tmpl	./R/pairwiseKaKs.R	/^codeml.tmpl <- "seqfile = <%= cds.msa.path %>\\n    treefile = <%= tree.path %>\\n     outfile = <%= ks.out.path %>\\n       noisy = 0\\n     verbose = 0\\n     runmode = -2\\n   cleandata = 1\\n     seqtype = 1\\n   CodonFreq = 2\\n       model = 2\\n     NSsites = 0\\n       icode = 0\\n       Mgene = 0\\n   fix_kappa = 0\\n       kappa = 2\\n   fix_omega = 0\\n       omega = 1\\n   fix_alpha = 1\\n       alpha = .0\\n      Malpha = 0\\n       ncatG = 4\\n       clock = 0\\n       getSE = 0\\nRateAncestor = 0\\n      method = 0"$/;"	r
+collectNonConservedAnnotations	./R/enrichment_funks.R	/^collectNonConservedAnnotations <- function(genes.df, group.col = "Tandem.Cluster", $/;"	r
+compositeAnnotations	./R/family_funks.R	/^compositeAnnotations <- function(gene.accs, gene.annos = all.ipr, gene.col = 1, anno.col = 2) {$/;"	r
+computeKsPipeline	./R/pairwiseKaKs.R	/^computeKsPipeline <- function(gene.a, gene.b, cds = all.cds, t.d = file.path(tempdir(), $/;"	r
+computeSpeciesSpecificAnnotationDiversityPerGroup	./R/family_funks.R	/^computeSpeciesSpecificAnnotationDiversityPerGroup <- function(groups.df, group.col = "Tandem.Cluster", $/;"	r
+conservedOrthologs	./R/ortholog_funks.R	/^conservedOrthologs <- function(pairwise.orths, intersect.col = "V1", ortholog.col = "V2", $/;"	r
+countNonAminoAcidCharsFromStart	./R/iprSelectedPositions.R	/^countNonAminoAcidCharsFromStart <- function(aa.seq, non.aa.regex = "^[-]+") {$/;"	r
+cru.cds	./exec/loadCodingSequences.R	/^cru.cds <- loadDnaFasta(input.args[[7]])$/;"	r
+cru.ipr	./exec/loadInterProData.R	/^cru.ipr <- readMinimumInterProScanResultTable(input.args[[7]])$/;"	r
+domainsForPos	./R/iprSelectedPositions.R	/^domainsForPos <- function(gene, aa.pos, iprscan.tbl, gene.col = "V1", start.col = "V7", $/;"	r
+enrichedAnnotations	./R/enrichment_funks.R	/^enrichedAnnotations <- function(case.genes, universe.annos = all.ipr, univ.gene.col = 1, $/;"	r
+enrichmentTests	./R/enrichment_funks.R	/^enrichmentTests <- function(case.anno.tbl, universe.anno.tbl, test.dir = "greater", $/;"	r
+esa.cds	./exec/loadCodingSequences.R	/^esa.cds <- loadDnaFasta(input.args[[8]])$/;"	r
+esa.ipr	./exec/loadInterProData.R	/^esa.ipr <- readMinimumInterProScanResultTable(input.args[[8]])$/;"	r
+expressionProfilesDists	./R/expression_funks.R	/^expressionProfilesDists <- function(gene.accessions, expression.profiles = rna.seq.exp.profils, $/;"	r
+extractFamilyName	./R/family_funks.R	/^extractFamilyName <- function(char.vec) {$/;"	r
+fam.dirs	./exec/generateFubarBatchFiles.R	/^fam.dirs <- system(paste("find ", normalizePath(input.args[[1]]), " -maxdepth 1 -type d -regex '.*cluster_[0-9]*'", $/;"	r
+fam.nms	./exec/generateFubarBatchFiles.R	/^fam.nms <- sub("^.*\/", "", as.character(fam.dirs), perl = TRUE)$/;"	r
+families.HRD.df	./exec/annotateFamilies.R	/^families.HRD.df <- families.df$/;"	r
+families.df	./exec/loadGeneFamilies.R	/^families.df <- read.table(input.args[[3]], sep = "\\t", header = TRUE, stringsAsFactors = FALSE, $/;"	r
+families.genes.df	./exec/loadGeneFamilies.R	/^families.genes.df <- readMclOutput(input.args[[2]])$/;"	r
+families.hrd	./exec/annotateFamilies.R	/^families.hrd <- mclapply(families.lst[1:100], annotateCluster, ipr.annos = all.ipr, $/;"	r
+families.lst	./exec/loadGeneFamilies.R	/^families.lst <- mclDataFrameAsList(families.genes.df)$/;"	r
+families.non.singleton.inds	./exec/computePairwiseKaKsRatios.R	/^families.non.singleton.inds <- families.df[which(families.df$size > 1), "id"]$/;"	r
+families.non.singleton.inds	./exec/reconstructFamilyPhylogenies.R	/^families.non.singleton.inds <- families.df[ which( families.df$size > 1 ), "id" ]$/;"	r
+familyExpanded	./R/family_funks.R	/^familyExpanded <- function(x, test.species = "chi", background.species = setdiff(names(x), $/;"	r
+foregroundNodes	./R/selection_funks.R	/^foregroundNodes <- function(phylo.tr, foreground.nodes) {$/;"	r
+formatNodeLabels	./R/phylogenies.R	/^formatNodeLabels <- function(nd.lb) {$/;"	r
+geneGroupsAnnotationBasedShannonEntropy	./R/family_funks.R	/^geneGroupsAnnotationBasedShannonEntropy <- function(groups.ids, groups.2.genes.lst, $/;"	r
+genePairInRedis	./R/pairwiseKaKs.R	/^genePairInRedis <- function(gene.pair) {$/;"	r
+generateContingencyTable	./R/enrichment_funks.R	/^generateContingencyTable <- function(row.1, row.2, col.1, col.2, row.category, col.category, $/;"	r
+genes	./exec/loadRpkmRnaSeqCounts.R	/^genes <- sort(unique(rpkm.rna.seq.counts$id))$/;"	r
+genes.2.process	./exec/computePairwiseKaKsRatios.R	/^genes.2.process <- genes.2.process[i.start:i.stop]$/;"	r
+genes.2.process	./exec/computePairwiseKaKsRatios.R	/^genes.2.process <- unlist(families.lst[families.non.singleton.inds])$/;"	r
+getAASubstring	./R/iprSelectedPositions.R	/^getAASubstring <- function(msa.fasta, gene, sel.aa, radius = 3) {$/;"	r
+getFamilyDNAStringSet	./R/phylogenies.R	/^getFamilyDNAStringSet <- function(fam, cds = all.cds) {$/;"	r
+getSpeciesNodeNumberFromCafe	./R/family_funks.R	/^getSpeciesNodeNumberFromCafe <- function(cafe.id.line, species.name = "chi") {$/;"	r
+goEnrichTest	./R/enrichment_funks.R	/^goEnrichTest <- function(gsc, gene.ids, univ.gene.ids, ontologies = c("BP", "CC", $/;"	r
+homologs	./R/ortholog_funks.R	/^homologs <- function(seq.sim.tbl) {$/;"	r
+hyphy.branch.site.bf	./R/selection_funks.R	/^hyphy.branch.site.bf <- "inputRedirect = {};\\ninputRedirect[\\"01\\"]=\\"Universal\\";\\ninputRedirect[\\"02\\"]=\\"Yes\\";\\ninputRedirect[\\"03\\"]=\\"Yes\\";\\ninputRedirect[\\"04\\"]=\\"<%= fam.cds.msa.path %>\\";\\ninputRedirect[\\"05\\"]=\\"<%= fam.tree.4.paml.path %>\\";\\ninputRedirect[\\"06\\"]=\\"<%= fam.hyphy.branch.site.output.path %>\\";\\n\\nExecuteAFile (\\"\/biodata\/dep_tsiantis\/common\/software\/lib\/hyphy\/TemplateBatchFiles\/BranchSiteREL.bf\\", inputRedirect);"$/;"	r
+hyphy.busted.bf	./R/selection_funks.R	/^hyphy.busted.bf <- "inputRedirect = {};\\ninputRedirect[\\"01\\"]=\\"Universal\\";\\ninputRedirect[\\"02\\"]=\\"<%= fam.cds.msa.nexus.path %>\\";\\ninputRedirect[\\"03\\"]=\\"<%= fam.hyphy.busted.tree.path %>\\";\\ninputRedirect[\\"04\\"]=\\"Set TEST\\";\\ninputRedirect[\\"05\\"]=\\"\\";\\n\\nExecuteAFile (\\"\/biodata\/dep_tsiantis\/common\/software\/lib\/hyphy\/TemplateBatchFiles\/BUSTED.bf\\", inputRedirect);"$/;"	r
+hyphy.fubar.bf	./R/selection_funks.R	/^hyphy.fubar.bf <- "inputRedirect = {};\\ninputRedirect[\\"01\\"]=\\"Universal\\";\\ninputRedirect[\\"02\\"]=\\"1\\";\\ninputRedirect[\\"03\\"]=\\"<%= fam.cds.msa.path %>\\";\\ninputRedirect[\\"04\\"]=\\"<%= fam.tree.no.node.lables.path %>\\";\\ninputRedirect[\\"05\\"]=\\"20\\";\\ninputRedirect[\\"06\\"]=\\"5\\";\\ninputRedirect[\\"07\\"]=\\"2000000\\";\\ninputRedirect[\\"08\\"]=\\"1000000\\";\\ninputRedirect[\\"09\\"]=\\"100\\";\\ninputRedirect[\\"10\\"]=\\"0.5\\";\\ninputRedirect[\\"11\\"]=\\"<%= fam.hyphy.fubar.output.path %>\\";\\n\\nExecuteAFile (\\"\/biodata\/dep_tsiantis\/common\/software\/lib\/hyphy\/TemplateBatchFiles\/FUBAR.bf\\", inputRedirect);"$/;"	r
+hyphy.meme.bf	./R/selection_funks.R	/^hyphy.meme.bf <- "inputRedirect = {};\\ninputRedirect[\\"01\\"]=\\"Universal\\";\\ninputRedirect[\\"02\\"]=\\"New Analysis\\";\\ninputRedirect[\\"03\\"]=\\"<%= fam.cds.msa.path %>\\";\\ninputRedirect[\\"04\\"]=\\"Custom\\";\\ninputRedirect[\\"05\\"]=\\"110240\\";\\ninputRedirect[\\"06\\"]=\\"<%= fam.tree.no.node.lables.path %>\\";\\ninputRedirect[\\"07\\"]=\\"<%= fam.hyphy.meme.log.path %>\\";\\ninputRedirect[\\"08\\"]=\\"Estimate dN\/dS only\\";\\ninputRedirect[\\"09\\"]=\\"MEME\\";\\ninputRedirect[\\"10\\"]=\\"0.1\\";\\ninputRedirect[\\"11\\"]=\\"N\\";\\ninputRedirect[\\"12\\"]=\\"<%= fam.hyphy.meme.output.path %>\\";\\n\\nExecuteAFile (\\"\/biodata\/dep_tsiantis\/common\/software\/lib\/hyphy\/TemplateBatchFiles\/QuickSelectionDetection.bf\\", inputRedirect);"$/;"	r
+i.start	./exec/computePairwiseKaKsRatios.R	/^i.start <- if (length(input.args) > 1) as.numeric(input.args[[2]]) else 1$/;"	r
+i.start	./exec/reconstructFamilyPhylogenies.R	/^i.start <- if (length(input.args) > 2) as.integer(input.args[[3]]) else 1$/;"	r
+i.stop	./exec/computePairwiseKaKsRatios.R	/^i.stop <- if (length(input.args) > 1) {$/;"	r
+i.stop	./exec/reconstructFamilyPhylogenies.R	/^i.stop <- if (length(input.args) > 3) as.integer(input.args[[4]]) else length(families.non.singleton.inds)$/;"	r
+inferExpectedFalsePositiveRate	./R/selection_funks.R	/^inferExpectedFalsePositiveRate <- function(fubar.tbl.res, fubar.expct.fls.pos.n) {$/;"	r
+input.args	./exec/computePairwiseKaKsRatios.R	/^input.args <- commandArgs(trailingOnly = TRUE)$/;"	r
+input.args	./exec/generateFubarBatchFiles.R	/^input.args <- commandArgs(trailingOnly = TRUE)$/;"	r
+input.args	./exec/loadCodingSequences.R	/^input.args <- commandArgs(trailingOnly = TRUE)$/;"	r
+input.args	./exec/loadGeneFamilies.R	/^input.args <- commandArgs(trailingOnly = TRUE)$/;"	r
+input.args	./exec/loadInterProData.R	/^input.args <- commandArgs(trailingOnly = TRUE)$/;"	r
+input.args	./exec/loadOrthologsAndTandems.R	/^input.args <- commandArgs(trailingOnly = TRUE)$/;"	r
+input.args	./exec/loadRpkmRnaSeqCounts.R	/^input.args <- commandArgs(trailingOnly = TRUE)$/;"	r
+input.args	./exec/parseCafeResult.R	/^input.args <- commandArgs(trailingOnly = TRUE)$/;"	r
+input.args	./exec/reconstructFamilyPhylogenies.R	/^input.args <- commandArgs(trailingOnly = TRUE)$/;"	r
+interVsIntraSpeciesExpressionProfileDists	./R/expression_funks.R	/^interVsIntraSpeciesExpressionProfileDists <- function(expr.prof.dists, gene.ids.to.specs.regex = list(ath = "^AT[0-9CM]G\\\\d+$", $/;"	r
+ipr.db	./exec/loadInterProData.R	/^ipr.db <- parseInterProXML(input.args[[10]])$/;"	r
+iprWithSelectedAA	./R/iprSelectedPositions.R	/^iprWithSelectedAA <- function(sel.aa, gene, aa.fasta, msa.fasta, iprscan.tbl) {$/;"	r
+joinGOEnrichResults	./R/enrichment_funks.R	/^joinGOEnrichResults <- function(go.enrich.lst, p.adjust.method = "fdr") {$/;"	r
+loadDnaFasta	./R/family_funks.R	/^loadDnaFasta <- function(path.2.dna.fasta, sanitize.names = TRUE) {$/;"	r
+matchingSpliceVariant	./R/ortholog_funks.R	/^matchingSpliceVariant <- function(gene.ids, genes = as.character(unlist(spec.gene.ids))) {$/;"	r
+maxValuesFromInterVsIntraSpeciesExpressionProfileDists	./R/expression_funks.R	/^maxValuesFromInterVsIntraSpeciesExpressionProfileDists <- function(fams.inter.intra.exp.prof.dists, $/;"	r
+mclDataFrameAsList	./R/family_funks.R	/^mclDataFrameAsList <- function(mcl.df) {$/;"	r
+mr.bayes.cds.tree	./R/selection_funks.R	/^mr.bayes.cds.tree <- "\\nbegin mrbayes;\\nlog start filename=<%= mr.bayes.log.file %> replace;\\nlset nst=6 rates=invgamma Nucmodel=Codon;\\nset autoclose=yes;\\nmcmc ngen=20000 printfreq=500 samplefreq=10\\nnchains=<%= mr.bayes.n.chains %> savebrlens=yes starttree=random\\nfilename=<%= mr.bayes.out.file %>;\\nsumt filename=<%= mr.bayes.out.file %> burnin=1000 showtreeprobs=yes\\ncontype=allcompat Conformat=Simple;\\nquit;\\nend;\\n"$/;"	r
+mr.bayes.mixed.cds.tree	./R/selection_funks.R	/^mr.bayes.mixed.cds.tree <- "\\nbegin mrbayes;\\n<% for (x in names(mr.bayes.char.sets)) { %>\\n<% y <- mr.bayes.char.sets[[x]] %>\\ncharset <%= x %> = <%= y[[1]] %> - <%= y[[2]] %>;\\n<% } %>\\npartition favored = <%= length(mr.bayes.char.sets) %>: <%= paste( names( mr.bayes.char.sets ), collapse=\\", \\" ) %>;\\nset partition = favored;\\n\\nlog start filename=<%= mr.bayes.log.file %> replace;\\nlset nst=6 rates=invgamma Nucmodel=Codon;\\nset autoclose=yes;\\nmcmc ngen=20000 printfreq=500 samplefreq=10\\nnchains=<%= mr.bayes.n.chains %> savebrlens=yes starttree=random\\nfilename=<%= mr.bayes.out.file %>;\\nsumt filename=<%= mr.bayes.out.file %> burnin=1000 showtreeprobs=yes\\ncontype=allcompat Conformat=Simple;\\nquit;\\nend;\\n"$/;"	r
+mr.bayes.mixed.prot.tree	./R/selection_funks.R	/^mr.bayes.mixed.prot.tree <- "\\nbegin mrbayes;\\n<% for (x in names(mr.bayes.char.sets)) { %>\\n<% y <- mr.bayes.char.sets[[x]] %>\\ncharset <%= x %> = <%= y[[1]] %> - <%= y[[2]] %>;\\n<% } %>\\npartition favored = <%= length(mr.bayes.char.sets) %>: <%= paste( names( mr.bayes.char.sets ), collapse=\\", \\" ) %>;\\nset partition = favored;\\n\\nlog start filename=<%= mr.bayes.log.file %> replace;\\nprset aamodelpr=fixed(wag);\\nlset rates=invgamma Ngammacat=4;\\nset autoclose=yes;\\nmcmc ngen=20000 printfreq=500 samplefreq=10\\nnchains=<%= mr.bayes.n.chains %> savebrlens=yes starttree=random\\nfilename=<%= mr.bayes.out.file %>;\\nsumt filename=<%= mr.bayes.out.file %> burnin=1000 showtreeprobs=yes\\ncontype=allcompat Conformat=Simple;\\nquit;\\nend;\\n"$/;"	r
+mr.bayes.prot.tree	./R/selection_funks.R	/^mr.bayes.prot.tree <- "\\nbegin mrbayes;\\nlog start filename=<%= mr.bayes.log.file %> replace;\\nprset aamodelpr=fixed(wag);\\nlset rates=invgamma Ngammacat=4;\\nset autoclose=yes;\\nmcmc ngen=20000 printfreq=500 samplefreq=10\\nnchains=<%= mr.bayes.n.chains %> savebrlens=yes starttree=random\\nfilename=<%= mr.bayes.out.file %>;\\nsumt filename=<%= mr.bayes.out.file %> burnin=1000 showtreeprobs=yes\\ncontype=allcompat Conformat=Simple;\\nquit;\\nend;\\n"$/;"	r
+mrBayesCdsTree	./R/selection_funks.R	/^mrBayesCdsTree <- function(cds.msa, mr.bayes.dir, gene.group.name, mr.bayes.n.chains = getOption("mc.cores", $/;"	r
+mrBayesProteinTree	./R/selection_funks.R	/^mrBayesProteinTree <- function(aa.msa, mr.bayes.dir, gene.group.name, mr.bayes.n.chains = getOption("mc.cores", $/;"	r
+mrBayesProteinTreeFromMixedMSA	./R/selection_funks.R	/^mrBayesProteinTreeFromMixedMSA <- function(aa.msa, extra.msa, mr.bayes.dir, gene.group.name, $/;"	r
+mrBayesTreeFromMixedMSA	./R/selection_funks.R	/^mrBayesTreeFromMixedMSA <- function(msa.lst, msa.types, mr.bayes.dir, gene.group.name, $/;"	r
+n.threads	./exec/reconstructFamilyPhylogenies.R	/^n.threads <- if (length(input.args) > 1) as.integer(input.args[[2]]) else detectCores()$/;"	r
+node.maps	./exec/parseCafeResult.R	/^node.maps <- sub("^.+:", "", readLines(input.args[[1]], n = 3)[[3]], perl = TRUE)$/;"	r
+node.pos	./exec/parseCafeResult.R	/^node.pos <- strsplit(gsub("[()\\\\s]", "", gsub("\\\\) \\\\(", ",", sub("^.+:", "", readLines(input.args[[1]], $/;"	r
+nonConservedAnnotations	./R/enrichment_funks.R	/^nonConservedAnnotations <- function(gene.accs, gene.annos = all.ipr, gene.col = 1, $/;"	r
+nonConservedCompositeAnnotations	./R/enrichment_funks.R	/^nonConservedCompositeAnnotations <- function(gene.accs, gene.annos = all.ipr, gene.col = 1, $/;"	r
+numberAnnotations	./R/enrichment_funks.R	/^numberAnnotations <- function(anno, anno.tbl) {$/;"	r
+o.dir	./exec/reconstructFamilyPhylogenies.R	/^o.dir <- input.args[[1]]$/;"	r
+orthologs	./R/ortholog_funks.R	/^orthologs <- function(homologs.tbl, gene.regex.1, gene.regex.2) {$/;"	r
+orthologs	./exec/loadOrthologsAndTandems.R	/^orthologs <- read.table(input.args[[3]], header = TRUE, sep = "\\t", comment.char = "", $/;"	r
+orthologsFromBLATpslTable	./R/ortholog_funks.R	/^orthologsFromBLATpslTable <- function(blat.df, query.col = 10, target.col = 14, matching.bases.col = 1, $/;"	r
+pairwise.Ka.Ks	./exec/computePairwiseKaKsRatios.R	/^pairwise.Ka.Ks <- data.frame(gene.a = c(), gene.b = c(), Ka = c(), Ks = c(), w = c(), $/;"	r
+parseCafeBranchSpecificPValues	./R/family_funks.R	/^parseCafeBranchSpecificPValues <- function(cafe.br.spec.pvals, spec.pos) {$/;"	r
+parseMemeBranchResults	./R/selection_funks.R	/^parseMemeBranchResults <- function(meme.file, bayes.factor.sign.cutoff = 100, fam.name.reg.exp = "\/(fam\\\\d+)\/") {$/;"	r
+passSupportValues	./R/phylogenies.R	/^passSupportValues <- function(tree, trees, nds = unique(tree$edge[, 1])) {$/;"	r
+plotSpeciesSpecificAnnotationDiversity	./R/plots.R	/^plotSpeciesSpecificAnnotationDiversity <- function(plot.pdf, entropy.df, species) {$/;"	r
+plotSpeciesSpecificAnnotationDiversityDists	./R/plots.R	/^plotSpeciesSpecificAnnotationDiversityDists <- function(plot.pdf, entropy.df, species, $/;"	r
+procGOHyperGResult	./R/enrichment_funks.R	/^procGOHyperGResult <- function(ghgr, pvalue.cutoff = 0.01) {$/;"	r
+putGenePairIntoRedis	./R/pairwiseKaKs.R	/^putGenePairIntoRedis <- function(gene.pair) {$/;"	r
+readBlatPSLoutput	./R/ortholog_funks.R	/^readBlatPSLoutput <- function(blat.psl.path) {$/;"	r
+readFubarTable	./R/selection_funks.R	/^readFubarTable <- function(path.2.fubar.csv, family.name) {$/;"	r
+readInterProScanResultTable	./R/iprSelectedPositions.R	/^readInterProScanResultTable <- function(path.2.iprscan.res) {$/;"	r
+readKaKsCalculatorOutput	./R/selection_funks.R	/^readKaKsCalculatorOutput <- function(path.2.KaKs.Calc.output) {$/;"	r
+readMclOutput	./R/family_funks.R	/^readMclOutput <- function(path.2.mcl.out, family.name.prefix = "cluster_") {$/;"	r
+readMinimumInterProScanResultTable	./R/iprSelectedPositions.R	/^readMinimumInterProScanResultTable <- function(path.2.iprscan.res, gene.col = 1, $/;"	r
+removeDuplicatedInversePairs	./R/selection_funks.R	/^removeDuplicatedInversePairs <- function(clst.hmlgs.list, ret.as.list = TRUE) {$/;"	r
+removeNodeLabelsAndBranchLengths	./R/selection_funks.R	/^removeNodeLabelsAndBranchLengths <- function(phyl.tree) {$/;"	r
+removeNonAAChars	./R/iprSelectedPositions.R	/^removeNonAAChars <- function(aa.seq, non.aa.regex = "[-]") {$/;"	r
+removeSpliceVariant	./R/enrichment_funks.R	/^removeSpliceVariant <- function(gene.ids) {$/;"	r
+renderCodemlInputs	./R/pairwiseKaKs.R	/^renderCodemlInputs <- function(gene.pair, cds.msa.path, ks.out.path = sub("_CDS_MSA.fasta", $/;"	r
+replaceSanitizedWithOriginalIDs	./R/iprSelectedPositions.R	/^replaceSanitizedWithOriginalIDs <- function(xstring.set, name.maps, san.col = "sanitized", $/;"	r
+replaceWithOriginal	./R/phylogenies.R	/^replaceWithOriginal <- function(san.names, name.mappings) {$/;"	r
+replaceWithOriginalInFigTree	./R/selection_funks.R	/^replaceWithOriginalInFigTree <- function(name.mappings, path.2.fig.tree, path.2.fig.tree.orig = sub(".con.tre", $/;"	r
+rna.seq.exp.profils	./exec/loadRpkmRnaSeqCounts.R	/^rna.seq.exp.profils <- do.call("rbind", mclapply(genes, function(x) {$/;"	r
+rpkm.rna.seq.counts	./exec/loadRpkmRnaSeqCounts.R	/^rpkm.rna.seq.counts <- read.table(input.args[[1]], sep = "\\t", header = TRUE, stringsAsFactors = FALSE, $/;"	r
+sanitizeNames	./R/phylogenies.R	/^sanitizeNames <- function(xstring.set) {$/;"	r
+selectGeneGroupSpecificEnrichedAnnotations	./R/enrichment_funks.R	/^selectGeneGroupSpecificEnrichedAnnotations <- function(gene.group.type, gene.group.type.enriched.annos = list(positively.selected = fams.pos.sel.non.conserved.iprs.enrich.df$Annotation, $/;"	r
+selectSignificantEnrichments	./R/enrichment_funks.R	/^selectSignificantEnrichments <- function(enrichment.tbl, significance.level = 0.05) {$/;"	r
+selectSignificantlyEnrichedAnnotations	./R/enrichment_funks.R	/^selectSignificantlyEnrichedAnnotations <- function(enriched.annotations, p.val.cutoff = 0.01, $/;"	r
+spec.names	./exec/parseCafeResult.R	/^spec.names <- c("B.rapa","S.parvula","E.salsugineum","C.hirsuta","C.rubella","A.thaliana","A.lyrata","A.arabicum")$/;"	r
+spec.nodes	./exec/parseCafeResult.R	/^spec.nodes <- setNames(lapply(spec.names, function(x) getSpeciesNodeNumberFromCafe(node.maps, $/;"	r
+spec.pos	./exec/parseCafeResult.R	/^spec.pos <- unlist(lapply(spec.nodes, function(x) which(node.pos == x)))$/;"	r
+spec.regex.gene.ids	./R/zzz.R	/^spec.regex.gene.ids <- list(aet = "^aet_\\\\d+$", aly = "^((scaffold_)|(fgenesh2_kg\\\\.)|(Al_scaffold_))$", $/;"	r
+speciesComposition	./R/family_funks.R	/^speciesComposition <- function(fam, spec.cds.ids = spec.gene.ids) {$/;"	r
+speciesCompositionsToDataFrame	./R/family_funks.R	/^speciesCompositionsToDataFrame <- function(spec.comps.lst, column.names = names(spec.comps.lst[[1]]), $/;"	r
+speciesForGeneId	./R/phylogenies.R	/^speciesForGeneId <- function(gene.id, spec.genes = spec.gene.ids) {$/;"	r
+speciesForGeneId_Regex	./R/phylogenies.R	/^speciesForGeneId_Regex <- function(gene.id, spec.regexs = spec.regex.gene.ids) {$/;"	r
+subTrees	./R/phylogenies.R	/^subTrees <- function(tree, nds = unique(tree$edge[, 1])) {$/;"	r
+subseqPos	./R/iprSelectedPositions.R	/^subseqPos <- function(aa.subseq, aa.full) {$/;"	r
+tandems	./exec/loadOrthologsAndTandems.R	/^tandems <- read.table(input.args[[4]], header = TRUE, sep = "\\t", comment.char = "", $/;"	r
+testAnnotationBasedSpeciesSpecificNeofunctionalization	./R/family_funks.R	/^testAnnotationBasedSpeciesSpecificNeofunctionalization <- function(entropy.df, spec.2.compare, $/;"	r
+testHomologs	./R/ortholog_funks.R	/^testHomologs <- function() {$/;"	r
+testNonConservedAnnotations	./R/enrichment_funks.R	/^testNonConservedAnnotations <- function() {$/;"	r
+testNonConservedCompositeAnnotations	./R/enrichment_funks.R	/^testNonConservedCompositeAnnotations <- function() {$/;"	r
+tissues	./exec/loadRpkmRnaSeqCounts.R	/^tissues <- sort(unique(rpkm.rna.seq.counts$tissue))$/;"	r
+tpa.cds	./exec/loadCodingSequences.R	/^tpa.cds <- loadDnaFasta(input.args[[9]])$/;"	r
+tpa.ipr	./exec/loadInterProData.R	/^tpa.ipr <- readMinimumInterProScanResultTable(input.args[[9]])$/;"	r
+transcriptsPerKilobaseMillion	./R/expression_funks.R	/^transcriptsPerKilobaseMillion <- function(raw.count.tbl, gene.col = "gene", gene.length.col = "gene.length", $/;"	r
+translate2AASeqs	./R/phylogenies.R	/^translate2AASeqs <- function(path.2.cds.fasta, macse.call = getOption("macse.call", $/;"	r
+tree4Busted	./R/selection_funks.R	/^tree4Busted <- function(phylo.tree, foreground.nodes) {$/;"	r
+unalignedAAforAlignedAA	./R/iprSelectedPositions.R	/^unalignedAAforAlignedAA <- function(gene, sel.aa, aa.fasta, msa.fasta, min.radius = 3) {$/;"	r
+validateAASeqs	./R/phylogenies.R	/^validateAASeqs <- function(aa.seq) {$/;"	r
+validateAAStringSet	./R/phylogenies.R	/^validateAAStringSet <- function(aa.set) {$/;"	r
+writeAxt	./R/selection_funks.R	/^writeAxt <- function(axt, axt.path) {$/;"	r
+x	./data/pairwiseSequenceSimilarities.RData	/^x<-ZrâÖ`a/;"	r

@@ -1,0 +1,7 @@
+inst/doc
+.Rapp.history
+VennDiagram*.log
+.nfs*
+Rplots.pdf
+*.tar*
+data/*
