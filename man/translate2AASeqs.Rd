@@ -6,7 +6,7 @@
 sequences.}
 \usage{
 translate2AASeqs(path.2.cds.fasta, macse.call = getOption("macse.call",
-  paste("java -Xmx600m -jar ", file.path(path.package("GeneFamilies"),
+  paste("java -Xmx600m -jar ", file.path(path.package("MaizeGeneFamilies"),
   "macse_v1.01b.jar"), " -prog translateNT2AA", sep = "")))
 }
 \arguments{

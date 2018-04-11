@@ -2,7 +2,7 @@
 % Please edit documentation in R/annotationVectorSpace.R
 \name{geneClassesVectorClouds}
 \alias{geneClassesVectorClouds}
-\title{Invokes \code{GeneFamilies::statVectorCloud} on each subset of genes in
+\title{Invokes \code{MaizeGeneFamilies::statVectorCloud} on each subset of genes in
 \code{annot.vec.space} classified by the gene-sets in \code{gene.sets}.}
 \usage{
 geneClassesVectorClouds(annot.vec.space, gene.sets)
@@ -17,11 +17,11 @@ and values are gene IDs including the ones references in
 }
 \value{
 A named list, with one entry per gene-class in \code{gene.sets}.
-Values are the results of invoking \code{GeneFamilies::statVectorCloud} on
+Values are the results of invoking \code{MaizeGeneFamilies::statVectorCloud} on
 each respective subset.
 }
 \description{
-Invokes \code{GeneFamilies::statVectorCloud} on each subset of genes in
+Invokes \code{MaizeGeneFamilies::statVectorCloud} on each subset of genes in
 \code{annot.vec.space} classified by the gene-sets in \code{gene.sets}.
 }
 

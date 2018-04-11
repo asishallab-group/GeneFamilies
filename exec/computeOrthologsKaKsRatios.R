@@ -1,7 +1,7 @@
-require(GeneFamilies)
-data("pairwiseSequenceSimilarities", package = "GeneFamilies")
+require(MaizeGeneFamilies)
+data("pairwiseSequenceSimilarities", package = "MaizeGeneFamilies")
 
-message("USAGE: Rscript path/2/GeneFamilies/exec/computeOrthologsKaKsRatios.R orthologs_Ka_Ks_Batch.tsv [ start-index stop-index ]")
+message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/computeOrthologsKaKsRatios.R orthologs_Ka_Ks_Batch.tsv [ start-index stop-index ]")
 message("NOTE: Use parameters 'start-index' and 'stop-index' to execute this computation in parallel.")
 
 input.args <- commandArgs(trailingOnly = TRUE)

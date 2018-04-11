@@ -7,11 +7,11 @@
 #'
 #' @param counts.table result of invoking \code{base::table(count.vector)}
 #' @param log.base The base of the logarithm. Default is the natural logarithm,
-#' \code{getOption('GeneFamilies.entropy.log.base', base::exp(1))}.
+#' \code{getOption('MaizeGeneFamilies.entropy.log.base', base::exp(1))}.
 #'
 #' @export
 #' @return A numeric value element [0,1], the normalized Shannon Entropy.
-shannonEntropy <- function(counts.table, log.base = getOption("GeneFamilies.entropy.log.base", 
+shannonEntropy <- function(counts.table, log.base = getOption("MaizeGeneFamilies.entropy.log.base", 
     base::exp(1))) {
     if (length(counts.table) <= 1) 
         return(0)
@@ -20,7 +20,7 @@ shannonEntropy <- function(counts.table, log.base = getOption("GeneFamilies.entr
         base = log.base)
 }
 
-#' Testing function \code{GeneFamilies::shannonEntropy}
+#' Testing function \code{MaizeGeneFamilies::shannonEntropy}
 #'
 #' @export
 #' @return \code{TRUE} if and only if all tests are passed successfully.
@@ -197,8 +197,8 @@ compositeAnnotations <- function(gene.accs, gene.annos = all.ipr, gene.col = 1,
 #' @param anno.col the column of 'gene.annos' in which to lookup the function
 #' annotation for the genes in 'gene.accs'. Default is 2
 #' @param entropy.funk The function to be used to compute the Shannon Entropy.
-#' Default is \code{getOption( 'GeneFamilies.entropy.function',
-#' entropy::entropy )}. Set to \code{GeneFamilies::shannonEntropy} if you want
+#' Default is \code{getOption( 'MaizeGeneFamilies.entropy.function',
+#' entropy::entropy )}. Set to \code{MaizeGeneFamilies::shannonEntropy} if you want
 #' normalized Shannon Entropy. See
 #' \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4696313/}{Entropy
 #' Explorer R package}.
@@ -208,7 +208,7 @@ compositeAnnotations <- function(gene.accs, gene.annos = all.ipr, gene.col = 1,
 #' and 'gene.annos.freqs' is an instance of table showing the annotation
 #' architectures and their frequencies
 annotationBasedShannonEntropy <- function(gene.accs, gene.annos = all.ipr, 
-    gene.col = 1, anno.col = 2, entropy.funk = getOption("GeneFamilies.entropy.function", 
+    gene.col = 1, anno.col = 2, entropy.funk = getOption("MaizeGeneFamilies.entropy.function", 
         entropy::entropy)) {
     c.a <- compositeAnnotations(gene.accs, gene.annos, gene.col, anno.col)
     c.a.i <- !is.na(c.a)
@@ -460,11 +460,11 @@ closestHomolog <- function(gene.id, seq.sim.tbl = if (exists("all.vs.all.sim")) 
 #' @param gene.ids a character vector of gene identifiers.
 #' @param reg.ex the regular expression used to identify the to be deleted
 #' expression variant part of a gene ID. Default is
-#' \code{getOption('GeneFamilies.expression.variant.regex', '\\.\\d+$')}.
+#' \code{getOption('MaizeGeneFamilies.expression.variant.regex', '\\.\\d+$')}.
 #'
 #' @export
 #' @return The modified gene IDs with the expression variant parts deleted.
-removeExpressionVariant <- function(gene.ids, reg.ex = getOption("GeneFamilies.expression.variant.regex", 
+removeExpressionVariant <- function(gene.ids, reg.ex = getOption("MaizeGeneFamilies.expression.variant.regex", 
     "\\.\\d+$")) {
     unique(sub(reg.ex, "", gene.ids))
 }

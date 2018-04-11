@@ -38,7 +38,7 @@ constructAnnotationVectorSpace <- function(genes, annot.df = all.ipr, gene.col =
 }
 
 
-#' Invokes \code{GeneFamilies::statVectorCloud} on each subset of genes in
+#' Invokes \code{MaizeGeneFamilies::statVectorCloud} on each subset of genes in
 #' \code{annot.vec.space} classified by the gene-sets in \code{gene.sets}.
 #'
 #' @param annot.vec.space A data.frame result of calling function
@@ -49,7 +49,7 @@ constructAnnotationVectorSpace <- function(genes, annot.df = all.ipr, gene.col =
 #'
 #' @export
 #' @return A named list, with one entry per gene-class in \code{gene.sets}.
-#' Values are the results of invoking \code{GeneFamilies::statVectorCloud} on
+#' Values are the results of invoking \code{MaizeGeneFamilies::statVectorCloud} on
 #' each respective subset.
 geneClassesVectorClouds <- function(annot.vec.space, gene.sets) {
     # Validate a
@@ -81,7 +81,7 @@ geneClassesVectorClouds <- function(annot.vec.space, gene.sets) {
 #' @param evolved.genes Character vector of gene IDs, identifying the evolved
 #' genes.
 #' @param annot.df A data.frame of gene annotations. Default is
-#' \code{GeneFamilies::all.ipr}
+#' \code{MaizeGeneFamilies::all.ipr}
 #' @param gene.col The column name or index in \code{annot.df} in which to
 #' lookup the gene IDs. Default is \code{1}
 #' @param anno.col The column name or index in \code{annot.df} in which to
@@ -293,7 +293,7 @@ geneGroupSubfunctionalization <- function(gene.groups.lst, gene.classes) {
 #' @param base.gene.set The name of list-entry in \code{gene.sets} indicating
 #' which is to be interpreted as base genes. Default is \code{'ortholog'}.
 #' @param annot.df A data.frame of gene annotations. Default is
-#' \code{GeneFamilies::all.ipr}
+#' \code{MaizeGeneFamilies::all.ipr}
 #' @param gene.col The column name or index in \code{annot.df} in which to
 #' lookup the gene IDs. Default is \code{1}
 #' @param anno.col The column name or index in \code{annot.df} in which to

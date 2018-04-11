@@ -1,7 +1,7 @@
-require(GeneFamilies)
+require(MaizeGeneFamilies)
 options(mc.cores = getMcCores())
 
-message("USAGE: Rscript path/2/GeneFamilies/exec/loadRpkmRnaSeqCounts.R RPKM_counts_table.tsv path/2/GeneFamilies")
+message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/loadRpkmRnaSeqCounts.R RPKM_counts_table.tsv path/2/MaizeGeneFamilies")
 message("Note, that the table in argument file 'RPKM_counts_table.tsv' is expected to be TAB-Delimited and have a header line:\n", 
     "id tissue rank expression variance")
 

@@ -1,7 +1,7 @@
-require(GeneFamilies)
+require(MaizeGeneFamilies)
 options(mc.cores = getMcCores())
 
-message("USAGE: Rscript path/2/exec/assessDosageEffect.R path/2/GeneFamilies")
+message("USAGE: Rscript path/2/exec/assessDosageEffect.R path/2/MaizeGeneFamilies")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

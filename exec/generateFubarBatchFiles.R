@@ -1,6 +1,6 @@
-require(GeneFamilies)
+require(MaizeGeneFamilies)
 
-message("USAGE: Rscript path/2/GeneFamilies/exec/generateFubarBatchFiles.R path/2/family_phylogenies_directory")
+message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/generateFubarBatchFiles.R path/2/family_phylogenies_directory")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

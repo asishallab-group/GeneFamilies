@@ -21,7 +21,7 @@ subfunctionalizationAnnotationBased(base.genes, evolved.genes,
 genes.}
 
 \item{annot.df}{A data.frame of gene annotations. Default is
-\code{GeneFamilies::all.ipr}}
+\code{MaizeGeneFamilies::all.ipr}}
 
 \item{gene.col}{The column name or index in \code{annot.df} in which to
 lookup the gene IDs. Default is \code{1}}

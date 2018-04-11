@@ -19,3 +19,15 @@ getMcCores <- function(env.var = "MCCORES") {
         detectCores()
     }
 }
+
+
+#' Function to sanitize maize genes. Cuts of the tail following \code{_} and
+#' puts everything into lower case.
+#'
+#' @param x a character vector of maize gene accessions
+#'
+#' @export
+#' @return sanitized version of argument \code{x}
+toLowerCutTail <- function(x) {
+    sub("_[a-z0-9]+$", "", tolower(x))
+}

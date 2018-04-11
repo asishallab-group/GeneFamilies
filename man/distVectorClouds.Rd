@@ -3,7 +3,7 @@
 \name{distVectorClouds}
 \alias{distVectorClouds}
 \title{Measures the distance between two vector clouds (see
-\code{GeneFamilies::statVectorCloud}) within the same vector space. The
+\code{MaizeGeneFamilies::statVectorCloud}) within the same vector space. The
 vector between the two \code{stat.vec}s representing \code{cl.a} and
 \code{cl.b} is computed. The deviance spaces of the two respective clouds
 are projected onto this distance vector, and the remaining 'un-shadowed'
@@ -14,10 +14,10 @@ around them.}
 distVectorClouds(cl.a, cl.b)
 }
 \arguments{
-\item{cl.a}{Result of invoking \code{GeneFamilies::statVectorCloud} on a set
+\item{cl.a}{Result of invoking \code{MaizeGeneFamilies::statVectorCloud} on a set
 of vectors.}
 
-\item{cl.b}{Result of invoking \code{GeneFamilies::statVectorCloud} on a set
+\item{cl.b}{Result of invoking \code{MaizeGeneFamilies::statVectorCloud} on a set
 of vectors.}
 }
 \value{
@@ -26,7 +26,7 @@ respective clouds' deviances.
 }
 \description{
 Measures the distance between two vector clouds (see
-\code{GeneFamilies::statVectorCloud}) within the same vector space. The
+\code{MaizeGeneFamilies::statVectorCloud}) within the same vector space. The
 vector between the two \code{stat.vec}s representing \code{cl.a} and
 \code{cl.b} is computed. The deviance spaces of the two respective clouds
 are projected onto this distance vector, and the remaining 'un-shadowed'

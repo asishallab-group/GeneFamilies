@@ -1,7 +1,7 @@
-require(GeneFamilies)
+require(MaizeGeneFamilies)
 options(mc.cores = getMcCores())
 
-message("USAGE: Rscript path/2/GeneFamilies/exec/loadFubarResults.R path/2/families/working_directory path/2/GeneFamilies")
+message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/loadFubarResults.R path/2/families/working_directory path/2/MaizeGeneFamilies")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

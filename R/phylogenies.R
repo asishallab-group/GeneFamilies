@@ -29,7 +29,7 @@ getFamilyDNAStringSet <- function(fam, cds = all.cds) {
 #' @return TRUE if and only if no error has occurred.
 #' @export
 translate2AASeqs <- function(path.2.cds.fasta, macse.call = getOption("macse.call", 
-    paste("java -Xmx600m -jar ", file.path(path.package("GeneFamilies"), "macse_v1.01b.jar"), 
+    paste("java -Xmx600m -jar ", file.path(path.package("MaizeGeneFamilies"), "macse_v1.01b.jar"), 
         " -prog translateNT2AA", sep = ""))) {
     cmd <- paste(macse.call, "-seq", path.2.cds.fasta)
     system(cmd)

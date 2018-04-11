@@ -1,6 +1,6 @@
-require(GeneFamilies)
+require(MaizeGeneFamilies)
 
-message("USAGE: Rscript path/2/GeneFamilies/exec/dosageEffectEnrichedFunctions.R path/2/GeneFamilies")
+message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/dosageEffectEnrichedFunctions.R path/2/MaizeGeneFamilies")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 message("For those families and tandem clusters showing dossage effect (correlation between copy number and RPKM expression) we identify the enriched protein functions.")

@@ -1,7 +1,7 @@
-require(GeneFamilies)
+require(MaizeGeneFamilies)
 options(mc.cores=detectCores())
 
-message("USAGE: Rscript path/2/GeneFamilies/exec/parseCafeResult.R path/2/cafe_result.txt.cafe path/2/GeneFamilies/data")
+message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/parseCafeResult.R path/2/cafe_result.txt.cafe path/2/MaizeGeneFamilies/data")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

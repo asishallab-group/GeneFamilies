@@ -1,5 +1,7 @@
-.onLoad <- function(libname = find.package("GeneFamilies"), pkgname = "GeneFamilies") {
-  message("No data to be loaded yet. See folder ./data and file R/zzz.R for details.")
+.onLoad <- function(libname = find.package("MaizeGeneFamilies"), pkgname = "MaizeGeneFamilies") {
+  data( "maizeUstilagoDeGenes", package="MaizeGeneFamilies" )
+  data( "maizeGenome", package="MaizeGeneFamilies" )
+  data( "maizeCellCycleHouseKeeping", package="MaizeGeneFamilies" )
 }
 #'####################
 #' Define constants: #

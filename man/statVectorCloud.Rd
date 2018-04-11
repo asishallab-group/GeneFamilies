@@ -7,8 +7,9 @@ the cloud of vectors. Also infers the deviance in terms of
 \code{deviance.funk} (default is \code{base::sd}) of each axis of the vector
 space.}
 \usage{
-statVectorCloud(vecs.df, stat = getOption("GeneFamilies.vector.cloud.stat",
-  mean), deviance.funk = getOption("GeneFamilies.vector.cloud.deviance", sd))
+statVectorCloud(vecs.df,
+  stat = getOption("MaizeGeneFamilies.vector.cloud.stat", mean),
+  deviance.funk = getOption("MaizeGeneFamilies.vector.cloud.deviance", sd))
 }
 \arguments{
 \item{vecs.df}{A matrix of data.frame of row vectors of the same vector
@@ -17,11 +18,11 @@ space}
 \item{stat}{A function used to infer the vector representing the argument
 cloud. The function is applied on each column seperately in order to infer
 the resulting vector's components. Default is
-\code{getOption('GeneFamilies.vector.cloud.stat', mean)}.}
+\code{getOption('MaizeGeneFamilies.vector.cloud.stat', mean)}.}
 
 \item{deviance.funk}{Function applied on each column of the cloud
 \code{vecs.df} in order to infer the cloud's spread around it's representing
-vector. Default is \code{getOption('GeneFamilies.vector.cloud.deviance',
+vector. Default is \code{getOption('MaizeGeneFamilies.vector.cloud.deviance',
 sd)}.}
 }
 \value{

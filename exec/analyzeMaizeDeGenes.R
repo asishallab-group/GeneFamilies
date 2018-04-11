@@ -1,0 +1,75 @@
+require(MaizeGeneFamilies)
+
+
+message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/analyzeMaizeDeGenes.R path/2/MaizeGeneFamilies")
+
+input.args <- commandArgs(trailingOnly = TRUE)
+
+
+#' Prepare exact Fischer tests:
+maize.w.mapMan <- intersect(toLowerCutTail(names(maize.aas)), toLowerCutTail(maize.mapMan$IDENTIFIER))
+maize.genes.expr <- Reduce(union, list(mmbs.v.mms$target_id, mmbs.v.sgstc$target_id, 
+    mms.v.sgltc$target_id, sgstc.v.sgltc$target_id, seetc.v.mms$target_id, 
+    seetc.v.sgltc$target_id))
+maize.expr.w.mapMan <- intersect(maize.w.mapMan, toLowerCutTail(maize.genes.expr))
+
+
+#' Venn Diagramm has revealed, that there are only four sets of Diff Expr Genes
+#' (DEG):
+sgltc.inter.sgstc.de.genes.w.mmb <- intersect(intersect(toLowerCutTail(mms.v.sgltc.de.genes), 
+    toLowerCutTail(mmbs.v.sgstc.de.genes)), maize.expr.w.mapMan)
+mms.v.sgltc.de.genes.uniq.w.mmb <- setdiff(intersect(toLowerCutTail(mms.v.sgltc.de.genes), 
+    maize.expr.w.mapMan), sgltc.inter.sgstc.de.genes.w.mmb)
+mmbs.v.sgstc.de.genes.uniq.w.mmb <- setdiff(intersect(toLowerCutTail(mmbs.v.sgstc.de.genes), 
+    maize.expr.w.mapMan), sgltc.inter.sgstc.de.genes.w.mmb)
+
+
+#' exact Fischer test to find over represented MapMan-Bin annotations:
+maize.mapMan$IDENTIFIER.san <- toLowerCutTail(maize.mapMan$IDENTIFIER)
+mmBins <- unique(maize.mapMan$BINCODE)
+
+
+#' Function to execute Fischer test:
+maizeFischerTest <- function(genes.de, genes.not.de, univ.genes = union(genes.de, 
+    genes.not.de)) {
+    res.df <- Reduce(rbind, lapply(mmBins, function(mmBin) {
+        mmBin.expr.genes <- intersect(maize.mapMan[which(maize.mapMan$BINCODE == 
+            mmBin), "IDENTIFIER.san"], maize.expr.w.mapMan)
+        if (length(mmBin.expr.genes) > 0) {
+            cont.tbl <- generateContingencyTable(genes.de, genes.not.de, 
+                mmBin.expr.genes, setdiff(univ.genes, mmBin.expr.genes), 
+                "DE", "MapManBin")
+            p.val <- fisher.test(cont.tbl, alternative = "greater")$p.value
+            data.frame(BINCODE = mmBin, p.value = p.val, stringsAsFactors = FALSE)
+        } else NULL
+    }))
+    if (!is.null(res.df)) {
+        # Correct for multiple hypothesis testing:
+        res.df$p.adjusted <- p.adjust(res.df$p.value, method = "fdr")
+        # Retain significant ones only:
+        res.df.sign <- res.df[which(res.df$p.adjusted <= 0.05), ]
+        if (nrow(res.df.sign) > 0) {
+            # Add MapMan-Bin Names and Descriptions:
+            res.df.sign$NAME <- sapply(res.df.sign$BINCODE, function(mmBin) maize.mapMan[which(maize.mapMan$BINCODE == 
+                mmBin), "NAME"][[1]])
+            res.df.sign$DESCRIPTION <- sapply(res.df.sign$BINCODE, function(mmBin) maize.mapMan[which(maize.mapMan$BINCODE == 
+                mmBin), "DESCRIPTION"][[1]])
+            # Done:
+            res.df.sign
+        } else {
+            warning("No significant P-Values found.")
+            res.df
+        }
+    } else NULL
+}
+
+
+#' Fisher tests:
+mms.v.sgltc.de.genes.uniq.fish <- maizeFischerTest(mms.v.sgltc.de.genes.uniq.w.mmb, 
+    setdiff(maize.expr.w.mapMan, mms.v.sgltc.de.genes.uniq.w.mmb))
+sgltc.inter.sgstc.de.genes.fish <- maizeFischerTest(sgltc.inter.sgstc.de.genes.w.mmb, 
+    setdiff(maize.expr.w.mapMan, sgltc.inter.sgstc.de.genes.w.mmb))
+mmbs.v.sgstc.de.genes.uniq.fish <- maizeFischerTest(mmbs.v.sgstc.de.genes.uniq.w.mmb, 
+    setdiff(maize.expr.w.mapMan, mmbs.v.sgstc.de.genes.uniq.w.mmb))
+
+message("DONE")

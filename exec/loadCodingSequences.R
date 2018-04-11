@@ -1,6 +1,6 @@
-require(GeneFamilies)
+require(MaizeGeneFamilies)
 
-message("USAGE: Rscript path/2/GeneFamilies/exec/loadCodingSequences.R path/2/GeneFamilies/data aet.fa aly.fa ath.fa bra.fa chi.fa cru.fa esa.fa tpa.fa")
+message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/loadCodingSequences.R path/2/MaizeGeneFamilies/data aet.fa aly.fa ath.fa bra.fa chi.fa cru.fa esa.fa tpa.fa")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

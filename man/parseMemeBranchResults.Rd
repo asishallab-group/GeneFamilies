@@ -5,20 +5,18 @@
 \title{Parses a HyPhy MEME branch result file to extract significant LEAVES with
 codons showing signs of positive selection.}
 \usage{
-parseMemeBranchResults(meme.file, bayes.factor.sign.cutoff = 100,
-  fam.name.reg.exp = "/(fam\\\\d+)/")
+parseMemeBranchResults(meme.file, fam.name, bayes.factor.sign.cutoff = 100)
 }
 \arguments{
 \item{meme.file}{a valid file path to a MEME branch result file, e.g.
 'fam8119_hyphy_meme_output.txt.branches'}
 
+\item{fam.name}{The name of the gene family the \code{meme.file} holds
+branch results for.}
+
 \item{bayes.factor.sign.cutoff}{The numeric value above which to consider a
 Bayes-Factor to be significant. Default is highly conservative and set to
 100 aka 'decisive'}
-
-\item{fam.name.reg.exp}{The regular expression used within
-\code{base::regexec(...)} to extract the gene family's name from the
-\code{meme.file} argument}
 }
 \value{
 A data.frame with four columns: Family, Site, Branch, and
