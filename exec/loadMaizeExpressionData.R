@@ -29,6 +29,25 @@ seetc.v.mms$padj <- p.adjust(seetc.v.mms$pval, method = "fdr")
 seetc.v.sgltc$padj <- p.adjust(seetc.v.sgltc$pval, method = "fdr")
 
 
+#' Add log2-fold-changes:
+log2Fc <- function(counts.tbl, untreated.name, treated.name) {
+    unt.col <- colnames(counts.tbl)[grepl(paste("^", untreated.name, "\\d\\.est_counts$", 
+        sep = ""), colnames(counts.tbl))]
+    trt.col <- colnames(counts.tbl)[grepl(paste("^", treated.name, "\\d\\.est_counts$", 
+        sep = ""), colnames(counts.tbl))]
+    apply(counts.tbl, 1, function(x) {
+        log2(mean(as.numeric(x[trt.col]), na.rm = TRUE)/mean(as.numeric(x[unt.col]), 
+            na.rm = TRUE))
+    })
+}
+mmbs.v.mms$log2.folg.change <- log2Fc( mmbs.v.mms, "MBS", "MMS" )
+mmbs.v.sgstc$log2.folg.change <- log2Fc( mmbs.v.sgstc, "MBS", "SGsTC" )
+mms.v.sgltc$log2.folg.change <- log2Fc( mms.v.sgltc, "MBS", "SGsTC" )
+sgstc.v.sgltc$log2.folg.change <- log2Fc( sgstc.v.sgltc, "SGsTC", "SGlTC" )
+seetc.v.mms$log2.folg.change <- log2Fc( seetc.v.mms, "MMS", "SeeTC" )
+seetc.v.sgltc$log2.folg.change <- log2Fc( seetc.v.sgltc, "SGlTC", "SeeTC" )
+
+
 #' Identify differentially expressed genes:
 mmbs.v.mms.de.genes <- mmbs.v.mms[which(mmbs.v.mms$padj <= 0.05), "target_id"]
 mmbs.v.sgstc.de.genes <- mmbs.v.sgstc[which(mmbs.v.sgstc$padj <= 0.05), 
@@ -61,6 +80,28 @@ maize.ustilago.cell.house.de.venn <- venn(venn.house.cell.cyc.lst)
 pdf(file.path(input.args[[7]], "inst", "maize_ustilago_cell_cycle_housekeeping_de_venn_diagr.pdf"))
 plot(maize.ustilago.cell.house.de.venn)
 dev.off()
+
+
+#' Investigate intersections:
+maize.gene.lst <- list(mmbs.v.sgstc = toLowerCutTail(mmbs.v.sgstc.de.genes), 
+    mms.v.sgltc = toLowerCutTail(mms.v.sgltc.de.genes), seetc.v.mms = toLowerCutTail(seetc.v.sgltc.de.genes))
+for (gene.class in unique(maize.gene.sets$V3)) {
+    lst <- setNames(list(toLowerCutTail(maize.gene.sets[which(maize.gene.sets$V3 == 
+        gene.class), 1])), gene.class)
+    venn.lst <- venn(append(maize.gene.lst, lst))
+    # Plot:
+    pdf(file.path(input.args[[7]], "inst", paste("maize_ustilago_de_", 
+        gene.class, "_venn_diagr.pdf", sep = "")))
+    plot(venn.lst)
+    dev.off()
+    # Write Gene Lists:
+    for (de.class in names(maize.gene.lst)) {
+        de.inter.class <- intersect(unlist(lst), maize.gene.lst[[de.class]])
+        fl.pth <- file.path(input.args[[7]], "inst", paste("intersect", 
+            de.class, gene.class, ".txt", sep = "_"))
+        writeLines(de.inter.class, fl.pth)
+    }
+}
 
 
 #' Write lists of DE genes:
