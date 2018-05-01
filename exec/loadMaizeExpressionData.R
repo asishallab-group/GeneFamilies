@@ -1,4 +1,5 @@
 require(MaizeGeneFamilies)
+options(mc.cores = detectCores())
 
 message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/loadMaizeExpressionData.R MBS_vs_MMS.tsv MBS_vs_SGsTC.tsv MMS_vs_SGlTC.tsv SGsTC_vs_SGlTC.tsv SeeTC_vs_MMS.tsv SeeTC_vs_SGlTC.tsv path/2/MaizeGeneFamilies")
 
@@ -35,17 +36,44 @@ log2Fc <- function(counts.tbl, untreated.name, treated.name) {
         sep = ""), colnames(counts.tbl))]
     trt.col <- colnames(counts.tbl)[grepl(paste("^", treated.name, "\\d\\.est_counts$", 
         sep = ""), colnames(counts.tbl))]
-    apply(counts.tbl, 1, function(x) {
-        log2(mean(as.numeric(x[trt.col]), na.rm = TRUE)/mean(as.numeric(x[unt.col]), 
-            na.rm = TRUE))
-    })
+    res.df <- data.frame(mean.treated = as.numeric(unlist(apply(counts.tbl, 
+        1, function(x) {
+            mean(as.numeric(x[trt.col]), na.rm = TRUE)
+        }))), mean.untreated = as.numeric(unlist(apply(counts.tbl, 1, function(x) {
+        mean(as.numeric(x[unt.col]), na.rm = TRUE)
+    }))), stringsAsFactors = FALSE)
+    res.df$log2.fold.change <- log2(res.df$mean.treated/res.df$mean.untreated)
+    res.df
 }
-mmbs.v.mms$log2.folg.change <- log2Fc( mmbs.v.mms, "MBS", "MMS" )
-mmbs.v.sgstc$log2.folg.change <- log2Fc( mmbs.v.sgstc, "MBS", "SGsTC" )
-mms.v.sgltc$log2.folg.change <- log2Fc( mms.v.sgltc, "MBS", "SGsTC" )
-sgstc.v.sgltc$log2.folg.change <- log2Fc( sgstc.v.sgltc, "SGsTC", "SGlTC" )
-seetc.v.mms$log2.folg.change <- log2Fc( seetc.v.mms, "MMS", "SeeTC" )
-seetc.v.sgltc$log2.folg.change <- log2Fc( seetc.v.sgltc, "SGlTC", "SeeTC" )
+mmbs.v.mms <- cbind(mmbs.v.mms, log2Fc(mmbs.v.mms, "MBS", "MMS"))
+mmbs.v.sgstc <- cbind(mmbs.v.sgstc, log2Fc(mmbs.v.sgstc, "MBS", "SGsTC"))
+mms.v.sgltc <- cbind(mms.v.sgltc, log2Fc(mms.v.sgltc, "MBS", "SGsTC"))
+sgstc.v.sgltc <- cbind(sgstc.v.sgltc, log2Fc(sgstc.v.sgltc, "SGsTC", "SGlTC"))
+seetc.v.mms <- cbind(seetc.v.mms, log2Fc(seetc.v.mms, "MMS", "SeeTC"))
+seetc.v.sgltc <- cbind(seetc.v.sgltc, log2Fc(seetc.v.sgltc, "SGlTC", "SeeTC"))
+
+
+#' Add MapMan-Bins where possible:
+addMapManBins <- function(expr.tbl) {
+    cbind(expr.tbl, Reduce(rbind, mclapply(expr.tbl$target_id, function(gene) {
+        gene.san <- toLowerCutTail(gene)
+        if (gene.san %in% maize.mapMan$IDENTIFIER.san) {
+            maize.mapMan.i <- maize.mapMan[which(maize.mapMan$IDENTIFIER.san == 
+                gene.san), ]
+            data.frame(MapMan.BINCODE = paste(sort(unique(maize.mapMan.i$BINCODE)), 
+                collapse = ";"), MapMan.NAME = paste(sort(unique(maize.mapMan.i$NAME)), 
+                collapse = ";"), stringsAsFactors = FALSE)
+        } else {
+            data.frame(MapMan.BINCODE = NA, MapMan.NAME = NA, stringsAsFactors = FALSE)
+        }
+    })))
+}
+mbs.v.mms <- addMapManBins(mmbs.v.mms)
+mmbs.v.sgstc <- addMapManBins(mmbs.v.sgstc)
+mms.v.sgltc <- addMapManBins(mms.v.sgltc)
+sgstc.v.sgltc <- addMapManBins(sgstc.v.sgltc)
+seetc.v.mms <- addMapManBins(seetc.v.mms)
+seetc.v.sgltc <- addMapManBins(seetc.v.sgltc)
 
 
 #' Identify differentially expressed genes:
@@ -117,6 +145,21 @@ writeLines(sort(seetc.v.mms.de.genes), file.path(input.args[[7]], "inst",
     "seetc.v.mms_de_genes.txt"))
 writeLines(sort(seetc.v.sgltc.de.genes), file.path(input.args[[7]], "inst", 
     "seetc.v.sgltc_de_genes.txt"))
+
+
+#' Write tables:
+write.table(mmbs.v.mms, file.path(input.args[[7]], "inst", "mmbs.v.mms_de_genes_tbl.txt"), 
+    row.names = FALSE, sep = "\t")
+write.table(mmbs.v.sgstc, file.path(input.args[[7]], "inst", "mmbs.v.sgstc_de_genes_tbl.txt"), 
+    row.names = FALSE, sep = "\t")
+write.table(mms.v.sgltc, file.path(input.args[[7]], "inst", "mms.v.sgltc_de_genes_tbl.txt"), 
+    row.names = FALSE, sep = "\t")
+write.table(sgstc.v.sgltc, file.path(input.args[[7]], "inst", "sgstc.v.sgltc_de_genes_tbl.txt"), 
+    row.names = FALSE, sep = "\t")
+write.table(seetc.v.mms, file.path(input.args[[7]], "inst", "seetc.v.mms_de_genes_tbl.txt"), 
+    row.names = FALSE, sep = "\t")
+write.table(seetc.v.sgltc, file.path(input.args[[7]], "inst", "seetc.v.sgltc_de_genes_tbl.txt"), 
+    row.names = FALSE, sep = "\t")
 
 
 #' Save results:

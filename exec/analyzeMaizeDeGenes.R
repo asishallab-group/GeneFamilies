@@ -26,6 +26,8 @@ mms.v.sgltc.de.genes.uniq.w.mmb <- setdiff(intersect(toLowerCutTail(mms.v.sgltc.
     maize.expr.w.mapMan), sgltc.inter.sgstc.de.genes.w.mmb)
 mmbs.v.sgstc.de.genes.uniq.w.mmb <- setdiff(intersect(toLowerCutTail(mmbs.v.sgstc.de.genes), 
     maize.expr.w.mapMan), sgltc.inter.sgstc.de.genes.w.mmb)
+sgltc.union.sgstc.de.genes.w.mmb <- intersect(union(toLowerCutTail(mms.v.sgltc.de.genes), 
+    toLowerCutTail(mmbs.v.sgstc.de.genes)), maize.expr.w.mapMan)
 
 
 #' exact Fischer test to find over represented MapMan-Bin annotations:
@@ -73,94 +75,53 @@ mms.v.sgltc.de.genes.uniq.fish <- maizeFischerTest(mms.v.sgltc.de.genes.uniq.w.m
     setdiff(maize.expr.w.mapMan, mms.v.sgltc.de.genes.uniq.w.mmb))
 sgltc.inter.sgstc.de.genes.fish <- maizeFischerTest(sgltc.inter.sgstc.de.genes.w.mmb, 
     setdiff(maize.expr.w.mapMan, sgltc.inter.sgstc.de.genes.w.mmb))
+sgltc.union.sgstc.de.genes.fish <- maizeFischerTest(sgltc.union.sgstc.de.genes.w.mmb, 
+    setdiff(maize.expr.w.mapMan, sgltc.union.sgstc.de.genes.w.mmb))
 mmbs.v.sgstc.de.genes.uniq.fish <- maizeFischerTest(mmbs.v.sgstc.de.genes.uniq.w.mmb, 
     setdiff(maize.expr.w.mapMan, mmbs.v.sgstc.de.genes.uniq.w.mmb))
 
 
-#' ******
-#' PFam *
-#' ******
-maize.w.pfam <- intersect(toLowerCutTail(names(maize.aas)), maize.pfam$gene.san.id)
-maize.expr.w.pfam <- intersect(maize.w.pfam, toLowerCutTail(maize.genes.expr))
-maize.pfam.compound <- data.frame(gene = maize.w.pfam, compound.Pfam = sapply(maize.w.pfam, 
-    function(x) {
-        paste(sort(unique(maize.pfam[which(maize.pfam$gene.san.id == x), 
-            "Pfam"])), collapse = ",")
-    }), stringsAsFactors = FALSE)
-
-
-#' Venn Diagramm has revealed, that there are only four sets of Diff Expr Genes
-#' (DEG):
-sgltc.inter.sgstc.de.genes.w.pfam <- intersect(intersect(toLowerCutTail(mms.v.sgltc.de.genes), 
-    toLowerCutTail(mmbs.v.sgstc.de.genes)), maize.expr.w.pfam)
-mms.v.sgltc.de.genes.uniq.w.pfam <- setdiff(intersect(toLowerCutTail(mms.v.sgltc.de.genes), 
-    maize.expr.w.pfam), sgltc.inter.sgstc.de.genes.w.pfam)
-mmbs.v.sgstc.de.genes.uniq.w.pfam <- setdiff(intersect(toLowerCutTail(mmbs.v.sgstc.de.genes), 
-    maize.expr.w.pfam), sgltc.inter.sgstc.de.genes.w.pfam)
-
-
-#' Function to execute Fischer test:
-maizeFischerTestGen <- function(genes.de, genes.not.de, univ.genes = union(genes.de, 
-    genes.not.de), anno.tbl, at.gene.col = 3, at.anno.col = 2) {
-    annos <- unique(anno.tbl[anno.tbl[, at.gene.col] %in% univ.genes, at.anno.col])
-    res.df <- Reduce(rbind, lapply(annos, function(anno.i) {
-        expr.genes.w.anno <- intersect(anno.tbl[which(anno.tbl[, at.anno.col] == 
-            anno.i), at.gene.col], genes.de)
-        if (length(expr.genes.w.anno) > 0) {
-            cont.tbl <- generateContingencyTable(genes.de, genes.not.de, 
-                expr.genes.w.anno, setdiff(univ.genes, expr.genes.w.anno), 
-                "DE", "Annotation")
-            p.val <- fisher.test(cont.tbl, alternative = "greater")$p.value
-            data.frame(Annotation = anno.i, p.value = p.val, stringsAsFactors = FALSE)
-        } else NULL
+#' Analysis showed that only 'sgltc.inter.sgstc.de.genes.fish' and
+#' 'sgltc.union.sgstc.de.genes.fish' contain significant results:
+overrep.mapManBins <- unique(union(sgltc.inter.sgstc.de.genes.fish$BINCODE, 
+    sgltc.union.sgstc.de.genes.fish$BINCODE))
+overrep.mapManBins.genes.df <- Reduce(rbind, lapply(overrep.mapManBins, 
+    function(mmBin) {
+        binGenes.df <- maize.mapMan[(grepl(paste("^", mmBin, "[0-9.]*", 
+            sep = ""), maize.mapMan$BINCODE) & maize.mapMan$TYPE == "TRUE"), 
+            ]
+        mmbs.v.sgstc.de.genes.mmBin <- binGenes.df[which(binGenes.df$IDENTIFIER.san %in% 
+            toLowerCutTail(mmbs.v.sgstc.de.genes)), c("IDENTIFIER.san", 
+            "BINCODE", "NAME")]
+        mmbs.v.sgstc.de.genes.mmBin$DEG.set <- "mmbs.v.sgstc"
+        mms.v.sgltc.de.genes.mmBin <- binGenes.df[which(binGenes.df$IDENTIFIER.san %in% 
+            toLowerCutTail(mms.v.sgltc.de.genes)), c("IDENTIFIER.san", 
+            "BINCODE", "NAME")]
+        mms.v.sgltc.de.genes.mmBin$DEG.set <- "mms.v.sgltc"
+        # Generate a Venn Diagramm:
+        mmBin.venn.lst <- list(mmbs.v.sgstc = unique(mmbs.v.sgstc.de.genes.mmBin$IDENTIFIER.san), 
+            mms.v.sgltc = unique(mms.v.sgltc.de.genes.mmBin$IDENTIFIER.san))
+        mmBin.venn <- venn(mmBin.venn.lst)
+        pdf(file.path(input.args[[1]], "inst", paste("mapManBin_DEG_sgst_sgltc_", 
+            mmBin, "_venn.pdf", sep = "")))
+        plot(mmBin.venn)
+        dev.off()
+        # Generate result data.frame:
+        res.df <- rbind(mmbs.v.sgstc.de.genes.mmBin, mms.v.sgltc.de.genes.mmBin)
+        res.df$overrep.mapManBin <- mmBin
+        unique(res.df)
     }))
-    if (!is.null(res.df)) {
-        # Correct for multiple hypothesis testing:
-        res.df$p.adjusted <- p.adjust(res.df$p.value, method = "fdr")
-        # Retain significant ones only:
-        res.df.sign <- res.df[which(res.df$p.adjusted <= 0.05), ]
-        if (nrow(res.df.sign) > 0) {
-            res.df.sign
-        } else {
-            warning("No significant P-Values found.")
-            res.df
-        }
-    } else NULL
-}
 
 
-#' Function to lookup InterPro NAME for given PFam IDs:
-iprNamesForPFamIds <- function(pfam.ids) {
-    Reduce(rbind, lapply(pfam.ids, function(pfam.id) {
-        ipr.id <- pfam.2.ipr[which(pfam.2.ipr$V1 == pfam.id), 2]
-        if (!is.null(ipr.id) && !is.na(ipr.id) && length(ipr.id) > 0 && 
-            ipr.id %in% names(ipr.db)) {
-            ipr.entry <- ipr.db[[ipr.id]]
-            data.frame(IPR.ID = ipr.id, IPR.NAME = ipr.entry[["NAME"]], 
-                stringsAsFactors = FALSE)
-        } else {
-            data.frame(IPR.ID = NA, IPR.NAME = NA, stringsAsFactors = FALSE)
-        }
-    }))
-}
+#' Write table
+write.table(overrep.mapManBins.genes.df, file.path(input.args[[1]], "inst", 
+    "overrep_mapManBins_DEG_tbl.txt"), sep = "\t", row.names = FALSE)
 
 
-#' Execute Fischer tests to find enriched PFams among DE genes:
-mms.v.sgltc.de.genes.uniq.fish.pfam <- maizeFischerTestGen(mms.v.sgltc.de.genes.uniq.w.pfam, 
-    setdiff(maize.expr.w.pfam, mms.v.sgltc.de.genes.uniq.w.pfam), anno.tbl = maize.pfam)
-mms.v.sgltc.de.genes.uniq.fish.pfam <- cbind(mms.v.sgltc.de.genes.uniq.fish.pfam, 
-    iprNamesForPFamIds(mms.v.sgltc.de.genes.uniq.fish.pfam$Annotation))
-
-sgltc.inter.sgstc.de.genes.fish.pfam <- maizeFischerTestGen(sgltc.inter.sgstc.de.genes.w.pfam, 
-    setdiff(maize.expr.w.pfam, sgltc.inter.sgstc.de.genes.w.pfam), anno.tbl = maize.pfam)
-sgltc.inter.sgstc.de.genes.fish.pfam <- cbind(sgltc.inter.sgstc.de.genes.fish.pfam, 
-    iprNamesForPFamIds(sgltc.inter.sgstc.de.genes.fish.pfam$Annotation))
-
-mmbs.v.sgstc.de.genes.uniq.fish.pfam <- maizeFischerTestGen(mmbs.v.sgstc.de.genes.uniq.w.pfam, 
-    setdiff(maize.expr.w.pfam, mmbs.v.sgstc.de.genes.uniq.w.pfam), anno.tbl = maize.pfam)
-mmbs.v.sgstc.de.genes.uniq.fish.pfam <- cbind(mmbs.v.sgstc.de.genes.uniq.fish.pfam, 
-    iprNamesForPFamIds(mmbs.v.sgstc.de.genes.uniq.fish.pfam$Annotation))
-
+#' Save results:
+save(mms.v.sgltc.de.genes.uniq.fish, sgltc.inter.sgstc.de.genes.fish, mmbs.v.sgstc.de.genes.uniq.fish, 
+    overrep.mapManBins.genes.df, file = file.path(input.args[[1]], "data", 
+        "maize_de_mapManBin_overrep.RData"))
 
 
 message("DONE")

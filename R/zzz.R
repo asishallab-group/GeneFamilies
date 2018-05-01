@@ -5,6 +5,7 @@
   data( "Zmays_pfam_go", package="MaizeGeneFamilies" )
   data( "PFam_to_InterPro_mapping", package="MaizeGeneFamilies" )
   data( "MaizeGeneSets", package="MaizeGeneFamilies" )
+  data( "maize_de_mapManBin_overrep", package="MaizeGeneFamilies" )
 }
 #'####################
 #' Define constants: #
