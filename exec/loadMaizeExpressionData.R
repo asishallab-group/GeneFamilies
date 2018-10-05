@@ -62,9 +62,11 @@ addMapManBins <- function(expr.tbl) {
                 gene.san), ]
             data.frame(MapMan.BINCODE = paste(sort(unique(maize.mapMan.i$BINCODE)), 
                 collapse = ";"), MapMan.NAME = paste(sort(unique(maize.mapMan.i$NAME)), 
+                collapse = ";"), MapMan.Gene.IDs = paste(sort(unique(maize.mapMan.i$IDENTIFIER)), 
                 collapse = ";"), stringsAsFactors = FALSE)
         } else {
-            data.frame(MapMan.BINCODE = NA, MapMan.NAME = NA, stringsAsFactors = FALSE)
+            data.frame(MapMan.BINCODE = NA, MapMan.NAME = NA, MapMan.Gene.IDs = NA, 
+                stringsAsFactors = FALSE)
         }
     })))
 }

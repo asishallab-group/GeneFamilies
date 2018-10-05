@@ -1,4 +1,5 @@
 require(MaizeGeneFamilies)
+options(mc.cores = getMcCores())
 
 
 message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/analyzeMaizeDeGenes.R path/2/MaizeGeneFamilies")
@@ -38,7 +39,7 @@ mmBins <- unique(maize.mapMan$BINCODE)
 #' Function to execute Fischer test:
 maizeFischerTest <- function(genes.de, genes.not.de, univ.genes = union(genes.de, 
     genes.not.de)) {
-    res.df <- Reduce(rbind, lapply(mmBins, function(mmBin) {
+    res.df <- Reduce(rbind, mclapply(mmBins, function(mmBin) {
         mmBin.expr.genes <- intersect(maize.mapMan[which(maize.mapMan$BINCODE == 
             mmBin), "IDENTIFIER.san"], maize.expr.w.mapMan)
         if (length(mmBin.expr.genes) > 0) {
@@ -114,8 +115,9 @@ overrep.mapManBins.genes.df <- Reduce(rbind, lapply(overrep.mapManBins,
 
 
 #' Write table
-write.table(overrep.mapManBins.genes.df, file.path(input.args[[1]], "inst", 
-    "overrep_mapManBins_DEG_tbl.txt"), sep = "\t", row.names = FALSE)
+write.table(overrep.mapManBins.genes.df[order(overrep.mapManBins.genes.df$IDENTIFIER.san), 
+    ], file.path(input.args[[1]], "inst", "overrep_mapManBins_DEG_tbl.txt"), 
+    sep = "\t", row.names = FALSE)
 
 
 #' Save results:
