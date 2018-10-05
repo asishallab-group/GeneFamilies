@@ -2,7 +2,7 @@
 % Please edit documentation in R/family_funks.R
 \name{testShannonEntropy}
 \alias{testShannonEntropy}
-\title{Testing function \code{MaizeGeneFamilies::shannonEntropy}}
+\title{Testing function \code{GeneFamilies::shannonEntropy}}
 \usage{
 testShannonEntropy()
 }
@@ -10,6 +10,6 @@ testShannonEntropy()
 \code{TRUE} if and only if all tests are passed successfully.
 }
 \description{
-Testing function \code{MaizeGeneFamilies::shannonEntropy}
+Testing function \code{GeneFamilies::shannonEntropy}
 }
 

@@ -634,10 +634,10 @@ vectorProjection <- function(a, b) {
 #' @param stat A function used to infer the vector representing the argument
 #' cloud. The function is applied on each column seperately in order to infer
 #' the resulting vector's components. Default is
-#' \code{getOption('MaizeGeneFamilies.vector.cloud.stat', mean)}. 
+#' \code{getOption('GeneFamilies.vector.cloud.stat', mean)}. 
 #' @param deviance.funk Function applied on each column of the cloud
 #' \code{vecs.df} in order to infer the cloud's spread around it's representing
-#' vector. Default is \code{getOption('MaizeGeneFamilies.vector.cloud.deviance',
+#' vector. Default is \code{getOption('GeneFamilies.vector.cloud.deviance',
 #' sd)}.
 #'
 #' @export
@@ -645,8 +645,8 @@ vectorProjection <- function(a, b) {
 #' representing the cloud, \code{deviance.vec} the vector representing the
 #' spread around \code{stat.vec}, and the vector orthogonal on the vector space
 #' diagonal pointing to the \code{stat.vec}.
-statVectorCloud <- function(vecs.df, stat = getOption("MaizeGeneFamilies.vector.cloud.stat", 
-    mean), deviance.funk = getOption("MaizeGeneFamilies.vector.cloud.deviance", 
+statVectorCloud <- function(vecs.df, stat = getOption("GeneFamilies.vector.cloud.stat", 
+    mean), deviance.funk = getOption("GeneFamilies.vector.cloud.deviance", 
     sd)) {
     i <- which(!as.logical(apply(vecs.df, 1, hasInvalidVecSpaceComponents)))
     if (length(i) == 0) 
@@ -673,7 +673,7 @@ naAsZero <- function(x) {
 }
 
 #' Measures the distance between two vector clouds (see
-#' \code{MaizeGeneFamilies::statVectorCloud}) within the same vector space. The
+#' \code{GeneFamilies::statVectorCloud}) within the same vector space. The
 #' vector between the two \code{stat.vec}s representing \code{cl.a} and
 #' \code{cl.b} is computed. The deviance spaces of the two respective clouds
 #' are projected onto this distance vector, and the remaining 'un-shadowed'
@@ -681,9 +681,9 @@ naAsZero <- function(x) {
 #' considering their representatives and the irespective deviance spreads
 #' around them.
 #'
-#' @param cl.a Result of invoking \code{MaizeGeneFamilies::statVectorCloud} on a set
+#' @param cl.a Result of invoking \code{GeneFamilies::statVectorCloud} on a set
 #' of vectors.
-#' @param cl.b Result of invoking \code{MaizeGeneFamilies::statVectorCloud} on a set
+#' @param cl.b Result of invoking \code{GeneFamilies::statVectorCloud} on a set
 #' of vectors.
 #'
 #' @export

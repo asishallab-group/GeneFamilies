@@ -6,8 +6,8 @@
 \code{sel.aa}.}
 \usage{
 unalignedAAforAlignedAAPos(gene, sel.aa, msa.fasta,
-  gap.char = getOption("MaizeGeneFamilies.gap.char", "-"),
-  gap.char.matching.fixed = getOption("MaizeGeneFamilies.gap.char.matching.fixed",
+  gap.char = getOption("GeneFamilies.gap.char", "-"),
+  gap.char.matching.fixed = getOption("GeneFamilies.gap.char.matching.fixed",
   TRUE))
 }
 \arguments{
@@ -22,12 +22,12 @@ strip.desc=TRUE)}.}
 
 \item{gap.char}{The character or regular expression used to identify non
 sequence characters in the aligned sequences. Default is
-\code{getOption('MaizeGeneFamilies.gap.char', '-')}.}
+\code{getOption('GeneFamilies.gap.char', '-')}.}
 
 \item{gap.char.matching.fixed}{boolean indicating the value to pass to
 \code{grepl} and \code{gsub} argument \code{fixed=}. Set to \code{TRUE} if
 \code{gap.char} is literal and atomic. Default is
-getOption('MaizeGeneFamilies.gap.char.matching.fixed', TRUE).}
+getOption('GeneFamilies.gap.char.matching.fixed', TRUE).}
 }
 \value{
 An integer; either NA if the position is a non sequence character,

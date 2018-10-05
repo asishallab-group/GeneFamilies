@@ -1,6 +1,6 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 
-message("USAGE: Rscript path/2/MaizeGeneFamiliesexec/exec/loadMapManAnnotations.R mercatorMapManResults.txt path/2/MaizeGeneFamilies")
+message("USAGE: Rscript path/2/MaizeGeneFamiliesexec/exec/loadMapManAnnotations.R mercatorMapManResults.txt path/2/GeneFamilies")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

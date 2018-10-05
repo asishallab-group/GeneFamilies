@@ -1,7 +1,7 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 options(mc.cores = detectCores())
 
-message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/loadMaizeExpressionData.R MBS_vs_MMS.tsv MBS_vs_SGsTC.tsv MMS_vs_SGlTC.tsv SGsTC_vs_SGlTC.tsv SeeTC_vs_MMS.tsv SeeTC_vs_SGlTC.tsv path/2/MaizeGeneFamilies")
+message("USAGE: Rscript path/2/GeneFamilies/exec/loadMaizeExpressionData.R MBS_vs_MMS.tsv MBS_vs_SGsTC.tsv MMS_vs_SGlTC.tsv SGsTC_vs_SGlTC.tsv SeeTC_vs_MMS.tsv SeeTC_vs_SGlTC.tsv path/2/MaizeGeneFamilies")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

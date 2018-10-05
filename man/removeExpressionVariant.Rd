@@ -7,7 +7,7 @@ identifiers \emph{and} removing resulting duplicate gene IDs. See
 \code{base::sub} for more details.}
 \usage{
 removeExpressionVariant(gene.ids,
-  reg.ex = getOption("MaizeGeneFamilies.expression.variant.regex",
+  reg.ex = getOption("GeneFamilies.expression.variant.regex",
   "\\\\.\\\\d+$"))
 }
 \arguments{
@@ -15,7 +15,7 @@ removeExpressionVariant(gene.ids,
 
 \item{reg.ex}{the regular expression used to identify the to be deleted
 expression variant part of a gene ID. Default is
-\code{getOption('MaizeGeneFamilies.expression.variant.regex', '\\.\\d+$')}.}
+\code{getOption('GeneFamilies.expression.variant.regex', '\\.\\d+$')}.}
 }
 \value{
 The modified gene IDs with the expression variant parts deleted.

@@ -1,6 +1,6 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 
-message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/loadOrthologsAndParalogs.R path/2/MaizeGeneFamilies/data all_vs_all_tabular_blast_out.txt eight_brassicaceae_orthologs.txt eight_brassicaceae_tandems.txt")
+message("USAGE: Rscript path/2/GeneFamilies/exec/loadOrthologsAndParalogs.R path/2/MaizeGeneFamilies/data all_vs_all_tabular_blast_out.txt eight_brassicaceae_orthologs.txt eight_brassicaceae_tandems.txt")
 message("EXPEXTED FORMATS:")
 message("- all_vs_all_tabular_blast_out.txt is the result of calling BLAT or BLAST on all coding sequences in an 'all vs all' approach. The result file is expected to be in the tabular Blast output format ")
 message("- eight_brassicaceae_orthologs.txt is a TAB separated table holding orthologous gene clusters. The table is expected to have the following header:\naly\tath\tcru\tchi\taet\tbra\tesa\ttpa\n")

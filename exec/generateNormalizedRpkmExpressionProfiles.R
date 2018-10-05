@@ -1,10 +1,10 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 #' Load pairwise sequence similarity results (all.vs.all.sim):
-data("pairwiseSequenceSimilarities", package = "MaizeGeneFamilies")
+data("pairwiseSequenceSimilarities", package = "GeneFamilies")
 
 options(mc.cores = getMcCores())
 
-message("USAGE: Rscript path/2/exec/generateNormalizedRpkmExpressionProfiles.R path/2/MaizeGeneFamilies")
+message("USAGE: Rscript path/2/exec/generateNormalizedRpkmExpressionProfiles.R path/2/GeneFamilies")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

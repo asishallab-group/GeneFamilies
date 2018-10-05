@@ -10,7 +10,7 @@ the same three annotations the resulting entropy will be 0.}
 \usage{
 annotationBasedShannonEntropy(gene.accs, gene.annos = all.ipr, gene.col = 1,
   anno.col = 2,
-  entropy.funk = getOption("MaizeGeneFamilies.entropy.function",
+  entropy.funk = getOption("GeneFamilies.entropy.function",
   entropy::entropy))
 }
 \arguments{
@@ -28,8 +28,8 @@ identifiers or gene accessions. Default is 1}
 annotation for the genes in 'gene.accs'. Default is 2}
 
 \item{entropy.funk}{The function to be used to compute the Shannon Entropy.
-Default is \code{getOption( 'MaizeGeneFamilies.entropy.function',
-entropy::entropy )}. Set to \code{MaizeGeneFamilies::shannonEntropy} if you want
+Default is \code{getOption( 'GeneFamilies.entropy.function',
+entropy::entropy )}. Set to \code{GeneFamilies::shannonEntropy} if you want
 normalized Shannon Entropy. See
 \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4696313/}{Entropy
 Explorer R package}.}

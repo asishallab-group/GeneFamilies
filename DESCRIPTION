@@ -1,4 +1,4 @@
-Package: MaizeGeneFamilies
+Package: GeneFamilies
 Type: Package
 Title: Analyses different properties of gene families
 Version: 0.1

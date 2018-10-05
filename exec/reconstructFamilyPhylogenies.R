@@ -1,6 +1,6 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 
-message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/reconstructFamilyPhylogenies.R working_dir n_cores [Batch-Start Batch-Stop]")
+message("USAGE: Rscript path/2/GeneFamilies/exec/reconstructFamilyPhylogenies.R working_dir n_cores [Batch-Start Batch-Stop]")
 message("NOTE: If you want to reconstruct the Gene families.lst' Phylogenies in parallel, you can provide both Batch-Start and Batch-Stop as indices of the non-singleton families.lst for which to run the Phylogenetic Pipeline.")
 
 #' Working folder:

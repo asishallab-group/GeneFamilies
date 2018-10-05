@@ -1,6 +1,6 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 
-message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/loadInterProData.R path/2/MaizeGeneFamilies/data aet_iprscan_out.tsv aly_iprscan_out.tsv ath_iprscan_out.tsv bra_iprscan_out.tsv chi_iprscan_out.tsv cru_iprscan_out.tsv esa_iprscan_out.tsv tpa_iprscan_out.tsv interpro.xml")
+message("USAGE: Rscript path/2/GeneFamilies/exec/loadInterProData.R path/2/MaizeGeneFamilies/data aet_iprscan_out.tsv aly_iprscan_out.tsv ath_iprscan_out.tsv bra_iprscan_out.tsv chi_iprscan_out.tsv cru_iprscan_out.tsv esa_iprscan_out.tsv tpa_iprscan_out.tsv interpro.xml")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

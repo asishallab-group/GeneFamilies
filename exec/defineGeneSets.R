@@ -1,7 +1,7 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 options(mc.cores = detectCores())
 
-message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/defineGeneSets.R path/2/MaizeGeneFamilies")
+message("USAGE: Rscript path/2/GeneFamilies/exec/defineGeneSets.R path/2/MaizeGeneFamilies")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

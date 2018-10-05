@@ -1,7 +1,7 @@
-require(MaizeGeneFamilies)
-data("pairwiseSequenceSimilarities", package = "MaizeGeneFamilies")
+require(GeneFamilies)
+data("pairwiseSequenceSimilarities", package = "GeneFamilies")
 
-message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/computePairwiseKaKsRatios.R output_table.tsv [start-index stop-index]")
+message("USAGE: Rscript path/2/GeneFamilies/exec/computePairwiseKaKsRatios.R output_table.tsv [start-index stop-index]")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

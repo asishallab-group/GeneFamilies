@@ -1,6 +1,6 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 
-message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/loadMaizeGenomeAndMapManAnnos.R maizeProteins_AA.fa mapManBinAnnos.txt path/2/MaizeGeneFamilies")
+message("USAGE: Rscript path/2/GeneFamilies/exec/loadMaizeGenomeAndMapManAnnos.R maizeProteins_AA.fa mapManBinAnnos.txt path/2/MaizeGeneFamilies")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

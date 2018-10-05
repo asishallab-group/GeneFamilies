@@ -10,13 +10,13 @@ natural and normalization is done by division by the maximum entropy
 Entropy}.}
 \usage{
 shannonEntropy(counts.table,
-  log.base = getOption("MaizeGeneFamilies.entropy.log.base", base::exp(1)))
+  log.base = getOption("GeneFamilies.entropy.log.base", base::exp(1)))
 }
 \arguments{
 \item{counts.table}{result of invoking \code{base::table(count.vector)}}
 
 \item{log.base}{The base of the logarithm. Default is the natural logarithm,
-\code{getOption('MaizeGeneFamilies.entropy.log.base', base::exp(1))}.}
+\code{getOption('GeneFamilies.entropy.log.base', base::exp(1))}.}
 }
 \value{
 A numeric value element [0,1], the normalized Shannon Entropy.

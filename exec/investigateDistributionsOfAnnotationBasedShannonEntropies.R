@@ -1,6 +1,6 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 
-message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/investigateDistributionsOfAnnotationBasedShannonEntropies.R path/2/MaizeGeneFamilies")
+message("USAGE: Rscript path/2/GeneFamilies/exec/investigateDistributionsOfAnnotationBasedShannonEntropies.R path/2/MaizeGeneFamilies")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

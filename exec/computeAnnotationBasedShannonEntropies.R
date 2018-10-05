@@ -1,7 +1,7 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 options(mc.cores = getMcCores())
 
-message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/computeAnnotationBasedShannonEntropies.R path/2/MaizeGeneFamilies")
+message("USAGE: Rscript path/2/GeneFamilies/exec/computeAnnotationBasedShannonEntropies.R path/2/MaizeGeneFamilies")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 
@@ -30,7 +30,7 @@ families.ipr.entropies.orth.dist <- computeOrthologSpecificAnnotationDiversityPe
 
 #' In the following use normalized Shannon Entropy see
 #' en.wikipedia.org/wiki/Entropy_(information_theory)#Efficiency
-options(MaizeGeneFamilies.entropy.function = MaizeGeneFamilies::shannonEntropy)
+options(GeneFamilies.entropy.function = MaizeGeneFamilies::shannonEntropy)
 
 #' Compute NORMALIZED annotation based Shannon Entropy for the following gene
 #' groups.  - Tandems:

@@ -1,8 +1,8 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 options(mc.cores = getMcCores())
 
 
-message("USAGE:\n[MCCORES=<Int>] Rscript path/2/MaizeGeneFamilies/exec/domainBasedSubfunctionalizationAfterDuplication.R duplicated|tandem start_index end_index output_table.txt")
+message("USAGE:\n[MCCORES=<Int>] Rscript path/2/GeneFamilies/exec/domainBasedSubfunctionalizationAfterDuplication.R duplicated|tandem start_index end_index output_table.txt")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 

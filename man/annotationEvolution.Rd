@@ -18,7 +18,7 @@ identifiers.}
 which is to be interpreted as base genes. Default is \code{'ortholog'}.}
 
 \item{annot.df}{A data.frame of gene annotations. Default is
-\code{MaizeGeneFamilies::all.ipr}}
+\code{GeneFamilies::all.ipr}}
 
 \item{gene.col}{The column name or index in \code{annot.df} in which to
 lookup the gene IDs. Default is \code{1}}

@@ -1,6 +1,6 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 
-message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/generateBustedBatchFiles.R path/2/families_dir")
+message("USAGE: Rscript path/2/GeneFamilies/exec/generateBustedBatchFiles.R path/2/families_dir")
 
 #' This script needs data on which genes have been found to have a Ka/Ks ratio
 #' significantly greater than 1: 

@@ -1,7 +1,7 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 options(mc.cores = getMcCores())
 
-message("USAGE: Rscript path/2/MaizeGeneFamilies/exec/annotateFamiliesUsingProtDescriptions.R protein_description_database.txt path/2/MaizeGeneFamilies")
+message("USAGE: Rscript path/2/GeneFamilies/exec/annotateFamiliesUsingProtDescriptions.R protein_description_database.txt path/2/MaizeGeneFamilies")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 
