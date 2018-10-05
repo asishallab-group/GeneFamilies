@@ -1,4 +1,4 @@
-require(MaizeGeneFamilies)
+require(GeneFamilies)
 options(mc.cores = getMcCores())
 
 
