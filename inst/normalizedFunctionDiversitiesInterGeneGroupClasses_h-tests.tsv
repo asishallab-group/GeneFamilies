@@ -1,0 +1,4 @@
+Alternative.Hypothesis	t.p.value	effect.size.t	w.p.value	t.p.adj	w.p.adj
+Expanded families' non-orthologs have higher mean (t.test) diversity (wilcox.test) than positively selected families	1.4762241275654e-16	-8.29059135030432	5.54278771842846e-14	2.21433619134809e-16	1.66283631552854e-13
+Positively selected families' non-orthologs have higher mean (t.test) diversity (wilcox.test) than tandem clusters	0.47867319503865	-0.0534864979359766	0.712981714156828	0.47867319503865	0.712981714156828
+Expanded families non-orthologs have higher mean (t.test) diversity (wilcox.test) than tandem clusters	4.22152823305017e-17	-8.45242650491465	1.03859391331485e-11	1.26645846991505e-16	1.55789086997228e-11

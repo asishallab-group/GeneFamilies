@@ -1,0 +1,10 @@
+Tissue	Alternative.Hypothesis	p.value	effect.size	p.value.adjusted
+seedling	Non-Orthologs have higher mean expression profile distances than Orthologs	2.98598788626119e-09	-5.88179824069884	1.9006346108175e-08
+cotyledon	Non-Orthologs have higher mean expression profile distances than Orthologs	2.67044457313959e-08	-5.48526371408078	1.35982852585087e-07
+developing leaf	Non-Orthologs have higher mean expression profile distances than Orthologs	0.0121737399020871	-2.25581438759204	0.0516586855726066
+flower stage 9	Non-Orthologs have higher mean expression profile distances than Orthologs	2.23702456875429e-17	-8.56640318053819	2.84781216975881e-16
+flower stage 16	Non-Orthologs have higher mean expression profile distances than Orthologs	6.97398419516602e-12	-6.8472539231686	5.91875396754031e-11
+cotyledon	Orthologs have higher median expression profile distances in cotyledon than in developing leaf	0.987657367735032	2.2517852270934	1
+flower stage 9	Orthologs have higher median expression profile distances in flower stage 9 than in developing leaf	0.0354816268931708	-1.80879170414077	0.129055366388477
+cotyledon	Non-Orthologs have higher median expression profile distances in cotyledon than in developing leaf	0.101277187768378	-1.27503207649063	0.322323692678914
+flower stage 9	Non-Orthologs have higher median expression profile distances in flower stage 9 than in developing leaf	7.21261714358268e-18	-8.68698905080097	1.83638384345003e-16

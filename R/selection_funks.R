@@ -413,17 +413,19 @@ replaceWithOriginalInFigTree <- function(name.mappings, path.2.fig.tree, path.2.
 #'
 #' @param meme.file a valid file path to a MEME branch result file, e.g.
 #' 'fam8119_hyphy_meme_output.txt.branches'
-#' @param fam.name The name of the gene family the \code{meme.file} holds
-#' branch results for.
 #' @param bayes.factor.sign.cutoff The numeric value above which to consider a
 #' Bayes-Factor to be significant. Default is highly conservative and set to
 #' 100 aka 'decisive'
+#' @param fam.name.reg.exp The regular expression used within
+#' \code{base::regexec(...)} to extract the gene family's name from the
+#' \code{meme.file} argument
 #'
 #' @return A data.frame with four columns: Family, Site, Branch, and
 #' BayesianFactor, where the rows hold the significant results. NULL is
 #' returned if no significant results were contained in \code{meme.file}.
 #' @export
-parseMemeBranchResults <- function(meme.file, fam.name, bayes.factor.sign.cutoff = 100) {
+parseMemeBranchResults <- function(meme.file, bayes.factor.sign.cutoff = 100, fam.name.reg.exp = "/(fam\\d+)/") {
+    fam.name <- regmatches(meme.file, regexec(fam.name.reg.exp, meme.file))[[1]][[2]]
     fam.dir <- sub(paste(fam.name, "_hyphy_meme_output.txt.branches", sep = ""), 
         "", meme.file, fixed = TRUE)
     meme.signif.branches <- system(paste("sed -e '1,2d'", meme.file, "| awk -F \",\" '{ if($1 ~ /Site/ || $4 >", 
@@ -440,21 +442,4 @@ parseMemeBranchResults <- function(meme.file, fam.name, bayes.factor.sign.cutoff
         x$Branch <- replaceWithOriginal(x$Branch, fam.name.maps)
         x
     } else NULL
-}
-
-#' Reads in the tabular MEME site result table and adds a column with adjusted
-#' P-Values.
-#'
-#' @param meme.out A valid file-path to the MEME tabular site output file
-#' @param p.adjust.method The argument provided to \code{base::p.adjust} as the
-#' \code{method} used to adjust the p-values. Default is \code{"BY"}.
-#'
-#' @export
-#' @return An instance of data.frame read from the MEME site tabular output
-#' with an added \code{Site} and adjusted p-values (\code{p.adj}) columns.
-parseMemeSiteResult <- function( meme.out, p.adjust.method="BY" ) {
-  meme.tbl <- read.table( meme.out, sep=",", header=TRUE, stringsAsFactors = FALSE )
-  meme.tbl$Site <- rownames(meme.tbl)
-  meme.tbl$p.adj <- p.adjust( meme.tbl$p.value, method=p.adjust.method)
-  meme.tbl
 }

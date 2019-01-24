@@ -1,0 +1,202 @@
+BINCODE	NAME	gene	log2FoldChange
+15	RNA biosynthesis	at1g73870	-0.586030641723588
+15	RNA biosynthesis	at1g49130	0.803981987556231
+15	RNA biosynthesis	at1g25440	-0.45418160309277
+15	RNA biosynthesis	at1g68190	0.808100633754652
+15	RNA biosynthesis	at1g68520	-0.854335739765415
+15	RNA biosynthesis	at3g02380	-0.477242815664441
+15	RNA biosynthesis	at5g57660	1.28264472024986
+15	RNA biosynthesis	at5g15850	-0.498575117575874
+15	RNA biosynthesis	at4g26150	-0.652721190993922
+15	RNA biosynthesis	at1g51700	-0.755082916230895
+15	RNA biosynthesis	at1g69570	1.69166134853385
+15	RNA biosynthesis	at5g60850	0.755934188210278
+15	RNA biosynthesis	at1g56650	-1.6231373989611
+15	RNA biosynthesis	at5g56840	-1.1478319849324
+15	RNA biosynthesis	at2g44910	2.63194341836251
+15	RNA biosynthesis	at2g22430	0.51951085660969
+15	RNA biosynthesis	at3g60390	0.800048207162294
+15	RNA biosynthesis	at4g17460	0.885466730891468
+15	RNA biosynthesis	at4g16780	4.06443043119935
+15	RNA biosynthesis	at5g47370	3.06402332380149
+15	RNA biosynthesis	at5g11060	-0.535429182410608
+15	RNA biosynthesis	at2g23760	0.609198551663771
+15	RNA biosynthesis	at5g41410	-0.871917104051926
+15	RNA biosynthesis	at3g50890	0.906112138524602
+15	RNA biosynthesis	at2g42380	1.02478744574782
+15	RNA biosynthesis	at3g58120	0.921892872437509
+15	RNA biosynthesis	at2g28350	0.615204155304463
+15	RNA biosynthesis	at3g61830	0.697864552136505
+15	RNA biosynthesis	at1g13260	1.02964736205418
+15	RNA biosynthesis	at2g46310	1.08203997254309
+15	RNA biosynthesis	at5g61600	1.08527493228208
+15	RNA biosynthesis	at5g25190	2.81427393649696
+15	RNA biosynthesis	at5g51190	1.88892366265272
+15	RNA biosynthesis	at1g75490	2.10271252781757
+15	RNA biosynthesis	at2g28550	-0.464354236224687
+15	RNA biosynthesis	at1g14920	1.27416479605889
+15	RNA biosynthesis	at1g27730	0.841007758738814
+15	RNA biosynthesis	at5g03150	0.615189940563722
+15	RNA biosynthesis	at3g55980	0.751426074620561
+15	RNA biosynthesis	at5g44260	2.22534566173027
+15	RNA biosynthesis	at2g31070	-0.506617574615552
+15	RNA biosynthesis	at5g28300	0.698819122099168
+15	RNA biosynthesis	at4g01250	1.10910929569616
+15	RNA biosynthesis	at3g21320	Inf
+15	RNA biosynthesis	at1g09250	1.20120432131793
+15	RNA biosynthesis	at1g69010	0.857067341327988
+15	RNA biosynthesis	at1g26945	2.26535141197149
+15	RNA biosynthesis	at1g18400	2.7340314188529
+15	RNA biosynthesis	at1g02340	3.99904155684322
+15	RNA biosynthesis	at1g01260	1.00935346884018
+15	RNA biosynthesis	at2g42870	2.23276475714091
+15	RNA biosynthesis	at2g46970	5.59285106756953
+15	RNA biosynthesis	at3g17100	0.850249209552945
+15	RNA biosynthesis	at3g57800	0.522976537494197
+15	RNA biosynthesis	at3g25710	0.950409313414671
+15	RNA biosynthesis	at3g29370	3.13140864428908
+15	RNA biosynthesis	at3g21330	5.54510602086394
+15	RNA biosynthesis	at4g36540	0.736099027333816
+15	RNA biosynthesis	at4g34530	0.656651232502823
+15	RNA biosynthesis	at5g61270	-1.25284847169976
+15	RNA biosynthesis	at5g67060	2.19259402511475
+15	RNA biosynthesis	at5g39860	3.22435027566777
+15	RNA biosynthesis	at5g15160	1.05121169265891
+15	RNA biosynthesis	at5g08130	1.61432976447918
+15	RNA biosynthesis	at2g36400	0.764263964319033
+15	RNA biosynthesis	at2g32100	-0.52175077756005
+15	RNA biosynthesis	at1g78700	0.79954913054051
+15	RNA biosynthesis	at1g19350	-0.497699488927212
+15	RNA biosynthesis	at3g50750	0.720455688598649
+15	RNA biosynthesis	at4g36780	0.612999132000505
+15	RNA biosynthesis	at1g70700	-0.738372998303882
+15.6	RNA biosynthesis.transcription factor families	at1g73870	-0.586030641723588
+15.6	RNA biosynthesis.transcription factor families	at1g49130	0.803981987556231
+15.6	RNA biosynthesis.transcription factor families	at1g25440	-0.45418160309277
+15.6	RNA biosynthesis.transcription factor families	at1g68190	0.808100633754652
+15.6	RNA biosynthesis.transcription factor families	at1g68520	-0.854335739765415
+15.6	RNA biosynthesis.transcription factor families	at3g02380	-0.477242815664441
+15.6	RNA biosynthesis.transcription factor families	at5g57660	1.28264472024986
+15.6	RNA biosynthesis.transcription factor families	at5g15850	-0.498575117575874
+15.6	RNA biosynthesis.transcription factor families	at4g26150	-0.652721190993922
+15.6	RNA biosynthesis.transcription factor families	at1g51700	-0.755082916230895
+15.6	RNA biosynthesis.transcription factor families	at1g69570	1.69166134853385
+15.6	RNA biosynthesis.transcription factor families	at5g60850	0.755934188210278
+15.6	RNA biosynthesis.transcription factor families	at1g56650	-1.6231373989611
+15.6	RNA biosynthesis.transcription factor families	at5g56840	-1.1478319849324
+15.6	RNA biosynthesis.transcription factor families	at2g44910	2.63194341836251
+15.6	RNA biosynthesis.transcription factor families	at2g22430	0.51951085660969
+15.6	RNA biosynthesis.transcription factor families	at3g60390	0.800048207162294
+15.6	RNA biosynthesis.transcription factor families	at4g17460	0.885466730891468
+15.6	RNA biosynthesis.transcription factor families	at4g16780	4.06443043119935
+15.6	RNA biosynthesis.transcription factor families	at5g47370	3.06402332380149
+15.6	RNA biosynthesis.transcription factor families	at5g11060	-0.535429182410608
+15.6	RNA biosynthesis.transcription factor families	at2g23760	0.609198551663771
+15.6	RNA biosynthesis.transcription factor families	at5g41410	-0.871917104051926
+15.6	RNA biosynthesis.transcription factor families	at3g50890	0.906112138524602
+15.6	RNA biosynthesis.transcription factor families	at2g42380	1.02478744574782
+15.6	RNA biosynthesis.transcription factor families	at3g58120	0.921892872437509
+15.6	RNA biosynthesis.transcription factor families	at2g28350	0.615204155304463
+15.6	RNA biosynthesis.transcription factor families	at3g61830	0.697864552136505
+15.6	RNA biosynthesis.transcription factor families	at1g13260	1.02964736205418
+15.6	RNA biosynthesis.transcription factor families	at2g46310	1.08203997254309
+15.6	RNA biosynthesis.transcription factor families	at5g61600	1.08527493228208
+15.6	RNA biosynthesis.transcription factor families	at5g25190	2.81427393649696
+15.6	RNA biosynthesis.transcription factor families	at5g51190	1.88892366265272
+15.6	RNA biosynthesis.transcription factor families	at1g75490	2.10271252781757
+15.6	RNA biosynthesis.transcription factor families	at2g28550	-0.464354236224687
+15.6	RNA biosynthesis.transcription factor families	at1g14920	1.27416479605889
+15.6	RNA biosynthesis.transcription factor families	at1g27730	0.841007758738814
+15.6	RNA biosynthesis.transcription factor families	at5g03150	0.615189940563722
+15.6	RNA biosynthesis.transcription factor families	at3g55980	0.751426074620561
+15.6	RNA biosynthesis.transcription factor families	at5g44260	2.22534566173027
+15.6	RNA biosynthesis.transcription factor families	at2g31070	-0.506617574615552
+15.6	RNA biosynthesis.transcription factor families	at5g28300	0.698819122099168
+15.6	RNA biosynthesis.transcription factor families	at4g01250	1.10910929569616
+15.6	RNA biosynthesis.transcription factor families	at3g21320	Inf
+15.6	RNA biosynthesis.transcription factor families	at1g09250	1.20120432131793
+15.6	RNA biosynthesis.transcription factor families	at1g69010	0.857067341327988
+15.6	RNA biosynthesis.transcription factor families	at1g26945	2.26535141197149
+15.6	RNA biosynthesis.transcription factor families	at1g18400	2.7340314188529
+15.6	RNA biosynthesis.transcription factor families	at1g02340	3.99904155684322
+15.6	RNA biosynthesis.transcription factor families	at1g01260	1.00935346884018
+15.6	RNA biosynthesis.transcription factor families	at2g42870	2.23276475714091
+15.6	RNA biosynthesis.transcription factor families	at2g46970	5.59285106756953
+15.6	RNA biosynthesis.transcription factor families	at3g17100	0.850249209552945
+15.6	RNA biosynthesis.transcription factor families	at3g57800	0.522976537494197
+15.6	RNA biosynthesis.transcription factor families	at3g25710	0.950409313414671
+15.6	RNA biosynthesis.transcription factor families	at3g29370	3.13140864428908
+15.6	RNA biosynthesis.transcription factor families	at3g21330	5.54510602086394
+15.6	RNA biosynthesis.transcription factor families	at4g36540	0.736099027333816
+15.6	RNA biosynthesis.transcription factor families	at4g34530	0.656651232502823
+15.6	RNA biosynthesis.transcription factor families	at5g61270	-1.25284847169976
+15.6	RNA biosynthesis.transcription factor families	at5g67060	2.19259402511475
+15.6	RNA biosynthesis.transcription factor families	at5g39860	3.22435027566777
+15.6	RNA biosynthesis.transcription factor families	at5g15160	1.05121169265891
+15.6	RNA biosynthesis.transcription factor families	at5g08130	1.61432976447918
+15.6	RNA biosynthesis.transcription factor families	at2g36400	0.764263964319033
+15.6	RNA biosynthesis.transcription factor families	at2g32100	-0.52175077756005
+15.6	RNA biosynthesis.transcription factor families	at1g78700	0.79954913054051
+15.6	RNA biosynthesis.transcription factor families	at1g19350	-0.497699488927212
+15.6	RNA biosynthesis.transcription factor families	at3g50750	0.720455688598649
+15.6	RNA biosynthesis.transcription factor families	at4g36780	0.612999132000505
+15.6	RNA biosynthesis.transcription factor families	at1g70700	-0.738372998303882
+15.6.1.2	RNA biosynthesis.transcription factor families.C2C2 superfamily.BBX/CONSTANS transcription factor	at1g73870	-0.586030641723588
+15.6.1.2	RNA biosynthesis.transcription factor families.C2C2 superfamily.BBX/CONSTANS transcription factor	at1g49130	0.803981987556231
+15.6.1.2	RNA biosynthesis.transcription factor families.C2C2 superfamily.BBX/CONSTANS transcription factor	at1g25440	-0.45418160309277
+15.6.1.2	RNA biosynthesis.transcription factor families.C2C2 superfamily.BBX/CONSTANS transcription factor	at1g68190	0.808100633754652
+15.6.1.2	RNA biosynthesis.transcription factor families.C2C2 superfamily.BBX/CONSTANS transcription factor	at1g68520	-0.854335739765415
+15.6.1.2	RNA biosynthesis.transcription factor families.C2C2 superfamily.BBX/CONSTANS transcription factor	at3g02380	-0.477242815664441
+15.6.1.2	RNA biosynthesis.transcription factor families.C2C2 superfamily.BBX/CONSTANS transcription factor	at5g57660	1.28264472024986
+15.6.1.2	RNA biosynthesis.transcription factor families.C2C2 superfamily.BBX/CONSTANS transcription factor	at5g15850	-0.498575117575874
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at2g44910	2.63194341836251
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at2g22430	0.51951085660969
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at3g60390	0.800048207162294
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at4g17460	0.885466730891468
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at4g16780	4.06443043119935
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g47370	3.06402332380149
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g11060	-0.535429182410608
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at2g23760	0.609198551663771
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g41410	-0.871917104051926
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at3g50890	0.906112138524602
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at1g09250	1.20120432131793
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at1g69010	0.857067341327988
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at1g26945	2.26535141197149
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at1g18400	2.7340314188529
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at1g02340	3.99904155684322
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at1g01260	1.00935346884018
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at2g42870	2.23276475714091
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at2g46970	5.59285106756953
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at3g17100	0.850249209552945
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at3g57800	0.522976537494197
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at3g25710	0.950409313414671
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at3g29370	3.13140864428908
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at3g21330	5.54510602086394
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at4g36540	0.736099027333816
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at4g34530	0.656651232502823
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g61270	-1.25284847169976
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g67060	2.19259402511475
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g39860	3.22435027566777
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g15160	1.05121169265891
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g08130	1.61432976447918
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at2g36400	0.764263964319033
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at1g09250	1.20120432131793
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at1g69010	0.857067341327988
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at1g26945	2.26535141197149
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at1g18400	2.7340314188529
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at1g02340	3.99904155684322
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at1g01260	1.00935346884018
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at2g42870	2.23276475714091
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at2g46970	5.59285106756953
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at3g17100	0.850249209552945
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at3g57800	0.522976537494197
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at3g25710	0.950409313414671
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at3g29370	3.13140864428908
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at3g21330	5.54510602086394
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at4g36540	0.736099027333816
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at4g34530	0.656651232502823
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at5g61270	-1.25284847169976
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at5g67060	2.19259402511475
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at5g39860	3.22435027566777
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at5g15160	1.05121169265891
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at5g08130	1.61432976447918

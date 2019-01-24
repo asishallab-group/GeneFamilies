@@ -140,7 +140,8 @@ save(fubar.fams.decisive.evidence.genes, fubar.fams.decisive.evidence.genes.nev,
     families.exp, families.exp.genes, families.exp.genes.nev, families.conserved, 
     families.conserved.genes, families.conserved.genes.nev, tandems.lst, 
     tandems.genes, tandems.genes.nev, orthologs.lst, orthologs.genes, tands.w.orths, 
-    dupl.w.orths, psel.w.orths, tand.classifier, tand.psel.classifier, 
+    dupl.w.orths, psel.w.orths, tand.classifier, tands.expr, tands.expr.nev, 
+    orths.expr, dupl.expr, dupl.expr.nev, psel.expr, psel.expr.nev, tand.psel.classifier, 
     dupl.classifier, dupl.psel.classifier, psel.classifier, file = file.path(input.args[[1]], 
         "data", "GeneGroups.RData"))
 

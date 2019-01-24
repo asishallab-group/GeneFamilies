@@ -1,0 +1,2 @@
+"BINCODE"	"p.value"	"p.adjusted"	"NAME"	"DESCRIPTION"
+"15.6"	1.69978927282576e-07	0.00782379654950461	"RNA biosynthesis.transcription factor families"	""

@@ -1,0 +1,17 @@
+BINCODE	percent.up	p.adjusted	NAME	DESCRIPTION
+11	0.9	2.47936017126727e-18	Phytohormones	
+11.2	0.9375	1.03792991697113e-11	Phytohormones.auxin	
+11.2.3	1	1.27122848131967e-05	Phytohormones.auxin.conjugation and degradation	
+11.2.3.1	1	2.3133733941712e-06	Phytohormones.auxin.conjugation and degradation.indole-3-acetic acid-amido synthetase	Phytohormones.auxin.conjugation and degradation.indole-3-acetic acid-amido synthetase (original description: none)
+11.2.4	1	0.00174524533711042	Phytohormones.auxin.transport	
+11.2.4.1	1	0.00170510050111802	Phytohormones.auxin.transport.polar auxin transport	
+11.2.4.1.1	1	0.000168240218249318	Phytohormones.auxin.transport.polar auxin transport.PIN transporter	Phytohormones.auxin.transport.polar auxin transport.PIN transporter (original description: none)
+11.3	0.875	0.0154758324853501	Phytohormones.brassinosteroid	
+11.4.3	1	0.00653848209590334	Phytohormones.cytokinin.conjugation and degradation	
+11.4.3.2	1	0.00653848209590334	Phytohormones.cytokinin.conjugation and degradation.cytokinin dehydrogenase	Phytohormones.cytokinin.conjugation and degradation.cytokinin dehydrogenase (original description: none)
+11.5.1.1	1	0.00306411950755531	Phytohormones.ethylene.synthesis.1-aminocyclopropane-1-carboxylate (ACC) synthase	Phytohormones.ethylene.synthesis.1-aminocyclopropane-1-carboxylate (ACC) synthase (original description: none)
+15.6.3	0.764705882352941	0.000215572720866648	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	
+15.6.34	0.9	0.00306411950755531	RNA biosynthesis.transcription factor families.bHLH transcription factor	RNA biosynthesis.transcription factor families.bHLH transcription factor (original description: none)
+24.3.5	1	0.0253027498454635	Solute transport.carrier-mediated transport.BART superfamily	
+24.3.5.2	1	0.00599047186715051	Solute transport.carrier-mediated transport.BART superfamily.AEC family	
+24.3.5.2.1	1	0.000168240218249318	Solute transport.carrier-mediated transport.BART superfamily.AEC family.auxin efflux transporter (PIN-type)	Solute transport.carrier-mediated transport.BART superfamily.AEC family.auxin efflux transporter (PIN-type) (original description: none)

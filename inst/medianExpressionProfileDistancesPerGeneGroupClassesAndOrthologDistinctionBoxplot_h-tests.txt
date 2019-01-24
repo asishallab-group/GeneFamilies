@@ -1,0 +1,5 @@
+"alternative.hypothesis"	"t.test.p.val"	"wilcox.test.p.val"	"t.test.p.adj"	"wilcox.test.p.adj"
+"Dist of median expr. dists of Tand\Orth is above Tand^Orth"	1	3.99124239670494e-57	1	7.98248479340987e-57
+"Dist of median expr. dists of Exp\Orth is above Exp^Orth"	1	2.73121485480622e-25	1	3.6416198064083e-25
+"Dist of median expr. dists of PSel\Orth is above PSel^Orth"	1	5.05364823396915e-65	1	2.02145929358766e-64
+"Dist of median expr. dists of Tand\Orth is above Exp\Orth"	0.990428384229104	0.944373045316862	1	0.944373045316862

@@ -1,4 +1,5 @@
 require(GeneFamilies)
+options(mc.cores = getMcCores())
 
 message("USAGE: Rscript path/2/GeneFamilies/exec/expressionAngles.R path/2/GeneFamilies")
 
@@ -19,22 +20,22 @@ message("Defining expression vector space with the following axes: ", paste(expr
 
 
 #' Infer angle to diagonal as measure of tissue specificity:
-tands.expr.angle.diag.df <- data.frame(gene = tands.expr, angle.diag = as.numeric(lapply(tands.expr, 
+tands.expr.angle.diag.df <- data.frame(gene = tands.expr, angle.diag = as.numeric(mclapply(tands.expr, 
     function(x) {
         cosDiag(rpkm.expr.profiles.df[which(rpkm.expr.profiles.df$gene.exp.var == 
             x), expr.cols])/sqrt(2)
     })), stringsAsFactors = FALSE)
-orths.expr.angle.diag.df <- data.frame(gene = orths.expr, angle.diag = as.numeric(lapply(orths.expr, 
+orths.expr.angle.diag.df <- data.frame(gene = orths.expr, angle.diag = as.numeric(mclapply(orths.expr, 
     function(x) {
         cosDiag(rpkm.expr.profiles.df[which(rpkm.expr.profiles.df$gene == 
             x), expr.cols])/sqrt(2)
     })), stringsAsFactors = FALSE)
-dupl.expr.angle.diag.df <- data.frame(gene = dupl.expr, angle.diag = as.numeric(lapply(dupl.expr, 
+dupl.expr.angle.diag.df <- data.frame(gene = dupl.expr, angle.diag = as.numeric(mclapply(dupl.expr, 
     function(x) {
         cosDiag(rpkm.expr.profiles.df[which(rpkm.expr.profiles.df$gene.exp.var == 
             x), expr.cols])/sqrt(2)
     })), stringsAsFactors = FALSE)
-psel.expr.angle.diag.df <- data.frame(gene = psel.expr, angle.diag = as.numeric(lapply(psel.expr, 
+psel.expr.angle.diag.df <- data.frame(gene = psel.expr, angle.diag = as.numeric(mclapply(psel.expr, 
     function(x) {
         cosDiag(rpkm.expr.profiles.df[which(rpkm.expr.profiles.df$gene.exp.var == 
             x), expr.cols])/sqrt(2)
@@ -44,7 +45,7 @@ psel.expr.angle.diag.df <- data.frame(gene = psel.expr, angle.diag = as.numeric(
 #' Plot results:
 p.lst <- list(tandem = tands.expr.angle.diag.df, ortholog = orths.expr.angle.diag.df, 
     duplicated = dupl.expr.angle.diag.df, pos.selected = psel.expr.angle.diag.df)
-p.df <- Reduce(rbind, lapply(names(p.lst), function(gene.type) {
+p.df <- Reduce(rbind, mclapply(names(p.lst), function(gene.type) {
     data.frame(gene.type = gene.type, angle.diag = p.lst[[gene.type]]$angle.diag, 
         stringsAsFactors = FALSE)
 }))
@@ -66,36 +67,41 @@ dev.off()
 
 #' Investigate what happened in each gene group after duplication:
 #' - Comparing tandems and orthologs
-tands.w.orths.angles.df <- Reduce(rbind, lapply(names(tands.w.orths), function(fam.name) {
-    genes <-intersect(tands.w.orths[[fam.name]], rpkm.expr.profiles.df$gene)
-    exprVecSpaceEvolutionAfterDupl(genes, fam.name, tand.classifier)
-}))
+tands.w.orths.angles.df <- Reduce(rbind, mclapply(names(tands.w.orths), 
+    function(fam.name) {
+        genes <- intersect(tands.w.orths[[fam.name]], rpkm.expr.profiles.df$gene)
+        exprVecSpaceEvolutionAfterDupl(genes, fam.name, tand.classifier)
+    }))
 #' - Comparing tandems, pos.selected, and orthologs
-tands.psel.w.orths.angles.df <- Reduce(rbind, lapply(names(tands.w.orths), function(fam.name) {
-    genes <-intersect(tands.w.orths[[fam.name]], rpkm.expr.profiles.df$gene)
-    exprVecSpaceEvolutionAfterDupl(genes, fam.name, tand.psel.classifier)
-}))
+tands.psel.w.orths.angles.df <- Reduce(rbind, mclapply(names(tands.w.orths), 
+    function(fam.name) {
+        genes <- intersect(tands.w.orths[[fam.name]], rpkm.expr.profiles.df$gene)
+        exprVecSpaceEvolutionAfterDupl(genes, fam.name, tand.psel.classifier)
+    }))
 #' - Comparing duplicated and orthologs
-dupl.w.orths.angles.df <- Reduce(rbind, lapply(names(dupl.w.orths), function(fam.name) {
-    genes <-intersect(dupl.w.orths[[fam.name]], rpkm.expr.profiles.df$gene)
+dupl.w.orths.angles.df <- Reduce(rbind, mclapply(names(dupl.w.orths), function(fam.name) {
+    genes <- intersect(dupl.w.orths[[fam.name]], rpkm.expr.profiles.df$gene)
     exprVecSpaceEvolutionAfterDupl(genes, fam.name, dupl.classifier)
 }))
 #' - Comparing duplicated, pos.selected, and orthologs
-dupl.psel.w.orths.angles.df <- Reduce(rbind, lapply(names(dupl.w.orths), function(fam.name) {
-    genes <-intersect(dupl.w.orths[[fam.name]], rpkm.expr.profiles.df$gene)
-    exprVecSpaceEvolutionAfterDupl(genes, fam.name, dupl.psel.classifier)
-}))
+dupl.psel.w.orths.angles.df <- Reduce(rbind, mclapply(names(dupl.w.orths), 
+    function(fam.name) {
+        genes <- intersect(dupl.w.orths[[fam.name]], rpkm.expr.profiles.df$gene)
+        exprVecSpaceEvolutionAfterDupl(genes, fam.name, dupl.psel.classifier)
+    }))
 
 
 #' Plot the above:
-p.lst <- list(tandem = tands.w.orths.angles.df[which(tands.w.orths.angles.df$dist.vec.clouds > 
-    0), ], duplicated = dupl.w.orths.angles.df[which(dupl.w.orths.angles.df$dist.vec.clouds > 
+p.lst <- list(tandem = tands.w.orths.angles.df[which(tands.w.orths.angles.df$tandem.dist.vec.clouds > 
+    0), ], duplicated = dupl.w.orths.angles.df[which(dupl.w.orths.angles.df$duplicated.dist.vec.clouds > 
     0), ])
 p.df <- Reduce(rbind, lapply(names(p.lst), function(x) {
-    y <- p.lst[[x]]
-    data.frame(group.type = x, diff.tissue.versatility = (y$mean.dupl.tiss.vers - 
-        y$mean.orth.tiss.vers), angle.between.orth.2.diag.vecs = y$mean.dupl.tiss.change, 
-        stringsAsFactors = FALSE)
+    tryCatch({
+        y <- p.lst[[x]]
+        data.frame(group.type = x, diff.tissue.versatility = (y[, paste(x, 
+            ".tiss.vers", sep = "")] - y$mean.base.tiss.vers), angle.between.orth.2.diag.vecs = y[, 
+            paste(x, ".tiss.change", sep = "")], stringsAsFactors = FALSE)
+    }, error = function(e) browser())
 }))
 pdf(file.path(input.args[[1]], "inst", "meanTissueVersatilityDiffsAfterDuplicationBoxplot.pdf"))
 boxplot(diff.tissue.versatility ~ group.type, data = p.df, col = addAlpha(colors), 
@@ -106,7 +112,8 @@ stripchart(diff.tissue.versatility ~ group.type, vertical = TRUE, data = p.df,
 dev.off()
 pdf(file.path(input.args[[1]], "inst", "meanTissueVersatilityDiffsAfterDuplicationHistograms.pdf"))
 old.par <- par(mfrow = c(2, 1))
-xlim <- c(min(p.df$diff.tissue.versatility), max(p.df$diff.tissue.versatility))
+xlim <- c(min(p.df$diff.tissue.versatility, na.rm = TRUE), max(p.df$diff.tissue.versatility, 
+    na.rm = TRUE))
 hist(p.df[which(p.df$group.type == "duplicated"), "diff.tissue.versatility"], 
     breaks = 30, main = "duplicated", col = addAlpha(colors[[1]]), border = colors[[1]], 
     xlab = "", xlim = xlim)
@@ -119,37 +126,39 @@ par(old.par)
 
 pdf(file.path(input.args[[1]], "inst", "afterDuplicationAngleBetweenOrth2DiagVecsBoxplot.pdf"))
 boxplot(angle.between.orth.2.diag.vecs ~ group.type, data = p.df, col = addAlpha(colors), 
-    outline = FALSE, border = colors, xlab = "Type of gene group", ylab = "Angle between orthologs and duplicated orthologs on diagonal", 
+    outline = FALSE, border = colors, xlab = "Type of gene group", ylab = "Angle between orthogonals on expression space diagional", 
     pch = "-")
 stripchart(angle.between.orth.2.diag.vecs ~ group.type, vertical = TRUE, 
     data = p.df, method = "jitter", add = TRUE, pch = ".", col = colors)
 dev.off()
 pdf(file.path(input.args[[1]], "inst", "afterDuplicationAngleBetweenOrth2DiagVecsHistograms.pdf"))
 old.par <- par(mfrow = c(2, 1))
-xlim <- c(min(p.df$angle.between.orth.2.diag.vecs), max(p.df$angle.between.orth.2.diag.vecs))
+xlim <- c(min(p.df$angle.between.orth.2.diag.vecs, na.rm = TRUE), max(p.df$angle.between.orth.2.diag.vecs, 
+    na.rm = TRUE))
 hist(p.df[which(p.df$group.type == "duplicated"), "angle.between.orth.2.diag.vecs"], 
     breaks = 30, main = "duplicated", col = addAlpha(colors[[1]]), border = colors[[1]], 
     xlab = "", xlim = xlim)
 hist(p.df[which(p.df$group.type == "tandem"), "angle.between.orth.2.diag.vecs"], 
     breaks = 30, main = "tandem", col = addAlpha(colors[[2]]), border = colors[[2]], 
-    xlab = "Angle between orthologs and duplicated orthologs on diagonal", 
-    xlim = xlim)
+    xlab = "Angle between orthogonals on expression space diagional", xlim = xlim)
 dev.off()
 par(old.par)
 
 #' Plot both changes in tissue specificity:
-p.df.1 <- dupl.w.orths.angles.df[with(dupl.w.orths.angles.df, which(!is.na(mean.dupl.tiss.change) & 
-    !is.nan(mean.dupl.tiss.change))), ]
+p.df.1 <- dupl.w.orths.angles.df[with(dupl.w.orths.angles.df, which(!is.na(duplicated.tiss.change) & 
+    !is.nan(duplicated.tiss.change))), ]
 p.df.1$class <- "Duplicated"
-p.df.2 <- tands.w.orths.angles.df[with(tands.w.orths.angles.df, which(!is.na(mean.dupl.tiss.change) & 
-    !is.nan(mean.dupl.tiss.change))), ]
+p.df.2 <- tands.w.orths.angles.df[with(tands.w.orths.angles.df, which(!is.na(tandem.tiss.change) & 
+    !is.nan(tandem.tiss.change))), ]
+colnames(p.df.2) <- sub("tandem", "duplicated", colnames(p.df.2))
 p.df.2$class <- "Tandem"
+cols.i <- c("class")
 p.df <- rbind(p.df.1, p.df.2)
 
 #' Plot all
 pdf(file.path(input.args[[1]], "inst", "meanChangeInAngleBetweenOrthOnDiagsBoxplot.pdf"))
 pushed.colors <- brewer.pal(3, "Dark2")
-boxplot(mean.dupl.tiss.change ~ class, data = p.df, xlab = "Type of Gene", 
+boxplot(duplicated.tiss.change ~ class, data = p.df, xlab = "Type of Gene", 
     ylab = "angle between diagonal orthologs", border = pushed.colors, 
     col = addAlpha(pushed.colors))
 dev.off()
@@ -158,7 +167,7 @@ dev.off()
 #' Boxplot log2 fold change of ortholog, tandem, and duplicated expressed
 #' genes. Gene Expression is inferred on the intra-species level during fruit
 #' development and shade reaction.
-p.df <- Reduce(rbind, lapply(list(fruit.ath.intra, fruit.chi.intra, light.ath.intra, 
+p.df <- Reduce(rbind, mclapply(list(fruit.ath.intra, fruit.chi.intra, light.ath.intra, 
     light.chi.intra), function(x) {
     y <- x[which(!is.na(x$log2FoldChange) & !is.infinite(x$log2FoldChange) & 
         !is.null(x$log2FoldChange)), c("id", "log2FoldChange")]

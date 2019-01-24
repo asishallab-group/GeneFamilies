@@ -73,7 +73,7 @@ iprWithSelectedAA <- function(sel.aa, gene, msa.fasta, iprscan.tbl) {
 #' @param gap.char.matching.fixed boolean indicating the value to pass to
 #' \code{grepl} and \code{gsub} argument \code{fixed=}. Set to \code{TRUE} if
 #' \code{gap.char} is literal and atomic. Default is
-#' getOption('GeneFamilies.gap.char.matching.fixed', TRUE).
+#' getOption("GeneFamilies.gap.char.matching.fixed", TRUE).
 #'
 #' @return  An integer; either NA if the position is a non sequence character,
 #' or the corresponding un-aligned position.
@@ -81,17 +81,13 @@ iprWithSelectedAA <- function(sel.aa, gene, msa.fasta, iprscan.tbl) {
 unalignedAAforAlignedAAPos <- function(gene, sel.aa, msa.fasta, gap.char = getOption("GeneFamilies.gap.char", 
     "-"), gap.char.matching.fixed = getOption("GeneFamilies.gap.char.matching.fixed", 
     TRUE)) {
-    tryCatch({
-        aa.algn.seq <- msa.fasta[[gene]][[1]]
-        aa.algn.char <- substr(aa.algn.seq, sel.aa, sel.aa)
-        if (grepl(gap.char, aa.algn.char, fixed = gap.char.matching.fixed)) {
-            NA
-        } else {
-            nchar(gsub(gap.char, "", substr(aa.algn.seq, 1, sel.aa), fixed = gap.char.matching.fixed))
-        }
-    }, error = function(e) {
-        browser()
-    })
+    aa.algn.seq <- msa.fasta[[gene]][[1]]
+    aa.algn.char <- substr(aa.algn.seq, sel.aa, sel.aa)
+    if (grepl(gap.char, aa.algn.char, fixed = gap.char.matching.fixed)) {
+        NA
+    } else {
+        nchar(gsub(gap.char, "", substr(aa.algn.seq, 1, sel.aa), fixed = gap.char.matching.fixed))
+    }
 }
 
 

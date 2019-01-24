@@ -1,0 +1,438 @@
+"142 elements included exclusively in ""At UP"":"					
+AT3G21320					
+AT5G16023					
+AT1G52830					
+AT5G25190					
+AT3G62100					
+AT4G36110					
+AT2G44910					
+AT1G09350					
+AT5G02540					
+AT5G66080					
+AT3G50800					
+AT5G09970					
+AT2G42870					
+AT5G46240					
+AT3G28420					
+AT2G20835					
+AT1G75490					
+AT4G14819					
+AT5G54470					
+AT1G02660					
+AT5G04190					
+AT5G51190					
+AT1G73480					
+AT3G05640					
+AT1G10550					
+AT2G28400					
+AT1G21050					
+AT5G57760					
+AT1G77640					
+AT1G53163					
+AT1G31880					
+AT4G24275					
+AT4G24570					
+AT5G52890					
+AT4G16770					
+AT1G11210					
+AT5G48900					
+AT3G07350					
+AT5G65140					
+AT5G55250					
+AT3G06370					
+AT3G16800					
+AT1G54200					
+AT3G29575					
+AT4G28640					
+AT3G44260					
+AT1G65920					
+AT4G29780					
+AT2G36220					
+AT5G50130					
+AT3G13980					
+AT2G26530					
+AT1G35140					
+AT4G10150					
+AT3G44610					
+AT1G74670					
+AT2G42530					
+AT4G11280					
+AT4G01250					
+AT5G61600					
+AT4G22780					
+AT2G46310					
+AT3G51660					
+AT1G36940					
+AT2G42380					
+AT3G01490					
+AT5G62170					
+AT1G01260					
+AT1G09570					
+AT2G42800					
+AT2G22830					
+AT1G23340					
+AT1G69160					
+AT5G64780					
+AT3G25710					
+AT2G40000					
+AT3G02170					
+AT4G39400					
+AT3G58120					
+AT2G40610					
+AT4G32290					
+AT5G15580					
+AT1G51170					
+AT2G39870					
+AT1G69010					
+AT3G45780					
+AT2G39980					
+AT3G19380					
+AT5G60860					
+AT1G27730					
+AT1G11960					
+AT1G68560					
+AT1G21060					
+AT4G32285					
+AT1G68190					
+AT3G60390					
+AT1G78700					
+AT4G03400					
+AT5G52870					
+AT5G47380					
+AT1G32190					
+AT2G36400					
+AT4G09890					
+AT2G17880					
+AT5G60850					
+AT5G56220					
+AT3G55980					
+AT3G54200					
+AT4G36540					
+AT4G03190					
+AT1G64640					
+AT4G37390					
+AT5G06930					
+AT4G22190					
+AT4G39800					
+AT2G18700					
+AT3G50750					
+AT3G08640					
+AT4G14550					
+AT1G27210					
+AT3G61830					
+AT1G59740					
+AT4G31390					
+AT4G35470					
+AT5G25460					
+AT5G16030					
+AT4G39640					
+AT4G34530					
+AT2G45310					
+AT3G50350					
+AT2G01150					
+AT3G12920					
+AT3G28180					
+ATCG00020					
+AT2G28350					
+AT5G03150					
+AT4G36780					
+AT1G52190					
+AT2G23760					
+AT2G21050					
+AT2G42620					
+AT3G51670					
+					
+					
+Locus Identifier	Representative Gene Model Name	Gene Description	Gene Model Type	Primary Gene Symbol	All Gene Symbols
+AT1G73480	AT1G73480.1	alpha/beta-Hydrolases superfamily protein; FUNCTIONS IN: hydrolase activity; EXPRESSED IN: 25 plant structures; EXPRESSED DURING: 15 growth stages; BEST Arabidopsis thaliana protein match is: alpha/beta-Hydrolases superfamily protein (TAIR:AT1G18360.1); Has 6390 Blast hits to 6380 proteins in 1730 species: Archae - 36; Bacteria - 4672; Metazoa - 140; Fungi - 153; Plants - 452; Viruses - 63; Other Eukaryotes - 874 (source: NCBI BLink).	protein_coding		
+AT5G66080	AT5G66080.1	"Protein phosphatase 2C family protein; FUNCTIONS IN: protein serine/threonine phosphatase activity, catalytic activity; INVOLVED IN: protein amino acid dephosphorylation; LOCATED IN: protein serine/threonine phosphatase complex; EXPRESSED IN: 16 plant structures; EXPRESSED DURING: 10 growth stages; CONTAINS InterPro DOMAIN/s: Protein phosphatase 2C, manganese/magnesium aspartate binding site (InterPro:IPR000222), Protein phosphatase 2C-related (InterPro:IPR001932), Protein phosphatase 2C (InterPro:IPR015655), Protein phosphatase 2C, N-terminal (InterPro:IPR014045); BEST Arabidopsis thaliana protein match is: Protein phosphatase 2C family protein (TAIR:AT3G51370.1); Has 1807 Blast hits to 1807 proteins in 277 species: Archae - 0; Bacteria - 0; Metazoa - 736; Fungi - 347; Plants - 385; Viruses - 0; Other Eukaryotes - 339 (source: NCBI BLink)."	protein_coding		
+AT2G28400	AT2G28400.1	"Protein of unknown function, DUF584; CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF584 (InterPro:IPR007608); BEST Arabidopsis thaliana protein match is: Protein of unknown function, DUF584 (TAIR:AT3G45210.1); Has 318 Blast hits to 318 proteins in 20 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 318; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink)."	protein_coding		
+AT1G77640	AT1G77640.1	"encodes a member of the DREB subfamily A-5 of ERF/AP2 transcription factor family. The protein contains one AP2 domain. There are 15 members in this subfamily including RAP2.1, RAP2.9 and RAP2.10."	protein_coding		
+AT4G29780	AT4G29780.1	unknown protein; BEST Arabidopsis thaliana protein match is: unknown protein (TAIR:AT5G12010.1); Has 945 Blast hits to 944 proteins in 87 species: Archae - 0; Bacteria - 0; Metazoa - 519; Fungi - 43; Plants - 365; Viruses - 0; Other Eukaryotes - 18 (source: NCBI BLink).	protein_coding		
+AT1G69160	AT1G69160.1	unknown protein; BEST Arabidopsis thaliana protein match is: unknown protein (TAIR:AT3G13980.1); Has 173 Blast hits to 172 proteins in 54 species: Archae - 0; Bacteria - 0; Metazoa - 25; Fungi - 33; Plants - 84; Viruses - 2; Other Eukaryotes - 29 (source: NCBI BLink).	protein_coding		
+AT1G27210	AT1G27210.1	"ARM repeat superfamily protein; FUNCTIONS IN: binding; LOCATED IN: chloroplast; EXPRESSED IN: 23 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: HEAT (InterPro:IPR000357), Armadillo-like helical (InterPro:IPR011989), HEAT, type 2 (InterPro:IPR021133), Armadillo-type fold (InterPro:IPR016024); BEST Arabidopsis thaliana protein match is: ARM repeat superfamily protein (TAIR:AT1G59850.1); Has 516 Blast hits to 439 proteins in 115 species: Archae - 2; Bacteria - 40; Metazoa - 93; Fungi - 74; Plants - 195; Viruses - 0; Other Eukaryotes - 112 (source: NCBI BLink)."	protein_coding		
+AT1G11210	AT1G11210.1	"Protein of unknown function (DUF761); FUNCTIONS IN: molecular_function unknown; INVOLVED IN: response to oxidative stress; LOCATED IN: endomembrane system; EXPRESSED IN: 10 plant structures; EXPRESSED DURING: LP.06 six leaves visible, LP.04 four leaves visible, 4 anthesis, petal differentiation and expansion stage; CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF761, plant (InterPro:IPR008480); BEST Arabidopsis thaliana protein match is: Protein of unknown function (DUF761) (TAIR:AT1G11220.1); Has 74 Blast hits to 74 proteins in 12 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 70; Viruses - 0; Other Eukaryotes - 4 (source: NCBI BLink)."	protein_coding		
+AT1G21060	AT1G21060.1	"Protein of unknown function, DUF547; FUNCTIONS IN: molecular_function unknown; INVOLVED IN: biological_process unknown; LOCATED IN: chloroplast; EXPRESSED IN: 16 plant structures; EXPRESSED DURING: 8 growth stages; CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF547 (InterPro:IPR006869); BEST Arabidopsis thaliana protein match is: Protein of unknown function, DUF547 (TAIR:AT1G76620.1); Has 536 Blast hits to 524 proteins in 67 species: Archae - 0; Bacteria - 34; Metazoa - 26; Fungi - 3; Plants - 441; Viruses - 0; Other Eukaryotes - 32 (source: NCBI BLink)."	protein_coding		
+AT5G16030	AT5G16030.3	unknown protein; FUNCTIONS IN: molecular_function unknown; INVOLVED IN: biological_process unknown; LOCATED IN: cellular_component unknown; EXPRESSED IN: 20 plant structures; EXPRESSED DURING: 13 growth stages; BEST Arabidopsis thaliana protein match is: unknown protein (TAIR:AT3G02500.1); Has 30201 Blast hits to 17322 proteins in 780 species: Archae - 12; Bacteria - 1396; Metazoa - 17338; Fungi - 3422; Plants - 5037; Viruses - 0; Other Eukaryotes - 2996 (source: NCBI BLink).	protein_coding		
+AT3G51660	AT3G51660.1	"Tautomerase/MIF superfamily protein; FUNCTIONS IN: molecular_function unknown; INVOLVED IN: inflammatory response, response to other organism; LOCATED IN: peroxisome; EXPRESSED IN: 20 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Tautomerase (InterPro:IPR014347), Macrophage migration inhibitory factor (InterPro:IPR001398); BEST Arabidopsis thaliana protein match is: Tautomerase/MIF superfamily protein (TAIR:AT5G01650.1); Has 396 Blast hits to 396 proteins in 86 species: Archae - 0; Bacteria - 25; Metazoa - 165; Fungi - 0; Plants - 140; Viruses - 0; Other Eukaryotes - 66 (source: NCBI BLink)."	protein_coding		
+AT5G54470	AT5G54470.1	"B-box type zinc finger family protein; FUNCTIONS IN: sequence-specific DNA binding transcription factor activity, zinc ion binding; INVOLVED IN: response to cold, regulation of transcription; LOCATED IN: intracellular; EXPRESSED IN: 11 plant structures; EXPRESSED DURING: 4 anthesis, F mature embryo stage, petal differentiation and expansion stage, E expanded cotyledon stage, D bilateral stage; CONTAINS InterPro DOMAIN/s: Zinc finger, B-box (InterPro:IPR000315); BEST Arabidopsis thaliana protein match is: B-box type zinc finger family protein (TAIR:AT4G27310.1); Has 35333 Blast hits to 34131 proteins in 2444 species: Archae - 798; Bacteria - 22429; Metazoa - 974; Fungi - 991; Plants - 531; Viruses - 0; Other Eukaryotes - 9610 (source: NCBI BLink)."	protein_coding		
+AT5G47380	AT5G47380.1	"Protein of unknown function, DUF547; FUNCTIONS IN: molecular_function unknown; INVOLVED IN: biological_process unknown; LOCATED IN: cellular_component unknown; EXPRESSED IN: 13 plant structures; EXPRESSED DURING: 8 growth stages; CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF547 (InterPro:IPR006869); BEST Arabidopsis thaliana protein match is: Protein of unknown function, DUF547 (TAIR:AT5G66600.3); Has 575 Blast hits to 559 proteins in 76 species: Archae - 2; Bacteria - 39; Metazoa - 40; Fungi - 0; Plants - 462; Viruses - 0; Other Eukaryotes - 32 (source: NCBI BLink)."	protein_coding		
+AT1G53163	AT1G53163.1	unknown protein; FUNCTIONS IN: molecular_function unknown; INVOLVED IN: biological_process unknown; LOCATED IN: cellular_component unknown; BEST Arabidopsis thaliana protein match is: unknown protein (TAIR:AT3G15250.1); Has 315 Blast hits to 216 proteins in 74 species: Archae - 0; Bacteria - 86; Metazoa - 43; Fungi - 52; Plants - 27; Viruses - 1; Other Eukaryotes - 106 (source: NCBI BLink).	protein_coding		
+AT3G07350	AT3G07350.1	"Protein of unknown function (DUF506) ; CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF506, plant (InterPro:IPR006502); BEST Arabidopsis thaliana protein match is: Protein of unknown function (DUF506) (TAIR:AT3G25240.1); Has 393 Blast hits to 390 proteins in 24 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 391; Viruses - 0; Other Eukaryotes - 2 (source: NCBI BLink)."	protein_coding		
+AT3G50350	AT3G50350.1	"Protein of unknown function (DUF1685); FUNCTIONS IN: molecular_function unknown; INVOLVED IN: biological_process unknown; LOCATED IN: chloroplast; EXPRESSED IN: 18 plant structures; EXPRESSED DURING: LP.04 four leaves visible, 4 anthesis, C globular stage, 4 leaf senescence stage, petal differentiation and expansion stage; CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF1685 (InterPro:IPR012881); BEST Arabidopsis thaliana protein match is: Protein of unknown function (DUF1685) (TAIR:AT4G33985.1); Has 199 Blast hits to 199 proteins in 14 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 199; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink)."	protein_coding		
+AT5G06930	AT5G06930.1	LOCATED IN: chloroplast; EXPRESSED IN: 15 plant structures; EXPRESSED DURING: 7 growth stages; BEST Arabidopsis thaliana protein match is: nucleolar protein gar2-related (TAIR:AT2G42320.2); Has 3369 Blast hits to 1526 proteins in 313 species: Archae - 2; Bacteria - 910; Metazoa - 754; Fungi - 336; Plants - 137; Viruses - 11; Other Eukaryotes - 1219 (source: NCBI BLink).	protein_coding		
+AT3G44610	AT3G44610.1	"Protein kinase superfamily protein; FUNCTIONS IN: kinase activity; INVOLVED IN: protein amino acid phosphorylation; LOCATED IN: chloroplast; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Protein kinase, catalytic domain (InterPro:IPR000719), Serine/threonine-protein kinase domain (InterPro:IPR002290), Serine/threonine-protein kinase-like domain (InterPro:IPR017442), Protein kinase-like domain (InterPro:IPR011009), Serine/threonine-protein kinase, active site (InterPro:IPR008271); BEST Arabidopsis thaliana protein match is: D6 protein kinase like 2 (TAIR:AT5G47750.1); Has 99456 Blast hits to 74546 proteins in 2417 species: Archae - 35; Bacteria - 11117; Metazoa - 41933; Fungi - 12113; Plants - 14694; Viruses - 280; Other Eukaryotes - 19284 (source: NCBI BLink)."	protein_coding		
+AT1G21050	AT1G21050.1	"Protein of unknown function, DUF617; CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF617, plant (InterPro:IPR006460); BEST Arabidopsis thaliana protein match is: Protein of unknown function, DUF617 (TAIR:AT1G76610.1); Has 257 Blast hits to 256 proteins in 14 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 257; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink)."	protein_coding		
+AT4G22190	AT4G22190.1	unknown protein; Has 283 Blast hits to 154 proteins in 44 species: Archae - 0; Bacteria - 2; Metazoa - 24; Fungi - 12; Plants - 48; Viruses - 0; Other Eukaryotes - 197 (source: NCBI BLink).	protein_coding		
+AT3G16800	AT3G16800.2	"Protein phosphatase 2C family protein; FUNCTIONS IN: protein serine/threonine phosphatase activity, catalytic activity; INVOLVED IN: biological_process unknown; LOCATED IN: nucleus, cytoplasm; EXPRESSED IN: 12 plant structures; EXPRESSED DURING: 6 growth stages; CONTAINS InterPro DOMAIN/s: Protein phosphatase 2C-related (InterPro:IPR001932), Protein phosphatase 2C (InterPro:IPR015655), Protein phosphatase 2C, N-terminal (InterPro:IPR014045); BEST Arabidopsis thaliana protein match is: Protein phosphatase 2C family protein (TAIR:AT5G27930.2); Has 6043 Blast hits to 6037 proteins in 299 species: Archae - 0; Bacteria - 10; Metazoa - 1467; Fungi - 737; Plants - 2641; Viruses - 5; Other Eukaryotes - 1183 (source: NCBI BLink)."	protein_coding		
+AT2G20835	AT2G20835.1	unknown protein; BEST Arabidopsis thaliana protein match is: unknown protein (TAIR:AT3G15534.1); Has 66 Blast hits to 66 proteins in 12 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 66; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink).	protein_coding		
+AT4G32290	AT4G32290.1	"Core-2/I-branching beta-1,6-N-acetylglucosaminyltransferase family protein; FUNCTIONS IN: molecular_function unknown; INVOLVED IN: biological_process unknown; LOCATED IN: endomembrane system; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Core-2/I-Branching enzyme (InterPro:IPR021141); BEST Arabidopsis thaliana protein match is: Core-2/I-branching beta-1,6-N-acetylglucosaminyltransferase family protein (TAIR:AT5G25330.1); Has 1807 Blast hits to 1807 proteins in 277 species: Archae - 0; Bacteria - 0; Metazoa - 736; Fungi - 347; Plants - 385; Viruses - 0; Other Eukaryotes - 339 (source: NCBI BLink)."	protein_coding		
+AT5G56220	AT5G56220.1	"P-loop containing nucleoside triphosphate hydrolases superfamily protein; FUNCTIONS IN: nucleoside-triphosphatase activity, nucleotide binding, ATP binding; INVOLVED IN: apoptosis; LOCATED IN: chloroplast; EXPRESSED IN: 12 plant structures; EXPRESSED DURING: 7 growth stages; CONTAINS InterPro DOMAIN/s: ATPase, AAA+ type, core (InterPro:IPR003593), NB-ARC (InterPro:IPR002182); BEST Arabidopsis thaliana protein match is: Disease resistance protein (TIR-NBS class) (TAIR:AT4G23440.1); Has 1807 Blast hits to 1807 proteins in 277 species: Archae - 0; Bacteria - 0; Metazoa - 736; Fungi - 347; Plants - 385; Viruses - 0; Other Eukaryotes - 339 (source: NCBI BLink)."	protein_coding		
+AT4G09890	AT4G09890.1	Protein of unknown function (DUF3511); CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF3511 (InterPro:IPR021899); BEST Arabidopsis thaliana protein match is: Protein of unknown function (DUF3511) (TAIR:AT5G11970.1); Has 187 Blast hits to 187 proteins in 14 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 187; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink).	protein_coding		
+AT5G57760	AT5G57760.1	unknown protein; Has 5 Blast hits to 5 proteins in 2 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 5; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink).	protein_coding		
+AT1G23340	AT1G23340.1	"Protein of Unknown Function (DUF239); FUNCTIONS IN: molecular_function unknown; INVOLVED IN: biological_process unknown; LOCATED IN: endomembrane system; EXPRESSED IN: 12 plant structures; EXPRESSED DURING: 6 growth stages; CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF239, plant (InterPro:IPR004314); BEST Arabidopsis thaliana protein match is: Protein of Unknown Function (DUF239) (TAIR:AT1G70550.1); Has 778 Blast hits to 728 proteins in 29 species: Archae - 0; Bacteria - 13; Metazoa - 0; Fungi - 10; Plants - 755; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink)."	protein_coding		
+AT1G51170	AT1G51170.1	"Protein kinase superfamily protein; FUNCTIONS IN: kinase activity; INVOLVED IN: protein amino acid phosphorylation; EXPRESSED IN: 21 plant structures; EXPRESSED DURING: 7 growth stages; CONTAINS InterPro DOMAIN/s: Protein kinase, ATP binding site (InterPro:IPR017441), Protein kinase, catalytic domain (InterPro:IPR000719), Serine/threonine-protein kinase domain (InterPro:IPR002290), Serine/threonine-protein kinase-like domain (InterPro:IPR017442), Protein kinase-like domain (InterPro:IPR011009), Serine/threonine-protein kinase, active site (InterPro:IPR008271); BEST Arabidopsis thaliana protein match is: AGC (cAMP-dependent, cGMP-dependent and protein kinase C) kinase family protein (TAIR:AT3G20830.1); Has 78471 Blast hits to 68236 proteins in 2375 species: Archae - 34; Bacteria - 10419; Metazoa - 31772; Fungi - 10508; Plants - 9891; Viruses - 177; Other Eukaryotes - 15670 (source: NCBI BLink)."	protein_coding		
+AT1G32190	AT1G32190.1	alpha/beta-Hydrolases superfamily protein; FUNCTIONS IN: hydrolase activity; INVOLVED IN: N-terminal protein myristoylation; LOCATED IN: plasma membrane; EXPRESSED IN: 14 plant structures; EXPRESSED DURING: 8 growth stages; CONTAINS InterPro DOMAIN/s: Phospholipase/carboxylesterase (InterPro:IPR003140); BEST Arabidopsis thaliana protein match is: alpha/beta-Hydrolases superfamily protein (TAIR:AT4G31020.1); Has 9321 Blast hits to 5856 proteins in 779 species: Archae - 6; Bacteria - 1089; Metazoa - 5494; Fungi - 254; Plants - 546; Viruses - 17; Other Eukaryotes - 1915 (source: NCBI BLink).	protein_coding		
+AT3G54200	AT3G54200.1	"Late embryogenesis abundant (LEA) hydroxyproline-rich glycoprotein family; FUNCTIONS IN: molecular_function unknown; INVOLVED IN: biological_process unknown; LOCATED IN: anchored to plasma membrane, plasma membrane; EXPRESSED IN: 23 plant structures; EXPRESSED DURING: 14 growth stages; CONTAINS InterPro DOMAIN/s: Late embryogenesis abundant protein, group 2 (InterPro:IPR004864); BEST Arabidopsis thaliana protein match is: Late embryogenesis abundant (LEA) hydroxyproline-rich glycoprotein family (TAIR:AT3G05975.1); Has 631 Blast hits to 630 proteins in 23 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 631; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink)."	protein_coding		
+AT3G05640	AT3G05640.1	"Protein phosphatase 2C family protein; FUNCTIONS IN: protein serine/threonine phosphatase activity, catalytic activity; INVOLVED IN: response to water deprivation; LOCATED IN: cellular_component unknown; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Protein phosphatase 2C-related (InterPro:IPR001932), Protein phosphatase 2C (InterPro:IPR015655), Protein phosphatase 2C, N-terminal (InterPro:IPR014045); BEST Arabidopsis thaliana protein match is: Protein phosphatase 2C family protein (TAIR:AT5G27930.2); Has 5684 Blast hits to 5679 proteins in 292 species: Archae - 2; Bacteria - 4; Metazoa - 1387; Fungi - 671; Plants - 2430; Viruses - 5; Other Eukaryotes - 1185 (source: NCBI BLink)."	protein_coding		
+AT2G17880	AT2G17880.1	"Chaperone DnaJ-domain superfamily protein; FUNCTIONS IN: heat shock protein binding; INVOLVED IN: protein folding; LOCATED IN: chloroplast; EXPRESSED IN: 18 plant structures; EXPRESSED DURING: 11 growth stages; CONTAINS InterPro DOMAIN/s: Molecular chaperone, heat shock protein, Hsp40, DnaJ (InterPro:IPR015609), Heat shock protein DnaJ, N-terminal (InterPro:IPR001623); BEST Arabidopsis thaliana protein match is: Chaperone DnaJ-domain superfamily protein (TAIR:AT4G36040.1); Has 19677 Blast hits to 19677 proteins in 3133 species: Archae - 135; Bacteria - 8632; Metazoa - 3284; Fungi - 1660; Plants - 1836; Viruses - 5; Other Eukaryotes - 4125 (source: NCBI BLink)."	protein_coding		
+AT1G01260	AT1G01260.1	"basic helix-loop-helix (bHLH) DNA-binding superfamily protein; FUNCTIONS IN: DNA binding, sequence-specific DNA binding transcription factor activity; INVOLVED IN: regulation of transcription; LOCATED IN: nucleus; EXPRESSED IN: 24 plant structures; EXPRESSED DURING: 15 growth stages; CONTAINS InterPro DOMAIN/s: Helix-loop-helix DNA-binding domain (InterPro:IPR001092), Helix-loop-helix DNA-binding (InterPro:IPR011598); BEST Arabidopsis thaliana protein match is: ABA-inducible BHLH-type transcription factor (TAIR:AT2G46510.1); Has 3647 Blast hits to 3273 proteins in 223 species: Archae - 0; Bacteria - 2; Metazoa - 174; Fungi - 93; Plants - 3336; Viruses - 0; Other Eukaryotes - 42 (source: NCBI BLink)."	protein_coding		
+AT3G51670	AT3G51670.1	"SEC14 cytosolic factor family protein / phosphoglyceride transfer family protein; FUNCTIONS IN: transporter activity; INVOLVED IN: transport; LOCATED IN: plasma membrane; EXPRESSED IN: 23 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Cellular retinaldehyde-binding/triple function, C-terminal (InterPro:IPR001251), Cellular retinaldehyde-binding/triple function, N-terminal (InterPro:IPR008273), GOLD (InterPro:IPR009038), Phosphatidylinositol transfer protein-like, N-terminal (InterPro:IPR011074); BEST Arabidopsis thaliana protein match is: SEC14 cytosolic factor family protein / phosphoglyceride transfer family protein (TAIR:AT4G09160.1); Has 2976 Blast hits to 2970 proteins in 235 species: Archae - 0; Bacteria - 0; Metazoa - 1096; Fungi - 761; Plants - 842; Viruses - 0; Other Eukaryotes - 277 (source: NCBI BLink)."	protein_coding		
+AT4G24275	AT4G24275.1	Identified as a screen for stress-responsive genes.	protein_coding		
+AT3G50800	AT3G50800.1	unknown protein; FUNCTIONS IN: molecular_function unknown; INVOLVED IN: N-terminal protein myristoylation; LOCATED IN: cellular_component unknown; BEST Arabidopsis thaliana protein match is: unknown protein (TAIR:AT5G66580.1); Has 249 Blast hits to 249 proteins in 14 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 249; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink).	protein_coding		
+AT1G52190	AT1G52190.1	"Major facilitator superfamily protein; FUNCTIONS IN: transporter activity; INVOLVED IN: oligopeptide transport; LOCATED IN: membrane; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Oligopeptide transporter (InterPro:IPR000109), Major facilitator superfamily, general substrate transporter (InterPro:IPR016196); BEST Arabidopsis thaliana protein match is: Major facilitator superfamily protein (TAIR:AT3G16180.1); Has 5212 Blast hits to 5001 proteins in 870 species: Archae - 0; Bacteria - 1843; Metazoa - 575; Fungi - 389; Plants - 2143; Viruses - 0; Other Eukaryotes - 262 (source: NCBI BLink)."	protein_coding		
+AT5G51190	AT5G51190.1	"encodes a member of the ERF (ethylene response factor) subfamily B-3 of ERF/AP2 transcription factor family. The protein contains one AP2 domain. There are 18 members in this subfamily including ATERF-1, ATERF-2, AND ATERF-5."	protein_coding		
+AT1G65920	AT1G65920.1	"Regulator of chromosome condensation (RCC1) family with FYVE zinc finger domain; FUNCTIONS IN: zinc ion binding; LOCATED IN: plasma membrane, vacuole; EXPRESSED IN: 11 plant structures; EXPRESSED DURING: 6 growth stages; CONTAINS InterPro DOMAIN/s: Regulator of chromosome condensation, RCC1 (InterPro:IPR000408), Disease resistance/zinc finger/chromosome condensation-like region (InterPro:IPR013591), Pleckstrin homology (InterPro:IPR001849), Zinc finger, FYVE-type (InterPro:IPR000306), Regulator of chromosome condensation/beta-lactamase-inhibitor protein II (InterPro:IPR009091), Zinc finger, FYVE-related (InterPro:IPR017455), Pleckstrin homology-type (InterPro:IPR011993), Zinc finger, FYVE/PHD-type (InterPro:IPR011011); BEST Arabidopsis thaliana protein match is: Regulator of chromosome condensation (RCC1) family with FYVE zinc finger domain (TAIR:AT5G42140.1); Has 20784 Blast hits to 8293 proteins in 486 species: Archae - 65; Bacteria - 2335; Metazoa - 8187; Fungi - 1149; Plants - 2727; Viruses - 3; Other Eukaryotes - 6318 (source: NCBI BLink)."	protein_coding		
+AT1G11960	AT1G11960.1	ERD (early-responsive to dehydration stress) family protein; FUNCTIONS IN: molecular_function unknown; INVOLVED IN: biological_process unknown; LOCATED IN: plasma membrane; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF221 (InterPro:IPR003864); BEST Arabidopsis thaliana protein match is: ERD (early-responsive to dehydration stress) family protein (TAIR:AT1G62320.1); Has 1452 Blast hits to 1271 proteins in 185 species: Archae - 0; Bacteria - 4; Metazoa - 184; Fungi - 702; Plants - 435; Viruses - 0; Other Eukaryotes - 127 (source: NCBI BLink).	protein_coding		
+AT3G28420	AT3G28420.1	Putative membrane lipoprotein; Has 11 Blast hits to 11 proteins in 7 species: Archae - 0; Bacteria - 2; Metazoa - 0; Fungi - 0; Plants - 9; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink).	protein_coding		
+AT2G36220	AT2G36220.1	unknown protein; BEST Arabidopsis thaliana protein match is: unknown protein (TAIR:AT3G52710.1); Has 74 Blast hits to 74 proteins in 10 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 74; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink).	protein_coding		
+AT5G50130	AT5G50130.1	"NAD(P)-binding Rossmann-fold superfamily protein; FUNCTIONS IN: oxidoreductase activity, binding, catalytic activity; INVOLVED IN: oxidation reduction, metabolic process; LOCATED IN: cellular_component unknown; EXPRESSED IN: 23 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: NAD(P)-binding domain (InterPro:IPR016040), Glucose/ribitol dehydrogenase (InterPro:IPR002347), Short-chain dehydrogenase/reductase SDR (InterPro:IPR002198); BEST Arabidopsis thaliana protein match is: NAD(P)-binding Rossmann-fold superfamily protein (TAIR:AT4G24050.1); Has 30201 Blast hits to 17322 proteins in 780 species: Archae - 12; Bacteria - 1396; Metazoa - 17338; Fungi - 3422; Plants - 5037; Viruses - 0; Other Eukaryotes - 2996 (source: NCBI BLink)."	protein_coding		
+AT2G39980	AT2G39980.1	"HXXXD-type acyl-transferase family protein; FUNCTIONS IN: transferase activity, transferring acyl groups other than amino-acyl groups, transferase activity; INVOLVED IN: response to karrikin; LOCATED IN: cellular_component unknown; EXPRESSED IN: 17 plant structures; EXPRESSED DURING: 10 growth stages; CONTAINS InterPro DOMAIN/s: Transferase (InterPro:IPR003480); BEST Arabidopsis thaliana protein match is: HXXXD-type acyl-transferase family protein (TAIR:AT5G01210.1); Has 2459 Blast hits to 2362 proteins in 147 species: Archae - 0; Bacteria - 2; Metazoa - 0; Fungi - 105; Plants - 2350; Viruses - 0; Other Eukaryotes - 2 (source: NCBI BLink)."	protein_coding		
+AT2G39870	AT2G39870.1	unknown protein; BEST Arabidopsis thaliana protein match is: unknown protein (TAIR:AT3G55690.1); Has 73 Blast hits to 71 proteins in 14 species: Archae - 0; Bacteria - 0; Metazoa - 2; Fungi - 2; Plants - 69; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink).	protein_coding		
+AT1G68190	AT1G68190.1	"B-box zinc finger family protein; FUNCTIONS IN: sequence-specific DNA binding transcription factor activity, zinc ion binding; INVOLVED IN: regulation of transcription; LOCATED IN: endomembrane system, intracellular; EXPRESSED IN: 14 plant structures; EXPRESSED DURING: 8 growth stages; CONTAINS InterPro DOMAIN/s: Zinc finger, B-box (InterPro:IPR000315); BEST Arabidopsis thaliana protein match is: CONSTANS-like 9 (TAIR:AT3G07650.4); Has 1632 Blast hits to 1343 proteins in 109 species: Archae - 0; Bacteria - 2; Metazoa - 1; Fungi - 0; Plants - 1580; Viruses - 0; Other Eukaryotes - 49 (source: NCBI BLink)."	protein_coding		
+AT5G02540	AT5G02540.1	"NAD(P)-binding Rossmann-fold superfamily protein; FUNCTIONS IN: oxidoreductase activity, binding, catalytic activity; INVOLVED IN: oxidation reduction, metabolic process; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: NAD(P)-binding domain (InterPro:IPR016040), Glucose/ribitol dehydrogenase (InterPro:IPR002347), Short-chain dehydrogenase/reductase SDR (InterPro:IPR002198); BEST Arabidopsis thaliana protein match is: NAD(P)-binding Rossmann-fold superfamily protein (TAIR:AT2G37540.1); Has 30201 Blast hits to 17322 proteins in 780 species: Archae - 12; Bacteria - 1396; Metazoa - 17338; Fungi - 3422; Plants - 5037; Viruses - 0; Other Eukaryotes - 2996 (source: NCBI BLink)."	protein_coding		
+AT1G75490	AT1G75490.1	encodes a member of the DREB subfamily A-2 of ERF/AP2 transcription factor family. The protein contains one AP2 domain. There are eight members in this subfamily including DREB2A AND DREB2B that are involved in response to drought.	protein_coding		
+AT3G01490	AT3G01490.1	"Protein kinase superfamily protein; FUNCTIONS IN: protein serine/threonine/tyrosine kinase activity, kinase activity; INVOLVED IN: protein amino acid phosphorylation; LOCATED IN: cellular_component unknown; EXPRESSED IN: 8 plant structures; EXPRESSED DURING: LP.06 six leaves visible, 4 anthesis, petal differentiation and expansion stage; CONTAINS InterPro DOMAIN/s: Protein kinase, catalytic domain (InterPro:IPR000719), Serine-threonine/tyrosine-protein kinase (InterPro:IPR001245), Serine/threonine protein kinase-like, ATMRK (InterPro:IPR015783), Protein kinase-like domain (InterPro:IPR011009), Serine/threonine-protein kinase, active site (InterPro:IPR008271); BEST Arabidopsis thaliana protein match is: Protein kinase superfamily protein (TAIR:AT5G50000.1); Has 129107 Blast hits to 127633 proteins in 4815 species: Archae - 144; Bacteria - 13952; Metazoa - 48674; Fungi - 11933; Plants - 33456; Viruses - 637; Other Eukaryotes - 20311 (source: NCBI BLink)."	protein_coding		
+AT1G02660	AT1G02660.1	"alpha/beta-Hydrolases superfamily protein; FUNCTIONS IN: triglyceride lipase activity; INVOLVED IN: lipid metabolic process; LOCATED IN: cellular_component unknown; EXPRESSED IN: 24 plant structures; EXPRESSED DURING: 15 growth stages; CONTAINS InterPro DOMAIN/s: Lipase, class 3 (InterPro:IPR002921); BEST Arabidopsis thaliana protein match is: alpha/beta-Hydrolases superfamily protein (TAIR:AT3G62590.1); Has 747 Blast hits to 737 proteins in 148 species: Archae - 0; Bacteria - 27; Metazoa - 209; Fungi - 146; Plants - 175; Viruses - 15; Other Eukaryotes - 175 (source: NCBI BLink)."	protein_coding		
+AT4G16770	AT4G16770.1	"2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein; FUNCTIONS IN: oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, 2-oxoglutarate as one donor, and incorporation of one atom each of oxygen into both donors, oxidoreductase activity, iron ion binding; INVOLVED IN: oxidation reduction, flavonoid biosynthetic process; LOCATED IN: peroxisome; EXPRESSED IN: 23 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Isopenicillin N synthase (InterPro:IPR002283), Oxoglutarate/iron-dependent oxygenase (InterPro:IPR005123); BEST Arabidopsis thaliana protein match is: 2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein (TAIR:AT4G16765.1); Has 6583 Blast hits to 6566 proteins in 839 species: Archae - 0; Bacteria - 934; Metazoa - 52; Fungi - 818; Plants - 3817; Viruses - 0; Other Eukaryotes - 962 (source: NCBI BLink)."	protein_coding		
+AT1G59740	AT1G59740.1	"Major facilitator superfamily protein; FUNCTIONS IN: transporter activity; INVOLVED IN: oligopeptide transport, response to nematode; LOCATED IN: plasma membrane, membrane; EXPRESSED IN: 19 plant structures; EXPRESSED DURING: 10 growth stages; CONTAINS InterPro DOMAIN/s: PTR2 family proton/oligopeptide symporter, conserved site (InterPro:IPR018456), Oligopeptide transporter (InterPro:IPR000109), Major facilitator superfamily, general substrate transporter (InterPro:IPR016196); BEST Arabidopsis thaliana protein match is: Major facilitator superfamily protein (TAIR:AT1G33440.1); Has 6789 Blast hits to 6649 proteins in 1324 species: Archae - 0; Bacteria - 3372; Metazoa - 487; Fungi - 362; Plants - 2181; Viruses - 0; Other Eukaryotes - 387 (source: NCBI BLink)."	protein_coding		
+AT5G52890	AT5G52890.2	"AT hook motif-containing protein; FUNCTIONS IN: DNA binding; INVOLVED IN: biological_process unknown; LOCATED IN: cellular_component unknown; CONTAINS InterPro DOMAIN/s: AT hook, DNA-binding motif (InterPro:IPR017956); BEST Arabidopsis thaliana protein match is: DNA binding (TAIR:AT4G21895.1)."	protein_coding		
+AT5G48900	AT5G48900.1	"Pectin lyase-like superfamily protein; FUNCTIONS IN: lyase activity, pectate lyase activity; LOCATED IN: endomembrane system; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 14 growth stages; CONTAINS InterPro DOMAIN/s: Pectin lyase fold/virulence factor (InterPro:IPR011050), AmbAllergen (InterPro:IPR018082), Pectate lyase/Amb allergen (InterPro:IPR002022), Pectin lyase fold (InterPro:IPR012334), Parallel beta-helix repeat (InterPro:IPR006626); BEST Arabidopsis thaliana protein match is: Pectin lyase-like superfamily protein (TAIR:AT3G07010.1); Has 30201 Blast hits to 17322 proteins in 780 species: Archae - 12; Bacteria - 1396; Metazoa - 17338; Fungi - 3422; Plants - 5037; Viruses - 0; Other Eukaryotes - 2996 (source: NCBI BLink)."	protein_coding		
+AT4G14819	AT4G14819.1	"Protein of unknown function (DUF1677); CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF1677, plant (InterPro:IPR012876); BEST Arabidopsis thaliana protein match is: Protein of unknown function (DUF1677) (TAIR:AT3G22540.1); Has 35333 Blast hits to 34131 proteins in 2444 species: Archae - 798; Bacteria - 22429; Metazoa - 974; Fungi - 991; Plants - 531; Viruses - 0; Other Eukaryotes - 9610 (source: NCBI BLink)."	protein_coding		
+AT3G21320	AT3G21320.1	BEST Arabidopsis thaliana protein match is: hydroxyproline-rich glycoprotein family protein (TAIR:AT2G25930.1); Has 63 Blast hits to 58 proteins in 21 species: Archae - 0; Bacteria - 0; Metazoa - 3; Fungi - 0; Plants - 58; Viruses - 0; Other Eukaryotes - 2 (source: NCBI BLink).	protein_coding		
+AT3G13980	AT3G13980.1	unknown protein; BEST Arabidopsis thaliana protein match is: unknown protein (TAIR:AT1G54200.1); Has 1485 Blast hits to 418 proteins in 98 species: Archae - 0; Bacteria - 6; Metazoa - 246; Fungi - 61; Plants - 107; Viruses - 6; Other Eukaryotes - 1059 (source: NCBI BLink).	protein_coding		
+AT4G10150	AT4G10150.1	"RING/U-box superfamily protein; FUNCTIONS IN: zinc ion binding; CONTAINS InterPro DOMAIN/s: Zinc finger, RING-type (InterPro:IPR001841), Zinc finger, C3HC4 RING-type (InterPro:IPR018957); BEST Arabidopsis thaliana protein match is: RING/U-box superfamily protein (TAIR:AT4G10160.1); Has 9409 Blast hits to 9387 proteins in 290 species: Archae - 0; Bacteria - 6; Metazoa - 2329; Fungi - 766; Plants - 4947; Viruses - 49; Other Eukaryotes - 1312 (source: NCBI BLink)."	protein_coding		
+AT3G08640	AT3G08640.1	"Protein of unknown function (DUF3411); FUNCTIONS IN: molecular_function unknown; INVOLVED IN: biological_process unknown; LOCATED IN: chloroplast, chloroplast envelope; EXPRESSED IN: 23 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF3411 (InterPro:IPR021825); BEST Arabidopsis thaliana protein match is: Protein of unknown function (DUF3411) (TAIR:AT3G08630.1); Has 11715 Blast hits to 4977 proteins in 490 species: Archae - 4; Bacteria - 2620; Metazoa - 4563; Fungi - 550; Plants - 2459; Viruses - 100; Other Eukaryotes - 1419 (source: NCBI BLink)."	protein_coding		
+AT5G64780	AT5G64780.1	Uncharacterised conserved protein UCP009193; CONTAINS InterPro DOMAIN/s: Uncharacterised conserved protein UCP009193 (InterPro:IPR016549); BEST Arabidopsis thaliana protein match is: Uncharacterised conserved protein UCP009193 (TAIR:AT4G09830.1); Has 1807 Blast hits to 1807 proteins in 277 species: Archae - 0; Bacteria - 0; Metazoa - 736; Fungi - 347; Plants - 385; Viruses - 0; Other Eukaryotes - 339 (source: NCBI BLink).	protein_coding		
+AT4G32285	AT4G32285.1	"ENTH/ANTH/VHS superfamily protein; FUNCTIONS IN: phospholipid binding, clathrin binding, binding, phosphatidylinositol binding; INVOLVED IN: clathrin coat assembly; LOCATED IN: cytosol, nucleus, plasma membrane; EXPRESSED IN: guard cell, cultured cell; CONTAINS InterPro DOMAIN/s: Epsin-like, N-terminal (InterPro:IPR013809), ANTH (InterPro:IPR011417), ENTH/VHS (InterPro:IPR008942), Clathrin adaptor, phosphoinositide-binding, GAT-like (InterPro:IPR014712); BEST Arabidopsis thaliana protein match is: epsin N-terminal homology (ENTH) domain-containing protein / clathrin assembly protein-related (TAIR:AT2G25430.1); Has 30201 Blast hits to 17322 proteins in 780 species: Archae - 12; Bacteria - 1396; Metazoa - 17338; Fungi - 3422; Plants - 5037; Viruses - 0; Other Eukaryotes - 2996 (source: NCBI BLink)."	protein_coding		
+AT1G36940	AT1G36940.2	unknown protein; FUNCTIONS IN: molecular_function unknown; INVOLVED IN: biological_process unknown; LOCATED IN: cellular_component unknown; EXPRESSED IN: 8 plant structures; EXPRESSED DURING: 7 growth stages.	protein_coding		
+AT1G54200	AT1G54200.1	unknown protein; BEST Arabidopsis thaliana protein match is: unknown protein (TAIR:AT3G13980.1); Has 1084 Blast hits to 581 proteins in 136 species: Archae - 0; Bacteria - 72; Metazoa - 212; Fungi - 78; Plants - 102; Viruses - 0; Other Eukaryotes - 620 (source: NCBI BLink).	protein_coding		
+AT2G26530	AT2G26530.1	unknown function	protein_coding	(AR781)	(AR781)
+AT4G37390	AT4G37390.1	Encodes an IAA-amido synthase that conjugates Asp and other amino acids to auxin in vitro. Lines carrying insertions in this gene are hypersensitive to auxin. May function as a negative component in auxin signaling by regulating auxin activity.	protein_coding	(BRU6)	YADOKARI 1 (YDK1)
+					
+					(GH3.2)
+					
+					AUXIN UPREGULATED 3 (AUR3)
+					
+					(GH3-2)
+					
+					(BRU6)
+AT2G42380	AT2G42380.2	Encodes a member of the BZIP family of transcription factors. Forms heterodimers with the related protein AtbZIP61. Binds to G-boxes in vitro and is localized to the nucleus in onion epidermal cells.	protein_coding	(BZIP34)	(ATBZIP34)
+					
+					(BZIP34)
+AT3G58120	AT3G58120.1	Encodes a member of the BZIP family of transcription factors. Forms heterodimers with the related protein AtbZIP34. Binds to G-boxes in vitro and is localized to the nucleus in onion epidermal cells.	protein_coding	(BZIP61)	(BZIP61)
+					
+					(ATBZIP61)
+AT4G01250	AT4G01250.1	AtWRKY22 is a member of WRKY Transcription Factor; Group II-e. It is involved in regulation of dark induced leaf senescence.	protein_coding	(WRKY22)	(AtWRKY22)
+					
+					(WRKY22)
+AT5G09970	AT5G09970.1	member of CYP78A	protein_coding	"""CYTOCHROME P450, FAMILY 78, SUBFAMILY A, POLYPEPTIDE 7"" (CYP78A7)"	"""CYTOCHROME P450, FAMILY 78, SUBFAMILY A, POLYPEPTIDE 7"" (CYP78A7)"
+AT4G11280	AT4G11280.1	"encodes a a member of the 1-aminocyclopropane-1-carboxylate (ACC) synthase (S-adenosyl-L-methionine methylthioadenosine-lyase, EC 4.4.1.14) gene family"	protein_coding	1-AMINOCYCLOPROPANE-1-CARBOXYLIC ACID (ACC) SYNTHASE 6 (ACS6)	(ATACS6)
+					
+					1-AMINOCYCLOPROPANE-1-CARBOXYLIC ACID (ACC) SYNTHASE 6 (ACS6)
+AT4G31390	AT4G31390.1	"Protein kinase superfamily protein; FUNCTIONS IN: protein kinase activity, ATP binding; INVOLVED IN: protein amino acid phosphorylation; LOCATED IN: chloroplast, plastoglobule; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: ABC-1 (InterPro:IPR004147), Protein kinase, catalytic domain (InterPro:IPR000719), Protein kinase-like domain (InterPro:IPR011009); BEST Arabidopsis thaliana protein match is: Protein kinase superfamily protein (TAIR:AT1G79600.1); Has 10230 Blast hits to 10198 proteins in 1822 species: Archae - 124; Bacteria - 4469; Metazoa - 404; Fungi - 492; Plants - 709; Viruses - 16; Other Eukaryotes - 4016 (source: NCBI BLink)."	protein_coding	ABC1-LIKE KINASE RELATED TO CHLOROPHYLL DEGRADATION AND OXIDATIVE STRESS 1 (ACDO1)	(ATACDO1)
+					
+					ABC1-LIKE KINASE RELATED TO CHLOROPHYLL DEGRADATION AND OXIDATIVE STRESS 1 (ACDO1)
+AT3G29575	AT3G29575.1	ABI five binding protein 3 (AFP3); CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF1675 (InterPro:IPR012463); BEST Arabidopsis thaliana protein match is: ABI five binding protein (TAIR:AT1G69260.1); Has 196 Blast hits to 190 proteins in 23 species: Archae - 0; Bacteria - 0; Metazoa - 2; Fungi - 4; Plants - 184; Viruses - 0; Other Eukaryotes - 6 (source: NCBI BLink).	protein_coding	ABI FIVE BINDING PROTEIN 3 (AFP3)	ABI FIVE BINDING PROTEIN 3 (AFP3)
+AT4G22780	AT4G22780.1	Member of a family of ACT domain containing proteins . ACT domains are involved in amino acid binding .	protein_coding	ACT DOMAIN REPEAT 7 (ACR7)	ACT DOMAIN REPEAT 7 (ACR7)
+AT1G68560	AT1G68560.1	Encodes a bifunctional alpha-l-arabinofuranosidase/beta-d-xylosidase that belongs to family 3 of glycoside hydrolases.	protein_coding	ALPHA-XYLOSIDASE 1 (XYL1)	ALPHA-XYLOSIDASE 1 (ATXYL1)
+					
+					ALPHA-XYLOSIDASE 1 (XYL1)
+					
+					THERMOINHIBITION RESISTANT GERMINATION 1 (TRG1)
+					
+					(TRG1)
+					
+					ALTERED XYLOGLUCAN 3 (AXY3)
+AT2G28350	AT2G28350.1	Involved in root cap cell differentiation.	protein_coding	AUXIN RESPONSE FACTOR 10 (ARF10)	AUXIN RESPONSE FACTOR 10 (ARF10)
+AT3G61830	AT3G61830.1	"auxin response factor 18 (ARF18); FUNCTIONS IN: sequence-specific DNA binding transcription factor activity; INVOLVED IN: response to hormone stimulus, regulation of transcription, DNA-dependent, regulation of transcription; LOCATED IN: nucleus; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Aux/IAA-ARF-dimerisation (InterPro:IPR011525), Transcriptional factor B3 (InterPro:IPR003340), AUX/IAA protein (InterPro:IPR003311), Auxin response factor (InterPro:IPR010525); BEST Arabidopsis thaliana protein match is: auxin response factor 11 (TAIR:AT2G46530.1); Has 30201 Blast hits to 17322 proteins in 780 species: Archae - 12; Bacteria - 1396; Metazoa - 17338; Fungi - 3422; Plants - 5037; Viruses - 0; Other Eukaryotes - 2996 (source: NCBI BLink)."	protein_coding	AUXIN RESPONSE FACTOR 18 (ARF18)	AUXIN RESPONSE FACTOR 18 (ARF18)
+AT3G25710	AT3G25710.1	"Encodes a basic helix?loop?helix transcription factor that is expressed in the hypophysis-adjacent embryo cells, and is required and partially sufficient for MP-dependent root initiation. Involved in response to phosphate starvation. Negative regulator of root hair development, anthocyanin formation and Pi content."	protein_coding	BASIC HELIX-LOOP-HELIX 32 (BHLH32)	TARGET OF MONOPTEROS 5 (TMO5)
+					
+					BASIC HELIX-LOOP-HELIX 32 (BHLH32)
+					
+					(ATAIG1)
+AT2G23760	AT2G23760.1	"Encodes a member of the BEL family of homeodomain proteins. Plants doubly mutant for saw1/saw2 (blh2/blh4) have serrated leaves. BP is expressed in the serrated leaves, therefore saw2 and saw1 may act redundantly to repress BP in leaves."	protein_coding	BEL1-LIKE HOMEODOMAIN 4 (BLH4)	SAWTOOTH 2 (SAW2)
+					
+					BEL1-LIKE HOMEODOMAIN 4 (BLH4)
+AT1G69010	AT1G69010.1	"BES1-interacting Myc-like protein 2 (BIM2); FUNCTIONS IN: DNA binding, sequence-specific DNA binding transcription factor activity; INVOLVED IN: dTDP-rhamnose biosynthetic process, regulation of transcription; LOCATED IN: nucleus; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Helix-loop-helix DNA-binding domain (InterPro:IPR001092), Helix-loop-helix DNA-binding (InterPro:IPR011598); BEST Arabidopsis thaliana protein match is: basic helix-loop-helix (bHLH) DNA-binding superfamily protein (TAIR:AT5G08130.3); Has 2743 Blast hits to 2732 proteins in 181 species: Archae - 0; Bacteria - 0; Metazoa - 222; Fungi - 63; Plants - 2453; Viruses - 0; Other Eukaryotes - 5 (source: NCBI BLink)."	protein_coding	BES1-INTERACTING MYC-LIKE PROTEIN 2 (BIM2)	BES1-INTERACTING MYC-LIKE PROTEIN 2 (BIM2)
+AT3G50750	AT3G50750.1	"BES1/BZR1 homolog 1 (BEH1); FUNCTIONS IN: transcription regulator activity; INVOLVED IN: biological_process unknown; LOCATED IN: vacuole; EXPRESSED IN: 17 plant structures; EXPRESSED DURING: 12 growth stages; CONTAINS InterPro DOMAIN/s: BZR1, transcriptional repressor (InterPro:IPR008540); BEST Arabidopsis thaliana protein match is: Brassinosteroid signalling positive regulator (BZR1) family protein (TAIR:AT1G75080.2); Has 1801 Blast hits to 330 proteins in 47 species: Archae - 0; Bacteria - 4; Metazoa - 13; Fungi - 27; Plants - 263; Viruses - 0; Other Eukaryotes - 1494 (source: NCBI BLink)."	protein_coding	BES1/BZR1 HOMOLOG 1 (BEH1)	BES1/BZR1 HOMOLOG 1 (BEH1)
+AT4G36780	AT4G36780.1	"BES1/BZR1 homolog 2 (BEH2); CONTAINS InterPro DOMAIN/s: BZR1, transcriptional repressor (InterPro:IPR008540); BEST Arabidopsis thaliana protein match is: BES1/BZR1 homolog 1 (TAIR:AT3G50750.1); Has 773 Blast hits to 298 proteins in 42 species: Archae - 2; Bacteria - 6; Metazoa - 9; Fungi - 12; Plants - 241; Viruses - 1; Other Eukaryotes - 502 (source: NCBI BLink)."	protein_coding	BES1/BZR1 HOMOLOG 2 (BEH2)	BES1/BZR1 HOMOLOG 2 (BEH2)
+AT1G78700	AT1G78700.1	"BES1/BZR1 homolog 4 (BEH4); FUNCTIONS IN: transcription regulator activity; INVOLVED IN: biological_process unknown; LOCATED IN: cellular_component unknown; EXPRESSED IN: 23 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: BZR1, transcriptional repressor (InterPro:IPR008540); BEST Arabidopsis thaliana protein match is: BES1/BZR1 homolog 3 (TAIR:AT4G18890.1); Has 3228 Blast hits to 573 proteins in 95 species: Archae - 0; Bacteria - 18; Metazoa - 254; Fungi - 109; Plants - 296; Viruses - 0; Other Eukaryotes - 2551 (source: NCBI BLink)."	protein_coding	BES1/BZR1 HOMOLOG 4 (BEH4)	BES1/BZR1 HOMOLOG 4 (BEH4)
+AT3G12920	AT3G12920.1	Encodes one of the BRGs (BOI-related gene) involved in resistance to Botrytis cinerea.	protein_coding	BOI-RELATED GENE 3 (BRG3)	BOI-RELATED GENE 3 (BRG3)
+AT4G36540	AT4G36540.1	"BR enhanced expression 2 (BEE2); FUNCTIONS IN: DNA binding, sequence-specific DNA binding transcription factor activity; INVOLVED IN: regulation of transcription; LOCATED IN: nucleus; EXPRESSED IN: 21 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Helix-loop-helix DNA-binding domain (InterPro:IPR001092), Helix-loop-helix DNA-binding (InterPro:IPR011598); BEST Arabidopsis thaliana protein match is: basic helix-loop-helix (bHLH) DNA-binding superfamily protein (TAIR:AT2G18300.2); Has 2056 Blast hits to 2048 proteins in 102 species: Archae - 0; Bacteria - 0; Metazoa - 23; Fungi - 31; Plants - 2000; Viruses - 0; Other Eukaryotes - 2 (source: NCBI BLink)."	protein_coding	BR ENHANCED EXPRESSION 2 (BEE2)	BR ENHANCED EXPRESSION 2 (BEE2)
+AT4G39400	AT4G39400.1	"Encodes a plasma membrane localized leucine-rich repeat receptor kinase involved in brassinosteroid signal transduction. BRI1 ligand is brassinolide which binds at the extracellular domain. Binding results in phosphorylation of the kinase domain which activates the BRI1 protein leading to BR responses. Residue T-1049 and either S-1044 or T-1045 were essential for kinase function in vitro and normal BRI1 signaling in planta. The structure of BRI1 ligand-binding domain has been determined at 2.5A resolution. Although BAK1 and BRI1 alone localize in the plasma membrane, when BAK1 and BRI1 are coexpressed, the heterodimer BAK1/BRI1 they form is localized in the endosome. BRI1 appears to be involved in the autonomous pathway that regulates the transition to flowering, primarily through its effects on FLC expression levels, as uncovered by double mutant analyses. This most likely occurs as a result of BRI1-dependent effects on histone acetylation, but not histone triMeH3K4 methylation, at the FLC locus."	protein_coding	BRASSINOSTEROID INSENSITIVE 1 (BRI1)	BRASSINOSTEROID INSENSITIVE 1 (BRI1)
+					
+					CABBAGE 2 (CBB2)
+					
+					(ATBRI1)
+					
+					BR INSENSITIVE 1 (BIN1)
+					
+					DWARF 2 (DWF2)
+AT1G31880	AT1G31880.1	"Belongs to five-member BRX gene family. Arabidopsis BRX genes share high levels of similarity among each others, with several conserved domains. The most distinct is BRX domain - highly conserved in all BRX genes among distantly related species. This protein-protein interaction domain is required and sufficient for BRX activity. BRX encodes a key regulator of cell proliferation and elongation in the root, which has been implicated in the brassinosteroid (BR) pathway as well as regulation of auxin-responsive gene expression. Also involved in cytokinin-mediated inhibition of lateral root initiation. A loss-of-function allele, named brx-2 in Rodrigues et al. (2009) Plant Physiol. but changed to brx-3 to resolve nomenclature conflict (Li et al. Planta 2009:229(3):593-603), shows enhanced response to ABA-mediated inhibition of root growth."	protein_coding	BREVIS RADIX (BRX)	NOD26-LIKE INTRINSIC PROTEIN 3
+					
+					1 (NIP3
+					
+					1)
+					
+					(NLM9)
+					
+					BREVIS RADIX (BRX)
+AT3G44260	AT3G44260.1	"Encodes one of the homologs of the yeast CCR4-associated factor 1: AT3G44260 (CAF1a), AT5G22250 (CAF1b). Has mRNA deadenylation activity. Also plays a role in plant defense responses."	protein_coding	CCR4- ASSOCIATED FACTOR 1A (CAF1a)	CCR4- ASSOCIATED FACTOR 1A (CAF1a)
+					
+					CCR4- ASSOCIATED FACTOR 1A (AtCAF1a)
+AT3G28180	AT3G28180.1	encodes a gene similar to cellulose synthase	protein_coding	CELLULOSE-SYNTHASE-LIKE C4 (CSLC04)	CELLULOSE-SYNTHASE-LIKE C4 (ATCSLC04)
+					
+					(CSLC04)
+					
+					CELLULOSE-SYNTHASE-LIKE C4 (CSLC04)
+					
+					CELLULOSE-SYNTHASE LIKE C4 (CSLC4)
+					
+					(ATCSLC4)
+AT2G42530	AT2G42530.1	"cold regulated 15b (COR15B); INVOLVED IN: response to cold, defense response to fungus; LOCATED IN: chloroplast, chloroplast stroma, chloroplast envelope; EXPRESSED IN: 21 plant structures; EXPRESSED DURING: 13 growth stages; BEST Arabidopsis thaliana protein match is: cold-regulated 15a (TAIR:AT2G42540.2); Has 194 Blast hits to 148 proteins in 43 species: Archae - 0; Bacteria - 18; Metazoa - 5; Fungi - 6; Plants - 155; Viruses - 0; Other Eukaryotes - 10 (source: NCBI BLink)."	protein_coding	COLD REGULATED 15B (COR15B)	COLD REGULATED 15B (COR15B)
+AT4G34530	AT4G34530.1	"Encodes a transcription factor CIB1 (cryptochrome-interacting basic-helix-loop-helix). CIB1 interacts with CRY2 (cryptochrome 2) in a blue light-specific manner in yeast and Arabidopsis cells, and it acts together with additional CIB1-related proteins to promote CRY2-dependent floral initiation. CIB1 positively regulates FT expression."	protein_coding	CRYPTOCHROME-INTERACTING BASIC-HELIX-LOOP-HELIX 1 (CIB1)	CRYPTOCHROME-INTERACTING BASIC-HELIX-LOOP-HELIX 1 (CIB1)
+AT2G46310	AT2G46310.1	"CRF5 encodes one of the six cytokinin response factors. It is transcriptionally upregulated in response to cytokinin. CRF5 belongs to the AP2/ERF superfamily of the transcriptional factors. CRF proteins rapidly relocalize to the nucleus in response to cytokinin. Analysis of loos-of-function mutants revealed that the CRFs function redundantly to regulate the development of embryos, cotyledons and leaves."	protein_coding	CYTOKININ RESPONSE FACTOR 5 (CRF5)	CYTOKININ RESPONSE FACTOR 5 (CRF5)
+AT4G39800	AT4G39800.1	"** Referred to as MIPS2 in Mitsuhashi et al 2008. myo-inositol-1-phosphate synthase isoform 1.Expressed in leaf, root and silique. Immunolocalization experiments with an antibody recognizing MIPS1, MIPS2, and MIPS3 showed endosperm localization."	protein_coding	D-MYO-INOSITOL 3-PHOSPHATE SYNTHASE 1 (MIPS1)	MYO-INOSITOL-1-PHOSTPATE SYNTHASE 2 (ATMIPS2)
+					
+					(MI-1-P SYNTHASE)
+					
+					MYO-INOSITOL-1-PHOSPHATE SYNTHASE 1 (MIPS1)
+					
+					MYO-INOSITOL-1-PHOSPHATE SYNTHASE 1 (ATMIPS1)
+					
+					MYO-INOSITOL-1-PHOSPHATE SYNTHASE 2 (MIPS2)
+					
+					INOSITOL 3-PHOSPHATE SYNTHASE 1 (ATIPS1)
+					
+					D-MYO-INOSITOL 3-PHOSPHATE SYNTHASE 1 (MIPS1)
+AT4G24570	AT4G24570.1	"Encodes one of the mitochondrial dicarboxylate carriers (DIC): DIC1 (AT2G22500), DIC2 (AT4G24570), DIC3 (AT5G09470)."	protein_coding	DICARBOXYLATE CARRIER 2 (DIC2)	DICARBOXYLATE CARRIER 2 (DIC2)
+AT5G25460	AT5G25460.1	"Protein of unknown function, DUF642; FUNCTIONS IN: molecular_function unknown; INVOLVED IN: response to karrikin; LOCATED IN: plant-type cell wall; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Protein of unknown function DUF642 (InterPro:IPR006946); BEST Arabidopsis thaliana protein match is: Protein of unknown function, DUF642 (TAIR:AT5G11420.1); Has 1807 Blast hits to 1807 proteins in 277 species: Archae - 0; Bacteria - 0; Metazoa - 736; Fungi - 347; Plants - 385; Viruses - 0; Other Eukaryotes - 339 (source: NCBI BLink)."	protein_coding	DUF642 L-GALL RESPONSIVE GENE 2 (DGR2)	DUF642 L-GALL RESPONSIVE GENE 2 (DGR2)
+AT4G03400	AT4G03400.1	Encodes a GH3-related gene involved in red light-specific hypocotyl elongation. Analysis of sense and antisense transgenic plants suggests that DFL2 is located downstream of red light signal transduction and determines the degree of hypocotyl elongation.	protein_coding	DWARF IN LIGHT 2 (DFL2)	(GH3-10)
+					
+					DWARF IN LIGHT 2 (DFL2)
+AT1G64640	AT1G64640.1	"early nodulin-like protein 8 (ENODL8); FUNCTIONS IN: electron carrier activity, copper ion binding; LOCATED IN: anchored to membrane; EXPRESSED IN: 18 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Plastocyanin-like (InterPro:IPR003245), Cupredoxin (InterPro:IPR008972); BEST Arabidopsis thaliana protein match is: early nodulin-like protein 3 (TAIR:AT4G28365.1); Has 1336 Blast hits to 1294 proteins in 65 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 1335; Viruses - 0; Other Eukaryotes - 1 (source: NCBI BLink)."	protein_coding	EARLY NODULIN-LIKE PROTEIN 8 (ENODL8)	(AtENODL8)
+					
+					EARLY NODULIN-LIKE PROTEIN 8 (ENODL8)
+AT5G25190	AT5G25190.1	encodes a member of the ERF (ethylene response factor) subfamily B-6 of ERF/AP2 transcription factor family. The protein contains one AP2 domain. There are 12 members in this subfamily including RAP2.11.	protein_coding	ETHYLENE AND SALT INDUCIBLE 3 (ESE3)	ETHYLENE AND SALT INDUCIBLE 3 (ESE3)
+AT5G61600	AT5G61600.1	"encodes a member of the ERF (ethylene response factor) subfamily B-3 of ERF/AP2 transcription factor family. The protein contains one AP2 domain. There are 18 members in this subfamily including ATERF-1, ATERF-2, AND ATERF-5."	protein_coding	ETHYLENE RESPONSE FACTOR 104 (ERF104)	ETHYLENE RESPONSE FACTOR 104 (ERF104)
+AT2G40610	AT2G40610.1	"member of Alpha-Expansin Gene Family. Naming convention from the Expansin Working Group (Kende et al, 2004. Plant Mol Bio). Involved in the formation of nematode-induced syncytia in roots of Arabidopsis thaliana."	protein_coding	EXPANSIN A8 (EXPA8)	EXPANSIN A8 (ATEXPA8)
+					
+					(EXP8)
+					
+					EXPANSIN A8 (EXPA8)
+					
+					(ATHEXP ALPHA 1.11)
+					
+					(ATEXP8)
+AT1G74670	AT1G74670.1	Gibberellin-regulated family protein; FUNCTIONS IN: molecular_function unknown; INVOLVED IN: in 6 processes; LOCATED IN: endomembrane system; EXPRESSED IN: 21 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Gibberellin regulated protein (InterPro:IPR003854); BEST Arabidopsis thaliana protein match is: GAST1 protein homolog 4 (TAIR:AT5G15230.1); Has 479 Blast hits to 479 proteins in 44 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 479; Viruses - 0; Other Eukaryotes - 0 (source: NCBI BLink).	protein_coding	GA-STIMULATED ARABIDOPSIS 6 (GASA6)	GA-STIMULATED ARABIDOPSIS 6 (GASA6)
+AT1G09350	AT1G09350.1	Predicted to encode a galactinol synthase	protein_coding	GALACTINOL SYNTHASE 3 (GolS3)	GALACTINOL SYNTHASE 3 (GolS3)
+					
+					GALACTINOL SYNTHASE 3 (AtGolS3)
+AT4G39640	AT4G39640.1	"The gene encodes a gamma-glutamyltransferase (AKA gamma-glutamyl transpeptidase, EC 2.3.2.2) that is located in vascular tissues (predominantly phloem) of leaves and is involved in the degradation of glutathione. The encoded enzyme also mitigates oxidative stress by metabolizing GSSG (oxidized form of GSH - glutathione) in the apoplast."	protein_coding	GAMMA-GLUTAMYL TRANSPEPTIDASE 1 (GGT1)	GAMMA-GLUTAMYL TRANSPEPTIDASE 1 (GGT1)
+AT2G36400	AT2G36400.1	"Growth regulating factor encoding transcription activator. One of the nine members of a GRF gene family, containing nuclear targeting domain. Mutants result in smaller leaves indicating the role of the gene in leaf development. Expressed in root, shoot and flower."	protein_coding	GROWTH-REGULATING FACTOR 3 (GRF3)	GROWTH-REGULATING FACTOR 3 (GRF3)
+					
+					GROWTH-REGULATING FACTOR 3 (AtGRF3)
+AT4G03190	AT4G03190.1	"Encodes an F box protein belonging to the TIR1 subfamily. This protein forms SCF complexes with ASK1 and CUL1 and interacts with Aux/IAA proteins in an auxin-dependent manner. It also has sequence similarity to the yeast protein GRR1, which is involved in glucose repression."	protein_coding	GRR1-LIKE PROTEIN 1 (GRH1)	GRR1-LIKE PROTEIN 1 (GRH1)
+					
+					(ATGRH1)
+					
+					A. THALIANA GERMIN-LIKE PROTEIN 1 (ATGER1)
+					
+					AUXIN SIGNALING F BOX PROTEIN 1 (AFB1)
+AT3G60390	AT3G60390.1	Encodes homeobox protein HAT3.	protein_coding	HOMEOBOX-LEUCINE ZIPPER PROTEIN 3 (HAT3)	HOMEOBOX-LEUCINE ZIPPER PROTEIN 3 (HAT3)
+AT2G44910	AT2G44910.1	Encodes a homeodomain protein whose expression displays a dependence on phyB for both red and far-red light response. Also involved in the shade avoidance syndrome.	protein_coding	HOMEOBOX-LEUCINE ZIPPER PROTEIN 4 (HB4)	HOMEOBOX-LEUCINE ZIPPER PROTEIN 4 (HB4)
+					
+					ARABIDOPSIS THALIANA HOMEOBOX-LEUCINE ZIPPER PROTEIN 4 (ATHB-4)
+					
+					HOMEOBOX-LEUCINE ZIPPER PROTEIN 4 (ATHB4)
+AT5G55250	AT5G55250.1	Encodes an enzyme which specifically converts IAA to its methyl ester form MelIAA. This gene belongs to the family of carboxyl methyltransferases whose members catalyze the transfer of the methyl group from S-adenosyl-L-methionine to carboxylic acid-containing substrates to form small molecule methyl esters. Expression of TCP genes is downregulated in mutant iamt1-D.	protein_coding	IAA CARBOXYLMETHYLTRANSFERASE 1 (IAMT1)	IAA CARBOXYLMETHYLTRANSFERASE 1 (IAMT1)
+					
+					(AtIAMT1)
+AT1G52830	AT1G52830.1	An extragenic dominant suppressor of the hy2 mutant phenotype. Also exhibits aspects of constitutive photomorphogenetic phenotype in the absence of hy2. Mutants have dominant leaf curling phenotype shortened hypocotyls and reduced apical hook. Induced by indole-3-acetic acid.	protein_coding	INDOLE-3-ACETIC ACID 6 (IAA6)	INDOLE-3-ACETIC ACID 6 (IAA6)
+					
+					SHORT HYPOCOTYL 1 (SHY1)
+AT4G28640	AT4G28640.2	"Auxin induced gene, IAA11 (IAA11)."	protein_coding	INDOLE-3-ACETIC ACID INDUCIBLE 11 (IAA11)	INDOLE-3-ACETIC ACID INDUCIBLE 11 (IAA11)
+AT4G14550	AT4G14550.1	IAA14 is a member of the Aux/IAA protein family. Involved in lateral root development. Gain of function mutation decreases auxin-inducible gene expression. Protein is localized to the nucleus. Expressed in stele and root tip epidermis. Functions as a negative regulator of ARF7/19.	protein_coding	INDOLE-3-ACETIC ACID INDUCIBLE 14 (IAA14)	SOLITARY ROOT (SLR)
+					
+					INDOLE-3-ACETIC ACID INDUCIBLE 14 (IAA14)
+AT3G62100	AT3G62100.1	"Encodes a member of the Aux/IAA family of proteins implicated in auxin signaling. IAA30 lacks the conserved degron (domain II) found in many family members. IAA30 transcripts are induced by auxin treatment and accumulate preferentially in the quiescent center cells of the root meristem. Overexpression of IAA30 leads to defects in gravitropism, root development, root meristem maintenance, and cotyledon vascular development. Target of LEC2 and AGL15. Promotes somatyic embryogenesis."	protein_coding	INDOLE-3-ACETIC ACID INDUCIBLE 30 (IAA30)	INDOLE-3-ACETIC ACID INDUCIBLE 30 (IAA30)
+AT5G03150	AT5G03150.1	"JKD is a nuclear-localized putative transcription factor with three zinc finger domains. jkd mutants show a number of root patterning defects including ectopic periclinal divisions in the cortex, increased cell numbers in the cortical and epidermal layers, a disrupted QC marker expression pattern, and disorganized QC and columella cells. jkd mutants also have a reduced number of meristematic cells in their roots. JKD can interact with the SCR and SHR proteins implicated in root patterning, as well as another zinc finger transcription factor, MAGPIE. All of these interactions require the first zinc finger in JKD according to a Y2H assay. There are also transcriptional interactions among these proteins. The initiation of JKD transcription does not appear to depend on SCR and SHR, but later expression in the post-embryonic QC cells and ground tissue initials is reduced in scr and shr mutants. JKD also appears to be required for SCR transcription beginning in the embryo. There is also some evidence that JKD plays a role in promoting the movement of SHR into the nucleus, particularly in QC cells, but this may be indirect."	protein_coding	JACKDAW (JKD)	JACKDAW (JKD)
+AT2G21050	AT2G21050.1	"Encodes LAX2 (LIKE AUXIN RESISTANT), a member of the AUX1 LAX family of auxin influx carriers. Required for the establishment of embryonic root cell organization."	protein_coding	LIKE AUXIN RESISTANT 2 (LAX2)	LIKE AUXIN RESISTANT 2 (LAX2)
+AT5G15580	AT5G15580.1	Encodes LONGIFOLIA1 (LNG1). Regulates leaf morphology by promoting cell expansion in the leaf-length direction. The LNG1 homologue LNG2 (At3g02170) has similar function.	protein_coding	LONGIFOLIA1 (LNG1)	TON1 RECRUITING MOTIF 2 (TRM2)
+					
+					LONGIFOLIA1 (LNG1)
+AT3G02170	AT3G02170.1	Encodes LONGIFOLIA2 (LNG2). Regulates leaf morphology by promoting cell expansion in the leaf-length direction. The LNG2 homologue LNG1 (At5g15580) has similar function.	protein_coding	LONGIFOLIA2 (LNG2)	TON1 RECRUITING MOTIF 1 (TRM1)
+					
+					LONGIFOLIA2 (LNG2)
+AT5G52870	AT5G52870.1	"Encodes a member of the MAKR (MEMBRANE-ASSOCIATED KINASE REGULATOR) gene family. MAKRs have putative kinase interacting motifs and membrane localization signals. Known members include: AT5G26230 (MAKR1), AT1G64080 (MAKR2), AT2G37380 (MAKR3), AT2G39370 (MAKR4), AT5G52870 (MAKR5) and AT5G52900 (MAKR6)."	protein_coding	MEMBRANE-ASSOCIATED KINASE REGULATOR 5 (MAKR5)	MEMBRANE-ASSOCIATED KINASE REGULATOR 5 (MAKR5)
+AT2G42620	AT2G42620.1	"The mutations at MAX2 cause increased hypocotyl and petiole elongation in light-grown seedlings. Positional cloning identifies MAX2 as a member of the F-box leucine-rich repeat family of proteins. MAX2 is identical to ORE9, a proposed regulator of leaf senescence. Involved in positive regulation of light responses."	protein_coding	MORE AXILLARY BRANCHES 2 (MAX2)	MORE AXILLARY BRANCHES 2 (MAX2)
+					
+					PLEIOTROPIC PHOTOSIGNALING (PPS)
+					
+					ORESARA 9 (ORE9)
+AT5G60850	AT5G60850.1	Encodes a zinc finger protein.	protein_coding	OBF BINDING PROTEIN 4 (OBP4)	OBF BINDING PROTEIN 4 (OBP4)
+AT2G40000	AT2G40000.1	"ortholog of sugar beet HS1 PRO-1 2 (HSPRO2); CONTAINS InterPro DOMAIN/s: Hs1pro-1, C-terminal (InterPro:IPR009743), Hs1pro-1, N-terminal (InterPro:IPR009869); BEST Arabidopsis thaliana protein match is: Hs1pro-1 protein (TAIR:AT3G55840.1); Has 71 Blast hits to 71 proteins in 18 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 60; Viruses - 0; Other Eukaryotes - 11 (source: NCBI BLink)."	protein_coding	ORTHOLOG OF SUGAR BEET HS1 PRO-1 2 (HSPRO2)	ARABIDOPSIS ORTHOLOG OF SUGAR BEET HS1 PRO-1 2 (ATHSPRO2)
+					
+					ORTHOLOG OF SUGAR BEET HS1 PRO-1 2 (HSPRO2)
+AT1G35140	AT1G35140.1	"EXL1 is involved in the C-starvation response. Phenotypic changes of an exl1 loss of function mutant became evident only under corresponding experimental conditions. For example, the mutant showed diminished biomass production in a short-day/low light growth regime, impaired survival during extended night, and impaired survival of anoxia stress."	protein_coding	PHOSPHATE-INDUCED 1 (PHI-1)	PHOSPHATE-INDUCED 1 (PHI-1)
+					
+					EXORDIUM LIKE 7 (EXL7)
+					
+					EXORDIUM LIKE 1 (EXL1)
+ATCG00020	ATCG00020.1	"Encodes chlorophyll binding protein D1, a part of the photosystem II reaction center core"	protein_coding	PHOTOSYSTEM II REACTION CENTER PROTEIN A (PSBA)	PHOTOSYSTEM II REACTION CENTER PROTEIN A (PSBA)
+AT3G45780	AT3G45780.1	"Blue-light photoreceptor. Contains a light activated serine-threonine kinase domain and LOV1 and LOV2 repeats. Mutants are defective in blue-light response. Mediates blue light-induced growth enhancements. PHOT1 and PHOT2 mediate blue light-dependent activation of the plasma membrane H+-ATPase in guard cell protoplasts. PHOT1 undergoes blue-light-dependent autophosphorylation. At least eight phosphorylation sites have been identified in PHOT1. Phosphorylation of serine851 in the activation loop of PHOT1 appears to be required for stomatal opening, chloroplast accumulation, leaf flattening, and phototropism, and phosphorylation of serine849 may also contribute to the regulation of these responses. Phosphorylation-dependent binding of 14-3-3 proteins to the Hinge1 region of PHOT1 appears to require serine350 and serine376."	protein_coding	PHOTOTROPIN 1 (PHOT1)	PHOTOTROPIN 1 (PHOT1)
+					
+					NONPHOTOTROPIC HYPOCOTYL 1 (NPH1)
+					
+					ROOT PHOTOTROPISM 1 (RPT1)
+					
+					(JK224)
+AT2G42870	AT2G42870.1	"Encodes PHYTOCHROME RAPIDLY REGULATED1 (PAR1), an atypical basic helix-loop-helix (bHLP) protein. Closely related to PAR2 (At3g58850). Up regulated after simulated shade perception. Acts in the nucleus to control plant development and as a negative regulator of shade avoidance response. Functions as transcriptional repressor of auxin-responsive genes SAUR15 (AT4G38850) and SAUR68 (AT1G29510)."	protein_coding	PHY RAPIDLY REGULATED 1 (PAR1)	PHY RAPIDLY REGULATED 1 (PAR1)
+					
+					HELIX-LOOP-HELIX 1 (HLH1)
+AT1G09570	AT1G09570.1	"Light-labile cytoplasmic red/far-red light photoreceptor involved in the regulation of photomorphogenesis. It exists in two inter-convertible forms: Pr and Pfr (active) and functions as a dimer.The N terminus carries a single tetrapyrrole chromophore, and the C terminus is involved in dimerization. It is the sole photoreceptor mediating the FR high irradiance response (HIR). Major regulator in red-light induction of phototropic enhancement. Involved in the regulation of de-etiolation. Involved in gravitropism and phototropism. Requires FHY1 for nuclear accumulation."	protein_coding	PHYTOCHROME A (PHYA)	PHYTOCHROME A (PHYA)
+					
+					ELONGATED HYPOCOTYL 8 (HY8)
+					
+					FAR RED ELONGATED 1 (FRE1)
+					
+					FAR RED ELONGATED HYPOCOTYL 2 (FHY2)
+AT5G04190	AT5G04190.1	"Encodes phytochrome kinase substrate 4, a phytochrome signaling component involved in phototropism. It is phosphorylated in a phot1-dependent manner in vitro. Phosphorylation is transient and regulated by a type 2- protein phosphatase."	protein_coding	PHYTOCHROME KINASE SUBSTRATE 4 (PKS4)	PHYTOCHROME KINASE SUBSTRATE 4 (PKS4)
+AT4G35470	AT4G35470.1	"Encodes PIRL4, a member of the Plant Intracellular Ras-group-related LRRs (Leucine rich repeat proteins). PIRLs are a distinct, plant-specific class of intracellular LRRs that likely mediate protein interactions, possibly in the context of signal transduction."	protein_coding	PLANT INTRACELLULAR RAS GROUP-RELATED LRR 4 (PIRL4)	PLANT INTRACELLULAR RAS GROUP-RELATED LRR 4 (PIRL4)
+AT3G19380	AT3G19380.1	"plant U-box 25 (PUB25); FUNCTIONS IN: ubiquitin-protein ligase activity, binding; INVOLVED IN: response to chitin; LOCATED IN: ubiquitin ligase complex; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 12 growth stages; CONTAINS InterPro DOMAIN/s: U box domain (InterPro:IPR003613), Armadillo-like helical (InterPro:IPR011989), Armadillo-type fold (InterPro:IPR016024); BEST Arabidopsis thaliana protein match is: plant U-box 26 (TAIR:AT1G49780.1); Has 2521 Blast hits to 2449 proteins in 133 species: Archae - 0; Bacteria - 22; Metazoa - 177; Fungi - 24; Plants - 2091; Viruses - 3; Other Eukaryotes - 204 (source: NCBI BLink)."	protein_coding	PLANT U-BOX 25 (PUB25)	PLANT U-BOX 25 (PUB25)
+AT5G46240	AT5G46240.1	"Encodes a potassium channel protein (KAT1). ABA triggers KAT1 endocytosis both in epidermal cells as well as guard cells. Upon removal of ABA, KAT1 is recycled back to the plasma membrane. KAT1 is localized within 0.5?0.6 ?m diameter microdomains at the plasma membrane surface. KAT1 belongs to the Shaker family K+ channel. This family includes five groups based on phylogenetic analysis (FEBS Letters (2007) 581: 2357): I (inward rectifying channel): AKT1 (AT2G26650), AKT5 (AT4G32500) and SPIK (also known as AKT6, AT2G25600); II (inward rectifying channel): KAT1 (AT5G46240) and KAT2 (AT4G18290); III (weakly inward rectifying channel): AKT2 (AT4G22200); IV (regulatory subunit involved in inwardly rectifying conductance formation): KAT3 (also known as AtKC1, AT4G32650); V (outward rectifying channel): SKOR (AT3G02850) and GORK (AT5G37500)."	protein_coding	POTASSIUM CHANNEL IN ARABIDOPSIS THALIANA 1 (KAT1)	POTASSIUM CHANNEL IN ARABIDOPSIS THALIANA 1 (KAT1)
+AT5G60860	AT5G60860.1	"RAB GTPase homolog A1F (RABA1f); FUNCTIONS IN: GTP binding; INVOLVED IN: protein transport, small GTPase mediated signal transduction; EXPRESSED IN: 23 plant structures; EXPRESSED DURING: 15 growth stages; CONTAINS InterPro DOMAIN/s: Ras GTPase (InterPro:IPR001806), Small GTP-binding protein (InterPro:IPR005225), Small GTPase (InterPro:IPR020851), Ras (InterPro:IPR013753), Ras small GTPase, Rab type (InterPro:IPR003579), Rab11-related (InterPro:IPR015595); BEST Arabidopsis thaliana protein match is: RAB GTPase homolog A1G (TAIR:AT3G15060.1); Has 1807 Blast hits to 1807 proteins in 277 species: Archae - 0; Bacteria - 0; Metazoa - 736; Fungi - 347; Plants - 385; Viruses - 0; Other Eukaryotes - 339 (source: NCBI BLink)."	protein_coding	RAB GTPASE HOMOLOG A1F (RABA1f)	RAB GTPASE HOMOLOG A1F (RABA1f)
+					
+					RAB GTPASE HOMOLOG A1F (AtRABA1f)
+AT2G42800	AT2G42800.1	"receptor like protein 29 (RLP29); LOCATED IN: anchored to membrane, plant-type cell wall; EXPRESSED IN: 16 plant structures; EXPRESSED DURING: 8 growth stages; CONTAINS InterPro DOMAIN/s: Leucine-rich repeat (InterPro:IPR001611); BEST Arabidopsis thaliana protein match is: Leucine-rich repeat (LRR) family protein (TAIR:AT1G80080.1); Has 95156 Blast hits to 31366 proteins in 1102 species: Archae - 33; Bacteria - 5084; Metazoa - 23826; Fungi - 961; Plants - 59193; Viruses - 0; Other Eukaryotes - 6059 (source: NCBI BLink)."	protein_coding	RECEPTOR LIKE PROTEIN 29 (RLP29)	RECEPTOR LIKE PROTEIN 29 (AtRLP29)
+					
+					RECEPTOR LIKE PROTEIN 29 (RLP29)
+AT2G01150	AT2G01150.1	"Encodes a RING-H2 finger protein that is expressed in vascular tissue, root tips, embryos and pistils."	protein_coding	RING-H2 FINGER PROTEIN 2B (RHA2B)	RING-H2 FINGER PROTEIN 2B (RHA2B)
+AT5G16023	AT5G16023.1	Encodes a plant peptide that could be involved in the coordination of socket cell development in wild-type plants.	protein_coding	ROTUNDIFOLIA LIKE 18 (RTFL18)	ROTUNDIFOLIA LIKE 18 (RTFL18)
+					
+					DEVIL 1 (DVL1)
+AT1G27730	AT1G27730.1	"Related to Cys2/His2-type zinc-finger proteins found in higher plants. Compensated for a subset of calcineurin deficiency in yeast. Salt tolerance produced by ZAT10 appeared to be partially dependent on ENA1/PMR2, a P-type ATPase required for Li+ and Na+ efflux in yeast. The protein is localized to the nucleus, acts as a transcriptional repressor and is responsive to chitin oligomers. Also involved in response to photooxidative stress."	protein_coding	SALT TOLERANCE ZINC FINGER (STZ)	(ZAT10)
+					
+					SALT TOLERANCE ZINC FINGER (STZ)
+AT3G55980	AT3G55980.1	"salt-inducible zinc finger 1 (SZF1); CONTAINS InterPro DOMAIN/s: Zinc finger, CCCH-type (InterPro:IPR000571), Ankyrin repeat-containing domain (InterPro:IPR020683), Ankyrin repeat (InterPro:IPR002110); BEST Arabidopsis thaliana protein match is: zinc finger (CCCH-type) family protein (TAIR:AT2G40140.2); Has 1623 Blast hits to 1414 proteins in 181 species: Archae - 2; Bacteria - 49; Metazoa - 777; Fungi - 32; Plants - 465; Viruses - 2; Other Eukaryotes - 296 (source: NCBI BLink)."	protein_coding	SALT-INDUCIBLE ZINC FINGER 1 (SZF1)	(ATSZF1)
+					
+					SALT-INDUCIBLE ZINC FINGER 1 (SZF1)
+AT4G36110	AT4G36110.1	SAUR-like auxin-responsive protein family ; CONTAINS InterPro DOMAIN/s: Auxin responsive SAUR protein (InterPro:IPR003676); BEST Arabidopsis thaliana protein match is: SAUR-like auxin-responsive protein family (TAIR:AT2G18010.1); Has 1361 Blast hits to 1344 proteins in 26 species: Archae - 0; Bacteria - 0; Metazoa - 0; Fungi - 0; Plants - 1360; Viruses - 0; Other Eukaryotes - 1 (source: NCBI BLink).	protein_coding	SMALL AUXIN UPREGULATED RNA 9 (SAUR9)	SMALL AUXIN UPREGULATED RNA 9 (SAUR9)
+AT3G06370	AT3G06370.1	member of Sodium proton exchanger family	protein_coding	SODIUM HYDROGEN EXCHANGER 4 (NHX4)	(ATNHX4)
+					
+					SODIUM HYDROGEN EXCHANGER 4 (NHX4)
+AT2G22830	AT2G22830.1	"squalene epoxidase 2 (SQE2); FUNCTIONS IN: squalene monooxygenase activity, electron carrier activity, oxidoreductase activity, FAD binding; INVOLVED IN: sterol biosynthetic process; LOCATED IN: integral to membrane; EXPRESSED IN: 22 plant structures; EXPRESSED DURING: 13 growth stages; CONTAINS InterPro DOMAIN/s: Squalene epoxidase (InterPro:IPR013698), Fumarate reductase/succinate dehydrogenase flavoprotein, N-terminal (InterPro:IPR003953); BEST Arabidopsis thaliana protein match is: squalene epoxidase 3 (TAIR:AT4G37760.1); Has 2838 Blast hits to 2834 proteins in 830 species: Archae - 46; Bacteria - 1617; Metazoa - 134; Fungi - 223; Plants - 197; Viruses - 0; Other Eukaryotes - 621 (source: NCBI BLink)."	protein_coding	SQUALENE EPOXIDASE 2 (SQE2)	SQUALENE EPOXIDASE 2 (SQE2)
+AT5G62170	AT5G62170.1	unknown protein; BEST Arabidopsis thaliana protein match is: unknown protein (TAIR:AT5G51850.1); Has 381 Blast hits to 359 proteins in 81 species: Archae - 0; Bacteria - 16; Metazoa - 101; Fungi - 21; Plants - 99; Viruses - 3; Other Eukaryotes - 141 (source: NCBI BLink).	protein_coding	TON1 RECRUITING MOTIF 25 (TRM25)	TON1 RECRUITING MOTIF 25 (TRM25)
+AT2G18700	AT2G18700.1	Encodes an enzyme putatively involved in trehalose biosynthesis. The protein has a trehalose synthase (TPS)-like domain that may or may not be active as well as a trehalose phosphatase (TPP)-like domain.	protein_coding	TREHALOSE PHOSPHATASE/SYNTHASE 11 (TPS11)	TREHALOSE PHOSPHATASE/SYNTHASE 11 (ATTPS11)
+					
+					TREHALOSE PHOSPHATASE/SYNTHASE 11 (TPS11)
+					
+					(ATTPSB)
+					
+					TREHALOSE-6-PHOSPHATE SYNTHASE 11 (TPS11)
+AT5G65140	AT5G65140.1	"Haloacid dehalogenase-like hydrolase (HAD) superfamily protein; FUNCTIONS IN: catalytic activity, trehalose-phosphatase activity; INVOLVED IN: response to cadmium ion, trehalose biosynthetic process; EXPRESSED IN: 21 plant structures; EXPRESSED DURING: 14 growth stages; CONTAINS InterPro DOMAIN/s: HAD-superfamily hydrolase, subfamily IIB (InterPro:IPR006379), Trehalose-phosphatase (InterPro:IPR003337); BEST Arabidopsis thaliana protein match is: Haloacid dehalogenase-like hydrolase (HAD) superfamily protein (TAIR:AT5G10100.1); Has 35333 Blast hits to 34131 proteins in 2444 species: Archae - 798; Bacteria - 22429; Metazoa - 974; Fungi - 991; Plants - 531; Viruses - 0; Other Eukaryotes - 9610 (source: NCBI BLink)."	protein_coding	TREHALOSE-6-PHOSPHATE PHOSPHATASE J (TPPJ)	TREHALOSE-6-PHOSPHATE PHOSPHATASE J (TPPJ)
+AT2G45310	AT2G45310.1	UDP-D-glucuronate 4-epimerase	protein_coding	UDP-D-GLUCURONATE 4-EPIMERASE 4 (GAE4)	UDP-D-GLUCURONATE 4-EPIMERASE 4 (GAE4)
+AT1G10550	AT1G10550.1	Encodes a membrane-localized protein that is predicted to function during cell wall modification.Overexpression of XTH33 results in abnormal cell morphology. It's expression is under epigenetic control by ATX1.	protein_coding	XYLOGLUCAN:XYLOGLUCOSYL TRANSFERASE 33 (XTH33)	XYLOGLUCAN:XYLOGLUCOSYL TRANSFERASE 33 (XTH33)
+					
+					XYLOGLUCAN:XYLOGLUCOSYL TRANSFERASE 33 (XET)

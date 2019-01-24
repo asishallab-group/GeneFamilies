@@ -1,0 +1,8 @@
+"BINCODE"	"p.value"	"p.adjusted"	"NAME"	"DESCRIPTION"
+"11"	3.8953425102298e-13	1.79294973664648e-08	"Phytohormones"	""
+"11.2"	7.16689128360318e-08	0.000824694863530255	"Phytohormones.auxin"	""
+"11.2.3"	4.14833674726054e-06	0.0272771145797429	"Phytohormones.auxin.conjugation and degradation"	""
+"11.2.3.1"	9.95774372641029e-07	0.00916670816236244	"Phytohormones.auxin.conjugation and degradation.indole-3-acetic acid-amido synthetase"	"Phytohormones.auxin.conjugation and degradation.indole-3-acetic acid-amido synthetase (original description: none)"
+"15.6"	1.94992826381262e-06	0.0149585620857942	"RNA biosynthesis.transcription factor families"	""
+"15.6.3"	7.11078905117093e-12	1.63647834858731e-07	"RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily"	""
+"15.6.34"	4.73461124427245e-11	7.26416223241684e-07	"RNA biosynthesis.transcription factor families.bHLH transcription factor"	"RNA biosynthesis.transcription factor families.bHLH transcription factor (original description: none)"

@@ -648,15 +648,18 @@ vectorProjection <- function(a, b) {
 statVectorCloud <- function(vecs.df, stat = getOption("GeneFamilies.vector.cloud.stat", 
     mean), deviance.funk = getOption("GeneFamilies.vector.cloud.deviance", 
     sd)) {
-    i <- which(!as.logical(apply(vecs.df, 1, hasInvalidVecSpaceComponents)))
-    if (length(i) == 0) 
-        return(NA)
-    v.df <- vecs.df[i, , drop = FALSE]
-    stat.vec <- as.numeric(apply(v.df, 2, stat))
-    dev.vec <- as.numeric(apply(v.df, 2, deviance.funk))
-    orth.on.diag.2.stat.vec <- stat.vec - vectorProjection(stat.vec, rep(1, 
-        length(stat.vec)))
-    list(stat.vec = stat.vec, deviance.vec = dev.vec, orth.on.diag.2.stat.vec = orth.on.diag.2.stat.vec)
+    if ((class(vecs.df) == "data.frame" || class(vecs.df) == "matrix") && 
+        nrow(vecs.df) > 0) {
+        i <- which(!as.logical(apply(vecs.df, 1, hasInvalidVecSpaceComponents)))
+        if (length(i) == 0) 
+            return(NA)
+        v.df <- vecs.df[i, , drop = FALSE]
+        stat.vec <- as.numeric(apply(v.df, 2, stat))
+        dev.vec <- as.numeric(apply(v.df, 2, deviance.funk))
+        orth.on.diag.2.stat.vec <- stat.vec - vectorProjection(stat.vec, 
+            rep(1, length(stat.vec)))
+        list(stat.vec = stat.vec, deviance.vec = dev.vec, orth.on.diag.2.stat.vec = orth.on.diag.2.stat.vec)
+    }
 }
 
 
@@ -781,27 +784,36 @@ exprVecSpaceEvolutionAfterDupl <- function(genes, family.name, classifier.lst,
         "flower stage 16")) {
     res <- NULL
     if (length(genes) > 0) {
-        genes.classed <- lapply(classifier.lst, function(x) intersect(genes, 
-            x))
+        genes.classed <- lapply(classifier.lst, function(x) intersect(intersect(genes, 
+            x), expr.vecs[, gene.col]))
         g.c.i <- sapply(genes.classed, function(x) length(x) > 0)
         evolved.classes <- setdiff(names(genes.classed), base.class)
-        # If base class and at least one other class has genes:
+        # If base class and at least one other class has genes with expression
+        # values:
         if (length(genes.classed[[base.class]]) > 0 && any(g.c.i[evolved.classes])) {
             base.class.cloud <- statVectorCloud(expr.vecs[which(expr.vecs[, 
                 gene.col] %in% genes.classed[[base.class]]), vec.space.axes])
             res <- cbind(data.frame(Family = family.name, mean.base.tiss.vers = (1 - 
                 cosDiag(base.class.cloud$stat.vec)/sqrt(2)), stringsAsFactors = FALSE), 
                 Reduce(cbind, lapply(names(g.c.i[evolved.classes]), function(evol.class) {
-                  e.g <- genes.classed[[evol.class]]
-                  e.g.cloud <- statVectorCloud(expr.vecs[which(expr.vecs[, 
-                    gene.col] %in% e.g), vec.space.axes])
-                  evol.df <- data.frame(V1 = (1 - cosDiag(e.g.cloud$stat.vec)/sqrt(2)), 
-                    V2 = rad2deg(acos(cosAngleVec(base.class.cloud$orth.on.diag.2.stat.vec, 
-                      e.g.cloud$orth.on.diag.2.stat.vec))), V3 = distVectorClouds(base.class.cloud, 
-                      e.g.cloud), stringsAsFactors = FALSE)
-                  colnames(evol.df) <- paste(evol.class, c("tiss.vers", 
-                    "tiss.change", "dist.vec.clouds"), sep = ".")
-                  evol.df
+                  # Check whether evol.class has expression values for its genes:
+                  if (g.c.i[[evol.class]]) {
+                    e.g <- genes.classed[[evol.class]]
+                    e.g.cloud <- statVectorCloud(expr.vecs[which(expr.vecs[, 
+                      gene.col] %in% e.g), vec.space.axes])
+                    evol.df <- data.frame(V1 = (1 - cosDiag(e.g.cloud$stat.vec)/sqrt(2)), 
+                      V2 = rad2deg(acos(cosAngleVec(base.class.cloud$orth.on.diag.2.stat.vec, 
+                        e.g.cloud$orth.on.diag.2.stat.vec))), V3 = distVectorClouds(base.class.cloud, 
+                        e.g.cloud), stringsAsFactors = FALSE)
+                    colnames(evol.df) <- paste(evol.class, c("tiss.vers", 
+                      "tiss.change", "dist.vec.clouds"), sep = ".")
+                    evol.df
+                  } else {
+                    evol.df <- data.frame(V1 = NA, V2 = NA, V3 = NA, stringsAsFactors = FALSE)
+                    colnames(evol.df) <- paste(evol.class, c("tiss.vers", 
+                      "tiss.change", "dist.vec.clouds"), sep = ".")
+                    evol.df
+                  }
                 })))
         }
     }

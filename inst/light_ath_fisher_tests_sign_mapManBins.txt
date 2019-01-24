@@ -1,0 +1,6 @@
+BINCODE	percent.up	p.adjusted	NAME	DESCRIPTION
+15	0.770833333333333	0.000495899344043511	RNA biosynthesis	
+15.6	0.770833333333333	1.37783848002949e-05	RNA biosynthesis.transcription factor families	
+15.6.1.2	0.285714285714286	1.37783848002949e-05	RNA biosynthesis.transcription factor families.C2C2 superfamily.BBX/CONSTANS transcription factor	RNA biosynthesis.transcription factor families.C2C2 superfamily.BBX/CONSTANS transcription factor (original description: none)
+15.6.3	1	3.86641233987538e-05	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	
+15.6.34	1	0.000126750522470687	RNA biosynthesis.transcription factor families.bHLH transcription factor	RNA biosynthesis.transcription factor families.bHLH transcription factor (original description: none)

@@ -1,0 +1,5 @@
+ps.II.over.ps.I	condition	species
+0.378680027554176	untreated	chi
+0.402416972562034	artificial shade	chi
+0.0656394909171863	untreated	ath
+0.0559514002659083	artificial shade	ath

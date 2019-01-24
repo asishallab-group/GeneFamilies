@@ -1,0 +1,123 @@
+BINCODE	NAME	gene	log2FoldChange
+1.1	Photosynthesis.photophosphorylation	carhr281960	1.08232950723286
+1.1	Photosynthesis.photophosphorylation	carhr282190	0.657776524684516
+1.1	Photosynthesis.photophosphorylation	carhr281970	1.13576625129488
+1.1	Photosynthesis.photophosphorylation	carhr282130	0.979235041784867
+1.1	Photosynthesis.photophosphorylation	carhr281980	1.13746325672752
+1.1	Photosynthesis.photophosphorylation	carhr282010	0.953514117703015
+1.1	Photosynthesis.photophosphorylation	carhr282000	0.765430205360592
+1.1	Photosynthesis.photophosphorylation	carhr282140	0.641698214132169
+1.1	Photosynthesis.photophosphorylation	carhr282020	1.11866446679408
+1.1	Photosynthesis.photophosphorylation	carhr147760	-0.710829727417388
+1.1	Photosynthesis.photophosphorylation	carhr282470	0.646266641532494
+1.1	Photosynthesis.photophosphorylation	carhr282060	1.26509117193351
+1.1	Photosynthesis.photophosphorylation	carhr282440	0.984990048720264
+1.1	Photosynthesis.photophosphorylation	carhr282040	1.22008820884862
+1.1	Photosynthesis.photophosphorylation	carhr282050	1.09058045734844
+1.1	Photosynthesis.photophosphorylation	carhr281900	0.801869314587514
+1.1	Photosynthesis.photophosphorylation	carhr282070	0.980317083355982
+1.1.1.2	Photosynthesis.photophosphorylation.photosystem II.PS-II complex	carhr281960	1.08232950723286
+1.1.1.2	Photosynthesis.photophosphorylation.photosystem II.PS-II complex	carhr282190	0.657776524684516
+1.1.1.2	Photosynthesis.photophosphorylation.photosystem II.PS-II complex	carhr281970	1.13576625129488
+1.1.1.2	Photosynthesis.photophosphorylation.photosystem II.PS-II complex	carhr282130	0.979235041784867
+1.1.1.2	Photosynthesis.photophosphorylation.photosystem II.PS-II complex	carhr281980	1.13746325672752
+1.1.1.2.1	Photosynthesis.photophosphorylation.photosystem II.PS-II complex.reaction center complex	carhr281960	1.08232950723286
+1.1.1.2.1	Photosynthesis.photophosphorylation.photosystem II.PS-II complex.reaction center complex	carhr282190	0.657776524684516
+1.1.1.2.1	Photosynthesis.photophosphorylation.photosystem II.PS-II complex.reaction center complex	carhr281970	1.13576625129488
+1.1.1.2.1	Photosynthesis.photophosphorylation.photosystem II.PS-II complex.reaction center complex	carhr282130	0.979235041784867
+1.1.1.2.1	Photosynthesis.photophosphorylation.photosystem II.PS-II complex.reaction center complex	carhr281980	1.13746325672752
+1.1.8	Photosynthesis.photophosphorylation.chlororespiration	carhr282470	0.646266641532494
+1.1.8	Photosynthesis.photophosphorylation.chlororespiration	carhr282060	1.26509117193351
+1.1.8	Photosynthesis.photophosphorylation.chlororespiration	carhr282440	0.984990048720264
+1.1.8	Photosynthesis.photophosphorylation.chlororespiration	carhr282040	1.22008820884862
+1.1.8	Photosynthesis.photophosphorylation.chlororespiration	carhr282050	1.09058045734844
+1.1.8.1	Photosynthesis.photophosphorylation.chlororespiration.NADH dehydrogenase-like (NDH) complex	carhr282470	0.646266641532494
+1.1.8.1	Photosynthesis.photophosphorylation.chlororespiration.NADH dehydrogenase-like (NDH) complex	carhr282060	1.26509117193351
+1.1.8.1	Photosynthesis.photophosphorylation.chlororespiration.NADH dehydrogenase-like (NDH) complex	carhr282440	0.984990048720264
+1.1.8.1	Photosynthesis.photophosphorylation.chlororespiration.NADH dehydrogenase-like (NDH) complex	carhr282040	1.22008820884862
+1.1.8.1	Photosynthesis.photophosphorylation.chlororespiration.NADH dehydrogenase-like (NDH) complex	carhr282050	1.09058045734844
+1.1.8.1.1	Photosynthesis.photophosphorylation.chlororespiration.NADH dehydrogenase-like (NDH) complex.membrane subcomplex M	carhr282470	0.646266641532494
+1.1.8.1.1	Photosynthesis.photophosphorylation.chlororespiration.NADH dehydrogenase-like (NDH) complex.membrane subcomplex M	carhr282060	1.26509117193351
+1.1.8.1.1	Photosynthesis.photophosphorylation.chlororespiration.NADH dehydrogenase-like (NDH) complex.membrane subcomplex M	carhr282440	0.984990048720264
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr174030	2.05276958384544
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr223400	2.96832709658926
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr224070	0.874447573468422
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr160460	2.08050494944943
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr157140	-1.65367530865001
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr277000	-0.595246526447581
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr001660	1.70969171591438
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr009230	0.710764411242551
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr019000	1.2627075296339
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr024960	0.959614250891505
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr063390	2.65532939262994
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr092350	0.593469912515177
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr097250	3.86848251864895
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr142340	6.56252598622418
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr169260	1.07149176369804
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr198150	1.24122937108288
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr205060	0.643326300087004
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr257350	0.676938684971316
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr262370	1.20936900875271
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr280590	1.41324015297905
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr001660	1.70969171591438
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr009230	0.710764411242551
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr019000	1.2627075296339
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr024960	0.959614250891505
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr063390	2.65532939262994
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr092350	0.593469912515177
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr097250	3.86848251864895
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr142340	6.56252598622418
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr169260	1.07149176369804
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr198150	1.24122937108288
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr205060	0.643326300087004
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr257350	0.676938684971316
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr262370	1.20936900875271
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr280590	1.41324015297905
+17.6	Protein biosynthesis.organelle translation machineries	carhr282260	0.730083224698709
+17.6	Protein biosynthesis.organelle translation machineries	carhr282170	1.21424083208981
+17.6	Protein biosynthesis.organelle translation machineries	carhr282410	1.41560623689383
+17.6	Protein biosynthesis.organelle translation machineries	carhr282150	1.13910126893185
+17.6	Protein biosynthesis.organelle translation machineries	carhr282240	0.890671114922936
+17.6	Protein biosynthesis.organelle translation machineries	carhr282270	0.916455305267916
+17.6	Protein biosynthesis.organelle translation machineries	carhr282030	0.743526033248049
+17.6	Protein biosynthesis.organelle translation machineries	carhr282250	0.779928764151981
+17.6	Protein biosynthesis.organelle translation machineries	carhr281990	0.585878374259154
+17.6	Protein biosynthesis.organelle translation machineries	carhr282160	1.06200187296687
+17.6	Protein biosynthesis.organelle translation machineries	carhr114570	-0.67386390061296
+17.6	Protein biosynthesis.organelle translation machineries	carhr282280	0.58491549438451
+17.6.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome	carhr282260	0.730083224698709
+17.6.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome	carhr282170	1.21424083208981
+17.6.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome	carhr282410	1.41560623689383
+17.6.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome	carhr282150	1.13910126893185
+17.6.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome	carhr282240	0.890671114922936
+17.6.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome	carhr282270	0.916455305267916
+17.6.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome	carhr282030	0.743526033248049
+17.6.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome	carhr282250	0.779928764151981
+17.6.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome	carhr281990	0.585878374259154
+17.6.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome	carhr282160	1.06200187296687
+17.6.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome	carhr114570	-0.67386390061296
+17.6.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome	carhr282280	0.58491549438451
+17.6.2.1	Protein biosynthesis.organelle translation machineries.plastidial ribosome.large subunit proteome	carhr282260	0.730083224698709
+17.6.2.1	Protein biosynthesis.organelle translation machineries.plastidial ribosome.large subunit proteome	carhr282170	1.21424083208981
+17.6.2.1	Protein biosynthesis.organelle translation machineries.plastidial ribosome.large subunit proteome	carhr282410	1.41560623689383
+17.6.2.1	Protein biosynthesis.organelle translation machineries.plastidial ribosome.large subunit proteome	carhr282150	1.13910126893185
+17.6.2.1	Protein biosynthesis.organelle translation machineries.plastidial ribosome.large subunit proteome	carhr282240	0.890671114922936
+17.6.2.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome.small subunit proteome	carhr282270	0.916455305267916
+17.6.2.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome.small subunit proteome	carhr282030	0.743526033248049
+17.6.2.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome.small subunit proteome	carhr282250	0.779928764151981
+17.6.2.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome.small subunit proteome	carhr282240	0.890671114922936
+17.6.2.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome.small subunit proteome	carhr281990	0.585878374259154
+17.6.2.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome.small subunit proteome	carhr282160	1.06200187296687
+17.6.2.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome.small subunit proteome	carhr114570	-0.67386390061296
+17.6.2.2	Protein biosynthesis.organelle translation machineries.plastidial ribosome.small subunit proteome	carhr282280	0.58491549438451
+21.6.1.3	Cell wall.cell wall proteins.hydroxyproline-rich glycoproteins.extensins (EXTs)	carhr164480	-0.523461120023309
+21.6.1.3	Cell wall.cell wall proteins.hydroxyproline-rich glycoproteins.extensins (EXTs)	carhr164490	-0.540305555095364
+21.6.1.3	Cell wall.cell wall proteins.hydroxyproline-rich glycoproteins.extensins (EXTs)	carhr206570	-0.626741009977271
+21.6.1.3	Cell wall.cell wall proteins.hydroxyproline-rich glycoproteins.extensins (EXTs)	carhr012400	-0.595156352840574
+21.6.1.3.2	Cell wall.cell wall proteins.hydroxyproline-rich glycoproteins.extensins (EXTs).glycoproteins	carhr164480	-0.523461120023309
+21.6.1.3.2	Cell wall.cell wall proteins.hydroxyproline-rich glycoproteins.extensins (EXTs).glycoproteins	carhr164490	-0.540305555095364
+21.6.1.3.2	Cell wall.cell wall proteins.hydroxyproline-rich glycoproteins.extensins (EXTs).glycoproteins	carhr206570	-0.626741009977271
+21.6.1.3.2	Cell wall.cell wall proteins.hydroxyproline-rich glycoproteins.extensins (EXTs).glycoproteins	carhr012400	-0.595156352840574
+21.6.1.3.2.1	Cell wall.cell wall proteins.hydroxyproline-rich glycoproteins.extensins (EXTs).glycoproteins.classical extensin	carhr164480	-0.523461120023309
+21.6.1.3.2.1	Cell wall.cell wall proteins.hydroxyproline-rich glycoproteins.extensins (EXTs).glycoproteins.classical extensin	carhr164490	-0.540305555095364
+21.6.1.3.2.1	Cell wall.cell wall proteins.hydroxyproline-rich glycoproteins.extensins (EXTs).glycoproteins.classical extensin	carhr206570	-0.626741009977271

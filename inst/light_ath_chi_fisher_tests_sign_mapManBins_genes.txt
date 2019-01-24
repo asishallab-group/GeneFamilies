@@ -1,0 +1,148 @@
+BINCODE	NAME	gene	log2FoldChange
+11	Phytohormones	at3g14440	1.55542541960213
+11	Phytohormones	carhr089320	1.32047660820361
+11	Phytohormones	carhr135420	-0.75813093830839
+11	Phytohormones	carhr122370	-0.703263313317161
+11	Phytohormones	at1g70560	-0.783633923959021
+11	Phytohormones	at4g28720	3.13066048701054
+11	Phytohormones	carhr236510	3.26339640107691
+11	Phytohormones	at4g03190	0.731090196513326
+11	Phytohormones	at4g37390	0.729736107281831
+11	Phytohormones	at4g27260	1.91361246338547
+11	Phytohormones	at5g54510	1.22561711686339
+11	Phytohormones	carhr105420	3.25235575104552
+11	Phytohormones	carhr234900	0.966194524427926
+11	Phytohormones	carhr267790	0.746412295319001
+11	Phytohormones	at1g73590	0.547930563831667
+11	Phytohormones	at1g70940	1.30953354465923
+11	Phytohormones	at2g01420	0.435563824687225
+11	Phytohormones	carhr064200	0.881540213026454
+11	Phytohormones	carhr143940	0.61927024053396
+11	Phytohormones	at3g28860	0.522182475401354
+11	Phytohormones	at5g05690	0.493511109351956
+11	Phytohormones	at4g39400	0.930481866170906
+11	Phytohormones	at5g59010	0.984174973285813
+11	Phytohormones	carhr285240	0.983686062563731
+11	Phytohormones	at1g78700	0.79954913054051
+11	Phytohormones	at1g19350	-0.497699488927212
+11	Phytohormones	at2g26710	2.05353249636361
+11	Phytohormones	carhr118790	1.76439086267565
+11	Phytohormones	at1g75450	2.40388438820699
+11	Phytohormones	at3g63440	1.84350904317548
+11	Phytohormones	carhr068850	2.01516379139029
+11	Phytohormones	carhr291530	0.847320135311046
+11	Phytohormones	at2g22810	4.29127909966478
+11	Phytohormones	at4g11280	1.12016208017814
+11	Phytohormones	at4g37770	6.88131557174843
+11	Phytohormones	carhr114120	3.15122186908
+11	Phytohormones	carhr246160	2.39293877575605
+11	Phytohormones	at4g25420	2.35781487194637
+11	Phytohormones	carhr232830	0.991307216683929
+11	Phytohormones	at2g42620	0.587722535504381
+11.2	Phytohormones.auxin	at1g70560	-0.783633923959021
+11.2	Phytohormones.auxin	at4g28720	3.13066048701054
+11.2	Phytohormones.auxin	carhr236510	3.26339640107691
+11.2	Phytohormones.auxin	at4g03190	0.731090196513326
+11.2	Phytohormones.auxin	at4g37390	0.729736107281831
+11.2	Phytohormones.auxin	at4g27260	1.91361246338547
+11.2	Phytohormones.auxin	at5g54510	1.22561711686339
+11.2	Phytohormones.auxin	carhr105420	3.25235575104552
+11.2	Phytohormones.auxin	carhr234900	0.966194524427926
+11.2	Phytohormones.auxin	carhr267790	0.746412295319001
+11.2	Phytohormones.auxin	at1g73590	0.547930563831667
+11.2	Phytohormones.auxin	at1g70940	1.30953354465923
+11.2	Phytohormones.auxin	at2g01420	0.435563824687225
+11.2	Phytohormones.auxin	carhr064200	0.881540213026454
+11.2	Phytohormones.auxin	carhr143940	0.61927024053396
+11.2	Phytohormones.auxin	at3g28860	0.522182475401354
+11.2.3	Phytohormones.auxin.conjugation and degradation	at4g37390	0.729736107281831
+11.2.3	Phytohormones.auxin.conjugation and degradation	at4g27260	1.91361246338547
+11.2.3	Phytohormones.auxin.conjugation and degradation	at5g54510	1.22561711686339
+11.2.3	Phytohormones.auxin.conjugation and degradation	carhr105420	3.25235575104552
+11.2.3	Phytohormones.auxin.conjugation and degradation	carhr234900	0.966194524427926
+11.2.3	Phytohormones.auxin.conjugation and degradation	carhr267790	0.746412295319001
+11.2.3.1	Phytohormones.auxin.conjugation and degradation.indole-3-acetic acid-amido synthetase	at4g37390	0.729736107281831
+11.2.3.1	Phytohormones.auxin.conjugation and degradation.indole-3-acetic acid-amido synthetase	at4g27260	1.91361246338547
+11.2.3.1	Phytohormones.auxin.conjugation and degradation.indole-3-acetic acid-amido synthetase	at5g54510	1.22561711686339
+11.2.3.1	Phytohormones.auxin.conjugation and degradation.indole-3-acetic acid-amido synthetase	carhr105420	3.25235575104552
+11.2.3.1	Phytohormones.auxin.conjugation and degradation.indole-3-acetic acid-amido synthetase	carhr234900	0.966194524427926
+11.2.3.1	Phytohormones.auxin.conjugation and degradation.indole-3-acetic acid-amido synthetase	carhr267790	0.746412295319001
+11.2.4	Phytohormones.auxin.transport	at1g73590	0.547930563831667
+11.2.4	Phytohormones.auxin.transport	at1g70940	1.30953354465923
+11.2.4	Phytohormones.auxin.transport	at2g01420	0.435563824687225
+11.2.4	Phytohormones.auxin.transport	carhr064200	0.881540213026454
+11.2.4	Phytohormones.auxin.transport	carhr143940	0.61927024053396
+11.2.4	Phytohormones.auxin.transport	at3g28860	0.522182475401354
+11.2.4.1	Phytohormones.auxin.transport.polar auxin transport	at1g73590	0.547930563831667
+11.2.4.1	Phytohormones.auxin.transport.polar auxin transport	at1g70940	1.30953354465923
+11.2.4.1	Phytohormones.auxin.transport.polar auxin transport	at2g01420	0.435563824687225
+11.2.4.1	Phytohormones.auxin.transport.polar auxin transport	carhr064200	0.881540213026454
+11.2.4.1	Phytohormones.auxin.transport.polar auxin transport	carhr143940	0.61927024053396
+11.2.4.1.1	Phytohormones.auxin.transport.polar auxin transport.PIN transporter	at1g73590	0.547930563831667
+11.2.4.1.1	Phytohormones.auxin.transport.polar auxin transport.PIN transporter	at1g70940	1.30953354465923
+11.2.4.1.1	Phytohormones.auxin.transport.polar auxin transport.PIN transporter	at2g01420	0.435563824687225
+11.2.4.1.1	Phytohormones.auxin.transport.polar auxin transport.PIN transporter	carhr064200	0.881540213026454
+11.2.4.1.1	Phytohormones.auxin.transport.polar auxin transport.PIN transporter	carhr143940	0.61927024053396
+11.3	Phytohormones.brassinosteroid	at5g05690	0.493511109351956
+11.3	Phytohormones.brassinosteroid	at4g39400	0.930481866170906
+11.3	Phytohormones.brassinosteroid	at5g59010	0.984174973285813
+11.3	Phytohormones.brassinosteroid	carhr285240	0.983686062563731
+11.3	Phytohormones.brassinosteroid	at1g78700	0.79954913054051
+11.3	Phytohormones.brassinosteroid	at1g19350	-0.497699488927212
+11.3	Phytohormones.brassinosteroid	at2g26710	2.05353249636361
+11.3	Phytohormones.brassinosteroid	carhr118790	1.76439086267565
+11.4.3	Phytohormones.cytokinin.conjugation and degradation	at1g75450	2.40388438820699
+11.4.3	Phytohormones.cytokinin.conjugation and degradation	at3g63440	1.84350904317548
+11.4.3	Phytohormones.cytokinin.conjugation and degradation	carhr068850	2.01516379139029
+11.4.3	Phytohormones.cytokinin.conjugation and degradation	carhr291530	0.847320135311046
+11.4.3.2	Phytohormones.cytokinin.conjugation and degradation.cytokinin dehydrogenase	at1g75450	2.40388438820699
+11.4.3.2	Phytohormones.cytokinin.conjugation and degradation.cytokinin dehydrogenase	at3g63440	1.84350904317548
+11.4.3.2	Phytohormones.cytokinin.conjugation and degradation.cytokinin dehydrogenase	carhr068850	2.01516379139029
+11.4.3.2	Phytohormones.cytokinin.conjugation and degradation.cytokinin dehydrogenase	carhr291530	0.847320135311046
+11.5.1.1	Phytohormones.ethylene.synthesis.1-aminocyclopropane-1-carboxylate (ACC) synthase	at2g22810	4.29127909966478
+11.5.1.1	Phytohormones.ethylene.synthesis.1-aminocyclopropane-1-carboxylate (ACC) synthase	at4g11280	1.12016208017814
+11.5.1.1	Phytohormones.ethylene.synthesis.1-aminocyclopropane-1-carboxylate (ACC) synthase	at4g37770	6.88131557174843
+11.5.1.1	Phytohormones.ethylene.synthesis.1-aminocyclopropane-1-carboxylate (ACC) synthase	carhr114120	3.15122186908
+11.5.1.1	Phytohormones.ethylene.synthesis.1-aminocyclopropane-1-carboxylate (ACC) synthase	carhr246160	2.39293877575605
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at3g60390	0.800048207162294
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g47370	3.06402332380149
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr174030	2.05276958384544
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g11060	-0.535429182410608
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g41410	-0.871917104051926
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr157140	-1.65367530865001
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at1g69010	0.857067341327988
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at3g17100	0.850249209552945
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at3g57800	0.522976537494197
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at3g25710	0.950409313414671
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g61270	-1.25284847169976
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g39860	3.22435027566777
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at5g08130	1.61432976447918
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr092350	0.593469912515177
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr205060	0.643326300087004
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	carhr262370	1.20936900875271
+15.6.3	RNA biosynthesis.transcription factor families.HB (Homeobox) superfamily	at2g36400	0.764263964319033
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at1g69010	0.857067341327988
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at3g17100	0.850249209552945
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at3g57800	0.522976537494197
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at3g25710	0.950409313414671
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at5g61270	-1.25284847169976
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at5g39860	3.22435027566777
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	at5g08130	1.61432976447918
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr092350	0.593469912515177
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr205060	0.643326300087004
+15.6.34	RNA biosynthesis.transcription factor families.bHLH transcription factor	carhr262370	1.20936900875271
+24.3.5	Solute transport.carrier-mediated transport.BART superfamily	at1g73590	0.547930563831667
+24.3.5	Solute transport.carrier-mediated transport.BART superfamily	at1g70940	1.30953354465923
+24.3.5	Solute transport.carrier-mediated transport.BART superfamily	at2g01420	0.435563824687225
+24.3.5	Solute transport.carrier-mediated transport.BART superfamily	carhr064200	0.881540213026454
+24.3.5	Solute transport.carrier-mediated transport.BART superfamily	carhr143940	0.61927024053396
+24.3.5.2	Solute transport.carrier-mediated transport.BART superfamily.AEC family	at1g73590	0.547930563831667
+24.3.5.2	Solute transport.carrier-mediated transport.BART superfamily.AEC family	at1g70940	1.30953354465923
+24.3.5.2	Solute transport.carrier-mediated transport.BART superfamily.AEC family	at2g01420	0.435563824687225
+24.3.5.2	Solute transport.carrier-mediated transport.BART superfamily.AEC family	carhr064200	0.881540213026454
+24.3.5.2	Solute transport.carrier-mediated transport.BART superfamily.AEC family	carhr143940	0.61927024053396
+24.3.5.2.1	Solute transport.carrier-mediated transport.BART superfamily.AEC family.auxin efflux transporter (PIN-type)	at1g73590	0.547930563831667
+24.3.5.2.1	Solute transport.carrier-mediated transport.BART superfamily.AEC family.auxin efflux transporter (PIN-type)	at1g70940	1.30953354465923
+24.3.5.2.1	Solute transport.carrier-mediated transport.BART superfamily.AEC family.auxin efflux transporter (PIN-type)	at2g01420	0.435563824687225
+24.3.5.2.1	Solute transport.carrier-mediated transport.BART superfamily.AEC family.auxin efflux transporter (PIN-type)	carhr064200	0.881540213026454
+24.3.5.2.1	Solute transport.carrier-mediated transport.BART superfamily.AEC family.auxin efflux transporter (PIN-type)	carhr143940	0.61927024053396

@@ -1,0 +1,4 @@
+Group.Class	Alternative.Hypothesis	t.p.value	effect.size.t	w.p.value	t.p.adj	w.p.adj
+Tand	orthologs have lower mean (t-test) or diversity distribution (wilcox test) than non-orthologs	4.21663775381618e-50	-15.2655727736129	2.0254170953066e-34	4.21663775381618e-50	2.0254170953066e-34
+Exp	orthologs have lower mean (t-test) or diversity distribution (wilcox test) than non-orthologs	3.49227946059718e-50	-15.7498226638272	4.33211798504113e-39	4.21663775381618e-50	6.49817697756169e-39
+PSel	orthologs have lower mean (t-test) or diversity distribution (wilcox test) than non-orthologs	1.07983412958203e-65	-17.4432872067576	7.04548522939995e-50	3.23950238874609e-65	2.11364556881998e-49
