@@ -1,18 +1,18 @@
 #' Brew template to generate a family's BranchREL input file
 #' @export
-hyphy.branch.site.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"Yes\";\ninputRedirect[\"03\"]=\"Yes\";\ninputRedirect[\"04\"]=\"<%= fam.cds.msa.path %>\";\ninputRedirect[\"05\"]=\"<%= fam.tree.4.paml.path %>\";\ninputRedirect[\"06\"]=\"<%= fam.hyphy.branch.site.output.path %>\";\n\nExecuteAFile (\"/biodata/dep_tsiantis/common/software/lib/hyphy/TemplateBatchFiles/BranchSiteREL.bf\", inputRedirect);"
+hyphy.branch.site.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"Yes\";\ninputRedirect[\"03\"]=\"Yes\";\ninputRedirect[\"04\"]=\"<%= fam.cds.msa.path %>\";\ninputRedirect[\"05\"]=\"<%= fam.tree.4.paml.path %>\";\ninputRedirect[\"06\"]=\"<%= fam.hyphy.branch.site.output.path %>\";\n\nExecuteAFile (\"<%= hyphy.batch.files.dir %>/BranchSiteREL.bf\", inputRedirect);"
 
 #' Brew template to generate a family's MEME input file
 #' @export
-hyphy.meme.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"New Analysis\";\ninputRedirect[\"03\"]=\"<%= fam.cds.msa.path %>\";\ninputRedirect[\"04\"]=\"Custom\";\ninputRedirect[\"05\"]=\"110240\";\ninputRedirect[\"06\"]=\"<%= fam.tree.no.node.labels.path %>\";\ninputRedirect[\"07\"]=\"<%= fam.hyphy.meme.log.path %>\";\ninputRedirect[\"08\"]=\"Estimate dN/dS only\";\ninputRedirect[\"09\"]=\"MEME\";\ninputRedirect[\"10\"]=\"0.1\";\ninputRedirect[\"11\"]=\"N\";\ninputRedirect[\"12\"]=\"<%= fam.hyphy.meme.output.path %>\";\n\nExecuteAFile (\"/biodata/dep_tsiantis/common/software/lib/hyphy/TemplateBatchFiles/QuickSelectionDetection.bf\", inputRedirect);"
+hyphy.meme.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"New Analysis\";\ninputRedirect[\"03\"]=\"<%= fam.cds.msa.path %>\";\ninputRedirect[\"04\"]=\"Custom\";\ninputRedirect[\"05\"]=\"110240\";\ninputRedirect[\"06\"]=\"<%= fam.tree.no.node.labels.path %>\";\ninputRedirect[\"07\"]=\"<%= fam.hyphy.meme.log.path %>\";\ninputRedirect[\"08\"]=\"Estimate dN/dS only\";\ninputRedirect[\"09\"]=\"MEME\";\ninputRedirect[\"10\"]=\"0.1\";\ninputRedirect[\"11\"]=\"N\";\ninputRedirect[\"12\"]=\"<%= fam.hyphy.meme.output.path %>\";\n\nExecuteAFile (\"<%= hyphy.batch.files.dir %>/QuickSelectionDetection.bf\", inputRedirect);"
 
 #' Brew template to generate a family's FUBAR input file
 #' @export
-hyphy.fubar.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"1\";\ninputRedirect[\"03\"]=\"<%= fam.cds.msa.path %>\";\ninputRedirect[\"04\"]=\"<%= fam.tree.no.node.lables.path %>\";\ninputRedirect[\"05\"]=\"20\";\ninputRedirect[\"06\"]=\"5\";\ninputRedirect[\"07\"]=\"2000000\";\ninputRedirect[\"08\"]=\"1000000\";\ninputRedirect[\"09\"]=\"100\";\ninputRedirect[\"10\"]=\"0.5\";\ninputRedirect[\"11\"]=\"<%= fam.hyphy.fubar.output.path %>\";\n\nExecuteAFile (\"/biodata/dep_tsiantis/common/software/lib/hyphy/TemplateBatchFiles/FUBAR.bf\", inputRedirect);"
+hyphy.fubar.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"1\";\ninputRedirect[\"03\"]=\"<%= fam.cds.msa.path %>\";\ninputRedirect[\"04\"]=\"<%= fam.tree.no.node.lables.path %>\";\ninputRedirect[\"05\"]=\"20\";\ninputRedirect[\"06\"]=\"5\";\ninputRedirect[\"07\"]=\"2000000\";\ninputRedirect[\"08\"]=\"1000000\";\ninputRedirect[\"09\"]=\"100\";\ninputRedirect[\"10\"]=\"0.5\";\ninputRedirect[\"11\"]=\"<%= fam.hyphy.fubar.output.path %>\";\n\nExecuteAFile (\"<%= hyphy.batch.files.dir %>/FUBAR.bf\", inputRedirect);"
 
 #' Brew template to generate a family's BUSTED input file
 #' @export
-hyphy.busted.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"<%= fam.cds.msa.nexus.path %>\";\ninputRedirect[\"03\"]=\"<%= fam.hyphy.busted.tree.path %>\";\ninputRedirect[\"04\"]=\"Set TEST\";\ninputRedirect[\"05\"]=\"\";\n\nExecuteAFile (\"/biodata/dep_tsiantis/common/software/lib/hyphy/TemplateBatchFiles/BUSTED.bf\", inputRedirect);"
+hyphy.busted.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"<%= fam.cds.msa.nexus.path %>\";\ninputRedirect[\"03\"]=\"<%= fam.hyphy.busted.tree.path %>\";\ninputRedirect[\"04\"]=\"Set TEST\";\ninputRedirect[\"05\"]=\"\";\n\nExecuteAFile (\"<%= hyphy.batch.files.dir %>/BUSTED.bf\", inputRedirect);"
 
 #' Brew template to generate a protein group's Mr Bayes input file
 #' @export
