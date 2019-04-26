@@ -25,4 +25,3 @@ Find those inner nodes that spawn subtrees whose tips are true subsets of
 Identifies those tip and inner nodes of the phylogenetic tree that span
 subtrees whose tips are true subsets of the argument 'foreground.nodes'.
 }
-

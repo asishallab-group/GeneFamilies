@@ -12,4 +12,3 @@ testExprVecSpaceEvolutionAfterDupl()
 \description{
 Testing function \code{exprVecSpaceEvolutionAfterDupl}.
 }
-

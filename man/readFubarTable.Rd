@@ -29,4 +29,3 @@ Parses a FUBAR output table for significant posterior probabilities of a
 codon being subject to positive selection. If any codons fit the criteria, a
 respective table is returned, otherwise \code{NULL} is returned.
 }
-

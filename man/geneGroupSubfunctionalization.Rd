@@ -25,4 +25,3 @@ Invokes \code{subfunctionalizationAnnotationBased} for all gene.groups
 (families) contained in argument \code{gene.groups.lst}, using argument
 \code{gene.classes} to separate 'base genes' from 'evolved genes'.
 }
-

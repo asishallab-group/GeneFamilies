@@ -7,7 +7,8 @@ identifiers \emph{and} removing resulting duplicate gene IDs. See
 \code{base::sub} for more details.}
 \usage{
 removeExpressionVariant(gene.ids,
-  reg.ex = getOption("GeneFamilies.expression.variant.regex", "\\\\.\\\\d+$"))
+  reg.ex = getOption("GeneFamilies.expression.variant.regex",
+  "\\\\.\\\\d+$"))
 }
 \arguments{
 \item{gene.ids}{a character vector of gene identifiers.}
@@ -24,4 +25,3 @@ Modifies the argument \code{gene.ids} by deleting expression variant
 identifiers \emph{and} removing resulting duplicate gene IDs. See
 \code{base::sub} for more details.
 }
-

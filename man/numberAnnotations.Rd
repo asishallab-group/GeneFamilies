@@ -20,4 +20,3 @@ integer - the number of genes 'anno' has been found annotated to.
 Counts the number of times an annotation, e.g. a Pfam or InterPro entry, is
 annotated in argument annotation table 'anno.tbl'.
 }
-

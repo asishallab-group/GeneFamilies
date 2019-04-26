@@ -5,8 +5,8 @@
 \title{Computes a Gene Ontology (GO) enrichment test using the functions from #'
 package GOstats and GSEABase.}
 \usage{
-goEnrichTest(gsc, gene.ids, univ.gene.ids, ontologies = c("BP", "CC", "MF"),
-  pvalue.cutoff = 0.01, cond = FALSE, test.dir = "over",
+goEnrichTest(gsc, gene.ids, univ.gene.ids, ontologies = c("BP", "CC",
+  "MF"), pvalue.cutoff = 0.01, cond = FALSE, test.dir = "over",
   p.adjust.method = "fdr")
 }
 \arguments{
@@ -42,4 +42,3 @@ A named list with enriched GO terms in the argument GO categories.
 Computes a Gene Ontology (GO) enrichment test using the functions from #'
 package GOstats and GSEABase.
 }
-

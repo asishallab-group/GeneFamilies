@@ -24,4 +24,3 @@ Method extracts all GO ontology specific enrichment result and combines them
 into a single data frame, re-adjusting the Pvalues for multiple hypothesis
 testing.
 }
-

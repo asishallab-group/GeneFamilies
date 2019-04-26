@@ -34,4 +34,3 @@ Identifies those gene annotations that are non conserved within the argument
 gene-group. Non conserved is inferred as those annotations that do not
 appear or miss from the most frequent composite annotation.
 }
-

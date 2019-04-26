@@ -35,4 +35,3 @@ multiple hypothesis testing, before being returned. Note, if applied on
 large data sets, run in parallel on multiple cores and set
 options('mc.cores'=...) accordingly.
 }
-

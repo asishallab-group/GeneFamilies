@@ -18,4 +18,3 @@ a character vector of extracted family names
 Given a character vector regular expressions are applied to extract
 substrings of the type 'fam1234'.
 }
-

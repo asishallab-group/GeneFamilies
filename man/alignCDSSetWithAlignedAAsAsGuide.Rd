@@ -23,4 +23,3 @@ accessions and values Strings representing the aligned coding-sequences.
 Uses an amino acid multiple sequence alignment to guide the alignment of
 codon sequence 'cds'.
 }
-

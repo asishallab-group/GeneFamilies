@@ -22,4 +22,3 @@ The extended data.frame 'df' with a new row holding the arguments
 Function appends a row to the argument data.frame 'df', which is supposed to
 hold two columns 'tested.hypothesis' and 'p.val'.
 }
-

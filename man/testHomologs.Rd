@@ -12,4 +12,3 @@ TRUE if and only if the test succeeded.
 \description{
 Test of function 'homologs(...)'
 }
-

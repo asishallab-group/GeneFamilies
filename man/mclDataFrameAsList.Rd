@@ -17,4 +17,3 @@ the respective gene members joined into sub-lists.
 \description{
 Converts the data.frame of gene families into a list of gene families.
 }
-

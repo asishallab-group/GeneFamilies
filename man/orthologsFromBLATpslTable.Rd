@@ -11,7 +11,8 @@ orthology is inferred based on reciprocal best search results.}
 \usage{
 orthologsFromBLATpslTable(blat.df, query.col = 10, target.col = 14,
   matching.bases.col = 1, qSize.col = 11, tSize.col = 15,
-  spec.regexs = c("CAHR\\\\d+(\\\\.\\\\d)?", "AT[0-9MC]G\\\\d+(\\\\.\\\\d)?"))
+  spec.regexs = c("CAHR\\\\d+(\\\\.\\\\d)?",
+  "AT[0-9MC]G\\\\d+(\\\\.\\\\d)?"))
 }
 \arguments{
 \item{blat.df}{a data frame holding the output of BLAT in psl format. Se
@@ -49,4 +50,3 @@ orthologs between two species can be extracted, even though the BLAT output
 file contains similarity pairs from more than two species. Note that
 orthology is inferred based on reciprocal best search results.
 }
-

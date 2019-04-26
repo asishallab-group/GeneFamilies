@@ -10,7 +10,7 @@ selectSignificantEnrichments(enrichment.tbl, significance.level = 0.05)
 \arguments{
 \item{enrichment.tbl}{a data.frame returned by function 'enrichmentTests'}
 
-\item{significance.level}{the p.value cutoff to apply, default is '≤ 0.05'}
+\item{significance.level}{the p.value cutoff to apply, default is '<= 0.05'}
 }
 \value{
 A subset of 'enrichment.tbl' holding only the significant results.
@@ -19,4 +19,3 @@ A subset of 'enrichment.tbl' holding only the significant results.
 Filters 'enrichment.tbl' for those annotations that have a significant
 adjusted p.value.
 }
-

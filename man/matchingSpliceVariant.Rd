@@ -6,7 +6,8 @@
 like '.1' but refer to genes contained in this packages coding sequences
 (data) this function aims to identify the matching splice variants.}
 \usage{
-matchingSpliceVariant(gene.ids, genes = as.character(unlist(spec.gene.ids)))
+matchingSpliceVariant(gene.ids,
+  genes = as.character(unlist(spec.gene.ids)))
 }
 \arguments{
 \item{'gene.ids'}{character vector of gene identifiers to be matched to
@@ -26,4 +27,3 @@ Assuming 'gene.ids' holds gene identifiers that lack splice variant suffixes
 like '.1' but refer to genes contained in this packages coding sequences
 (data) this function aims to identify the matching splice variants.
 }
-

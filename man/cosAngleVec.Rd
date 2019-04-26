@@ -20,4 +20,3 @@ in the vectors is not a number.
 Computes the cosine of the angle between the two n-dimensional argument
 vectors \code{a} and \code{b}.
 }
-

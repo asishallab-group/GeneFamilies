@@ -34,4 +34,3 @@ length returned. If this length is positive the two clouds do not overlap
 considering their representatives and the irespective deviance spreads
 around them.
 }
-

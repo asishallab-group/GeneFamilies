@@ -12,4 +12,3 @@ hyphy.fubar.bf
 Brew template to generate a family's FUBAR input file
 }
 \keyword{datasets}
-

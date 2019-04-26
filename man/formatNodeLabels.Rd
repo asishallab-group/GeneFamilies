@@ -19,4 +19,3 @@ original node labels
 For a default phylogentic tree this formats the local support values for
 printing.
 }
-

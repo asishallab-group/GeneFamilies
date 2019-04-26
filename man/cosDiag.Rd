@@ -22,4 +22,3 @@ or not a number or if \code{x} is \code{NULL} \code{NaN} is returned.
 Compute cosinus of the angle between argument vector \code{x} and the vector
 space diagonal.
 }
-

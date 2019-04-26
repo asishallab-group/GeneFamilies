@@ -29,4 +29,3 @@ Generates a data.frame with one row for each family with expression profile
 distance measurements and columns the maximum distances found for intra-,
 inter-species, and all pairwise distances.
 }
-

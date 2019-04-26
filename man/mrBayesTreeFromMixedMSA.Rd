@@ -26,4 +26,3 @@ Generates a valid input file for Mr Bayes, which will generate a Bayesian
 phylogeny from a mixed multiple sequence alignment, e.g. CDS AND an alignment of
 additional e.g. morphological data.
 }
-

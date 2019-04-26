@@ -15,4 +15,3 @@ A copy of 'phyl.tree' without branch length and without node labels
 \description{
 Removes node labels and branch lengths from instance of ape::phylo
 }
-

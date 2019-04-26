@@ -27,4 +27,3 @@ A character vector of matching InterPro entries.
 Identifies conserved protein domains (InterPro) overlapping with the
 conserved homologous amino acid (codon) 'sel.aa'.
 }
-

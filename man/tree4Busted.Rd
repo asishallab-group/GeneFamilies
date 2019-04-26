@@ -22,4 +22,3 @@ Mark foreground inner nodes:
 Annotates a phylogenetic tree in such amanner that foreground branches are
 recognized by HYPHY's BUSTED analysis.
 }
-

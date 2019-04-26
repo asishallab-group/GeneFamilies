@@ -17,4 +17,3 @@ An instance of base::data.frame with three columns: 'Sequence',
 \description{
 Uses base::read.table to parse the output of 'KaKs_Calculator'.
 }
-

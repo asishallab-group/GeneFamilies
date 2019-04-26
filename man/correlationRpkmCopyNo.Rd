@@ -67,4 +67,3 @@ expression levels are extracted for more than a single tissue the
 some expression in any tissue, never expressed genes are discarded from the
 analysis.
 }
-

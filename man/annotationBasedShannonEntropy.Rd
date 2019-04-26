@@ -8,8 +8,9 @@ multiple annotations these are sorted and concatonated in order to treat
 them as single composite annotations. This means, that e.g if all genes have
 the same three annotations the resulting entropy will be 0.}
 \usage{
-annotationBasedShannonEntropy(gene.accs, gene.annos = all.ipr, gene.col = 1,
-  anno.col = 2, entropy.funk = getOption("GeneFamilies.entropy.function",
+annotationBasedShannonEntropy(gene.accs, gene.annos = all.ipr,
+  gene.col = 1, anno.col = 2,
+  entropy.funk = getOption("GeneFamilies.entropy.function",
   entropy::entropy))
 }
 \arguments{
@@ -45,4 +46,3 @@ multiple annotations these are sorted and concatonated in order to treat
 them as single composite annotations. This means, that e.g if all genes have
 the same three annotations the resulting entropy will be 0.
 }
-

@@ -17,4 +17,3 @@ The read in table as data frame
 Wraps function base::read.table with the proper arguments needed to
 efficiently and correctly read in a BLAT output table in PSL format.
 }
-

@@ -258,7 +258,6 @@ formatNodeLabels <- function(nd.lb) {
 #' @return A named list. Names are the argument tips and values the node label
 #' of the root node of the sub-tree.
 #' @export
-#' @import phangorn ape
 subTrees <- function(tree, nds = unique(tree$edge[, 1])) {
     lst <- list()
     lapply(nds, function(x) {

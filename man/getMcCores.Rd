@@ -22,4 +22,3 @@ Reads out SHELL environment variable \code{MCCORES} and returns it as
 integer. If the environment variable is not set, the value returned by
 \code{detectCores()} is used as default.
 }
-

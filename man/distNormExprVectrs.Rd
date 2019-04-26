@@ -21,4 +21,3 @@ legal coordinates (see \code{hasInvalidVecSpaceComponents}). Otherwise
 Returns the vector resulting from subtracting \code{e.v.b} from
 \code{e.v.a}. Both argument vectors are normalized before subtraction.
 }
-

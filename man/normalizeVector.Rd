@@ -16,4 +16,3 @@ normalizeVector(x)
 \description{
 Normalizes the vector \code{x} to length 1.0.
 }
-

@@ -22,4 +22,3 @@ Identifies the species of a gene identifier using regular expressions. Note
 that the constant spec.regex.gene.ids is used by default to map regular
 expression to species. See zzz.R for more details.
 }
-

@@ -36,4 +36,3 @@ argument genes.
 Computes the within \code{stats} of expression profile distances for classes
 of gene groups separating the argument genes into sub-groups.
 }
-

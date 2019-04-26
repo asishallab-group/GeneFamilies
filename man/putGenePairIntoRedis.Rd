@@ -18,4 +18,3 @@ The output of calling rredis::redisSet(...)
 Puts the integer value 1 into the Redis Server using the alphabetically
 sorted gene accessions in 'gene.pair' as key.
 }
-

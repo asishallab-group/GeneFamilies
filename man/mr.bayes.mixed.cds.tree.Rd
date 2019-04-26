@@ -14,4 +14,3 @@ Brew template to generate a coding sequences group's Mr Bayes input file
 using additional e.g. morphological knowledge
 }
 \keyword{datasets}
-

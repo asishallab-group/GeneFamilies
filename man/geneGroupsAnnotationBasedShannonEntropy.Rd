@@ -32,4 +32,3 @@ Computes for each gene group in \code{groups.ids} the annotation based
 Shannon Entropy in parallel. Set \code{options(mc.cores=detectCores())} for
 maximum speed.
 }
-

@@ -17,4 +17,3 @@ A vector of colors adjusted with the argument alpha value.
 \description{
 Adds an alpha value to colors.
 }
-

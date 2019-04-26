@@ -20,4 +20,3 @@ A single numeric value
 Computes the absolute distance between maximum and minimum, optionally
 removing \code{NA}.
 }
-

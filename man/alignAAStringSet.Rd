@@ -28,4 +28,3 @@ Aligns the set of amino acid sequences based on the chemical properties of
 their respective amino acid residues. Does so using MAFFT. NOTE: mafft is
 expected to be installed.
 }
-

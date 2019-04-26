@@ -12,4 +12,3 @@ TRUE if and only if all tests pass
 \description{
 Test for function nonConservedCompositeAnnotations.
 }
-

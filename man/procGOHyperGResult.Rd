@@ -21,4 +21,3 @@ A data.frame with three columns: 1. 'GO.term', 2. 'p.value', and 3.
 Converts an instance of GOHyperGResult into a table containing only the
 significantly enriched Gene Ontology terms.
 }
-

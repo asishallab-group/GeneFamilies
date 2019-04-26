@@ -24,4 +24,3 @@ each respective subset.
 Invokes \code{GeneFamilies::statVectorCloud} on each subset of genes in
 \code{annot.vec.space} classified by the gene-sets in \code{gene.sets}.
 }
-
