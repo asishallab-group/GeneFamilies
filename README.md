@@ -8,6 +8,12 @@ Gan, X. et al. The Cardamine hirsuta genome offers insight into the evolution of
 
 ## Install the package
 
+### Requirements
+
+**You need HyPhy version 2.2.1**
+
+## Install
+
 You need to install the required package `AHRD.on.gene.clusters` as follows:
 ```
 require(devtools)
