@@ -24,8 +24,8 @@ readInterProScanResultTable <- function(path.2.iprscan.res) {
 #'
 #' @export
 #' @return An instance of base::data.frame
-readMinimumInterProScanResultTable <- function(path.2.iprscan.res, gene.col = 1, 
-    ipr.col = 12) {
+readMinimumInterProScanResultTable <- function(path.2.iprscan.res, 
+    gene.col = 1, ipr.col = 12) {
     ipr.df <- readInterProScanResultTable(path.2.iprscan.res)
     if (!is.null(ipr.df) && !is.na(ipr.df) && nrow(ipr.df) > 0) {
         ipr.df <- ipr.df[which(!is.na(ipr.df[, gene.col]) & !is.na(ipr.df[, 
@@ -52,7 +52,8 @@ readMinimumInterProScanResultTable <- function(path.2.iprscan.res, gene.col = 1,
 #' @export
 #' 
 iprWithSelectedAA <- function(sel.aa, gene, msa.fasta, iprscan.tbl) {
-    sel.aa.unaligned.pos <- unalignedAAforAlignedAAPos(gene, sel.aa, msa.fasta)
+    sel.aa.unaligned.pos <- unalignedAAforAlignedAAPos(gene, sel.aa, 
+        msa.fasta)
     if (!is.na(sel.aa.unaligned.pos)) 
         domainsForPos(gene, sel.aa.unaligned.pos, iprscan.tbl) else NA
 }
@@ -73,7 +74,7 @@ iprWithSelectedAA <- function(sel.aa, gene, msa.fasta, iprscan.tbl) {
 #' @param gap.char.matching.fixed boolean indicating the value to pass to
 #' \code{grepl} and \code{gsub} argument \code{fixed=}. Set to \code{TRUE} if
 #' \code{gap.char} is literal and atomic. Default is
-#' getOption("GeneFamilies.gap.char.matching.fixed", TRUE).
+#' getOption('GeneFamilies.gap.char.matching.fixed', TRUE).
 #'
 #' @return  An integer; either NA if the position is a non sequence character,
 #' or the corresponding un-aligned position.
@@ -90,6 +91,40 @@ unalignedAAforAlignedAAPos <- function(gene, sel.aa, msa.fasta, gap.char = getOp
     }
 }
 
+#' Computes the position of the unaligned character at argument position
+#' 'char.pos' in the aligned sequence of argument 'gene'.
+#'
+#' @param gene The gene accession / ID as used in 'msa.fasta'
+#' @param char.pos The index of the homologous amino acid subject to selection
+#' (integer coordinate)
+#' @param msa.fasta The result of
+#' \code{seqinr::read.fasta(path_2_AAs_MSA.fasta, seqtype='AA', as.string=TRUE,
+#' strip.desc=TRUE)}.
+#' @param gap.char The character or regular expression used to identify non
+#' sequence characters in the aligned sequences. Default is
+#' \code{getOption('GeneFamilies.gap.char', '-')}.
+#'
+#' @return  An integer; either NA if the position is a non sequence character,
+#' or the corresponding aligned position.
+#' @export
+alignedForUnalignedAAPos <- function(gene, char.pos, msa.fasta, gap.char = getOption("GeneFamilies.gap.char", 
+    "-"), gap.char.matching.fixed = getOption("GeneFamilies.gap.char.matching.fixed", 
+    TRUE)) {
+    unaligned.sub.seq <- strsplit(gsub(gap.char, "", msa.fasta[[gene]], 
+        fixed = TRUE), split = NULL)[[1]][1:char.pos]
+    gap.char.regex <- paste0(gap.char, "*")
+    unaligned.sub.seq.regex <- paste(unaligned.sub.seq, collapse = gap.char.regex)
+    regex.res <- regexec(unaligned.sub.seq.regex, msa.fasta[[gene]])
+    if (length(regex.res) > 1) {
+        stop("Found more than one matching aligned character for the argument unaligned position")
+    } else {
+        if (regex.res[[1]][[1]] > -1) {
+            attr(regex.res[[1]], "match.length")
+        } else {
+            NA
+        }
+    }
+}
 
 #' Looks up the conserved protein domains (InterPro) that have been annotated
 #' to gene and overlap with amino acid position 'aa.pos'.
@@ -109,11 +144,11 @@ unalignedAAforAlignedAAPos <- function(gene, sel.aa, msa.fasta, gap.char = getOp
 #' @return  A character vector of matching InterPro domains.
 #' @export
 #' 
-domainsForPos <- function(gene, aa.pos, iprscan.tbl, gene.col = "V1", start.col = "V7", 
-    end.col = "V8", ipr.col = "V12") {
+domainsForPos <- function(gene, aa.pos, iprscan.tbl, gene.col = "V1", 
+    start.col = "V7", end.col = "V8", ipr.col = "V12") {
     x <- iprscan.tbl[which(iprscan.tbl[, gene.col] == gene), ]
-    sort(unique(x[which(x[, start.col] <= aa.pos & x[, end.col] >= aa.pos), 
-        ipr.col]), na.last = NA)
+    sort(unique(x[which(x[, start.col] <= aa.pos & x[, end.col] >= 
+        aa.pos), ipr.col]), na.last = NA)
 }
 
 
@@ -132,10 +167,11 @@ domainsForPos <- function(gene, aa.pos, iprscan.tbl, gene.col = "V1", start.col 
 #' replaced with their originals.
 #' @export
 #' 
-replaceSanitizedWithOriginalIDs <- function(xstring.set, name.maps, san.col = "sanitized", 
-    orig.col = "original") {
-    names(xstring.set) <- as.character(lapply(names(xstring.set), function(x) {
-        name.maps[which(name.maps[, san.col] == x), orig.col]
-    }))
+replaceSanitizedWithOriginalIDs <- function(xstring.set, name.maps, 
+    san.col = "sanitized", orig.col = "original") {
+    names(xstring.set) <- as.character(lapply(names(xstring.set), 
+        function(x) {
+            name.maps[which(name.maps[, san.col] == x), orig.col]
+        }))
     xstring.set
 }
