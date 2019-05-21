@@ -27,7 +27,7 @@ sequence characters in the aligned sequences. Default is
 \item{gap.char.matching.fixed}{boolean indicating the value to pass to
 \code{grepl} and \code{gsub} argument \code{fixed=}. Set to \code{TRUE} if
 \code{gap.char} is literal and atomic. Default is
-getOption("GeneFamilies.gap.char.matching.fixed", TRUE).}
+getOption('GeneFamilies.gap.char.matching.fixed', TRUE).}
 }
 \value{
 An integer; either NA if the position is a non sequence character,
