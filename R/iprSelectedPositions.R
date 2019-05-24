@@ -100,30 +100,35 @@ unalignedAAforAlignedAAPos <- function(gene, sel.aa, msa.fasta, gap.char = getOp
 #' @param msa.fasta The result of
 #' \code{seqinr::read.fasta(path_2_AAs_MSA.fasta, seqtype='AA', as.string=TRUE,
 #' strip.desc=TRUE)}.
-#' @param gap.char The character or regular expression used to identify non
-#' sequence characters in the aligned sequences. Default is
-#' \code{getOption('GeneFamilies.gap.char', '-')}.
+#' @param gap.char The character used to identify non sequence characters in
+#' the aligned sequences. Default is \code{getOption('GeneFamilies.gap.char',
+#' '-')}.
 #'
 #' @return  An integer; either NA if the position is a non sequence character,
 #' or the corresponding aligned position.
 #' @export
 alignedForUnalignedAAPos <- function(gene, char.pos, msa.fasta, gap.char = getOption("GeneFamilies.gap.char", 
-    "-"), gap.char.matching.fixed = getOption("GeneFamilies.gap.char.matching.fixed", 
-    TRUE)) {
-    unaligned.sub.seq <- strsplit(gsub(gap.char, "", msa.fasta[[gene]], 
-        fixed = TRUE), split = NULL)[[1]][1:char.pos]
-    gap.char.regex <- paste0(gap.char, "*")
-    unaligned.sub.seq.regex <- paste(unaligned.sub.seq, collapse = gap.char.regex)
-    regex.res <- regexec(unaligned.sub.seq.regex, msa.fasta[[gene]])
-    if (length(regex.res) > 1) {
-        stop("Found more than one matching aligned character for the argument unaligned position")
-    } else {
-        if (regex.res[[1]][[1]] > -1) {
-            attr(regex.res[[1]], "match.length")
+    "-")) {
+    aligned.seq <- msa.fasta[[gene]][[1]]
+    n.non.gap.char <- 0
+    i <- 1
+    aligned.pos <- NA
+    # do
+    repeat {
+        if (substr(aligned.seq, i, i) != gap.char) {
+            n.non.gap.char <- n.non.gap.char + 1
+        }
+        # until
+        if (n.non.gap.char == char.pos) {
+            aligned.pos <- i
+            break
+        } else if (i == nchar(aligned.seq)) {
+            break
         } else {
-            NA
+            i <- i + 1
         }
     }
+    aligned.pos
 }
 
 #' Looks up the conserved protein domains (InterPro) that have been annotated
@@ -174,4 +179,18 @@ replaceSanitizedWithOriginalIDs <- function(xstring.set, name.maps,
             name.maps[which(name.maps[, san.col] == x), orig.col]
         }))
     xstring.set
+}
+
+#' Test for function \code{alignedForUnalignedAAPos}.
+#'
+#' @return TRUE if and only if all tests pass.
+#' @export
+testAlignedForUnalignedAAPos <- function() {
+    msa.fasta <- list(A = "---Hello---World")
+    gene.id <- "A"
+    act.res.1 <- alignedForUnalignedAAPos(gene.id, 1, msa.fasta)
+    t.1 <- 4 == act.res.1
+    act.res.2 <- alignedForUnalignedAAPos(gene.id, 6, msa.fasta)
+    t.2 <- 12 == act.res.2
+    all(c(t.1, t.2))
 }

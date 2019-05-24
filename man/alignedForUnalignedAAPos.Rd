@@ -6,9 +6,7 @@
 'char.pos' in the aligned sequence of argument 'gene'.}
 \usage{
 alignedForUnalignedAAPos(gene, char.pos, msa.fasta,
-  gap.char = getOption("GeneFamilies.gap.char", "-"),
-  gap.char.matching.fixed = getOption("GeneFamilies.gap.char.matching.fixed",
-  TRUE))
+  gap.char = getOption("GeneFamilies.gap.char", "-"))
 }
 \arguments{
 \item{gene}{The gene accession / ID as used in 'msa.fasta'}
@@ -20,9 +18,9 @@ alignedForUnalignedAAPos(gene, char.pos, msa.fasta,
 \code{seqinr::read.fasta(path_2_AAs_MSA.fasta, seqtype='AA', as.string=TRUE,
 strip.desc=TRUE)}.}
 
-\item{gap.char}{The character or regular expression used to identify non
-sequence characters in the aligned sequences. Default is
-\code{getOption('GeneFamilies.gap.char', '-')}.}
+\item{gap.char}{The character used to identify non sequence characters in
+the aligned sequences. Default is \code{getOption('GeneFamilies.gap.char',
+'-')}.}
 }
 \value{
 An integer; either NA if the position is a non sequence character,
