@@ -70,6 +70,31 @@ tree4Busted <- function(phylo.tree, foreground.nodes) {
     phylo.tree
 }
 
+#' Extracts pairs of genes from a CDS multiple sequence alignment. The ones
+#' extracted are identified by computing all pairwise sequence based distances
+#' from the multiple sequence alignment. Then those pairs representing the
+#' argument statistics, e.g. 'min', 'mean', 'median', and 'max' are used to
+#' generate the axt file for subsequent analysis with KaKs_Calculator
+#' (https://sourceforge.net/projects/kakscalculator2/).
+#'
+#' @param cds.msa The result of invoking \code{seqinr::read.fasta} representing
+#' the multiple alignment of coding sequences.
+#' @param dist.stats The statistics that are to be matched with the respective
+#' pairwise sequence based distances. Default is \code{c('min', 'median',
+#' 'mean', 'max')}.
+#'
+#' @return A named list. Names are those of argument \code{dist.stats}. These
+#' names can be concatonated with the letter 'n' if a pair of genes fulfills
+#' the criterion of various statistics. Values are the gene pairs themselfes.
+#' @export
+axtForSelectedDistances <- function(cds.msa, dist.stats=c('min', 'median', 'mean', 'max')) {
+    anchor.cds <- toString(cds.msa[[anchor.gene]])
+    other.genes <- setdiff(names(cds.msa), anchor.gene)
+    setNames(lapply(other.genes, function(x) {
+        list(anchor.cds, toString(cds.msa[[x]]))
+    }), other.genes)
+}
+
 #' Extracts pairs of genes from a CDS multiple sequence alignment.
 #'
 #' @param cds.msa an instance of Biostrings::DNAStringSet representing the

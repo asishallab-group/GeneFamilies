@@ -74,7 +74,7 @@ iprWithSelectedAA <- function(sel.aa, gene, msa.fasta, iprscan.tbl) {
 #' @param gap.char.matching.fixed boolean indicating the value to pass to
 #' \code{grepl} and \code{gsub} argument \code{fixed=}. Set to \code{TRUE} if
 #' \code{gap.char} is literal and atomic. Default is
-#' getOption('GeneFamilies.gap.char.matching.fixed', TRUE).
+#' getOption("GeneFamilies.gap.char.matching.fixed", TRUE).
 #'
 #' @return  An integer; either NA if the position is a non sequence character,
 #' or the corresponding un-aligned position.
