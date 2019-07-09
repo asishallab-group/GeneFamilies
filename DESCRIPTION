@@ -17,6 +17,7 @@ Depends:
     data.table (>= 1.9.6),
     ape (>= 3.4),
     entropy (>= 1.2.1),
+    outliers (>= 0.14),
     brew (>= 1.0.6),
     gplots (>= 2.17.0),
     RColorBrewer (>= 1.1.2),
