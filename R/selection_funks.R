@@ -73,6 +73,48 @@ tree4Busted <- function(phylo.tree, foreground.nodes) {
     phylo.tree
 }
 
+#' Uses KaKs_Calculator for selected pairs of aligned coding sequences to infer
+#' Ka and Ks values among other measures. The pairs that are selected are
+#' individuated by \code{GeneFamilies::axtForSelectedDistances}.
+#'
+#' @param cds.msa The result of invoking \code{seqinr::read.alignment}
+#' representing the multiple alignment of coding sequences.
+#' @param gene.group.name A string representing the name of the gene group for
+#' which the argument \code{cds.msa} was generated.
+#' @param w.dir The directory in which to store input and output files with
+#' which the KaKs_Calculator is invoked. Default is \code{tempdir()}.
+#' @param ka.ks.calculator.path The file path under which to find the
+#' KaKs_Calculator executable. Default is
+#' \code{getOption("GeneFamilies.ka.ks.calculator.path",
+#' file.path(path.package("GeneFamilies"), "KaKs_Calculator"))}.
+#' @param ka.ks.calculator.model A string used as a command line argument for
+#' the \code{-m} switch of KaKs_Calculator. This argument defines the evolution
+#' model to be used. Default is
+#' \code{getOption("GeneFamilies.ka.ks.calculator.model", "GMYN")}.
+#'
+#' @export
+#' @return An instance of \code{base::data.frame} the read in tabular result of
+#' invoking KaKs_Calculator using the \code{system} function. There is a
+#' strange behavior of KaKs_Calculator, sometimes it write out a header line to
+#' its result table and sometimes it does not. The result read in here is
+#' assuming NO header line. To get your desired results look for the
+#' appropriate row-name in the first column.
+KaKsStatistics <- function(cds.msa, gene.group.name, w.dir = tempdir(), 
+    ka.ks.calculator.path = getOption("GeneFamilies.ka.ks.calculator.path", 
+        file.path(path.package("GeneFamilies"), "KaKs_Calculator")), 
+    ka.ks.calculator.model = getOption("GeneFamilies.ka.ks.calculator.model", 
+        "GMYN")) {
+    gene.group.axt <- file.path(w.dir, paste0(gene.group.name, 
+        ".axt"))
+    writeAxt(axtForSelectedDistances(cds.msa), gene.group.axt)
+    gene.group.ka.ks.calc.res <- file.path(w.dir, paste0(gene.group.name, 
+        "_KaKs.txt"))
+    system(paste(ka.ks.calculator.path, "-i", gene.group.axt, 
+        "-o", gene.group.ka.ks.calc.res, "-m", ka.ks.calculator.model))
+    read.table(gene.group.ka.ks.calc.res, sep = "\t", comment.char = "", 
+        quote = "", na.strings = "NA", stringsAsFactors = FALSE)
+}
+
 #' Extracts pairs of genes from a CDS multiple sequence alignment. The ones
 #' extracted are identified by computing all pairwise sequence based distances
 #' from the multiple sequence alignment. Then those pairs representing the
@@ -84,25 +126,34 @@ tree4Busted <- function(phylo.tree, foreground.nodes) {
 #' representing the multiple alignment of coding sequences.
 #' @param dist.stats A character vector holding the names of the statistics
 #' functions that are to be matched with the respective pairwise sequence based
-#' distances. Default is \code{c('min', 'median', 'mean', 'max')}.
+#' distances. Default is \code{getOption('GeneFamilies.cds.msa.dist.stats',
+#' c('min', 'median', 'mean', 'max'))}.
 #'
 #' @return A named list. Names are those of argument \code{dist.stats}. These
-#' names can be concatonated with the letter 'n' if a pair of genes fulfills
+#' names can be concatonated with the letter '&' if a pair of genes fulfills
 #' the criterion of various statistics. Values are the gene pairs themselfes.
 #' Returns \code{NA} if and only if no numeric finite non-NA sequence based
 #' pairwise distances could be obtained from the multiple alignment.
 #' @export
-axtForSelectedDistances <- function(cds.msa, dist.stats = c("min", 
-    "median", "mean", "max")) {
+axtForSelectedDistances <- function(cds.msa, dist.stats = getOption("GeneFamilies.cds.msa.dist.stats", 
+    c("min", "median", "mean", "max"))) {
     dist.msa <- dist.alignment(cds.msa)
     num.dists <- as.numeric(dist.msa)
     num.dists.valid <- num.dists[which(!is.na(num.dists) & is.finite(num.dists))]
     dist.stats.vals <- setNames(lapply(dist.stats, function(s) get(s)(num.dists.valid)), 
         dist.stats)
-    if (length(num.dists.val) > 0) {
-        setNames(lapply(other.genes, function(x) {
-            list(anchor.cds, toString(cds.msa[[x]]))
-        }), other.genes)
+    dsv.i <- which(!is.na(dist.stats.vals) & !is.null(dist.stats.vals))
+    if (length(dsv.i) > 0) {
+        axt.lst <- list()
+        for (dist.i in unique(dist.stats.vals[dsv.i])) {
+            i <- which(dist.stats.vals == dist.i)
+            stat.i <- paste(names(dist.stats.vals)[i], collapse = "&")
+            gene.pair <- getPairsFromDistForIndices(which.min(abs(dist.msa - 
+                dist.i)), dist.msa)[1, ]
+            axt.lst[[stat.i]] <- cds.msa$seq[which(cds.msa$nam %in% 
+                gene.pair)]
+        }
+        axt.lst
     } else NA
 }
 
@@ -147,8 +198,8 @@ testGetPairsFromDistForIndices <- function() {
     pairs.2 <- matrix(c("A", "B", "B", "C"), ncol = 2)
     t.2 <- identical(pairs.2, getPairsFromDistForIndices(which(x.d == 
         1), x.d))
-    t.3 <- identical(matrix(rep(NA_character_, 2), ncol = 2), getPairsFromDistForIndices(4, 
-        x.d))
+    t.3 <- identical(matrix(rep(NA_character_, 2), ncol = 2), 
+        getPairsFromDistForIndices(4, x.d))
     all(c(t.1, t.2, t.3))
 }
 

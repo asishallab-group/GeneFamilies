@@ -9,8 +9,9 @@ argument statistics, e.g. 'min', 'mean', 'median', and 'max' are used to
 generate the axt file for subsequent analysis with KaKs_Calculator
 (https://sourceforge.net/projects/kakscalculator2/).}
 \usage{
-axtForSelectedDistances(cds.msa, dist.stats = c("min", "median", "mean",
-  "max"))
+axtForSelectedDistances(cds.msa,
+  dist.stats = getOption("GeneFamilies.cds.msa.dist.stats", c("min",
+  "median", "mean", "max")))
 }
 \arguments{
 \item{cds.msa}{The result of invoking \code{seqinr::read.alignment}
@@ -18,11 +19,12 @@ representing the multiple alignment of coding sequences.}
 
 \item{dist.stats}{A character vector holding the names of the statistics
 functions that are to be matched with the respective pairwise sequence based
-distances. Default is \code{c('min', 'median', 'mean', 'max')}.}
+distances. Default is \code{getOption('GeneFamilies.cds.msa.dist.stats',
+c('min', 'median', 'mean', 'max'))}.}
 }
 \value{
 A named list. Names are those of argument \code{dist.stats}. These
-names can be concatonated with the letter 'n' if a pair of genes fulfills
+names can be concatonated with the letter '&' if a pair of genes fulfills
 the criterion of various statistics. Values are the gene pairs themselfes.
 Returns \code{NA} if and only if no numeric finite non-NA sequence based
 pairwise distances could be obtained from the multiple alignment.

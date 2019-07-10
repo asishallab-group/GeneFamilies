@@ -3,6 +3,7 @@
 S3method(hasInvalidVecSpaceComponents,data.frame)
 S3method(hasInvalidVecSpaceComponents,matrix)
 S3method(hasInvalidVecSpaceComponents,numeric)
+export(KaKsStatistics)
 export(addAlpha)
 export(addGeneIdsCols2HomologsKaKsTable)
 export(addGeneIdsCols2OrthologsKaKsTable)
