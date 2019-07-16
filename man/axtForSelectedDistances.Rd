@@ -9,13 +9,19 @@ argument statistics, e.g. 'min', 'mean', 'median', and 'max' are used to
 generate the axt file for subsequent analysis with KaKs_Calculator
 (https://sourceforge.net/projects/kakscalculator2/).}
 \usage{
-axtForSelectedDistances(cds.msa,
+axtForSelectedDistances(cds.msa, background.genes = NULL,
   dist.stats = getOption("GeneFamilies.cds.msa.dist.stats", c("min",
   "median", "mean", "max")))
 }
 \arguments{
 \item{cds.msa}{The result of invoking \code{seqinr::read.alignment}
 representing the multiple alignment of coding sequences.}
+
+\item{background.genes}{A character vector or \code{NULL} specifying a
+subset of the genes in argument \code{cds.msa}. If such a background is
+specified sequence based distances are only considered for pairs of genes
+where one member is taken from the background and the other from the
+non-background (foreground) subsets. Default is \code{NULL}.}
 
 \item{dist.stats}{A character vector holding the names of the statistics
 functions that are to be matched with the respective pairwise sequence based

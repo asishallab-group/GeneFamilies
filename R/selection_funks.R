@@ -81,38 +81,48 @@ tree4Busted <- function(phylo.tree, foreground.nodes) {
 #' representing the multiple alignment of coding sequences.
 #' @param gene.group.name A string representing the name of the gene group for
 #' which the argument \code{cds.msa} was generated.
+#' @param background.genes A character vector or \code{NULL} specifying a
+#' subset of the genes in argument \code{cds.msa}. If such a background is
+#' specified sequence based distances are only considered for pairs of genes
+#' where one member is taken from the background and the other from the
+#' non-background (foreground) subsets. Default is \code{NULL}.
 #' @param w.dir The directory in which to store input and output files with
 #' which the KaKs_Calculator is invoked. Default is \code{tempdir()}.
 #' @param ka.ks.calculator.path The file path under which to find the
 #' KaKs_Calculator executable. Default is
-#' \code{getOption("GeneFamilies.ka.ks.calculator.path",
-#' file.path(path.package("GeneFamilies"), "KaKs_Calculator"))}.
+#' \code{getOption('GeneFamilies.ka.ks.calculator.path',
+#' file.path(path.package('GeneFamilies'), 'KaKs_Calculator'))}.
 #' @param ka.ks.calculator.model A string used as a command line argument for
 #' the \code{-m} switch of KaKs_Calculator. This argument defines the evolution
 #' model to be used. Default is
-#' \code{getOption("GeneFamilies.ka.ks.calculator.model", "GMYN")}.
+#' \code{getOption('GeneFamilies.ka.ks.calculator.model', 'GY')}.
+#' @param ... additional arguments passed to \code{base::read.table} used to
+#' read in the table written out by KaKs_Calculator.
 #'
 #' @export
 #' @return An instance of \code{base::data.frame} the read in tabular result of
 #' invoking KaKs_Calculator using the \code{system} function. There is a
 #' strange behavior of KaKs_Calculator, sometimes it write out a header line to
-#' its result table and sometimes it does not. The result read in here is
-#' assuming NO header line. To get your desired results look for the
-#' appropriate row-name in the first column.
-KaKsStatistics <- function(cds.msa, gene.group.name, w.dir = tempdir(), 
-    ka.ks.calculator.path = getOption("GeneFamilies.ka.ks.calculator.path", 
+#' its result table, when e.g. using model \code{GY}, and sometimes it does
+#' not, when using the newer models like \code{GMYN}. The result read in here
+#' is assuming NO header line. To get your desired results look for the
+#' appropriate row-name in the first column. To pass argument \code{header =
+#' TRUE} to \code{base::read.table} use the \code{...} argument.
+KaKsStatistics <- function(cds.msa, gene.group.name, background.genes = NULL, 
+    w.dir = tempdir(), ka.ks.calculator.path = getOption("GeneFamilies.ka.ks.calculator.path", 
         file.path(path.package("GeneFamilies"), "KaKs_Calculator")), 
     ka.ks.calculator.model = getOption("GeneFamilies.ka.ks.calculator.model", 
-        "GMYN")) {
+        "GY"), ...) {
     gene.group.axt <- file.path(w.dir, paste0(gene.group.name, 
         ".axt"))
-    writeAxt(axtForSelectedDistances(cds.msa), gene.group.axt)
+    writeAxt(axtForSelectedDistances(cds.msa, background.genes), 
+        gene.group.axt)
     gene.group.ka.ks.calc.res <- file.path(w.dir, paste0(gene.group.name, 
         "_KaKs.txt"))
     system(paste(ka.ks.calculator.path, "-i", gene.group.axt, 
         "-o", gene.group.ka.ks.calc.res, "-m", ka.ks.calculator.model))
     read.table(gene.group.ka.ks.calc.res, sep = "\t", comment.char = "", 
-        quote = "", na.strings = "NA", stringsAsFactors = FALSE)
+        quote = "", na.strings = "NA", stringsAsFactors = FALSE, ...)
 }
 
 #' Extracts pairs of genes from a CDS multiple sequence alignment. The ones
@@ -124,6 +134,11 @@ KaKsStatistics <- function(cds.msa, gene.group.name, w.dir = tempdir(),
 #'
 #' @param cds.msa The result of invoking \code{seqinr::read.alignment}
 #' representing the multiple alignment of coding sequences.
+#' @param background.genes A character vector or \code{NULL} specifying a
+#' subset of the genes in argument \code{cds.msa}. If such a background is
+#' specified sequence based distances are only considered for pairs of genes
+#' where one member is taken from the background and the other from the
+#' non-background (foreground) subsets. Default is \code{NULL}.
 #' @param dist.stats A character vector holding the names of the statistics
 #' functions that are to be matched with the respective pairwise sequence based
 #' distances. Default is \code{getOption('GeneFamilies.cds.msa.dist.stats',
@@ -135,10 +150,20 @@ KaKsStatistics <- function(cds.msa, gene.group.name, w.dir = tempdir(),
 #' Returns \code{NA} if and only if no numeric finite non-NA sequence based
 #' pairwise distances could be obtained from the multiple alignment.
 #' @export
-axtForSelectedDistances <- function(cds.msa, dist.stats = getOption("GeneFamilies.cds.msa.dist.stats", 
-    c("min", "median", "mean", "max"))) {
+axtForSelectedDistances <- function(cds.msa, background.genes = NULL, 
+    dist.stats = getOption("GeneFamilies.cds.msa.dist.stats", 
+        c("min", "median", "mean", "max"))) {
     dist.msa <- dist.alignment(cds.msa)
-    num.dists <- as.numeric(dist.msa)
+    num.dists <- if (length(background.genes) == 0 || all(is.na(background.genes))) {
+        as.numeric(dist.msa)
+    } else {
+        all.pairs <- getPairsFromDistForIndices(1:length(dist.msa), 
+            dist.msa)
+        ap.i <- which(all.pairs[, 1] %in% background.genes & 
+            !all.pairs[, 2] %in% background.genes | !all.pairs[, 
+            1] %in% background.genes & all.pairs[, 2] %in% background.genes)
+        as.numeric(dist.msa[ap.i])
+    }
     num.dists.valid <- num.dists[which(!is.na(num.dists) & is.finite(num.dists))]
     dist.stats.vals <- setNames(lapply(dist.stats, function(s) get(s)(num.dists.valid)), 
         dist.stats)

@@ -6,11 +6,12 @@
 Ka and Ks values among other measures. The pairs that are selected are
 individuated by \code{GeneFamilies::axtForSelectedDistances}.}
 \usage{
-KaKsStatistics(cds.msa, gene.group.name, w.dir = tempdir(),
+KaKsStatistics(cds.msa, gene.group.name, background.genes = NULL,
+  w.dir = tempdir(),
   ka.ks.calculator.path = getOption("GeneFamilies.ka.ks.calculator.path",
   file.path(path.package("GeneFamilies"), "KaKs_Calculator")),
   ka.ks.calculator.model = getOption("GeneFamilies.ka.ks.calculator.model",
-  "GMYN"))
+  "GY"), ...)
 }
 \arguments{
 \item{cds.msa}{The result of invoking \code{seqinr::read.alignment}
@@ -19,26 +20,37 @@ representing the multiple alignment of coding sequences.}
 \item{gene.group.name}{A string representing the name of the gene group for
 which the argument \code{cds.msa} was generated.}
 
+\item{background.genes}{A character vector or \code{NULL} specifying a
+subset of the genes in argument \code{cds.msa}. If such a background is
+specified sequence based distances are only considered for pairs of genes
+where one member is taken from the background and the other from the
+non-background (foreground) subsets. Default is \code{NULL}.}
+
 \item{w.dir}{The directory in which to store input and output files with
 which the KaKs_Calculator is invoked. Default is \code{tempdir()}.}
 
 \item{ka.ks.calculator.path}{The file path under which to find the
 KaKs_Calculator executable. Default is
-\code{getOption("GeneFamilies.ka.ks.calculator.path",
-file.path(path.package("GeneFamilies"), "KaKs_Calculator"))}.}
+\code{getOption('GeneFamilies.ka.ks.calculator.path',
+file.path(path.package('GeneFamilies'), 'KaKs_Calculator'))}.}
 
 \item{ka.ks.calculator.model}{A string used as a command line argument for
 the \code{-m} switch of KaKs_Calculator. This argument defines the evolution
 model to be used. Default is
-\code{getOption("GeneFamilies.ka.ks.calculator.model", "GMYN")}.}
+\code{getOption('GeneFamilies.ka.ks.calculator.model', 'GY')}.}
+
+\item{...}{additional arguments passed to \code{base::read.table} used to
+read in the table written out by KaKs_Calculator.}
 }
 \value{
 An instance of \code{base::data.frame} the read in tabular result of
 invoking KaKs_Calculator using the \code{system} function. There is a
 strange behavior of KaKs_Calculator, sometimes it write out a header line to
-its result table and sometimes it does not. The result read in here is
-assuming NO header line. To get your desired results look for the
-appropriate row-name in the first column.
+its result table, when e.g. using model \code{GY}, and sometimes it does
+not, when using the newer models like \code{GMYN}. The result read in here
+is assuming NO header line. To get your desired results look for the
+appropriate row-name in the first column. To pass argument \code{header =
+TRUE} to \code{base::read.table} use the \code{...} argument.
 }
 \description{
 Uses KaKs_Calculator for selected pairs of aligned coding sequences to infer
