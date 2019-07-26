@@ -1,17 +1,24 @@
 require(GeneFamilies)
 options(mc.cores = getMcCores())
 
-message("USAGE: Rscript path/2/GeneFamilies/exec/calculateFamiliesKsStats.R families-working-dir data-dir")
+message("USAGE: Rscript path/2/GeneFamilies/exec/calculateFamiliesKsStats.R families-working-dir data-dir plot-dir")
 
 input.args <- commandArgs(trailingOnly = TRUE)
 
+
 #' Use absolut paths:
 input.args <- lapply(input.args, normalizePath)
+
 
 #' Find paths to family working dirs:
 fams.dirs <- system(paste("find", input.args[[1]], "-maxdepth 1 -type d -name 'cluster_*'"), 
     intern = TRUE)
 names(fams.dirs) <- sub("^.*/", "", fams.dirs)
+
+
+#' Use the Model with best AIC:
+options(GeneFamilies.ka.ks.calculator.model = "MS")
+
 
 #' Calculate Ks statistics between trans duplicated and ancestral orthologs
 dupl.w.orths.dirs <- fams.dirs[names(dupl.w.orths)]
@@ -75,6 +82,18 @@ tands.w.orths.Ks.df <- do.call(rbind, mclapply(names(tands.w.orths),
             return(NULL)
         })
     }))
+
+
+#' Plot results:
+p.df <- rbind(data.frame(Ks = dupl.w.orths.Ks.df$Ks[!is.na(dupl.w.orths.Ks.df$Ks)], 
+    type = "trans", stringsAsFactors = FALSE), data.frame(Ks = tands.w.orths.Ks.df$Ks[!is.na(tands.w.orths.Ks.df$Ks)], 
+    type = "tandem", stringsAsFactors = FALSE))
+g.p <- ggplot(p.df, aes(y = Ks, x = type, color = type)) + geom_violin(aes(fill = type), 
+    alpha = 0.3) + geom_jitter(shape = 19, position = position_jitter(0.1), 
+    alpha = 0.2, cex = 0.75) + geom_boxplot(width = 0.1, outlier.shape = NA) + 
+    theme_classic() + theme(legend.position = "bottom")
+ggsave(filename = file.path(input.args[[3]], "DuplicatedKsStats.pdf"), 
+    plot = g.p)
 
 
 # Save results:
