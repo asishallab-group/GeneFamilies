@@ -1,18 +1,18 @@
 #' Brew template to generate a family's BranchREL input file
 #' @export
-hyphy.branch.site.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"Yes\";\ninputRedirect[\"03\"]=\"Yes\";\ninputRedirect[\"04\"]=\"<%= fam.cds.msa.path %>\";\ninputRedirect[\"05\"]=\"<%= fam.tree.4.paml.path %>\";\ninputRedirect[\"06\"]=\"<%= fam.hyphy.branch.site.output.path %>\";\n\nExecuteAFile (\"/biodata/dep_tsiantis/common/software/lib/hyphy/TemplateBatchFiles/BranchSiteREL.bf\", inputRedirect);"
+hyphy.branch.site.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"Yes\";\ninputRedirect[\"03\"]=\"Yes\";\ninputRedirect[\"04\"]=\"<%= fam.cds.msa.path %>\";\ninputRedirect[\"05\"]=\"<%= fam.tree.4.paml.path %>\";\ninputRedirect[\"06\"]=\"<%= fam.hyphy.branch.site.output.path %>\";\n\nExecuteAFile (\"<%= hyphy.batch.files.dir %>/BranchSiteREL.bf\", inputRedirect);"
 
 #' Brew template to generate a family's MEME input file
 #' @export
-hyphy.meme.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"New Analysis\";\ninputRedirect[\"03\"]=\"<%= fam.cds.msa.path %>\";\ninputRedirect[\"04\"]=\"Custom\";\ninputRedirect[\"05\"]=\"110240\";\ninputRedirect[\"06\"]=\"<%= fam.tree.no.node.labels.path %>\";\ninputRedirect[\"07\"]=\"<%= fam.hyphy.meme.log.path %>\";\ninputRedirect[\"08\"]=\"Estimate dN/dS only\";\ninputRedirect[\"09\"]=\"MEME\";\ninputRedirect[\"10\"]=\"0.1\";\ninputRedirect[\"11\"]=\"N\";\ninputRedirect[\"12\"]=\"<%= fam.hyphy.meme.output.path %>\";\n\nExecuteAFile (\"/biodata/dep_tsiantis/common/software/lib/hyphy/TemplateBatchFiles/QuickSelectionDetection.bf\", inputRedirect);"
+hyphy.meme.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"New Analysis\";\ninputRedirect[\"03\"]=\"<%= fam.cds.msa.path %>\";\ninputRedirect[\"04\"]=\"Custom\";\ninputRedirect[\"05\"]=\"110240\";\ninputRedirect[\"06\"]=\"<%= fam.tree.no.node.labels.path %>\";\ninputRedirect[\"07\"]=\"<%= fam.hyphy.meme.log.path %>\";\ninputRedirect[\"08\"]=\"Estimate dN/dS only\";\ninputRedirect[\"09\"]=\"MEME\";\ninputRedirect[\"10\"]=\"0.1\";\ninputRedirect[\"11\"]=\"N\";\ninputRedirect[\"12\"]=\"<%= fam.hyphy.meme.output.path %>\";\n\nExecuteAFile (\"<%= hyphy.batch.files.dir %>/QuickSelectionDetection.bf\", inputRedirect);"
 
 #' Brew template to generate a family's FUBAR input file
 #' @export
-hyphy.fubar.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"1\";\ninputRedirect[\"03\"]=\"<%= fam.cds.msa.path %>\";\ninputRedirect[\"04\"]=\"<%= fam.tree.no.node.lables.path %>\";\ninputRedirect[\"05\"]=\"20\";\ninputRedirect[\"06\"]=\"5\";\ninputRedirect[\"07\"]=\"2000000\";\ninputRedirect[\"08\"]=\"1000000\";\ninputRedirect[\"09\"]=\"100\";\ninputRedirect[\"10\"]=\"0.5\";\ninputRedirect[\"11\"]=\"<%= fam.hyphy.fubar.output.path %>\";\n\nExecuteAFile (\"/biodata/dep_tsiantis/common/software/lib/hyphy/TemplateBatchFiles/FUBAR.bf\", inputRedirect);"
+hyphy.fubar.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"1\";\ninputRedirect[\"03\"]=\"<%= fam.cds.msa.path %>\";\ninputRedirect[\"04\"]=\"<%= fam.tree.no.node.lables.path %>\";\ninputRedirect[\"05\"]=\"20\";\ninputRedirect[\"06\"]=\"5\";\ninputRedirect[\"07\"]=\"2000000\";\ninputRedirect[\"08\"]=\"1000000\";\ninputRedirect[\"09\"]=\"100\";\ninputRedirect[\"10\"]=\"0.5\";\ninputRedirect[\"11\"]=\"<%= fam.hyphy.fubar.output.path %>\";\n\nExecuteAFile (\"<%= hyphy.batch.files.dir %>/FUBAR.bf\", inputRedirect);"
 
 #' Brew template to generate a family's BUSTED input file
 #' @export
-hyphy.busted.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"<%= fam.cds.msa.nexus.path %>\";\ninputRedirect[\"03\"]=\"<%= fam.hyphy.busted.tree.path %>\";\ninputRedirect[\"04\"]=\"Set TEST\";\ninputRedirect[\"05\"]=\"\";\n\nExecuteAFile (\"/biodata/dep_tsiantis/common/software/lib/hyphy/TemplateBatchFiles/BUSTED.bf\", inputRedirect);"
+hyphy.busted.bf <- "inputRedirect = {};\ninputRedirect[\"01\"]=\"Universal\";\ninputRedirect[\"02\"]=\"<%= fam.cds.msa.nexus.path %>\";\ninputRedirect[\"03\"]=\"<%= fam.hyphy.busted.tree.path %>\";\ninputRedirect[\"04\"]=\"Set TEST\";\ninputRedirect[\"05\"]=\"\";\n\nExecuteAFile (\"<%= hyphy.batch.files.dir %>/BUSTED.bf\", inputRedirect);"
 
 #' Brew template to generate a protein group's Mr Bayes input file
 #' @export
@@ -55,19 +55,177 @@ removeNodeLabelsAndBranchLengths <- function(phyl.tree) {
 #' @export
 #' @return A BUSTED annotated copy of 'phylo.tree'
 tree4Busted <- function(phylo.tree, foreground.nodes) {
-    if (!is.null(foreground.nodes) && length(foreground.nodes) > 0) {
+    if (!is.null(foreground.nodes) && length(foreground.nodes) > 
+        0) {
         #' Mark foreground tips / leaves:
-        fg.tips <- intersect(1:length(phylo.tree$tip.label), foreground.nodes)
+        fg.tips <- intersect(1:length(phylo.tree$tip.label), 
+            foreground.nodes)
         if (!is.null(fg.tips) && length(fg.tips) > 0) 
             phylo.tree$tip.label[fg.tips] <- paste(phylo.tree$tip.label[fg.tips], 
                 "{TEST}", sep = "")
         #' Mark foreground inner nodes:
-        fg.in.nds <- which(1:phylo.tree$Nnode %in% (foreground.nodes - length(phylo.tree$tip.label)))
+        fg.in.nds <- which(1:phylo.tree$Nnode %in% (foreground.nodes - 
+            length(phylo.tree$tip.label)))
         phylo.tree$node.label <- character(length(phylo.tree$node.label))
         if (!is.null(fg.in.nds) && length(fg.in.nds) > 0) 
             phylo.tree$node.label[fg.in.nds] <- "{TEST}"
     }
     phylo.tree
+}
+
+#' Uses KaKs_Calculator for selected pairs of aligned coding sequences to infer
+#' Ka and Ks values among other measures. The pairs that are selected are
+#' individuated by \code{GeneFamilies::axtForSelectedDistances}.
+#'
+#' @param cds.msa The result of invoking \code{seqinr::read.alignment}
+#' representing the multiple alignment of coding sequences.
+#' @param gene.group.name A string representing the name of the gene group for
+#' which the argument \code{cds.msa} was generated.
+#' @param background.genes A character vector or \code{NULL} specifying a
+#' subset of the genes in argument \code{cds.msa}. If such a background is
+#' specified sequence based distances are only considered for pairs of genes
+#' where one member is taken from the background and the other from the
+#' non-background (foreground) subsets. Default is \code{NULL}.
+#' @param w.dir The directory in which to store input and output files with
+#' which the KaKs_Calculator is invoked. Default is \code{tempdir()}.
+#' @param ka.ks.calculator.path The file path under which to find the
+#' KaKs_Calculator executable. Default is
+#' \code{getOption('GeneFamilies.ka.ks.calculator.path',
+#' file.path(path.package('GeneFamilies'), 'KaKs_Calculator'))}.
+#' @param ka.ks.calculator.model A string used as a command line argument for
+#' the \code{-m} switch of KaKs_Calculator. This argument defines the evolution
+#' model to be used. Default is
+#' \code{getOption('GeneFamilies.ka.ks.calculator.model', 'GY')}.
+#' @param ... additional arguments passed to \code{base::read.table} used to
+#' read in the table written out by KaKs_Calculator.
+#'
+#' @export
+#' @return An instance of \code{base::data.frame} the read in tabular result of
+#' invoking KaKs_Calculator using the \code{system} function. There is a
+#' strange behavior of KaKs_Calculator, sometimes it write out a header line to
+#' its result table, when e.g. using model \code{GY}, and sometimes it does
+#' not, when using the newer models like \code{GMYN}. The result read in here
+#' is assuming NO header line. To get your desired results look for the
+#' appropriate row-name in the first column. To pass argument \code{header =
+#' TRUE} to \code{base::read.table} use the \code{...} argument.
+KaKsStatistics <- function(cds.msa, gene.group.name, background.genes = NULL, 
+    w.dir = tempdir(), ka.ks.calculator.path = getOption("GeneFamilies.ka.ks.calculator.path", 
+        file.path(path.package("GeneFamilies"), "KaKs_Calculator")), 
+    ka.ks.calculator.model = getOption("GeneFamilies.ka.ks.calculator.model", 
+        "GY"), ...) {
+    gene.group.axt <- file.path(w.dir, paste0(gene.group.name, 
+        ".axt"))
+    writeAxt(axtForSelectedDistances(cds.msa, background.genes), 
+        gene.group.axt)
+    gene.group.ka.ks.calc.res <- file.path(w.dir, paste0(gene.group.name, 
+        "_KaKs.txt"))
+    system(paste(ka.ks.calculator.path, "-i", gene.group.axt, 
+        "-o", gene.group.ka.ks.calc.res, "-m", ka.ks.calculator.model))
+    read.table(gene.group.ka.ks.calc.res, sep = "\t", comment.char = "", 
+        quote = "", na.strings = "NA", stringsAsFactors = FALSE, ...)
+}
+
+#' Extracts pairs of genes from a CDS multiple sequence alignment. The ones
+#' extracted are identified by computing all pairwise sequence based distances
+#' from the multiple sequence alignment. Then those pairs representing the
+#' argument statistics, e.g. 'min', 'mean', 'median', and 'max' are used to
+#' generate the axt file for subsequent analysis with KaKs_Calculator
+#' (https://sourceforge.net/projects/kakscalculator2/).
+#'
+#' @param cds.msa The result of invoking \code{seqinr::read.alignment}
+#' representing the multiple alignment of coding sequences.
+#' @param background.genes A character vector or \code{NULL} specifying a
+#' subset of the genes in argument \code{cds.msa}. If such a background is
+#' specified sequence based distances are only considered for pairs of genes
+#' where one member is taken from the background and the other from the
+#' non-background (foreground) subsets. Default is \code{NULL}.
+#' @param dist.stats A character vector holding the names of the statistics
+#' functions that are to be matched with the respective pairwise sequence based
+#' distances. Default is \code{getOption('GeneFamilies.cds.msa.dist.stats',
+#' c('min', 'median', 'mean', 'max'))}.
+#'
+#' @return A named list. Names are those of argument \code{dist.stats}. These
+#' names can be concatonated with the letter '&' if a pair of genes fulfills
+#' the criterion of various statistics. Values are the gene pairs themselfes.
+#' Returns \code{NA} if and only if no numeric finite non-NA sequence based
+#' pairwise distances could be obtained from the multiple alignment.
+#' @export
+axtForSelectedDistances <- function(cds.msa, background.genes = NULL, 
+    dist.stats = getOption("GeneFamilies.cds.msa.dist.stats", 
+        c("min", "median", "mean", "max"))) {
+    dist.msa <- dist.alignment(cds.msa)
+    num.dists <- if (length(background.genes) == 0 || all(is.na(background.genes))) {
+        as.numeric(dist.msa)
+    } else {
+        all.pairs <- getPairsFromDistForIndices(1:length(dist.msa), 
+            dist.msa)
+        ap.i <- which(all.pairs[, 1] %in% background.genes & 
+            !all.pairs[, 2] %in% background.genes | !all.pairs[, 
+            1] %in% background.genes & all.pairs[, 2] %in% background.genes)
+        as.numeric(dist.msa[ap.i])
+    }
+    num.dists.valid <- num.dists[which(!is.na(num.dists) & is.finite(num.dists))]
+    dist.stats.vals <- setNames(lapply(dist.stats, function(s) get(s)(num.dists.valid)), 
+        dist.stats)
+    dsv.i <- which(!is.na(dist.stats.vals) & !is.null(dist.stats.vals))
+    if (length(dsv.i) > 0) {
+        axt.lst <- list()
+        for (dist.i in unique(dist.stats.vals[dsv.i])) {
+            i <- which(dist.stats.vals == dist.i)
+            stat.i <- paste(names(dist.stats.vals)[i], collapse = "&")
+            gene.pair <- getPairsFromDistForIndices(which.min(abs(dist.msa - 
+                dist.i)), dist.msa)[1, ]
+            axt.lst[[stat.i]] <- cds.msa$seq[which(cds.msa$nam %in% 
+                gene.pair)]
+        }
+        axt.lst
+    } else NA
+}
+
+#' Identifies the pairs that match the argument indices \code{k} in the
+#' argument \code{dist.obj}. E.g. you might want to know which pairs have
+#' maximum distance: \code{getPairsFromDistForIndices(which(x.dist ==
+#' max(x.dist)), x.dist)} will help you out. Code taken from this post:
+#' https://stackoverflow.com/questions/39005958/r-how-to-get-row-column-subscripts-of-matched-elements-from-a-distance-matri
+#'
+#' @param k an integer vector holding the indices for which to identify the
+#' pairs.
+#' @param dist.obj An instance of \code{base::dist} that holds the distances
+#' and labels from which to extract the pairs.
+#'
+#' @export
+#' @return An instance of \code{base::matrix} with two columns in which each
+#' row holds a pair. Cells can be \code{NA} if the argument indices were not
+#' valid.
+getPairsFromDistForIndices <- function(k, dist.obj) {
+    if (!inherits(dist.obj, "dist")) 
+        stop("please provide a 'dist' object")
+    d.labels <- attr(dist.obj, "Labels")
+    n <- attr(dist.obj, "Size")
+    valid <- (k >= 1) & (k <= n * (n - 1)/2)
+    k.valid <- k[valid]
+    j <- rep.int(NA_real_, length(k))
+    j[valid] <- floor(((2 * n + 1) - sqrt((2 * n - 1)^2 - 8 * 
+        (k.valid - 1)))/2)
+    i <- j + k - (2 * n - j) * (j - 1)/2
+    cbind(d.labels[j], d.labels[i])
+}
+
+#' Tests the function \code{getPairsFromDistForIndices}.
+#'
+#' @export
+#' @return \code{TRUE} if and only of all tests pass.
+testGetPairsFromDistForIndices <- function() {
+    x.d <- dist(setNames(1:3, LETTERS[1:3]))
+    pair.1 <- cbind("A", "C")
+    t.1 <- identical(pair.1, getPairsFromDistForIndices(which(x.d == 
+        2), x.d))
+    pairs.2 <- matrix(c("A", "B", "B", "C"), ncol = 2)
+    t.2 <- identical(pairs.2, getPairsFromDistForIndices(which(x.d == 
+        1), x.d))
+    t.3 <- identical(matrix(rep(NA_character_, 2), ncol = 2), 
+        getPairsFromDistForIndices(4, x.d))
+    all(c(t.1, t.2, t.3))
 }
 
 #' Extracts pairs of genes from a CDS multiple sequence alignment.
@@ -98,10 +256,11 @@ axt <- function(cds.msa, anchor.gene) {
 #' @return the result of calling readLines 
 #' @export
 writeAxt <- function(axt, axt.path) {
-    axt.lines <- paste(as.character(unlist(lapply(names(axt), function(nm) {
-        gene.pair <- axt[[nm]]
-        paste(nm, gene.pair[[1]], gene.pair[[2]], sep = "\n")
-    }))), collapse = "\n\n")
+    axt.lines <- paste(as.character(unlist(lapply(names(axt), 
+        function(nm) {
+            gene.pair <- axt[[nm]]
+            paste(nm, gene.pair[[1]], gene.pair[[2]], sep = "\n")
+        }))), collapse = "\n\n")
     writeLines(axt.lines, con = axt.path)
 }
 
@@ -118,12 +277,14 @@ writeAxt <- function(axt, axt.path) {
 #' or as character matrix.
 #' @export
 removeDuplicatedInversePairs <- function(clst.hmlgs.list, ret.as.list = TRUE) {
-    srtd.pairs <- do.call("rbind", lapply(names(clst.hmlgs.list), function(x) {
-        sort(c(x, clst.hmlgs.list[[x]]))
-    }))
+    srtd.pairs <- do.call("rbind", lapply(names(clst.hmlgs.list), 
+        function(x) {
+            sort(c(x, clst.hmlgs.list[[x]]))
+        }))
     non.dupl.pairs <- srtd.pairs[!duplicated(srtd.pairs), , drop = FALSE]
     if (ret.as.list) 
-        setNames(as.list(non.dupl.pairs[, 2]), non.dupl.pairs[, 1]) else non.dupl.pairs
+        setNames(as.list(non.dupl.pairs[, 2]), non.dupl.pairs[, 
+            1]) else non.dupl.pairs
 }
 
 #' Identifies those tip and inner nodes of the phylogenetic tree that span
@@ -144,8 +305,8 @@ foregroundNodes <- function(phylo.tr, foreground.nodes) {
     #' Find those inner nodes that spawn subtrees whose tips are true subsets of
     #' 'foreground.nodes'
     in.nds <- setdiff(phylo.tr$edge[, 1], 1:length(phylo.tr$tip.label))
-    in.nds.spawned <- setNames(lapply(in.nds, function(x) Descendants(phylo.tr, x, 
-        type = "tips")[[1]]), in.nds)
+    in.nds.spawned <- setNames(lapply(in.nds, function(x) Descendants(phylo.tr, 
+        x, type = "tips")[[1]]), in.nds)
     union(foreground.nodes, as.integer(names(in.nds.spawned[as.logical(lapply(in.nds.spawned, 
         function(x) {
             length(setdiff(x, foreground.nodes)) == 0
@@ -161,9 +322,9 @@ foregroundNodes <- function(phylo.tr, foreground.nodes) {
 #' 'Ka.Ks', 'P.Value.Fisher.'
 #' @export
 readKaKsCalculatorOutput <- function(path.2.KaKs.Calc.output) {
-    read.table(path.2.KaKs.Calc.output, header = TRUE, sep = "\t", comment.char = "", 
-        quote = "", colClasses = c("character", rep("NULL", 3), rep("numeric", 2), 
-            rep("NULL", 16)))
+    read.table(path.2.KaKs.Calc.output, header = TRUE, sep = "\t", 
+        comment.char = "", quote = "", colClasses = c("character", 
+            rep("NULL", 3), rep("numeric", 2), rep("NULL", 16)))
 }
 
 #' Extracts the gene pairs' identifiers from the 'Sequence' column of
@@ -194,8 +355,10 @@ addGeneIdsCols2HomologsKaKsTable <- function(hom.kaks.tbl) {
 #' @return A modified version of 'orth.kaks.tbl' in which the column 'Sequence'
 #' is replaced with two columns 'gene.1' and 'gene.2'.
 #' @export
-addGeneIdsCols2OrthologsKaKsTable <- function(orth.kaks.tbl, gene.1) {
-    x <- data.frame(gene.1 = gene.1, gene.2 = orth.kaks.tbl$Sequence, stringsAsFactors = FALSE)
+addGeneIdsCols2OrthologsKaKsTable <- function(orth.kaks.tbl, 
+    gene.1) {
+    x <- data.frame(gene.1 = gene.1, gene.2 = orth.kaks.tbl$Sequence, 
+        stringsAsFactors = FALSE)
     cbind(x, orth.kaks.tbl[, 2:3], stringsAsFactors = FALSE)
 }
 
@@ -216,11 +379,13 @@ addGeneIdsCols2OrthologsKaKsTable <- function(orth.kaks.tbl, gene.1) {
 #' criteria.
 #' @export
 readFubarTable <- function(path.2.fubar.csv, family.name, sign.post.prob = 0.9) {
-    fubar.txt <- system(paste("awk -F \",\" '{if ( $5 >=", sign.post.prob, ") print $1 \"\\t\" $5 \"\\t\" $7 }'", 
-        path.2.fubar.csv), intern = TRUE)
+    fubar.txt <- system(paste("awk -F \",\" '{if ( $5 >=", sign.post.prob, 
+        ") print $1 \"\\t\" $5 \"\\t\" $7 }'", path.2.fubar.csv), 
+        intern = TRUE)
     if (length(fubar.txt) > 1) {
-        x <- read.table(text = fubar.txt, skip = 1, stringsAsFactors = FALSE, sep = "\t", 
-            comment.char = "", quote = "", colClasses = rep("numeric", 2))
+        x <- read.table(text = fubar.txt, skip = 1, stringsAsFactors = FALSE, 
+            sep = "\t", comment.char = "", quote = "", colClasses = rep("numeric", 
+                2))
         colnames(x) <- c("Codon", "Post.Prob", "BayesFactor")
         x$family <- family.name
         x
@@ -241,9 +406,10 @@ readFubarTable <- function(path.2.fubar.csv, family.name, sign.post.prob = 0.9) 
 #' false positive rates per family. 
 #' @export
 inferExpectedFalsePositiveRate <- function(fubar.tbl.res, fubar.expct.fls.pos.n) {
-    setNames(as.numeric(lapply(names(fubar.expct.fls.pos.n), function(fam) {
-        as.numeric(fubar.expct.fls.pos.n[[fam]])/nrow(fubar.tbl.res[[fam]])
-    })), names(fubar.expct.fls.pos.n))
+    setNames(as.numeric(lapply(names(fubar.expct.fls.pos.n), 
+        function(fam) {
+            as.numeric(fubar.expct.fls.pos.n[[fam]])/nrow(fubar.tbl.res[[fam]])
+        })), names(fubar.expct.fls.pos.n))
 }
 
 #' Generates a valid input file for Mr Bayes, which will generate a Bayesian
@@ -259,13 +425,16 @@ inferExpectedFalsePositiveRate <- function(fubar.tbl.res, fubar.expct.fls.pos.n)
 #'
 #' @return NULL
 #' @export
-mrBayesProteinTree <- function(aa.msa, mr.bayes.dir, gene.group.name, mr.bayes.n.chains = getOption("mc.cores", 
-    4)) {
-    mr.bayes.log.file <- paste(gene.group.name, "_mr_bayes_out.log", sep = "")
-    mr.bayes.out.file <- paste(gene.group.name, "_mr_bayes_out", sep = "")
-    gene.group.msa.nexus.path <- file.path(mr.bayes.dir, paste(gene.group.name, "_AA_MSA.nex", 
-        sep = ""))
-    write.nexus.data(as.list(aa.msa), gene.group.msa.nexus.path, format = "PROTEIN")
+mrBayesProteinTree <- function(aa.msa, mr.bayes.dir, gene.group.name, 
+    mr.bayes.n.chains = getOption("mc.cores", 4)) {
+    mr.bayes.log.file <- paste(gene.group.name, "_mr_bayes_out.log", 
+        sep = "")
+    mr.bayes.out.file <- paste(gene.group.name, "_mr_bayes_out", 
+        sep = "")
+    gene.group.msa.nexus.path <- file.path(mr.bayes.dir, paste(gene.group.name, 
+        "_AA_MSA.nex", sep = ""))
+    write.nexus.data(as.list(aa.msa), gene.group.msa.nexus.path, 
+        format = "PROTEIN")
     mr.bayes.inp.file <- file(gene.group.msa.nexus.path, "a")
     brew(text = mr.bayes.prot.tree, output = mr.bayes.inp.file)
     close(mr.bayes.inp.file)
@@ -285,13 +454,16 @@ mrBayesProteinTree <- function(aa.msa, mr.bayes.dir, gene.group.name, mr.bayes.n
 #'
 #' @return NULL
 #' @export
-mrBayesCdsTree <- function(cds.msa, mr.bayes.dir, gene.group.name, mr.bayes.n.chains = getOption("mc.cores", 
-    4)) {
-    mr.bayes.log.file <- paste(gene.group.name, "_mr_bayes_out.log", sep = "")
-    mr.bayes.out.file <- paste(gene.group.name, "_mr_bayes_out", sep = "")
-    gene.group.msa.nexus.path <- file.path(mr.bayes.dir, paste(gene.group.name, "_CDS_MSA.nex", 
-        sep = ""))
-    write.nexus.data(as.list(cds.msa), gene.group.msa.nexus.path, format = "dna")
+mrBayesCdsTree <- function(cds.msa, mr.bayes.dir, gene.group.name, 
+    mr.bayes.n.chains = getOption("mc.cores", 4)) {
+    mr.bayes.log.file <- paste(gene.group.name, "_mr_bayes_out.log", 
+        sep = "")
+    mr.bayes.out.file <- paste(gene.group.name, "_mr_bayes_out", 
+        sep = "")
+    gene.group.msa.nexus.path <- file.path(mr.bayes.dir, paste(gene.group.name, 
+        "_CDS_MSA.nex", sep = ""))
+    write.nexus.data(as.list(cds.msa), gene.group.msa.nexus.path, 
+        format = "dna")
     mr.bayes.inp.file <- file(gene.group.msa.nexus.path, "a")
     brew(text = mr.bayes.cds.tree, output = mr.bayes.inp.file)
     close(mr.bayes.inp.file)
@@ -312,26 +484,31 @@ mrBayesCdsTree <- function(cds.msa, mr.bayes.dir, gene.group.name, mr.bayes.n.ch
 #'
 #' @return NULL
 #' @export
-mrBayesTreeFromMixedMSA <- function(msa.lst, msa.types, mr.bayes.dir, gene.group.name, 
-    mr.bayes.n.chains = getOption("mc.cores", 4)) {
-    mr.bayes.log.file <- paste(gene.group.name, "_mr_bayes_out.log", sep = "")
-    mr.bayes.out.file <- paste(gene.group.name, "_mr_bayes_out", sep = "")
-    gene.group.msa.nexus.path <- file.path(mr.bayes.dir, paste(gene.group.name, ".nex", 
-        sep = ""))
+mrBayesTreeFromMixedMSA <- function(msa.lst, msa.types, mr.bayes.dir, 
+    gene.group.name, mr.bayes.n.chains = getOption("mc.cores", 
+        4)) {
+    mr.bayes.log.file <- paste(gene.group.name, "_mr_bayes_out.log", 
+        sep = "")
+    mr.bayes.out.file <- paste(gene.group.name, "_mr_bayes_out", 
+        sep = "")
+    gene.group.msa.nexus.path <- file.path(mr.bayes.dir, paste(gene.group.name, 
+        ".nex", sep = ""))
     gene.ids <- names(msa.lst[[1]])
     mixed.msa <- setNames(lapply(gene.ids, function(x) {
-        paste(lapply(msa.lst, function(i.msa) toString(i.msa[[x]])), collapse = "")
+        paste(lapply(msa.lst, function(i.msa) toString(i.msa[[x]])), 
+            collapse = "")
     }), gene.ids)
     write.nexus.data(mixed.msa, gene.group.msa.nexus.path, format = "dna")
     nchar.mix <- sum(unlist(lapply(msa.lst, function(x) nchar(x)[[1]])))
     mixed.nex <- readChar(gene.group.msa.nexus.path, file.info(gene.group.msa.nexus.path)$size)
-    mixed.nex <- sub("NCHAR=1", paste("NCHAR=", nchar.mix, sep = ""), mixed.nex, 
-        fixed = TRUE)
+    mixed.nex <- sub("NCHAR=1", paste("NCHAR=", nchar.mix, sep = ""), 
+        mixed.nex, fixed = TRUE)
     n <- 1
-    mixed.nex <- sub("DATATYPE=DNA", paste("DATATYPE=MIXED(", paste(lapply(1:length(msa.types), 
-        function(i) {
+    mixed.nex <- sub("DATATYPE=DNA", paste("DATATYPE=MIXED(", 
+        paste(lapply(1:length(msa.types), function(i) {
             msa.len <- nchar(msa.lst[[i]])[[1]]
-            msa.str <- paste(msa.types[[i]], ":", n, "-", msa.len + (n - 1), sep = "")
+            msa.str <- paste(msa.types[[i]], ":", n, "-", msa.len + 
+                (n - 1), sep = "")
             n <<- n + msa.len
             msa.str
         }), collapse = ","), ")", sep = ""), mixed.nex, fixed = TRUE)
@@ -342,7 +519,8 @@ mrBayesTreeFromMixedMSA <- function(msa.lst, msa.types, mr.bayes.dir, gene.group
         n <<- n + nchar(x)[[1]]
         msa.lst
     }), names(msa.lst))
-    gene.group.msa.nexus.file <- file(gene.group.msa.nexus.path, "a")
+    gene.group.msa.nexus.file <- file(gene.group.msa.nexus.path, 
+        "a")
     brew(text = mr.bayes.mixed.cds.tree, output = gene.group.msa.nexus.file)
     close(gene.group.msa.nexus.file)
 }
@@ -363,12 +541,15 @@ mrBayesTreeFromMixedMSA <- function(msa.lst, msa.types, mr.bayes.dir, gene.group
 #'
 #' @return NULL
 #' @export
-mrBayesProteinTreeFromMixedMSA <- function(aa.msa, extra.msa, mr.bayes.dir, gene.group.name, 
-    mr.bayes.n.chains = getOption("mc.cores", 4)) {
-    mr.bayes.log.file <- paste(gene.group.name, "_mr_bayes_out.log", sep = "")
-    mr.bayes.out.file <- paste(gene.group.name, "_mr_bayes_out", sep = "")
-    gene.group.msa.nexus.path <- file.path(mr.bayes.dir, paste(gene.group.name, "_mixed_AA_extra_MSA.nex", 
-        sep = ""))
+mrBayesProteinTreeFromMixedMSA <- function(aa.msa, extra.msa, 
+    mr.bayes.dir, gene.group.name, mr.bayes.n.chains = getOption("mc.cores", 
+        4)) {
+    mr.bayes.log.file <- paste(gene.group.name, "_mr_bayes_out.log", 
+        sep = "")
+    mr.bayes.out.file <- paste(gene.group.name, "_mr_bayes_out", 
+        sep = "")
+    gene.group.msa.nexus.path <- file.path(mr.bayes.dir, paste(gene.group.name, 
+        "_mixed_AA_extra_MSA.nex", sep = ""))
     mixed.msa <- setNames(lapply(names(aa.msa), function(x) {
         paste(toString(aa.msa[[x]]), extra.msa[[x]], sep = "")
     }), names(aa.msa))
@@ -376,15 +557,16 @@ mrBayesProteinTreeFromMixedMSA <- function(aa.msa, extra.msa, mr.bayes.dir, gene
     nchar.aa <- unique(nchar(aa.msa))[[1]]
     nchar.extra <- unique(nchar(extra.msa))[[1]]
     mixed.nex <- readChar(gene.group.msa.nexus.path, file.info(gene.group.msa.nexus.path)$size)
-    mixed.nex <- sub("NCHAR=1", paste("NCHAR=", (nchar.aa + nchar.extra), sep = ""), 
-        mixed.nex, fixed = TRUE)
-    mixed.nex <- sub("DATATYPE=PROTEIN", paste("DATATYPE=MIXED(PROTEIN:1-", nchar.aa, 
-        ",Standard:", (nchar.aa + 1), "-", (nchar.aa + nchar.extra), ")", sep = ""), 
-        mixed.nex, fixed = TRUE)
+    mixed.nex <- sub("NCHAR=1", paste("NCHAR=", (nchar.aa + nchar.extra), 
+        sep = ""), mixed.nex, fixed = TRUE)
+    mixed.nex <- sub("DATATYPE=PROTEIN", paste("DATATYPE=MIXED(PROTEIN:1-", 
+        nchar.aa, ",Standard:", (nchar.aa + 1), "-", (nchar.aa + 
+            nchar.extra), ")", sep = ""), mixed.nex, fixed = TRUE)
     writeLines(toString(mixed.nex), gene.group.msa.nexus.path)
-    mr.bayes.char.sets <- list(aaseqs = list(1, nchar.aa), extra = list((1 + nchar.aa), 
-        (nchar.aa + nchar.extra)))
-    gene.group.msa.nexus.file <- file(gene.group.msa.nexus.path, "a")
+    mr.bayes.char.sets <- list(aaseqs = list(1, nchar.aa), extra = list((1 + 
+        nchar.aa), (nchar.aa + nchar.extra)))
+    gene.group.msa.nexus.file <- file(gene.group.msa.nexus.path, 
+        "a")
     brew(text = mr.bayes.mixed.prot.tree, output = gene.group.msa.nexus.file)
     close(gene.group.msa.nexus.file)
 }
@@ -402,10 +584,12 @@ mrBayesProteinTreeFromMixedMSA <- function(aa.msa, extra.msa, mr.bayes.dir, gene
 #'
 #' @return NULL
 #' @export
-replaceWithOriginalInFigTree <- function(name.mappings, path.2.fig.tree, path.2.fig.tree.orig = sub(".con.tre", 
-    "_original_identifiers.con.tre", path.2.fig.tree, fixed = TRUE)) {
-    system(paste(c("sed", paste("-e 's/\\b", name.mappings$sanitized, "\\b/", name.mappings$original, 
-        "/'", sep = ""), path.2.fig.tree, ">", path.2.fig.tree.orig), collapse = " "))
+replaceWithOriginalInFigTree <- function(name.mappings, path.2.fig.tree, 
+    path.2.fig.tree.orig = sub(".con.tre", "_original_identifiers.con.tre", 
+        path.2.fig.tree, fixed = TRUE)) {
+    system(paste(c("sed", paste("-e 's/\\b", name.mappings$sanitized, 
+        "\\b/", name.mappings$original, "/'", sep = ""), path.2.fig.tree, 
+        ">", path.2.fig.tree.orig), collapse = " "))
 }
 
 #' Parses a HyPhy MEME branch result file to extract significant LEAVES with
@@ -424,21 +608,27 @@ replaceWithOriginalInFigTree <- function(name.mappings, path.2.fig.tree, path.2.
 #' BayesianFactor, where the rows hold the significant results. NULL is
 #' returned if no significant results were contained in \code{meme.file}.
 #' @export
-parseMemeBranchResults <- function(meme.file, bayes.factor.sign.cutoff = 100, fam.name.reg.exp = "/(fam\\d+)/") {
-    fam.name <- regmatches(meme.file, regexec(fam.name.reg.exp, meme.file))[[1]][[2]]
-    fam.dir <- sub(paste(fam.name, "_hyphy_meme_output.txt.branches", sep = ""), 
-        "", meme.file, fixed = TRUE)
-    meme.signif.branches <- system(paste("sed -e '1,2d'", meme.file, "| awk -F \",\" '{ if($1 ~ /Site/ || $4 >", 
-        bayes.factor.sign.cutoff, "&& $2 ~ /PROT/) { print $1 \"\\t\" $2 \"\\t\" $4 } }'"), 
+parseMemeBranchResults <- function(meme.file, bayes.factor.sign.cutoff = 100, 
+    fam.name.reg.exp = "/(fam\\d+)/") {
+    fam.name <- regmatches(meme.file, regexec(fam.name.reg.exp, 
+        meme.file))[[1]][[2]]
+    fam.dir <- sub(paste(fam.name, "_hyphy_meme_output.txt.branches", 
+        sep = ""), "", meme.file, fixed = TRUE)
+    meme.signif.branches <- system(paste("sed -e '1,2d'", meme.file, 
+        "| awk -F \",\" '{ if($1 ~ /Site/ || $4 >", bayes.factor.sign.cutoff, 
+        "&& $2 ~ /PROT/) { print $1 \"\\t\" $2 \"\\t\" $4 } }'"), 
         intern = TRUE)
-    if (!is.null(meme.signif.branches) && !is.na(meme.signif.branches) && length(meme.signif.branches) > 
-        1) {
-        fam.name.maps <- read.table(file.path(fam.dir, paste(fam.name, "_name_mappings_table.txt", 
-            sep = "")), sep = "\t", header = TRUE, stringsAsFactors = FALSE, quote = "", 
-            comment.char = "", na.strings = "", colClasses = rep("character", 2))
-        x <- cbind(Family = fam.name, read.table(text = meme.signif.branches, sep = "\t", 
-            quote = "", comment.char = "", na.strings = "", colClasses = c("integer", 
-                "character", "numeric"), header = TRUE, stringsAsFactors = FALSE))
+    if (!is.null(meme.signif.branches) && !is.na(meme.signif.branches) && 
+        length(meme.signif.branches) > 1) {
+        fam.name.maps <- read.table(file.path(fam.dir, paste(fam.name, 
+            "_name_mappings_table.txt", sep = "")), sep = "\t", 
+            header = TRUE, stringsAsFactors = FALSE, quote = "", 
+            comment.char = "", na.strings = "", colClasses = rep("character", 
+                2))
+        x <- cbind(Family = fam.name, read.table(text = meme.signif.branches, 
+            sep = "\t", quote = "", comment.char = "", na.strings = "", 
+            colClasses = c("integer", "character", "numeric"), 
+            header = TRUE, stringsAsFactors = FALSE))
         x$Branch <- replaceWithOriginal(x$Branch, fam.name.maps)
         x
     } else NULL

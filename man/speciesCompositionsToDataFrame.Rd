@@ -27,4 +27,3 @@ extra column of the family sizes.
 Generate a data frame of the list of species composition integer vectors.
 Rows are named as families and columns as species.
 }
-

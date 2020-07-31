@@ -8,11 +8,11 @@ is explicable with the background distribution observed in
 \code{universe.annos}. The default alternative hypothesis is that the actual
 case frequency is 'greater'.}
 \usage{
-enrichedAnnotations(case.genes, universe.annos = all.ipr, univ.gene.col = 1,
-  univ.anno.col = 2,
-  annos.2.test = unique(universe.annos[which(universe.annos[, univ.gene.col]
-  \%in\% case.genes), univ.anno.col]), alt.hypothesis = "greater",
-  p.adjust.method = "BY")
+enrichedAnnotations(case.genes, universe.annos = all.ipr,
+  univ.gene.col = 1, univ.anno.col = 2,
+  annos.2.test = unique(universe.annos[which(universe.annos[,
+  univ.gene.col] \%in\% case.genes), univ.anno.col]),
+  alt.hypothesis = "greater", p.adjust.method = "BY")
 }
 \arguments{
 \item{case.genes}{A character vector of gene identifiers defining the gene
@@ -49,4 +49,3 @@ is explicable with the background distribution observed in
 \code{universe.annos}. The default alternative hypothesis is that the actual
 case frequency is 'greater'.
 }
-

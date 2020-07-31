@@ -22,8 +22,8 @@
     data("rpkmNormalizedExpressionProfiles", package = "GeneFamilies")
     data("differentiallyExpressedGenes", package = "GeneFamilies")
     data("domainBasedSubfunctionalization", package = "GeneFamilies")
-    data("domainBasedSubfunctionalization", package = "GeneFamilies")
     data("tandemsDf", package = "GeneFamilies")
+    data("DuplicatedKsStats", package = "GeneFamilies")
     # After loading the species' CDS define this constant:
     if (exists("aet.cds") && exists("aly.cds") && exists("ath.cds") && exists("bra.cds") && 
         exists("cru.cds") && exists("esa.cds") && exists("tpa.cds") && exists("chi.cds")) {

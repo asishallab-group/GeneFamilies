@@ -6,7 +6,8 @@
 the genes in argument \code{gene.accessions}.}
 \usage{
 expressionProfilesDists(gene.accessions,
-  expression.profiles = rna.seq.exp.profils, expr.prof.gene.col = "gene",
+  expression.profiles = rna.seq.exp.profils,
+  expr.prof.gene.col = "gene",
   expr.prof.gene.variant.col = "gene.exp.var",
   tissues = setdiff(colnames(expression.profiles), c(expr.prof.gene.col,
   expr.prof.gene.variant.col)), dist.method = "euclidean",
@@ -54,4 +55,3 @@ tissues.
 Computes the distance (\code{base::dist}) between the expression profiles of
 the genes in argument \code{gene.accessions}.
 }
-

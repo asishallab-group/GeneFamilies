@@ -16,4 +16,3 @@ A data.frame with 14 columns.
 \description{
 Parses the result file of InterProScan into a data.frame.
 }
-

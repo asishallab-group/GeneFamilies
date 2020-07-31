@@ -16,4 +16,3 @@ non-numerical.
 \description{
 Generic function to check wether any vector component is non-numerical.
 }
-

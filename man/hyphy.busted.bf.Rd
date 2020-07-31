@@ -12,4 +12,3 @@ hyphy.busted.bf
 Brew template to generate a family's BUSTED input file
 }
 \keyword{datasets}
-

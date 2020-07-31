@@ -16,4 +16,3 @@ A logical vector indicating the indices of valid AA-Seqs in the argument set.
 \description{
 Validates an AAStringSet
 }
-

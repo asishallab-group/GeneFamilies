@@ -12,4 +12,3 @@ testShannonEntropy()
 \description{
 Testing function \code{GeneFamilies::shannonEntropy}
 }
-

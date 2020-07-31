@@ -51,4 +51,3 @@ the intersection of EA is smaller than the union of EA, and 3. The union of
 EA is identical to the BGA, or, if not strict, the union of the EA is a
 subset of the BGA.
 }
-

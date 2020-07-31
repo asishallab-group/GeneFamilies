@@ -26,4 +26,3 @@ nodes in argument 'tree', if and only if the respective inner nodes span a
 subtree terminating in identical sets of tips. Note, that the inner topology
 is ignored.
 }
-

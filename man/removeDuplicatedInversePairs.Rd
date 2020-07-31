@@ -21,4 +21,3 @@ or as character matrix.
 \description{
 Identifies duplicated inverse pairs and discards them.
 }
-

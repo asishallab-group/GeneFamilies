@@ -46,4 +46,3 @@ Lg: length of transcript g (bases)
 Note, that because we use gene length in bases and not in kilobases the
 scaling factor is 10^9 and not 10^6.
 }
-

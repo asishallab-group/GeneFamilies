@@ -29,4 +29,3 @@ natural and normalization is done by division by the maximum entropy
 \href{https://en.wikipedia.org/wiki/Entropy_(information_theory)#Efficiency)}{Normalized
 Entropy}.
 }
-

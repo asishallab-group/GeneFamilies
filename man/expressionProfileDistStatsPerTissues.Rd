@@ -4,8 +4,9 @@
 \alias{expressionProfileDistStatsPerTissues}
 \title{Extract different \code{stats} per tissue specific expression profile distances.}
 \usage{
-expressionProfileDistStatsPerTissues(expr.prof.dists.per.tissue, gene.classes,
-  fam.name = NA, stats = c("max", "median", "mean", "maxMinusMin"))
+expressionProfileDistStatsPerTissues(expr.prof.dists.per.tissue,
+  gene.classes, fam.name = NA, stats = c("max", "median", "mean",
+  "maxMinusMin"))
 }
 \arguments{
 \item{expr.prof.dists.per.tissue}{An instance of list with names identifying
@@ -34,4 +35,3 @@ inferred for each group of tissue specific distances as found in argument
 \description{
 Extract different \code{stats} per tissue specific expression profile distances.
 }
-

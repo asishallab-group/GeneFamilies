@@ -25,4 +25,3 @@ TRUE if and only if the plot can be generated successfully
 Scatter-Plots the pecies specific annotation (function) diversity for each
 single gene group found in 'entropy.df'.
 }
-

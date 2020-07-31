@@ -22,4 +22,3 @@ respective species.
 \description{
 Infers the number of genes belonging to the given species.
 }
-

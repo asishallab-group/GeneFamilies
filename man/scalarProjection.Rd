@@ -22,4 +22,3 @@ Computes the scalar projection of vector \code{a} onto vector \code{b}, i.e.
 the length of the segment of \code{b} 'overshadowed' by \code{a}. See
 en.wikipedia.org/wiki/Vector_projection
 }
-

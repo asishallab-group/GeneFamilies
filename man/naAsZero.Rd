@@ -17,4 +17,3 @@ naAsZero(x)
 Helper function that converts argument \code{x} to the number zero if and
 only if \code{is.na(x)}.
 }
-

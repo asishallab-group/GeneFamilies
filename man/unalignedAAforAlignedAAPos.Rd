@@ -37,4 +37,3 @@ or the corresponding un-aligned position.
 Computes the position in the unaligned sequence of a character indicated by
 \code{sel.aa}.
 }
-

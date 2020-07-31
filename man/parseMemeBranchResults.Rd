@@ -29,4 +29,3 @@ returned if no significant results were contained in \code{meme.file}.
 Parses a HyPhy MEME branch result file to extract significant LEAVES with
 codons showing signs of positive selection.
 }
-

@@ -18,4 +18,3 @@ columns, containing the candidate homologs.
 \description{
 Identify homologous gene pairs in a table of significantly similar genes.
 }
-

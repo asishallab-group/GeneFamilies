@@ -30,7 +30,7 @@
 generateContingencyTable <- function(row.1, row.2, col.1, col.2, row.category, col.category, 
     categories = c("T", "F"), validate = TRUE) {
     # Generates a contingency table of the given argument rows and columns. The
-    # resulting table can be used for e.g. exact Fisher tests and the like…
+    # resulting table can be used for e.g. exact Fisher tests and the like.
     cont.tbl <- matrix(c(length(intersect(row.1, col.1)), length(intersect(row.2, 
         col.1)), length(intersect(row.1, col.2)), length(intersect(row.2, col.2))), 
         nrow = 2, ncol = 2, dimnames = setNames(list(categories, categories), c(row.category, 
@@ -47,7 +47,7 @@ generateContingencyTable <- function(row.1, row.2, col.1, col.2, row.category, c
 }
 
 #' Removes trailing splice variant identifier from gene IDs; e.g. CARHR213450.1
-#' -> CARHR213450 
+#' will result in CARHR213450 
 #'
 #' @param gene.ids a character vector of gene identifiers
 #'
@@ -152,7 +152,7 @@ enrichmentTests <- function(case.anno.tbl, universe.anno.tbl, test.dir = "greate
 #' adjusted p.value.
 #'
 #' @param enrichment.tbl a data.frame returned by function 'enrichmentTests'
-#' @param significance.level the p.value cutoff to apply, default is '≤ 0.05'
+#' @param significance.level the p.value cutoff to apply, default is '<= 0.05'
 #'
 #' @return A subset of 'enrichment.tbl' holding only the significant results.
 #' @export
@@ -206,7 +206,6 @@ cbindAnnotationDescription <- function(enrichment.tbl, annotation.db = ipr.db, a
 #'
 #' @return A named list with enriched GO terms in the argument GO categories.
 #' @export
-#' @import GOstats GSEABase
 goEnrichTest <- function(gsc, gene.ids, univ.gene.ids, ontologies = c("BP", "CC", 
     "MF"), pvalue.cutoff = 0.01, cond = FALSE, test.dir = "over", p.adjust.method = "fdr") {
     setNames(mclapply(ontologies, function(go.ont) {
@@ -234,7 +233,6 @@ goEnrichTest <- function(gsc, gene.ids, univ.gene.ids, ontologies = c("BP", "CC"
 #'         'GO.category' - or NULL if no significantly enriched GO terms were
 #'         found.
 #' @export
-#' @import GO.db
 procGOHyperGResult <- function(ghgr, pvalue.cutoff = 0.01) {
     go.ont <- strsplit(ghgr@testName, " ")[[2]]
     x.pv <- pvalues(ghgr)

@@ -25,4 +25,3 @@ TRUE if and only if no error occurred.
 Uses FastTree[MP] to generate a maximum likelihood tree based on sequence
 profiles.
 }
-

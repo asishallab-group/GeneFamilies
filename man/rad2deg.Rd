@@ -15,4 +15,3 @@ The converted \code{rad} value in degrees.
 \description{
 Converts an angle's size given in \code{radians} to \code{degrees}.
 }
-

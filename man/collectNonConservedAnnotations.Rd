@@ -47,4 +47,3 @@ those gene groups (e.g. families) that are indicated by \code{group.ids}.
 Non conservation is inferred by
 \code{nonConservedCompositeAnnotations(...)}.
 }
-

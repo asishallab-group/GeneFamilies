@@ -24,4 +24,3 @@ identifiers in this project's data sets. Note that the constant
 spec.gene.ids is used by default to map gene identifiers to species. See
 zzz.R for more details.
 }
-

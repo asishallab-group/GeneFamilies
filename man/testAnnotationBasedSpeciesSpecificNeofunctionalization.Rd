@@ -38,4 +38,3 @@ compared using a Kolmogoroff Smirnoff test. Correction for multiple
 hypotheses testing is carried out using the 'BY' method (see base::p.adjust
 for more details).
 }
-

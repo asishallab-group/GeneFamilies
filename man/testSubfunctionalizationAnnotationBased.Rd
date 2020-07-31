@@ -12,4 +12,3 @@ testSubfunctionalizationAnnotationBased()
 \description{
 Testing \code{subfunctionalizationAnnotationBased}
 }
-

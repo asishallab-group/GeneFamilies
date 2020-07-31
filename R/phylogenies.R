@@ -13,8 +13,8 @@
 getFamilyDNAStringSet <- function(fam, cds = all.cds) {
     inds <- intersect(names(cds), fam)
     if (length(inds) != length(fam)) 
-        warning("Could not find coding sequences for ", paste(setdiff(fam, names(cds)), 
-            collapse = ","), " in database 'cds'.")
+        warning("Could not find coding sequences for ", paste(setdiff(fam, 
+            names(cds)), collapse = ","), " in database 'cds'.")
     cds[inds]
 }
 
@@ -29,8 +29,8 @@ getFamilyDNAStringSet <- function(fam, cds = all.cds) {
 #' @return TRUE if and only if no error has occurred.
 #' @export
 translate2AASeqs <- function(path.2.cds.fasta, macse.call = getOption("macse.call", 
-    paste("java -Xmx600m -jar ", file.path(path.package("GeneFamilies"), "macse_v1.01b.jar"), 
-        " -prog translateNT2AA", sep = ""))) {
+    paste("java -Xmx600m -jar ", file.path(path.package("GeneFamilies"), 
+        "macse_v1.01b.jar"), " -prog translateNT2AA", sep = ""))) {
     cmd <- paste(macse.call, "-seq", path.2.cds.fasta)
     system(cmd)
     TRUE
@@ -61,7 +61,8 @@ validateAAStringSet <- function(aa.set) {
         tryCatch({
             validateAASeqs(aa.set[[acc]])
         }, error = function(e) {
-            warning("Amino-Acid-Sequence ", acc, " caused an error: ", e)
+            warning("Amino-Acid-Sequence ", acc, " caused an error: ", 
+                e)
             FALSE
         })
     }))
@@ -99,7 +100,8 @@ alignAAStringSet <- function(path.2.aa.seqs, path.2.aa.msa, mafft.call = getOpti
 #'
 #' @return A String representing the aligned codon sequence
 #' @export
-alignCDSWithAlignedAASeq <- function(cds, aligned.aa.seq, aa.gap = "-", codon.gap = "---") {
+alignCDSWithAlignedAASeq <- function(cds, aligned.aa.seq, aa.gap = "-", 
+    codon.gap = "---") {
     aa.chars <- strsplit(toString(aligned.aa.seq), split = NULL)[[1]]
     cds.chars <- strsplit(toString(cds), split = NULL)[[1]]
     i <- 1
@@ -127,7 +129,8 @@ alignCDSWithAlignedAASeq <- function(cds, aligned.aa.seq, aa.gap = "-", codon.ga
 #' @return An instance of \code{base::list} with names being the gene
 #' accessions and values Strings representing the aligned coding-sequences.
 #' @export
-alignCDSSetWithAlignedAAsAsGuide <- function(unaligned.cds.set, aligned.aa.set) {
+alignCDSSetWithAlignedAAsAsGuide <- function(unaligned.cds.set, 
+    aligned.aa.set) {
     cds.set <- lapply(names(aligned.aa.set), function(acc) {
         alignCDSWithAlignedAASeq(unaligned.cds.set[[acc]], aligned.aa.set[[acc]])
     })
@@ -146,8 +149,9 @@ alignCDSSetWithAlignedAAsAsGuide <- function(unaligned.cds.set, aligned.aa.set) 
 #'
 #' @return TRUE if and only if no error occurred.
 #' @export
-buildPhylogeneticTree <- function(path.2.cds.msa, path.2.ml.tree, fast.tree.call = getOption("fast.tree.call", 
-    paste("OMP_NUM_THREADS=", getOption("mc.cores", 1), " FastTreeMP -nt -gtr -gamma", 
+buildPhylogeneticTree <- function(path.2.cds.msa, path.2.ml.tree, 
+    fast.tree.call = getOption("fast.tree.call", paste("OMP_NUM_THREADS=", 
+        getOption("mc.cores", 1), " FastTreeMP -nt -gtr -gamma", 
         sep = ""))) {
     cmd <- paste(fast.tree.call, "<", path.2.cds.msa, ">", path.2.ml.tree)
     system(cmd)
@@ -258,7 +262,6 @@ formatNodeLabels <- function(nd.lb) {
 #' @return A named list. Names are the argument tips and values the node label
 #' of the root node of the sub-tree.
 #' @export
-#' @import phangorn ape
 subTrees <- function(tree, nds = unique(tree$edge[, 1])) {
     lst <- list()
     lapply(nds, function(x) {
@@ -281,21 +284,22 @@ subTrees <- function(tree, nds = unique(tree$edge[, 1])) {
 #'
 #' @return An annotated copy of argument 'tree'
 #' @export
-passSupportValues <- function(tree, trees, nds = unique(tree$edge[, 1])) {
+passSupportValues <- function(tree, trees, nds = unique(tree$edge[, 
+    1])) {
     sub.trees <- lapply(trees, subTrees)
     tr <- tree
     if (!"node.label" %in% names(tr)) 
         tr$node.label <- character(tr$Nnode)
     for (n in nds) {
         for (i in 1:length(sub.trees)) {
-            x <- paste(sort(tr$tip.label[Descendants(tree, n, type = "tips")[[1]]]), 
-                collapse = ",")
+            x <- paste(sort(tr$tip.label[Descendants(tree, n, 
+                type = "tips")[[1]]]), collapse = ",")
             y <- sub.trees[[i]]
             if (x %in% names(y)) {
                 k <- n - length(tr$tip.label)
                 sup.name <- names(sub.trees)[[i]]
-                tr$node.label[[k]] <- paste(c(tr$node.label[[k]], paste(sup.name, 
-                  y[[x]], sep = "")), collapse = "_")
+                tr$node.label[[k]] <- paste(c(tr$node.label[[k]], 
+                  paste(sup.name, y[[x]], sep = "")), collapse = "_")
             }
         }
     }
@@ -323,17 +327,20 @@ alignCodingSequencesPipeline <- function(cds, work.dir, gene.group.name) {
     #' Sanitize the gene identifiers:
     name.maps <- sanitizeNames(cds)
     names(cds) <- name.maps$sanitized
-    cds.path <- file.path(work.dir, paste(gene.group.name, "_CDS.fasta", sep = ""))
-    write.fasta(sequences = cds, names = names(cds), file.out = cds.path)
-    name.maps.path <- file.path(work.dir, paste(gene.group.name, "_name_mappings_table.txt", 
+    cds.path <- file.path(work.dir, paste(gene.group.name, "_CDS.fasta", 
         sep = ""))
-    write.table(name.maps, name.maps.path, row.names = FALSE, sep = "\t", quote = FALSE)
+    write.fasta(sequences = cds, names = names(cds), file.out = cds.path)
+    name.maps.path <- file.path(work.dir, paste(gene.group.name, 
+        "_name_mappings_table.txt", sep = ""))
+    write.table(name.maps, name.maps.path, row.names = FALSE, 
+        sep = "\t", quote = FALSE)
     #' Convert to AA and align the AA-sequences:
     translate2AASeqs(cds.path)
     #' Remove invalid AA-Sequences, i.e. AA-Seqs with premature stop-codons:
     aa.path <- file.path(work.dir, paste(gene.group.name, "_CDS_macse_AA.fasta", 
         sep = ""))
-    aas <- read.fasta(aa.path, seqtype = "AA", as.string = TRUE, strip.desc = TRUE)
+    aas <- read.fasta(aa.path, seqtype = "AA", as.string = TRUE, 
+        strip.desc = TRUE)
     aas.san <- aas[validateAAStringSet(aas)]
     #' Warn about removed AA-Seqs:
     cds.san <- if (length(aas.san) < length(aas)) {
@@ -344,26 +351,63 @@ alignCodingSequencesPipeline <- function(cds, work.dir, gene.group.name) {
     #' If only a single sequence is left, we're done:
     cds.msa.orig <- if (length(cds.san) > 1) {
         #' Write out the sanitized amino acid seqs:
-        aas.san.path <- file.path(work.dir, paste(gene.group.name, "_AA_sanitized.fasta", 
-            sep = ""))
-        write.fasta(sequences = aas.san, names = names(aas.san), file.out = aas.san.path)
+        aas.san.path <- file.path(work.dir, paste(gene.group.name, 
+            "_AA_sanitized.fasta", sep = ""))
+        write.fasta(sequences = aas.san, names = names(aas.san), 
+            file.out = aas.san.path)
         #' Generate a multiple sequence alignment:
-        aas.msa.path <- file.path(work.dir, paste(gene.group.name, "_AA_sanitized_MSA.fasta", 
-            sep = ""))
+        aas.msa.path <- file.path(work.dir, paste(gene.group.name, 
+            "_AA_sanitized_MSA.fasta", sep = ""))
         alignAAStringSet(aas.san.path, aas.msa.path)
-        aas.san.msa <- read.fasta(aas.msa.path, seqtype = "AA", as.string = TRUE, 
-            strip.desc = TRUE)
+        aas.san.msa <- read.fasta(aas.msa.path, seqtype = "AA", 
+            as.string = TRUE, strip.desc = TRUE)
         #' Use the aligned AA-Seqs as quide to align the CDS Sequences:
-        cds.msa <- alignCDSSetWithAlignedAAsAsGuide(cds.san, aas.san.msa)
-        cds.msa.path <- file.path(work.dir, paste(gene.group.name, "_CDS_MSA.fasta", 
-            sep = ""))
-        write.fasta(sequences = cds.msa, names = names(cds.msa), file.out = cds.msa.path)
+        cds.msa <- alignCDSSetWithAlignedAAsAsGuide(cds.san, 
+            aas.san.msa)
+        cds.msa.path <- file.path(work.dir, paste(gene.group.name, 
+            "_CDS_MSA.fasta", sep = ""))
+        write.fasta(sequences = cds.msa, names = names(cds.msa), 
+            file.out = cds.msa.path)
         cds.msa
     } else {
         cds.san
     }
     #' Return the CDS MSA using the ORIGINAL gene identifiers:
     if (length(cds.msa.orig) > 0) 
-        names(cds.msa.orig) <- replaceWithOriginal(names(cds.msa.orig), name.maps)
+        names(cds.msa.orig) <- replaceWithOriginal(names(cds.msa.orig), 
+            name.maps)
     cds.msa.orig
+}
+
+#' Identifies those entries in argument \code{seq.lst} that have identical
+#' names as argument \code{seq.names}. If for not all members of
+#' \code{seq.names} entries are found in \code{seq.lst} the function tries to
+#' match those sequence names that were not found with sequence names in
+#' \code{seq.lst} by allowing for splice variants. E.g. \code{GeneA} is not
+#' found in \code{seq.lst}, but \code{GeneA.1} might be.
+#'
+#' @param seq.lst An instance of \code{base::list} holding biological sequences
+#' indexed by their unique names (IDs).
+#' @param seq.names A character vector of sequence IDs to select from argument
+#' \code{seq.lst}.
+#' @param ... Additional arguments to be passed to \code{base::grepl} can be
+#' e.g. \code{ignore.case = TRUE}.
+#'
+#' @export
+#' @return An instance of \code{base::list} the subset of argument
+#' \code{seq.lst} whose entries match the sequence IDs given in
+#' \code{seq.names}.
+getSpliceVariantSeqs <- function(seq.lst, seq.names, ...) {
+    seq.selected <- seq.lst[which(names(seq.lst) %in% seq.names)]
+    if (length(seq.selected) < length(unique(seq.names))) {
+        try.splice.vars <- setdiff(seq.names, names(seq.lst))
+        tsv.i <- unique(unlist(lapply(try.splice.vars, function(x) {
+            which(grepl(paste0("^", x, "\\.\\d+$"), names(seq.lst), 
+                ...))
+        })))
+        if (length(tsv.i) > 0) {
+            seq.selected <- append(seq.selected, seq.lst[tsv.i])
+        }
+    }
+    seq.selected
 }

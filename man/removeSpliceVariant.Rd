@@ -3,7 +3,7 @@
 \name{removeSpliceVariant}
 \alias{removeSpliceVariant}
 \title{Removes trailing splice variant identifier from gene IDs; e.g. CARHR213450.1
--> CARHR213450}
+will result in CARHR213450}
 \usage{
 removeSpliceVariant(gene.ids)
 }
@@ -15,6 +15,5 @@ The modified 'gene.ids' without the trailing splice variant IDs.
 }
 \description{
 Removes trailing splice variant identifier from gene IDs; e.g. CARHR213450.1
--> CARHR213450
+will result in CARHR213450
 }
-

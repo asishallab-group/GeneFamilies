@@ -7,11 +7,11 @@ human readable information to it and return it as a data.frame.}
 \usage{
 selectGeneGroupSpecificEnrichedAnnotations(gene.group.type,
   gene.group.type.enriched.annos = list(positively.selected =
-  fams.pos.sel.non.conserved.iprs.enrich.df$Annotation, expanded.contracted =
-  exp.fams.df.non.conserved.iprs.enrich.df$Annotation, tandems =
+  fams.pos.sel.non.conserved.iprs.enrich.df$Annotation, expanded.contracted
+  = exp.fams.df.non.conserved.iprs.enrich.df$Annotation, tandems =
   bra8.tandem.clusters.non.conserved.iprs.enrich.df$Annotation, conserved =
-  fams.conserved.non.conserved.iprs.enrich.df$Annotation), anno.db = ipr.db,
-  anno.name = "NAME")
+  fams.conserved.non.conserved.iprs.enrich.df$Annotation),
+  anno.db = ipr.db, anno.name = "NAME")
 }
 \arguments{
 \item{gene.group.type}{The type of the gene.groups for which to identify
@@ -35,4 +35,3 @@ A data.frame with two columns: 1. Annotation and 2. Annotation.Name
 Infer enriched annotations specific to the argument type of gene-groups, add
 human readable information to it and return it as a data.frame.
 }
-

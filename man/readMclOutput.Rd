@@ -22,4 +22,3 @@ families to their gene members.
 Uses Linux's AWK and package data.table to parse the output of MCL into an
 instance of base::data.frame.
 }
-

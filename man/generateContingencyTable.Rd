@@ -16,8 +16,8 @@ validation is done for the other rows and columns. Error-Codes are:
 the size of the mathematical set of all elements contained in both rows and
 columns (row.1, row.2, col.1, col.2).}
 \usage{
-generateContingencyTable(row.1, row.2, col.1, col.2, row.category, col.category,
-  categories = c("T", "F"), validate = TRUE)
+generateContingencyTable(row.1, row.2, col.1, col.2, row.category,
+  col.category, categories = c("T", "F"), validate = TRUE)
 }
 \arguments{
 \item{row.1}{a vector of elements that have attribute A}
@@ -58,4 +58,3 @@ validation is done for the other rows and columns. Error-Codes are:
 the size of the mathematical set of all elements contained in both rows and
 columns (row.1, row.2, col.1, col.2).
 }
-

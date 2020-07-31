@@ -36,4 +36,3 @@ distinct annotation will be an axis, each gene will be assigned a vector,
 with coordinates the discrete number of times an annotation has been
 assigned to the respective gene.
 }
-

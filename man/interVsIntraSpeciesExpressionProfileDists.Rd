@@ -43,4 +43,3 @@ Extracts the inter- and intra-species distances from argument object
 \code{expr.prof.dists} which is expected to be an instance of class
 \code{base::dist} (See \code{expressionProfilesDists} for more details).
 }
-

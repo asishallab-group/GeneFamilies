@@ -36,4 +36,3 @@ species with the background of the others. P-Values are obtained from an
 outlier chisquare test; see package outliers::chisq.out.test(...) for
 details.
 }
-

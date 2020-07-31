@@ -15,4 +15,3 @@ A scalar numeric value, the length of the vector \code{x}.
 \description{
 Computes the Euclidean norm (length) of vector \code{x}.
 }
-

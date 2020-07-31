@@ -20,4 +20,3 @@ the phylogeny. Returned as string.
 \description{
 Extracts the number CAFE assigned the species during its analysis.
 }
-

@@ -20,4 +20,3 @@ paired with the anchor gene. Values are the gene pairs themselfes.
 \description{
 Extracts pairs of genes from a CDS multiple sequence alignment.
 }
-

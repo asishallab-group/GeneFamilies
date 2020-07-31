@@ -20,4 +20,3 @@ A vector in the same space of \code{x}, the perpendicular.
 Drops a perpendicular from vector \code{x} to the vector space's diagonal.
 The perpendicular points towards \code{x}.
 }
-

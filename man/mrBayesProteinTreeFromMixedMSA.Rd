@@ -6,8 +6,8 @@
 phylogeny from a multiple amino acid sequence alignment AND an alignment of
 additional e.g. morphological data.}
 \usage{
-mrBayesProteinTreeFromMixedMSA(aa.msa, extra.msa, mr.bayes.dir, gene.group.name,
-  mr.bayes.n.chains = getOption("mc.cores", 4))
+mrBayesProteinTreeFromMixedMSA(aa.msa, extra.msa, mr.bayes.dir,
+  gene.group.name, mr.bayes.n.chains = getOption("mc.cores", 4))
 }
 \arguments{
 \item{aa.msa}{an instance of Biostrings::AAStringSet representing the MSA}
@@ -29,4 +29,3 @@ Generates a valid input file for Mr Bayes, which will generate a Bayesian
 phylogeny from a multiple amino acid sequence alignment AND an alignment of
 additional e.g. morphological data.
 }
-

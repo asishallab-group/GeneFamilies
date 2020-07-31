@@ -58,4 +58,3 @@ Computes the annotation (function) based Shannon Entropy per gene group
 separate for each species. Note it is highly recommended to set
 \code{options(mc.cores=detectCores())}
 }
-

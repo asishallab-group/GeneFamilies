@@ -24,4 +24,3 @@ descriptions following the first blank character after the gene accession.
 For example the name '>AT1G12345 crazy horse gymnast gene' becomes
 'AT1G12345'.
 }
-

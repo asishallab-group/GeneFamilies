@@ -12,4 +12,3 @@ hyphy.meme.bf
 Brew template to generate a family's MEME input file
 }
 \keyword{datasets}
-

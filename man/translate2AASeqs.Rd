@@ -23,4 +23,3 @@ TRUE if and only if no error has occurred.
 Uses the program MACSE to translate the coding sequences to amino acid
 sequences.
 }
-
