@@ -17,7 +17,7 @@ Gan, X. et al. The Cardamine hirsuta genome offers insight into the evolution of
 You need to install the required package `AHRD.on.gene.clusters` as follows:
 ```
 require(devtools)
-install_github("groupschoof/AHRD_on_gene_clusters")
+install_github("asishallab/AHRD_on_gene_clusters")
 ```
 
 Now you can install GeneFamilies:
