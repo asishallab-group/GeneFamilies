@@ -1,0 +1,127 @@
+# EasyVectorOmics
+
+In this profect the goal is to reproduce the vector space analyses as done in
+the _Cardamine hirsuta_ genome project [1]. The R-Code required to do so shall
+be isolated and made usabel with _any_ data. Next, this code shall be used to
+analyse public open access data of model species to evaluate whether the method
+works for other data-sets as well.
+
+## Reproduction of original results [1]
+
+Refer to the Vignette `./vignettes/GeneFamilies.Rmd`. The steps and data
+required to carry out the original analysis are:
+
+### `Load tissue specific expression data`
+
+This step produces data stored in binary format in the file
+`data/RNA_Seq_RPKM_and_profiles.RData`. The RData contains two objects:
+
+- `rna.seq.exp.profils` - This is a table in which each row represents the
+  expression vector of a gene in the expression vector space. Axes are the
+  different plant tissues. Gene Identifier (IDs) are given both in the pure
+  form, e.g. `AT1G01010`, and the splice variant, e.g. `AT1G01010.1`.
+  `r
+  head(rna.seq.exp.profils)
+  # produces the following result:
+  # cotyledon developing leaf  seedling flower stage 16 flower stage 9	gene gene.exp.var
+  # 0.206384145      0.08695488 0.2776287      0.07009093      0.3589414	AT1G01010  AT1G01010.1	
+  # 0.165161313      0.10448020 0.2267613      0.08841315      0.4151840	AT1G01020  AT1G01020.1	
+  # 0.086191341      0.15355937 0.1500006      0.07077711      0.5394716	AT1G01030  AT1G01030.1	
+  # 0.330792887      0.09427257 0.1829741      0.08449369      0.3074667	AT1G01040  AT1G01040.2	
+  # 0.079472192      0.11188537 0.1738841      0.34547414      0.2892842	AT1G01050  AT1G01050.1	
+  # 0.003454131      0.08389586 0.5113684      0.27232766      0.1289540	AT1G01060  AT1G01060.1	
+  `
+- `rpkm.rna.seq.counts`
+
+### Compute pairwise gene expression profile distances within gene groups
+
+> Differences in expression are correlated with function diversification. In
+> order to detect such diversification of function we measure euclidean
+> distances between expression profiles of genes within gene groups. Distances
+> are computed between whole expression profiles as well as on each euclidean
+> dimension (tissue).
+
+> The following R-script generates the data-set
+> `ExpressionProfileDistances.RData`:
+> `Rscript ./exec/computeExpressionProfileDistances.R path/2/GeneFamilies`
+
+The above `ExpressionProfileDistances.RData` contains these objects:
+- `families.exp.prof.dists` - A list of R `dist` objects, one for each gene
+  family. Note, that the names ("keys") of the list are the names of the gene
+  families, e.g. `cluster_1`. Note that the `dist` objects contain the
+  Euclidean distance between pairs of genes.
+- `families.exp.prof.dists.tissue` - This is a list of lists, where on the
+  first level the gene families are contained (see previous
+  `families.exp.prof.dists`). On the next level the tissues are listed. For
+  each tissue a R `dist` object contains the Euclidean distances between pairs
+  of genes just regarding a single axis, i.e. tissue.
+- `orthologs.exp.prof.dists` - Like the above `families.exp.prof.dists` but
+  with distances between pairs of genes that belong to the same group of
+  orthologs. So here, instead of grouping genes by gene family membership, they
+  are grouped by being orthologs to each other.
+- `orthologs.exp.prof.dists.tissue` - Like the above
+  `families.exp.prof.dists.tissue` but for ortholog groups instead of gene
+  families.
+- `tandems.exp.prof.dists` - Like the above `families.exp.prof.dists` but for
+  genes belong to a tandem cluster, i.e. these genes are paralogs that are
+  neighbors in the genome. The latter means that their coordinates are close to
+  each other.
+- `tandems.exp.prof.dists.tissue` - Like the above
+  `families.exp.prof.dists.tissue` but for genes belonging to tandem clusters.
+
+This is the first result of our expression vector space analysis. See attached
+presentation `./inst/GeneFunctionEvolution.pdf`, slide fourteen (14).
+
+### Expression Profile based Function Diversity
+
+In this step the euclidean distances in the expression vector space are
+invetigated in order to find out whether belonging to a certain gene group,
+i.e. gene family, orthologs, paralogs, or tandem duplicates has an influence on
+how gene expression changes. These changes are measured in distances between
+mean expression vectors, e.g. between the mean expression of orthologs and the
+mean expression of paralogs, all of which belong to the same gene family.
+
+So, the above, among others, tests whether within each gene family the gene
+expression of the orthologs is different from the gene expression of the
+paralogs by comparing the vector clouds of orthologs and paralogs,
+respectively. See slide fifteen (15) of `./inst/ExpressedGeneGroupsVenn.pdf`.
+
+Results of this step are stored as plots and tables of t-Test outcomes. See the
+same section in Vignette `./vignettes/GeneFamilies.Rmd` and the respective
+Rscripts, respectively.
+
+I think the plots are those seen on slide fourteen (14).
+
+### Expression vector space analysis
+
+See the namesake section in Vignette `./vignettes/GeneFamilies.Rmd` for
+details. Basically, here the angles between mean expression vectors of two
+sub-groups within the same super-group of genes are explored. For example, for
+each gene family the angle of rotation around the diagonal between the mean
+orthologs and mean paralogs expression. See slides sixteen (16) to nineteen
+(19).
+
+# Goals
+
+In the near future transfer these goals to GitHub Issues:
+- Understand the R code that produces the above results (RData, tables, and
+  plots)
+- Reproduce the results just to double check whether the original code and
+  input data still generates the same results
+- Refactor the R code into a separate R package `EasyVectorOmics` that should
+  exist as a separate GitHub repo in `github.com/asishallab-group`. Write
+  executable Rscripts (in `exec`) using
+  [optparse](https://cran.r-project.org/web/packages/optparse/index.html) that
+  is capable of carrying out the steps done here but for arbitrary input data.
+  It is fine to require the user to use a pipeline, i.e. a series of executable
+  scripts to produce final results.
+
+# References
+
+[1] Gan, X., Hay, A., Kwantes, M., Haberer, G., Hallab, A., Ioio, R. D.,
+  Hofhuis, H., Pieper, B., Cartolano, M., Neumann, U., Nikolov, L. A., Song,
+  B., Hajheidari, M., Briskine, R., Kougioumoutzi, E., Vlad, D., Broholm, S.,
+  Hein, J., Meksem, K., … Tsiantis, M. (2016). The Cardamine hirsuta genome
+  offers insight into the evolution of morphological diversity. Nature Plants,
+  2, 16167. https://doi.org/10.1038/nplants.2016.167
+
